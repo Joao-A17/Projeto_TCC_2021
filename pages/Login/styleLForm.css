@@ -1,0 +1,126 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
+:root {
+    --dark: #110d13;
+    --light: #E6E6FA;
+    --primary: #82589F;
+    --Secundary: #9500ff;
+}
+
+/* Fundo do formulario*/
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom right, var(--light), var(--primary));
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+  html{
+    scroll-behavior: smooth;
+  }  
+
+/* formulário */
+.card{
+    background: linear-gradient(to bottom, white, var(--primary));
+    box-shadow: 0px 0px 15px var(--primary);
+    border-radius: 28px;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;            
+}
+
+/* Para centralizar a imagem e o nome Login*/
+.card-top{
+    text-align: center;
+}
+
+input::placeholder {
+    color: var(--dark);
+}
+
+/* Campo de texto Email e Senha*/
+form input[type=email],
+form input[type=password]{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    border: 0;
+    background-color: #6a438500;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px var(--Secundary);
+    padding: 10px;
+    width: 220px;
+    outline: none;
+    color: var(--light);
+    border: 2px solid var(--Secundary);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+/* Animação de clicar nos campos focus*/
+form input[type=email]:focus,
+form input[type=password]:focus{
+    background-color: #6a438531;
+    width: 280px;
+    box-shadow: 0px 0px 5px var(--primary);
+    border-color: var(--Secundary);
+}
+
+
+/* Modificação do botão enviar*/
+form input[type=submit]{
+    transition: 0.25s;                      
+    border: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    text-align: center;
+    padding: 14px 40px;
+    border-radius: 24px;
+    outline: 0; 
+    background: #4a3b5200;
+    color: var(--Secundary);
+    border: 1px solid var(--Secundary);
+    box-shadow: 0px 0px 10px var(--Secundary);                         
+}
+
+/* Animação do botão quando passar o mause*/
+form input[type=submit]:hover{
+    background: var(--light);
+    color: var(--dark);
+    border: 1px solid var(--light);
+    box-shadow: 0px 0px 15px var(--light);
+}
+
+/* Imagem do formulário*/
+.img-login{
+    text-align: center;
+    width: 100px;
+}
+
+/* Texto Login Admin */
+.login{
+	background-image: linear-gradient(to top, var(--dark), var(--Secundary));
+  	background-clip: text;
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+/* Texto de cadastrar */
+
+.cadastro{
+    text-decoration: underline;
+    display: block;
+    margin: 25px auto;
+    color: var(--light); 
+}
