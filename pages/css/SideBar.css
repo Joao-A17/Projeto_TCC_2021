@@ -3,6 +3,7 @@
   --light: #E6E6FA;
   --primary: #82589F;
   --Secundary: #9500ff;
+  --primaryC: #d0a7ee;
 }
 
 .txtB{
@@ -38,7 +39,7 @@
 .line {
   width: 100%;
   height: 0.2rem;
-  background-color: var(--primary);
+  background-image: linear-gradient(to top, var(--dark), var(--Secundary));
   transition: 1s;
   
 }
@@ -89,19 +90,20 @@ header {
   position: relative;
 }
 
-/*           ========================Menu Lateral====================================                      */
+/*           ========================(Menu-Lateral)====================================                      */
 
 .sidebar {
   border-radius: 25px;
   width: 15rem;
   height: 85vh;
-  background: linear-gradient(to bottom right, var(--primary), var(--light));
   position: fixed;
   top: 80px;
   right: -20rem;
   transition: 0.50s;
   z-index: 80;
-  box-shadow: 0px 0px 5px var(--dark);
+  background: linear-gradient(to bottom right, var(--primaryC), var(--light));
+  border: 1px solid var(--light);
+  box-shadow: 0px 0px 5px var(--light);
 }
 
 .show-menu .sidebar {
@@ -127,12 +129,12 @@ header {
   cursor: pointer;
   text-align: center;
   padding: 14px 40px;
-  border-radius: 24px;
-  transition: 0.25s;
+  border-radius: 6px;
   outline: 0; 
-  background-color: var(--primary);
-  color: #FFF;
-  border: none;
+  transition: 0.10s;
+  background-color: transparent;
+  color: var(--dark);
+  border: 1px solid #3c274b;
 }
 
 .menu-link:hover {

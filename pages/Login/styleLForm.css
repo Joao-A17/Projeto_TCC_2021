@@ -10,7 +10,7 @@
 /* Fundo do formulario*/
 body{
     height: 100vh;
-    background: linear-gradient(to bottom right, var(--light), var(--primary));
+    background: linear-gradient(to bottom right, var(--light), var(--primary));    background: linear-gradient(to bottom , var(--light), var(--primary));
 }
 
 
@@ -26,8 +26,9 @@ body{
 
 /* formulário */
 .card{
-    background: linear-gradient(to bottom, white, var(--primary));
-    box-shadow: 0px 0px 15px var(--primary);
+    background: linear-gradient(to top left, white, var(--primary));
+    box-shadow: 0px 0px 15px var(--light);
+    border: 1px solid var(--light);
     border-radius: 28px;
     width: 400px;
     padding: 50px;
@@ -52,8 +53,7 @@ form input[type=email],
 form input[type=password]{
     font-size: 20px;
     font-family: 'Lora', serif;
-    border: 0;
-    background-color: #6a438500;
+    background-color: #6a438531;
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -61,7 +61,7 @@ form input[type=password]{
     padding: 10px;
     width: 220px;
     outline: none;
-    color: var(--light);
+    color: rgb(37, 0, 58);
     border: 2px solid var(--Secundary);
     border-radius: 24px;
     transition: 0.25s;
@@ -70,16 +70,15 @@ form input[type=password]{
 /* Animação de clicar nos campos focus*/
 form input[type=email]:focus,
 form input[type=password]:focus{
-    background-color: #6a438531;
+    background-color: #6a438500;
     width: 280px;
-    box-shadow: 0px 0px 5px var(--primary);
-    border-color: var(--Secundary);
+    box-shadow: 0px 0px 5px rgb(37, 0, 58);
+    border-color: rgb(37, 0, 58);
 }
 
 
 /* Modificação do botão enviar*/
-form input[type=submit]{
-    transition: 0.25s;                      
+form input[type=submit]{                    
     border: 0;
     margin: 10px auto;
     cursor: pointer;
@@ -87,18 +86,18 @@ form input[type=submit]{
     padding: 14px 40px;
     border-radius: 24px;
     outline: 0; 
-    background: #4a3b5200;
-    color: var(--Secundary);
-    border: 1px solid var(--Secundary);
-    box-shadow: 0px 0px 10px var(--Secundary);                         
+    background-color: transparent;
+    color: var(--dark);
+    border: 1px solid #3c274b; 
+    box-shadow: 0px 0px 3px var(--dark);                        
 }
 
 /* Animação do botão quando passar o mause*/
 form input[type=submit]:hover{
-    background: var(--light);
-    color: var(--dark);
-    border: 1px solid var(--light);
-    box-shadow: 0px 0px 15px var(--light);
+    background: #3c274b;
+    color: var(--light);
+    border: 1px solid #3c274b;
+    box-shadow: 0px 0px 15px #3c274b;
 }
 
 /* Imagem do formulário*/
@@ -120,7 +119,10 @@ form input[type=submit]:hover{
 
 .cadastro{
     text-decoration: underline;
-    display: block;
-    margin: 25px auto;
-    color: var(--light); 
+    color: rgb(131, 0, 207);
+    font-size: 20px;
+}
+
+.cadastro:hover{
+    color: rgb(37, 0, 58);
 }
