@@ -1,11 +1,5 @@
-function Home() {
-    return (
-        <>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-            <div>Home</div>
-
-        </>
-    )
-}
-
-export default Home
+ReactDOM.render(<App />, document.getElementById('root'));
