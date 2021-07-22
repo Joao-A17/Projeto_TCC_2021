@@ -19,7 +19,6 @@
 
                       /* desenho do hamburguer */
 .hamburguer {
-    
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -83,13 +82,6 @@
 
 .show-menu .hamburguer:hover span {
   opacity: 1;
-}
-
-header {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
 }
 
 /*           ========================(Menu-Lateral)====================================                      */
