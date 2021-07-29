@@ -1,18 +1,16 @@
-:root {
-    --dark: #1c1c1c;
-    --light: #F8E9FC;
-    --primary: #D881ED;
-}
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body{
-    background: linear-gradient(to bottom , var(--light), var(--primary)); 
+    background: rgb(218, 186, 212);
+    /* background: linear-gradient(to bottom right, var(--light), var(--primary)); */
 }
-  
+
 .logo {
     color: var(--light);
     font-family: 'Gugi', cursive;
@@ -36,8 +34,7 @@ nav {
     height: 8vh;
     font-family: 'Gugi', cursive;
     background: var(--dark);
-    border: 2px solid var(--dark);
-    box-shadow: 0px 0px 8px var(--dark);
+    box-shadow: 0px 0px 8px var(--tranp);
 }
 
 .menu-link{
@@ -49,6 +46,7 @@ nav {
     border: 2px solid var(--light);
     border-radius: 8px;
     box-shadow: 0px 0px 5px var(--light);
+    opacity: 0;
 }
 
 .menu-link:hover{
@@ -58,6 +56,37 @@ nav {
     box-shadow: 0px 0px 10px var(--light);
 }
   
+#login{
+    text-decoration: none;
+    padding: 6px 25px;
+    transition: .3s;
+    background: none;
+    color: var(--light);
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--light);
+    animation: span-login 2s infinite;
+}
+
+#login:hover{
+    text-decoration: none;
+    animation: none;
+    background: var(--light);
+    color: var(--dark);
+    border: 2px solid var(--light);
+    box-shadow: 0px 0px 10px var(--light);
+}
+
+@keyframes span-login{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
 .nav-list {
     list-style: none;
     display: flex;
@@ -82,6 +111,10 @@ nav {
 }
   
 @media (max-width: 700px) {
+    .menu-link{
+        opacity: 1;
+        align-items: center;
+    }
     body {
       overflow-x: hidden; 
     }
@@ -89,10 +122,10 @@ nav {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 45vh;
+        width: 100vh;
         height: 92vh;
         background: var(--dark);
-        box-shadow: 0px 0px 10px var(--light);
+        border: 2px solid #000000;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -138,7 +171,7 @@ nav {
 /* ----------------------Inicio---------------------- */
 
 #topo{
-    padding: 150px;
+    padding: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,7 +187,7 @@ nav {
 }
 
 #topo p{
-    padding-top: 150px;
+    padding-top: 100px;
     color: var(--dark);
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
@@ -185,12 +218,12 @@ nav {
 #info p{
     color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: rem;
     animation: Movertxt 4s forwards;
 }
 
-.social-media{
-    padding: 10px;
+.social-media{          
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -206,34 +239,94 @@ nav {
 }
 
 .Redes:hover{
-    font-size: 3rem;
     color: var(--primary);
+    transform: scale(1.40)
 }
 
 /* ----------------------Pintura---------------------- */
+
 
 #pinturas h2{
     text-align: center;
     color: var(--dark);
     font-family: 'Gugi', cursive;
-    /* font-family: 'Josefin Sans', sans-serif; */
     padding: 20px;
 }
 
-#pinturas::after{
-    content: "";
-    clear: both;
-    display: table;
+.PintArt{
+    display: inline-block;
+    margin-left: 60px;
+    width: 350px;
+    padding-top: 20px;
 }
 
-.coluna{
-    float: left;
-    width: 33.33%;
+#Img-Usuario{
+    width: 80px;
 }
 
-@media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
+#Img-Usuario:hover{
+    opacity: 0.7;
+}
+
+#InfoPint{
+    width: 100%;
+    height: 120px;
+    background: var(--tranp);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    box-shadow: 0px 0px 2px var(--dark);
+}
+
+.ImgPint {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--dark);
+    width: 100%;
+}
+.User{
+    display: flex;
+}
+
+.NomeUsuario{
+    color: var(--light);
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.DescPint{
+    text-align: center;
+    color: var(--light);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#Avaliar{
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .3s;
+    background: none;
+    color: var(--light);
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--light);
+}
+
+#Avaliar:hover{
+    background: var(--light);
+    color: var(--dark);
+    border: 2px solid var(--light);
+    box-shadow: 0px 0px 10px var(--light);
+}
+
+@media (max-width: 100px){
+    #Conteudo{
+        display: none;
     }
 }
 
@@ -249,17 +342,24 @@ nav {
     display: inline-block;
 }
 
+
 #desenvolvedores img{
     width: 20%;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+#desenvolvedores img:hover{
+    opacity: 0.5;
 }
 
 #desenvolvedores h2{
-    color: var(--primary);
+    color: var(--light);
     font-family: 'Gugi', cursive;
 }
 
 #desenvolvedores h3{
-    color: var(--primary);
+    color: var(--light);
     font-family: 'Gugi', cursive;
 }
 
@@ -269,19 +369,3 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-#pinturas::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.coluna{
-    float: left;
-    width: 33.33%;
-}
-
-@media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
-    }
-}
