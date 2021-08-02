@@ -7,12 +7,14 @@
 }
 
 body{
-    background: rgb(218, 186, 212);
-    /* background: linear-gradient(to bottom right, var(--light), var(--primary)); */
+    background: linear-gradient(to bottom, var(--corL), var(--corS));
 }
 
 .logo {
-    color: var(--light);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
     font-family: 'Gugi', cursive;
     text-decoration: none;
     transition: 0.3s;
@@ -26,15 +28,17 @@ body{
 }
   
 nav {
-    position: fixed;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 8vh;
     font-family: 'Gugi', cursive;
-    background: var(--dark);
-    box-shadow: 0px 0px 8px var(--tranp);
+    background: var(--corD2);
+    border-radius: 10px;
+    border: 1px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
 }
 
 .menu-link{
@@ -42,18 +46,17 @@ nav {
     text-decoration: none;
     transition: .3s;
     background: none;
-    color: var(--light);
-    border: 2px solid var(--light);
+    color: var(--corP);
+    border: 2px solid var(--corP);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--light);
-    opacity: 0;
+    box-shadow: 0px 0px 5px var(--corP);
 }
 
 .menu-link:hover{
-    background: var(--light);
-    color: var(--dark);
-    border: 2px solid var(--light);
-    box-shadow: 0px 0px 10px var(--light);
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
 }
   
 #login{
@@ -61,20 +64,20 @@ nav {
     padding: 6px 25px;
     transition: .3s;
     background: none;
-    color: var(--light);
-    border: 2px solid var(--light);
+    color: var(--corP);
+    border: 2px solid var(--corP);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--light);
+    box-shadow: 0px 0px 5px var(--corP);
     animation: span-login 2s infinite;
 }
 
 #login:hover{
     text-decoration: none;
     animation: none;
-    background: var(--light);
-    color: var(--dark);
-    border: 2px solid var(--light);
-    box-shadow: 0px 0px 10px var(--light);
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
 }
 
 @keyframes span-login{
@@ -105,14 +108,13 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: var(--light);
+    background: var(--corP);
     margin: 8px;
     transition: 0.3s;
 }
   
 @media (max-width: 700px) {
     .menu-link{
-        opacity: 1;
         align-items: center;
     }
     body {
@@ -124,7 +126,7 @@ nav {
         right: 0;
         width: 100vh;
         height: 92vh;
-        background: var(--dark);
+        background: var(--corD);
         border: 2px solid #000000;
         flex-direction: column;
         align-items: center;
@@ -175,51 +177,57 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--dark);
+    color: var(--corD);
     text-align: center;
 }
 
 #topo h1{
-    color: var(--dark);
+    color: var(--corD);
     font-size: 70px;
     font-family: 'Gugi', cursive;
-    animation: Movertxt 4s forwards;
+    animation: Mover 2s forwards;
 }
 
 #topo p{
     padding-top: 100px;
-    color: var(--dark);
+    color: var(--corD);
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
-    animation: Movertxt 4s forwards;
+    animation: Mover 4s forwards;
 }
 
 /* ----------------------Informações---------------------- */
 
 #info{
+    margin-top: 200px;
     width: 100%;
-    height: 220px;
+    height: 320px;
     margin-bottom: 5px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--corD);
+    border-radius: 25px;
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 15px var(--corS);
 }
 
 #info h2{
-    color: var(--primary);
+    font-size: 30px;
+    padding-top: 30px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+	letter-spacing: .5em;
     font-family: 'Josefin Sans', sans-serif;
-    padding: 15px;
-    animation: Movertxt 4s forwards;
 }
 
 #info p{
-    color: var(--light);
+    padding-top: 30px;
+    color: var(--corP);
     font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: rem;
-    animation: Movertxt 4s forwards;
 }
 
 .social-media{          
@@ -227,37 +235,57 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    animation: Movertxt 4s forwards;
 }
 
 .Redes{
     font-size: 2rem;
     background: transparent;
-    color: var(--light);
+    color: var(--corP);
     width: 8rem;
     transition: .3s;
 }
 
 .Redes:hover{
-    color: var(--primary);
+    color: var(--corS);
     transform: scale(1.40)
 }
 
 /* ----------------------Pintura---------------------- */
 
+#pinturas{
+    margin-top: 200px;
+    height: 100%;
+    border-radius: 25px;
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 15px var(--corS);
+    background: var(--corD);
+}
 
-#pinturas h2{
+#pinturas h2{  
+    font-size: 50px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+	letter-spacing: .5em;    
     text-align: center;
-    color: var(--dark);
     font-family: 'Gugi', cursive;
-    padding: 20px;
+    padding-top: 100px;
+}
+
+#pinturas h2:hover{
+    opacity: 0.7;
+}
+
+.espaço{
+    padding: 50px;
 }
 
 .PintArt{
     display: inline-block;
     margin-left: 60px;
     width: 350px;
-    padding-top: 20px;
+    padding-top: 70px;
 }
 
 #Img-Usuario{
@@ -273,13 +301,15 @@ nav {
     height: 120px;
     background: var(--tranp);
     border-radius: 10px;
-    border: 2px solid var(--dark);
-    box-shadow: 0px 0px 2px var(--dark);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 2px var(--corP);
+    margin-top: 10px;
 }
 
 .ImgPint {
     border-radius: 10px;
-    box-shadow: 0px 0px 5px var(--dark);
+    border: 2px solid var(--corS);
+    box-shadow: 0px 0px 5px var(--corS);
     width: 100%;
 }
 .User{
@@ -287,7 +317,9 @@ nav {
 }
 
 .NomeUsuario{
-    color: var(--light);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 15px;
     font-size: 30px;
@@ -295,7 +327,7 @@ nav {
 
 .DescPint{
     text-align: center;
-    color: var(--light);
+    color: var(--corP);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     padding: 10px;
@@ -311,17 +343,17 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
     transition: .3s;
     background: none;
-    color: var(--light);
-    border: 2px solid var(--light);
+    color: var(--corP);
+    border: 2px solid var(--corP);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--light);
+    box-shadow: 0px 0px 5px var(--corP);
 }
 
 #Avaliar:hover{
-    background: var(--light);
-    color: var(--dark);
-    border: 2px solid var(--light);
-    box-shadow: 0px 0px 10px var(--light);
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
 }
 
 @media (max-width: 100px){
@@ -333,7 +365,7 @@ nav {
 /* ----------------------Desenvolvedores---------------------- */
 
 #desenvolvedores{
-    background: var(--dark);
+    background: var(--corD);
     padding: 20px;
     text-align: center;
 }
@@ -354,18 +386,26 @@ nav {
 }
 
 #desenvolvedores h2{
-    color: var(--light);
+    color: var(--corP);
     font-family: 'Gugi', cursive;
 }
 
 #desenvolvedores h3{
-    color: var(--light);
+    color: var(--corP);
     font-family: 'Gugi', cursive;
 }
 
 #desenvolvedores p{
-    color: var(--light);
+    color: var(--corP);
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
+@keyframes Mover{
+    from {
+        transform: translate(500px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
