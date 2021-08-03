@@ -4,11 +4,12 @@
 
 :root {
     --dark: #1c1c1c;
-    --tranp: #0000007a;
     --light: #F8E9FC;
     --primary: #D881ED;
     --secundary: #660080;
     --terciary:  #4B0082;
+
+    --tranp: #0000007a;
 
     --corD: #0B1219;
     --corD2:#17202b;

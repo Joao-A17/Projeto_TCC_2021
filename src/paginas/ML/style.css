@@ -230,26 +230,6 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.social-media{          
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.Redes{
-    font-size: 2rem;
-    background: transparent;
-    color: var(--corP);
-    width: 8rem;
-    transition: .3s;
-}
-
-.Redes:hover{
-    color: var(--corS);
-    transform: scale(1.40)
-}
-
 /* ----------------------Pintura---------------------- */
 
 #pinturas{
@@ -271,10 +251,6 @@ nav {
     text-align: center;
     font-family: 'Gugi', cursive;
     padding-top: 100px;
-}
-
-#pinturas h2:hover{
-    opacity: 0.7;
 }
 
 .espaço{
@@ -299,10 +275,10 @@ nav {
 #InfoPint{
     width: 100%;
     height: 120px;
-    background: var(--tranp);
+    background-image: linear-gradient(to bottom left, var(--tranp), var(--corP));
     border-radius: 10px;
     border: 2px solid var(--corP);
-    box-shadow: 0px 0px 2px var(--corP);
+    box-shadow: 0px 0px 5px var(--corP);
     margin-top: 10px;
 }
 
@@ -317,7 +293,7 @@ nav {
 }
 
 .NomeUsuario{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--corL), var(--corP));
   	-webkit-background-clip: text;
     color: transparent;
     font-family: 'Josefin Sans', sans-serif;
@@ -327,13 +303,13 @@ nav {
 
 .DescPint{
     text-align: center;
-    color: var(--corP);
+    color: var(--corD2);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     padding: 10px;
 }
 
-#Avaliar{
+#Consultar{
     cursor: pointer;
     width: 120px;
     height: 35px;
@@ -349,7 +325,7 @@ nav {
     box-shadow: 0px 0px 5px var(--corP);
 }
 
-#Avaliar:hover{
+#Consultar:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
@@ -376,13 +352,13 @@ nav {
 
 
 #desenvolvedores img{
-    width: 20%;
+    width: 30%;
     transition: 0.3s;
-    border-radius: 20px;
 }
 
 #desenvolvedores img:hover{
     opacity: 0.5;
+    transform: scale(1.5);
 }
 
 #desenvolvedores h2{
@@ -401,11 +377,37 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.social-media{          
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Redes{
+    font-size: 2rem;
+    background: transparent;
+    color: var(--corP);
+    width: 5rem;
+    transition: .3s;
+}
+
+.Redes:hover{
+    color: var(--corS);
+    transform: scale(1.40)
+}
+
 @keyframes Mover{
     from {
         transform: translate(500px);
     }
     to {
         transform: translate(0);
+    }
+}
+
+@media (max-height: 700px){
+    #desig{
+        margin-top: 90px;
     }
 }
