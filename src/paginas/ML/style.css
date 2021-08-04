@@ -7,7 +7,7 @@
 }
 
 body{
-    background: linear-gradient(to bottom, var(--corL), var(--corS));
+    background: linear-gradient(to bottom, var(--corL), var(--corP));
 }
 
 .logo {
@@ -170,10 +170,28 @@ nav {
     transform: rotate(45deg) translate(-5px, -7px);
 }
 
+/* Upzinho */
+
+.Seta-Up{
+    position:fixed;
+    bottom:50px;
+    right:0px;
+    display: none;
+    font-size: 3rem;
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;   
+    width: 5rem;
+    transition: .3s;
+}
+
+.Seta-Up:hover{
+    color: var(--corP);
+}
 /* ----------------------Inicio---------------------- */
 
 #topo{
-    padding: 120px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,7 +207,7 @@ nav {
 }
 
 #topo p{
-    padding-top: 100px;
+    padding-top: 30px;
     color: var(--corD);
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;

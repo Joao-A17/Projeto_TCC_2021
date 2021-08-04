@@ -4,7 +4,7 @@ nav.Menu{
 	width: 100%;
 }
 h1{
-	background-image: linear-gradient(to top, var(--dark), var(--secundary));
+	background-image: linear-gradient(to top, var(--corD), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -16,10 +16,10 @@ h1{
 
 .M {
 	font-family: 'Josefin Sans', sans-serif;
-	color: var(--terciary);
-	border: 1px solid var(--terciary);
+	color: var(--corS);
+	border: 1px solid var(--corS);
     border-radius: 50%;
-	box-shadow: 0px 0px 15px var(--terciary);
+	box-shadow: 0px 0px 15px var(--corS);
     width: 2rem;
     height: 2rem;
     position: fixed;
@@ -33,10 +33,10 @@ h1{
 
 .L {
 	font-family: 'Josefin Sans', sans-serif;
-	color: var(--dark);
-	border: 1px solid var(--terciary);
+	color: var(--corS);
+	border: 1px solid var(--corS);
     border-radius: 50%;
-	box-shadow: 0px 0px 15px var(--terciary);
+	box-shadow: 0px 0px 15px var(--corS);
     width: 2rem;
     height: 2rem;
     position: fixed;

@@ -5,15 +5,15 @@
 
 body{
     height: 100vh;
-    background-image: linear-gradient(to top, #8c62979a 10%, var(--light) 100%);
+    background-image: linear-gradient(to bottom, transparent 20%, var(--corD2) 100%);
 }
 
 
 /* formulário */
 .card{
-    background-image: linear-gradient(to bottom, transparent 20%, var(--terciary) 100%);
-    border: none;
-    box-shadow: 0px 20px 50px var(--terciary);
+    background: transparent;
+    border: 2px solid var(--corD2);
+    box-shadow: 0px 20px 50px var(--corD2);
     border-radius: 33px;
     width: 400px;
     padding: 50px;
@@ -38,8 +38,7 @@ body{
 /* Texto Login Admin */
 .login{
     font-family: 'Gugi', cursive;
-	background-image: linear-gradient(to top, var(--dark), var(--primary));
-  	background-clip: text;
+	background-image: linear-gradient(to top, var(--corS), var(--corD));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -72,10 +71,10 @@ form input[type=password]{
 /* Animação de clicar nos campos focus*/
 form input[type=email]:focus,
 form input[type=password]:focus{
-    background-color: #6a438500;
+    background-color: transparent;
     width: 320px;
-    box-shadow: 0px 0px 5px rgb(37, 0, 58);
-    border-color: rgb(37, 0, 58);
+    box-shadow: 0px 0px 5px var(--corD);
+    border-color: var(--corD);
 }
 
 /* Modificação do botão enviar*/
@@ -122,11 +121,13 @@ form input[type=submit]:hover{
 .Redes{
     width: 80px;
     border: none;
-    color: var(--light);
+    background-image: linear-gradient(to top, var(--corS), var(--corD));
+  	-webkit-background-clip: text;
+    color: transparent;
     cursor: pointer;
 }
 
 .Redes:hover{
     transition: .3s;
-    color: var(--dark);
+    color: var(--corP);
 }
