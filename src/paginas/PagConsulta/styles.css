@@ -5,3 +5,135 @@
     text-decoration: none;
     list-style: none;
 }
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to top left, var(--corD), var(--corD2));
+}
+
+.Menu{
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Gugi', cursive;
+    background: var(--corD2);
+    border-radius: 10px;
+    border: 1px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
+}
+
+.Logo{
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Gugi', cursive;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: 820px;
+}
+
+.Voltar{
+    padding: 5px 15px;
+    transition: .3s;
+    font-family: 'Gugi', cursive;
+    text-transform: uppercase;
+    background: none;
+    color: var(--corP);
+    border: 2px solid var(--corP);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--corP);
+}
+
+.Voltar:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.container{
+    padding-top: 50px;
+    border-radius: 10px;
+    border: 2px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corD);
+    background: var(--corD);
+}
+
+.Fundo-Pint{
+    padding: 50px;
+    background: var(--corD2);
+    border: 1px solid var(--corL);
+}
+
+.Lado{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+.Img-Pint{
+    width: 100%;
+}
+
+#Nome-Pint{
+    font-size: 35px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+.contContato{
+    margin-top: 250px;
+    padding: 30px;
+    border-radius: 30px;
+    border: 2px solid  var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.Desc-Pint{
+    width: 500px;
+    font-size: 20px;
+    color: var(--corL);
+}
+
+.TextE{
+    vertical-align: bottom;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--corL);
+}
+
+.Redes{
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 3rem;
+    background: transparent;
+    color: var(--corL);
+    width: 5rem;
+    transition: .3s;
+}
+
+.Redes:hover{
+    opacity: 0.4;
+    transform: scale(1.40)
+}
+
+@media (max-width: 700px){
+    .Logo{
+        margin: 0;
+    }
+    .contContato{
+        margin-top: 20px;
+        width: 450px;
+    }
+    .Redes{
+        border: None;
+        font-size: 35px;
+    }
+}
