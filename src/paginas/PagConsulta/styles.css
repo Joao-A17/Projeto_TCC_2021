@@ -21,7 +21,7 @@ body{
     font-family: 'Gugi', cursive;
     background: var(--corD2);
     border-radius: 10px;
-    border: 1px solid var(--corS);
+    border: 2px solid var(--corS);
     box-shadow: 0px 0px 15px var(--corS);
 }
 
@@ -64,9 +64,10 @@ body{
 }
 
 .Fundo-Pint{
-    padding: 50px;
+    width: 600px;
     background: var(--corD2);
-    border: 1px solid var(--corL);
+    border: 1px solid var(--corP);
+    box-shadow: 0px 0px 15px var(--corP);
 }
 
 .Lado{
@@ -81,29 +82,32 @@ body{
 
 #Nome-Pint{
     font-size: 35px;
+    font-family: 'Gugi', cursive;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
 }
 
+.Desc-Pint{
+    margin-top: 10px;
+    width: 500px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: var(--corL);
+}
+
 .contContato{
-    margin-top: 250px;
     padding: 30px;
     border-radius: 30px;
     border: 2px solid  var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-.Desc-Pint{
-    width: 500px;
-    font-size: 20px;
-    color: var(--corL);
-}
-
 .TextE{
-    vertical-align: bottom;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    font-family: 'Josefin Sans', sans-serif;    
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
     color: var(--corL);
@@ -111,17 +115,67 @@ body{
 
 .Redes{
     justify-content: space-around;
+    cursor: pointer;
     margin: 20px;
     font-size: 3rem;
     background: transparent;
     color: var(--corL);
     width: 5rem;
-    transition: .3s;
 }
 
-.Redes:hover{
-    opacity: 0.4;
-    transform: scale(1.40)
+.E{
+    color: var(--corL);
+    transition: .3s;
+}
+.E:hover{
+    color: var(--corP);
+    transform: scale(1.40);
+}
+
+.W{
+    color: var(--corL);
+    transition: .3s;
+}
+.W:hover{
+    transform: scale(1.40);
+    color: #32CD32;
+}
+
+.F{
+    background: var(--tramp);
+    color: var(--corL);
+    border-radius: 50px;
+    border: 1px solid var(--corD);
+    box-shadow: 0px 0px 8px var(--tranp);
+    transition: .3s;
+}
+.F:hover{
+    background: white;
+    color: #0000FF;
+    border-radius: 50px;
+    border: 1px solid var(--corL);
+    box-shadow: 0px 0px 8px var(--corL);
+    transform: scale(1.40);
+}
+
+.I{
+    color: var(--corL);
+    transition: .3s;
+}
+.I:hover{
+    background-image: linear-gradient(to top, #FF1493, #8A2BE2);
+  	-webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.40);
+}
+
+.T{
+    color: var(--corL);
+    transition: .3s;
+}
+.T:hover{
+    color: #00BFFF;
+    transform: scale(1.40);
 }
 
 @media (max-width: 700px){
