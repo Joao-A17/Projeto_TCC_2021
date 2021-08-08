@@ -11,6 +11,20 @@ body{
     background-image: linear-gradient(to top left, var(--corD), var(--corD2));
 }
 
+body::-webkit-scrollbar{
+    width: 15px;              
+}
+  
+body::-webkit-scrollbar-track{
+    background: var(--corL);
+}
+  
+body::-webkit-scrollbar-thumb{
+    background-color: var(--corD);
+    border-radius: 20px;
+    border: 2px solid var(--corS);
+}
+
 .Menu{
     position: relative;
     width: 100%;
@@ -37,6 +51,7 @@ body{
 }
 
 .Voltar{
+    cursor: pointer;
     padding: 5px 15px;
     transition: .3s;
     font-family: 'Gugi', cursive;
@@ -80,7 +95,17 @@ body{
     width: 100%;
 }
 
-#Nome-Pint{
+.NomeT{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Gugi', cursive;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+.Nome-Pint{
     font-size: 35px;
     font-family: 'Gugi', cursive;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
@@ -97,17 +122,48 @@ body{
     color: var(--corL);
 }
 
-.contContato{
+.ContPint{
     padding: 30px;
     border-radius: 30px;
     border: 2px solid  var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
+.ContAdmin{
+    padding: 30px;
+    border-radius: 30px;
+    border: 2px solid  var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.Foto-Admin{
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--corL);
+    box-shadow: 0px 0px 12px var(--corL); 
+}
+
+.Nome-Admin{
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: 'Gugi', cursive;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+.Desc-Admin{
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: var(--corL);
+}
+
 .TextE{
     margin-top: 50px;
-    font-family: 'Josefin Sans', sans-serif;    
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: 'Josefin Sans', sans-serif; 
     font-size: 20px;
     text-align: center;
     color: var(--corL);
@@ -116,7 +172,8 @@ body{
 .Redes{
     justify-content: space-around;
     cursor: pointer;
-    margin: 20px;
+    margin-top: 50px;
+    margin: 30px;
     font-size: 3rem;
     background: transparent;
     color: var(--corL);
