@@ -5,40 +5,43 @@
 
 body{
     height: 100vh;
-    background-image: linear-gradient(to bottom, transparent 20%, var(--corD2) 100%);
+    background-image: linear-gradient(to top, var(--corD2), var(--corD));
 }
-
 
 /* formulário */
 .card{
     background: transparent;
-    border: 2px solid var(--corD2);
-    box-shadow: 0px 20px 50px var(--corD2);
+    border: 2px solid var(--corS);
+    box-shadow: 0px 0px 12px var(--corS);
     border-radius: 33px;
     width: 400px;
     padding: 50px;
-    margin-top: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;            
+    text-align: center;      
 }
 
-/* Para centralizar a imagem e o nome Login*/
+/* Para centralizar a Icon e o Nome Login*/
 .card-top{
     text-align: center;
 }
 
-/* Imagem do formulário*/
-.img-login{
-    width: 100px;
+/* Icon do formulário*/
+.User{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 80px;
+    background-image: linear-gradient(to top, var(--corS), var(--corP));
+  	-webkit-background-clip: text;
+    color: transparent;
 }
 
 /* Texto Login Admin */
 .login{
     font-family: 'Gugi', cursive;
-	background-image: linear-gradient(to top, var(--corS), var(--corD));
+	background-image: linear-gradient(to top left, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -46,35 +49,36 @@ body{
 
 /* mudar a cor dos inputs */
 input::placeholder {
-    color: var(--light);
+    background-image: linear-gradient(to top left, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
 }
 
 /* Campo de texto Email e Senha*/
-form input[type=email],
+form input[type=email],         /* h */
 form input[type=password]{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    background: transparent;
     display: block;
     margin: 30px auto;
     text-align: center;
-    box-shadow: 0px 0px 5px var(--light);
     height: 38px;
-    width: 290px;
+    width: 320px;
     outline: none;
-    color: var(--light);
-    border: 2px solid var(--light);
-    border-radius: 24px;
-    transition: 0.25s;
+    background: transparent;
+    color: var(--corP);
+    border: none;
+    border-bottom: 2px solid var(--corP);
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s;
 }
 
 /* Animação de clicar nos campos focus*/
 form input[type=email]:focus,
 form input[type=password]:focus{
-    background-color: transparent;
     width: 320px;
-    box-shadow: 0px 0px 5px var(--corD);
-    border-color: var(--corD);
+    border-bottom: 2px solid var(--corS);
 }
 
 /* Modificação do botão enviar*/
@@ -88,18 +92,18 @@ form input[type=submit]{
     border-radius: 24px;
     outline: 0; 
     transition: .2s;
-    background-color: transparent;
-    color: var(--light);
-    border: 2px solid var(--light); 
-    box-shadow: 0px 0px 3px var(--light);                        
+    background: #ffd9005b;
+    color: var(--corP);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 5px var(--corP);                        
 }
 
 /* Animação do botão quando passar o mause*/
 form input[type=submit]:hover{
-    background: var(--light);
+    background: var(--corP);
     color: var(--dark);
-    border: 2px solid var(--light);
-    box-shadow: 0px 0px 15px var(--light);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
 }
 
 /* cadastrar */
@@ -121,13 +125,14 @@ form input[type=submit]:hover{
 .Redes{
     width: 80px;
     border: none;
-    background-image: linear-gradient(to top, var(--corS), var(--corD));
-  	-webkit-background-clip: text;
-    color: transparent;
+    color: var(--corL);
     cursor: pointer;
+    transition: .3s;
 }
 
-.Redes:hover{
-    transition: .3s;
-    color: var(--corP);
+.Redes:hover,
+.Redes:focus{
+    background-image: linear-gradient(to top, var(--corS), var(--corP));
+  	-webkit-background-clip: text;
+    color: transparent;
 }

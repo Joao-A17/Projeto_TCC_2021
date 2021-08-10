@@ -1,5 +1,6 @@
 /* Esse JavaScript esta conectado a Pag-inicial e a Pag-Consulta */
-/* Voltar uma página */
+
+/* Função de voltar uma página */
 function voltar() {
     window.history.back();
 }

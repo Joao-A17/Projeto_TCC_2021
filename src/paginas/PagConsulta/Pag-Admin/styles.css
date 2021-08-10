@@ -32,8 +32,13 @@ body::-webkit-scrollbar-thumb{
     color: var(--corP);
     font-size: 40px;
     cursor: pointer;
+    transition: .3s;
 }
 
+.Pontinhos:hover,
+.Pontinhos:focus{
+    color: var(--corS);
+}
 
 .PontLista{
     font-family: 'Gugi', cursive;
@@ -44,9 +49,13 @@ body::-webkit-scrollbar-thumb{
     width: 120px;
     background-image: linear-gradient(to top left, var(--corP), var(--corS));
     border-radius: 10px;
-    color: var(--tramp);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 8px var(--corP);
     font-size: 20px;
-    visibility: hidden;
+}
+
+.hide{
+    display:none; /* classe para escoder e aparevcer a lista */
 }
 
 #Editar{
