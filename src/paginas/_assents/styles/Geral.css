@@ -3,14 +3,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
 
 :root {
-    --dark: #1c1c1c;
-    --light: #F8E9FC;
-    --primary: #D881ED;
-    --secundary: #660080;
-    --terciary:  #4B0082;
-
     --tranp: #0000007a;
-
     --corD: #0B1219;
     --corD2:#17202b;
     --corL: #E7F1F7;

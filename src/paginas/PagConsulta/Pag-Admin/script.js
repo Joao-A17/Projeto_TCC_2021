@@ -11,3 +11,5 @@ Pontinhos.addEventListener("click", function() {
     Lista.classList.toggle("hide");
 
 });
+
+/* Funções de Editar e Adicionar */
