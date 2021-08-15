@@ -5,29 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/paginas/_assents/styles/Geral.css">
-    <link rel="stylesheet" href="styles.css">  
-    <title id="Nome-Site">Pint</title>
+    <link rel="stylesheet" href="./styles.css">  
+    <title id="Nome-Site">Pintura-Admin</title>
 </head>
 <body>
     <nav class="Menu">
-        <h1 class="Logo" data-logo>Magics Paintings</h1>
-        <a class="Perfil" href="#"><i class="fas fa-user Icon"></i> Perfil</a>
-        <button class="btn-Editar"><i class="fas fa-cog Icon"></i>  Editar</button>
-        <a class="Voltar" onclick="Voltar()"><i class="fas fa-chevron-left Icon"></i>    Voltar</a>
+        <a href="/src/paginas/Inicio/index.html" class="Logo">Magics Paintings</a>
+        <a id="btn-edit" class="btn-menu" onclick="AparecerE()"><i class="fas fa-cog Icon"></i>Editar</a>
+        <a class="btn-menu">Adicionar</a>
+        <a class="btn-menu"><i class="fas fa-user Icon"></i>Perfil</a>
+        <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left Icon"></i>Voltar</a>
     </nav>
+
     <div class="container">
         <div class="Fundo">
             <div class="Lado">
                 <div class="Fundo-Pint">
-                    <img class="Pintura" src="/src/paginas/Edits/Ban.png" alt="NomePint">
+                    <img class="Pintura" src="/src/paginas/Edits/Ban.png" alt="{(Nome-Pint)}">
                 </div>
             </div>
             <div class="Lado">               
-                <div class="ContPint">
+                <div class="InfoP">
                     <h1 class="NomeT" style="text-align: center;">Pintura</h1>
-                    <h1 class="Nome-Pint">Nome da Pintura</h1>
-                    <p class="Desc-Pint">Descrição da Pintura.</p>                    
-                </div> 
+                    <h1 id="Nome-Pint">Nome da Pintura</h1>
+                    <p id="Desc-Pint">Descrição da Pintura</p>
+                    <div id="Editar">
+                        <h2>Novas Alterações</h2>
+                        <input type="text" id="NNPint" placeholder="Digite o nome da pintura">
+                        <input type="text" id="DNPint" placeholder="Digite a descrição da pintura">
+                        <input type="file" class="form-control-file" name="foto" id="PNPint" accept="image/*">   
+                        <label for="PNPint" class="SelectP" onclick="SelecionarImage()">Selecionar Imagem</label>        
+                        <input type="submit" value="Salvar" id="btn-SP" onclick="NPintura()">                      
+                    </div>                    
+                </div>
                 <div class="ContAdmin"><!-- Foto tem que ser menor que 338 x 338 -->
                     <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400" alt="Astro">
                     <h1 class="Nome-Admin">Admin</h1>
@@ -43,7 +53,7 @@
         </div>
     
                             <!-- Scripts -->
-    <script src="/src/paginas/_assents/JS/PConsulta.js"></script>
+    <script src="/src/paginas/_assents/JS/P-Pintura.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

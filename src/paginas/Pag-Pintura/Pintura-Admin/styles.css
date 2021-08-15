@@ -26,13 +26,13 @@ body::-webkit-scrollbar-thumb{
 }
 
 .Menu{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 8vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
     background: var(--corD2);
     border-radius: 10px;
     border: 2px solid var(--corS);
@@ -43,22 +43,26 @@ body::-webkit-scrollbar-thumb{
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-right: 750px;
 }
 
 .Icon{
     font-size: 20px;
 }
 
-.Voltar{
+.btn-menu{
+    width: 145px;
+    height: 32px;
     cursor: pointer;
-    padding: 5px 15px;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
+    display: flex;
     text-transform: uppercase;
+    letter-spacing: 5px;
+    justify-content: center;
+    align-items: center;
     background: none;
     color: var(--corP);
     border: 2px solid var(--corP);
@@ -67,48 +71,7 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 
-.Voltar:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
-}
-
-.Perfil{
-    cursor: pointer;
-    padding: 5px 15px;
-    font-family: 'Gugi', cursive;
-    text-transform: uppercase;
-    background: none;
-    color: var(--corP);
-    border: 2px solid var(--corP);
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
-    transition: .3s;
-}
-
-.Perfil:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
-}
-
-.btn-Editar{
-    cursor: pointer;
-    font-size: 18px;
-    padding: 5px 15px;
-    font-family: 'Gugi', cursive;
-    text-transform: uppercase;
-    background: none;
-    color: var(--corP);
-    border: 2px solid var(--corP);
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
-    transition: .3s;
-}
-
-.btn-Editar:hover{
+.btn-menu:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
@@ -125,6 +88,7 @@ body::-webkit-scrollbar-thumb{
 
 .Fundo-Pint{
     width: 600px;
+    border-radius: 20px;
     background: var(--corD2);
     border: 1px solid var(--corP);
     box-shadow: 0px 0px 15px var(--corP);
@@ -138,28 +102,29 @@ body::-webkit-scrollbar-thumb{
 
 .Pintura{
     width: 100%;
+    border-radius: 20px;
 }
 
 .NomeT{
     margin-bottom: 20px;
     font-size: 35px;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
 }
 
-.Nome-Pint{
+#Nome-Pint{
     font-size: 35px;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
 }
 
-.Desc-Pint{
+#Desc-Pint{
     margin-top: 10px;
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
@@ -167,7 +132,116 @@ body::-webkit-scrollbar-thumb{
     color: var(--corL);
 }
 
-.ContPint{
+/* ------------------------------------Editar------------------------------------ */
+#Editar{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
+}
+
+#Editar h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Gugi', sans-serif;
+	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+#Editar input::placeholder {
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--corL);
+}
+
+#NNPint, #DNPint{
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    outline: none;
+    background: var(--tranp);
+    color: var(--corP);
+    border: none;
+    border-radius: 20px;
+    border-bottom: 2px solid var(--corP);
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+#NNPint:focus{
+    width: 480px;
+    border-bottom: 2px solid var(--corS);
+}
+#DNPint:focus{
+    width: 480px;
+    border-bottom: 2px solid var(--corS);
+}
+
+#PNPint{
+    display: none;
+}
+
+.SelectP{
+    padding: 5px 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 24px;
+    background: var(--tranp);
+    color: var(--corP);
+    border: 2px solid var(--tranp);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;
+}
+
+.SelectP:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+#btn-SP{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    background: var(--tranp);
+    color: var(--corP);
+    border: 2px solid var(--tranp);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;
+}
+
+#btn-SP:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.InfoP{
     padding: 30px;
     border-radius: 30px;
     border: 2px solid  var(--corP);
@@ -191,7 +265,7 @@ body::-webkit-scrollbar-thumb{
 .Nome-Admin{
     margin-top: 20px;
     font-size: 35px;
-    font-family: 'Gugi', cursive;
+    font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
