@@ -10,6 +10,20 @@ body{
     background: var(--corD2);
 }
 
+body::-webkit-scrollbar{
+    width: 15px;              
+}
+  
+body::-webkit-scrollbar-track{
+    background: var(--corL);
+}
+  
+body::-webkit-scrollbar-thumb{
+    background-color: var(--corD);
+    border-radius: 20px;
+    border: 2px solid var(--corS);
+}
+
 /* Upzinho */
 
 .Seta-Up{
@@ -47,7 +61,6 @@ body{
     color: var(--corL);
     font-size: 70px;
     font-family: 'Gugi', sans-serif;
-    animation: Mover 2s forwards;
 }
 
 #topo p{
@@ -55,7 +68,6 @@ body{
     color: var(--corS);
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
-    animation: Mover 4s forwards;
 }
 
 /* ----------------------Informações---------------------- */
@@ -96,7 +108,7 @@ body{
 
 .caixa-help{
     height: 80px;
-    width: 800px;
+    width: 850px;
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -148,9 +160,6 @@ body{
     padding-top: 100px;
 }
 
-.linkPint:hover{
-    opacity: 0.7;
-}
 
 .PintArt{
     display: inline-block;
@@ -176,7 +185,7 @@ body{
     font-size: 30px;
 }
 
-#InfoPint{
+.InfoPint{
     width: 100%;
     background: var(--tranp);
     border: 0;
@@ -188,6 +197,23 @@ body{
     text-align: center;
 }
 
+.PintArt h4{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--corP);
+    transition: .3s;
+}
+
+.PintArt a{
+    text-decoration: underline;
+    color: var(--corL);
+}
+
+.PintArt a:hover{
+    color: var(--corS);
+}
+
 .ImgPint {
     border-radius: 33px;
     background: var(--tranp);
@@ -196,11 +222,12 @@ body{
     border-bottom: 3px solid var(--corS);
     width: 100%;
 }
+
 .User{
     display: flex;
 }
 
-.Nome-Pint{
+#Nome-Pint{
     text-align: center;
     color: var(--corS);
     font-family: 'Josefin Sans', sans-serif;
@@ -268,6 +295,11 @@ body{
 .img-P{
     margin-top: 20px;
     width: 30%;
+    background: var(--tranp);
+    border: 0;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corP);
+    border-radius: 100%;
     transition: .3s;
 }
 
@@ -322,19 +354,4 @@ body{
     -webkit-background-clip: text;
     color: transparent;  
     transform: scale(1.40)
-}
-
-@keyframes Mover{
-    from {
-        transform: translate(500px);
-    }
-    to {
-        transform: translate(0);
-    }
-}
-
-@media (max-height: 700px){
-    #desig{
-        margin-top: 90px;
-    }
 }
