@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: var(--corD2);
+}
+
+/* Upzinho */
+
+.Seta-Up{
+    color: var(--corL);
+    position:fixed;
+    bottom:50px;
+    right:0px;
+    display: none;
+    font-size: 3rem;   
+    width: 5rem;
+    transition: .3s;
+}
+
+.Seta-Up:hover{
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.espaço{
+    padding: 50px;
+}
+/* ----------------------Inicio---------------------- */
+
+
+#topo{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#topo h1{
+    color: var(--corL);
+    font-size: 70px;
+    font-family: 'Gugi', sans-serif;
+    animation: Mover 2s forwards;
+}
+
+#topo p{
+    padding-top: 30px;
+    color: var(--corS);
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: Mover 4s forwards;
+}
+
+/* ----------------------Informações---------------------- */
+
+#info{
+    margin-top: 200px;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--tranp);
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corP);  
+    border-bottom: 3px solid var(--corP);  
+}
+
+#info h2{
+    font-size: 30px;
+    padding-top: 30px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+	letter-spacing: .5em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.info-P{
+    font-size: 30px;
+    margin-top: 30px;
+    color: var(--corP);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.caixa-help{
+    height: 80px;
+    width: 800px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--tranp);
+    border: 0;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 12px var(--corS);
+    border-radius: 50px;
+}
+
+.help{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: var(--corP);
+    transition: .3s;
+}
+
+.help a{
+    color: var(--corL);
+    text-decoration: underline;
+}
+
+.help a:hover{
+    color: var(--corS);
+}
+/* ----------------------Pintura---------------------- */
+
+#pinturas{
+    margin-top: 200px;
+    height: 100%;
+    background: var(--tranp);
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);  
+    border-bottom: 3px solid var(--corS);  
+}
+
+#pinturas h2{  
+    font-size: 50px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+	letter-spacing: .5em;    
+    text-align: center;
+    font-family: 'Gugi', sans-serif;
+    padding-top: 100px;
+}
+
+.linkPint:hover{
+    opacity: 0.7;
+}
+
+.PintArt{
+    display: inline-block;
+    margin-left: 60px;
+    width: 350px;
+    padding-top: 70px;
+}
+
+#Img-Usuario{
+    width: 30%;
+    display: block;
+}
+
+#Img-Usuario:hover{
+    opacity: 0.7;
+}
+
+.NomeUsuario{
+    color: var(--corP);
+    font-family: 'Gugi', sans-serif;
+    margin-top: 15px;
+    float: left;
+    font-size: 30px;
+}
+
+#InfoPint{
+    width: 100%;
+    background: var(--tranp);
+    border: 0;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+    border-radius: 33px;
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.ImgPint {
+    border-radius: 33px;
+    background: var(--tranp);
+    border: 0;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    width: 100%;
+}
+.User{
+    display: flex;
+}
+
+.Nome-Pint{
+    text-align: center;
+    color: var(--corS);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#Consultar{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: 0;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    background: var(--tranp);
+    color: var(--corP);
+    border: 2px solid var(--tranp);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;  
+}
+
+#Consultar:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+@media (max-width: 100px){
+    #Conteudo{
+        display: none;
+    }
+}
+
+/* ----------------------Desenvolvedores---------------------- */
+
+#desenvolvedores{
+    background-image: linear-gradient(to bottom, var(--tranp), var(--corD));
+    border: 0;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+    box-shadow: 0px 0px 15px var(--corP);
+    border-radius: 33px;
+    padding: 20px;
+    text-align: center;
+}
+
+#desig{
+    width: 350px;
+    display: inline-block;
+    margin: 20px;
+    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    border: 0;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    border-radius: 33px;
+}
+
+
+.img-P{
+    margin-top: 20px;
+    width: 30%;
+    transition: .3s;
+}
+
+.img-P:hover{
+    opacity: 0.5;
+    transform: scale(1.5);
+}
+
+#desenvolvedores h2{
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;  
+    font-size: 50px;
+    font-family: 'Gugi', sans-serif;
+}
+
+#desenvolvedores h3{
+    margin-top: 20px;
+    font-size: 30px;
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;  
+    font-family: 'Gugi', sans-serif;
+}
+
+#desenvolvedores p{
+    color: var(--corP);
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.social-media{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Redes{
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 3rem;
+    color: var(--corL);  
+    width: 5rem;
+    transition: .3s;
+}
+
+.Redes:hover{
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;  
+    transform: scale(1.40)
+}
+
+@keyframes Mover{
+    from {
+        transform: translate(500px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+@media (max-height: 700px){
+    #desig{
+        margin-top: 90px;
+    }
+}
