@@ -22,7 +22,7 @@ var InfoPint10 = document.querySelector(".ConteudoInfo-10");
 var InfoPint11 = document.querySelector(".ConteudoInfo-11");
 var InfoPint12 = document.querySelector(".ConteudoInfo-12");
 
-User = false;
+User = true;
 switch (User) {
     case true:
         console.log("Usuário ON");
