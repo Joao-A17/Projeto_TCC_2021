@@ -169,8 +169,10 @@ body::-webkit-scrollbar-thumb{
 }
 
 #Img-Usuario{
+    margin-left: 20px;
     width: 30%;
     display: block;
+    border-radius: 50%;
 }
 
 #Img-Usuario:hover{
@@ -181,6 +183,7 @@ body::-webkit-scrollbar-thumb{
     color: var(--corP);
     font-family: 'Gugi', sans-serif;
     margin-top: 15px;
+    margin-left: 10px;
     float: left;
     font-size: 30px;
 }
