@@ -1,5 +1,5 @@
 Botão de excluir:           https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
-
+Botão Adicionar:            https://pt.stackoverflow.com/questions/454159/como-duplicar-ou-clonar-uma-div-em-java-script-e-ler-todos-os-elementos-em-asp-n
 
 
 Pedentes:

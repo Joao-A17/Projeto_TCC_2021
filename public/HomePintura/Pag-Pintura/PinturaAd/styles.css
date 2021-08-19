@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb{
 #btn-edit,#btn-delete,
 #btn-edit2,#btn-delete2,
 #btn-edit3,#btn-delete3{
-    margin-top: 10px;  
+    margin-top: 20px;  
     margin-left: 50%;
     margin-bottom: 30px;
     width: 200px;

@@ -1,3 +1,10 @@
+/* Função de Adicionar a div Pint-Completa */
+let clone = $("#Desc-Pint").clone();
+function Adicionar(){ 
+    console.log("Evento de click de Adicionar Funcionando!!!!");   
+    clone.attr("id", "Desc-Pint" + (count + 1));
+  }
+
 /* Aparecer a div de Editar
    Pegar o butão e a div com o document
    colocando a div com display none para desaparecer 
