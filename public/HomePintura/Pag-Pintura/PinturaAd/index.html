@@ -6,59 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Geral2.css">
     <link rel="stylesheet" href="styles.css">  
-    <link rel="stylesheet" href="carousel.css">
-    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet"> 
     <title id="Nome-Site">Pintura-Admin</title>              
 </head>
 <body>
     <nav class="Menu">
-        <a href="/public/HomePintura/HomePintura.html" class="Logo">Magics Paintings</a>
-        <a id="btn-edit" class="btn-menu" onclick="AparecerE()"><i class="fas fa-cog Icon"></i>Editar</a>
-        <a class="btn-menu">Adicionar</a>
-        <a class="btn-menu"><i class="fas fa-user Icon"></i>Perfil</a>
-        <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left Icon"></i>Voltar</a>
+        <a href="/public/HomePintura/HomePintura.html" class="Logo">Magics Paintings</a>     
+        <a class="btn-menu"><i class="fas fa-user IconG"></i>Perfil</a>
+        <a class="btn-menu" onclick="Adicionar()"><i class="fas fa-plus IconG"></i>Adicionar</a>
+        <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
     <div class="container">
-        <div class="Fundo">            
-            <div class="Fundo-Pint">
-                <img id="Pint-1" class="Pintura" src="/public/assets/IMAGES/Edits/Ban.png" alt="Nome-Pint">
-            </div>                    
-            <div class="espaço"></div>
-            <div class="Lado">               
-                <div class="InfoP">
-                    <h1 class="NomeT" style="text-align: center;">Pintura</h1>
-                    <h1 id="Nome-Pint">Ban</h1>
-                    <p id="Desc-Pint">Ban「バン」 é um membro dos Sete Pecados Capitais, 
-                        conhecido como o Pecado da Ganância da Raposa. 
-                        Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
-                        mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
-                        ele é conhecido por sua habilidade, Snatch.</p>
-                    <div id="Editar">
-                        <h2>Novas Alterações</h2>
-                        <input type="text" id="NNPint" placeholder="Digite o nome da pintura">
-                        <input type="text" id="DNPint" placeholder="Digite a descrição da pintura">
-                        <input type="file" class="form-control-file" name="foto" id="PNPint" accept="image/*">   
-                        <label for="PNPint" class="SelectP" onclick="SelecionarImage()">Selecionar Imagem</label>        
-                        <input type="submit" value="Salvar" id="btn-SP" onclick="NPintura()">                      
-                    </div>                    
-                </div>
-                <div class="ContAdmin"><!-- Foto tem que ser menor que 338 x 338 -->
+        <div class="Fundo">       
+            <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
+                <div id="AdminForm">
                     <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400" alt="Astro">
-                    <h1 class="Nome-Admin">Admin</h1>
-                    <p class="Desc-Admin">Descrição do Artista</p>
-                    <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
-                    <a class="Redes" href="joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
-                    <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
-                    <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
-                    <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
-                    <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>
-                </div>           
-            </div>
+                    <div class="Info-Admin">
+                        <h1 class="Nome-Admin">Admin</h1>
+                        <p class="Desc-Admin">Descrição do Artista</p>
+                    </div>
+                </div>
+                <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
+                <a class="Redes" href="joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
+                <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
+                <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
+                <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
+                <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>
+            </div>    
+                <div id="Cont-Master">
+                    <div id="Pint-Completa1" class="Cont">
+                        <div class="Fundo-Pint">
+                            <img class="Pintura" src="/public/assets/IMAGES/Edits/Ban.png">
+                        </div>                                          
+                        <div class="Fundo-Desc">   
+                            <h1 id="Nome-Pint">Ban</h1>
+                            <p id="Desc-Pint">Ban「バン」 é um membro dos Sete Pecados Capitais, 
+                                conhecido como o Pecado da Ganância da Raposa. 
+                                Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
+                                mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
+                                ele é conhecido por sua habilidade, Snatch.</p>
+                                <buttom id="btn-edit" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
+                                <button id="btn-delete" onclick="Excluir()"><i class="fas fa-trash-alt IconG"></i>Excluir</button> 
+                            <div id="Editar">
+                                <h2>Novas Alterações</h2>
+                                <input type="text" id="NNPint" maxlength="20" placeholder="Digite o nome da pintura">
+                                <input type="text" id="DNPint" placeholder="Digite a descrição da pintura">
+                                <input type="file" class="form-control-file" name="foto" id="PNPint" accept="image/*">   
+                                <label for="PNPint" class="SelectP" onclick="SelecionarImage()">Selecionar Imagem</label>        
+                                <input type="submit" value="Salvar" id="btn-SP" onclick="NPintura()">                      
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="espaço"></div>
+                    <div id="Pint-Completa2" class="Cont">
+                        <div class="Fundo-Pint">
+                            <img class="Pintura2" src="/public/assets/IMAGES/Edits/Princesa-Elizabeth.png">
+                        </div>                                          
+                        <div class="Fundo-Desc"> 
+                            <h1 id="Nome-Pint2">Princesa Elizabeth</h1>
+                            <p id="Desc-Pint2">Elizabeth Liones é a principal protagonista feminina da série e é a terceira princesa 
+                                do Reino de Liones, uma filha adotada do Rei de Liones e é originalmente do Reino de Danafor. 
+                                Ela começou a trabalhar como uma garçonete no bar Chapéu de Javali quando ela se junta a Meliodas 
+                                em sua jornada para encontrar os Sete Pecados Capitais.
+                                Mais tarde é revelado que Elizabeth é a centésima sétima reencarnação da deusa Elizabeth, 
+                                a filha da Suprema Divindade e amante de Meliodas à três mil anos.</p>
+                                <buttom id="btn-edit2" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
+                                <button id="btn-delete2" onclick="Excluir2()"><i class="fas fa-trash-alt IconG"></i>Excluir</button> 
+                            <div id="Editar2">
+                                <h2>Novas Alterações</h2>
+                                <input type="text" id="NNPint2" placeholder="Digite o nome da pintura">
+                                <input type="text" id="DNPint2" placeholder="Digite a descrição da pintura">
+                                <input type="file" class="form-control-file" name="foto" id="PNPint2" accept="image/*">   
+                                <label for="PNPint2" class="SelectP2" onclick="SelecionarImage()">Selecionar Imagem</label>        
+                                <input type="submit" value="Salvar" id="btn-SP2" onclick="NPintura2()">                      
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="espaço"></div>
+                    <div id="Pint-Completa3" class="Cont">
+                        <div class="Fundo-Pint">
+                            <img class="Pintura3" src="/public/assets/IMAGES/Edits/Tanjio.png">
+                        </div>                                          
+                        <div class="Fundo-Desc">
+                            <h1 id="Nome-Pint3">Tanjiro_Kamado</h1>
+                            <p id="Desc-Pint3">Tanjiro Kamado (竈門かまど 炭たん治じ郎ろう Kamado Tanjirō?) é o principal protagonista 
+                                de Demon Slayer: Kimetsu no Yaiba. Ele é um Caçador de Oni do Esquadrão de Caçadores de Onis, 
+                                que se juntou para encontrar um remédio para transformar sua irmã, Nezuko Kamado, 
+                                que foi transformada em um Oni, de volta em um humano.
+                                Antes de se tornar um Caçador de Oni, sua família foi massacrada pelo Rei dos Onis, 
+                                Muzan Kibutsuji, enquanto sua irmã mais nova, Nezuko, foi transformada em uma Oni.</p>
+                                <buttom id="btn-edit3" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
+                                <button id="btn-delete3" onclick="Excluir3()"><i class="fas fa-trash-alt IconG"></i>Excluir</button>   
+                            <div id="Editar3">
+                                <h2>Novas Alterações</h2>
+                                <input type="text" id="NNPint3" placeholder="Digite o nome da pintura">
+                                <input type="text" id="DNPint3" placeholder="Digite a descrição da pintura">
+                                <input type="file" class="form-control-file" name="foto" id="PNPint3" accept="image/*">   
+                                <label for="PNPint3" class="SelectP3">Selecionar Imagem</label>        
+                                <input type="submit" value="Salvar" id="btn-SP3" onclick="NPintura3()">                      
+                            </div>   
+                        </div>
+                    </div>
+                </div>
         </div>                  
         <!-- Scripts -->
-    <script src="/src/JS/Geral.js"></script>
+    <script src="/public/assets/JS/Geral.js"></script>
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>   
 </body>
 </html>

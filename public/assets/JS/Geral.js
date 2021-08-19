@@ -8,7 +8,6 @@ function Voltar() {
 /* Teste da estrurura do caso */
 var Login = document.getElementById("login");
 var Pintura = document.querySelector(".ImgPint");
-console.log(Pintura);
 var InfoPint1 = document.querySelector(".ConteudoInfo-1");
 var InfoPint2 = document.querySelector(".ConteudoInfo-2");
 var InfoPint3 = document.querySelector(".ConteudoInfo-3");

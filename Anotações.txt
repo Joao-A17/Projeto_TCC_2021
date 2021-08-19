@@ -1,7 +1,7 @@
-na pagina homePinturas quando o usuario tiver off ele não vai poder entrar na pagina 
-de consulta das pinturas e se tiver logado vai aparecer para consultar
+Botão de excluir:           https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
 
-lembrar de tira os links de clicar nas imagens para ir a tela de consultar
 
-quando o usuario estiver off desaparecer a div de info das pinturas e
- mostrar uma mensagem para o usuario logar para velas
+
+Pedentes:
+duplicar o id="Pint-Completa" da tela do pintor
+Criar o Banco de Dados

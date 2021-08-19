@@ -25,7 +25,15 @@ body::-webkit-scrollbar-thumb{
     border: 2px solid var(--corS);
 }
 .espaço{
-    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+    border-radius: 50px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corP); 
 }
 
 .Menu{
@@ -50,14 +58,15 @@ body::-webkit-scrollbar-thumb{
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    transition: .3s;
 }
 
-.Icon{
-    font-size: 20px;
+.Logo:hover{
+    opacity: 0.7;
 }
 
 .btn-menu{
-    width: 145px;
+    width: 200px;
     height: 32px;
     cursor: pointer;
     font-family: 'Gugi', sans-serif;
@@ -71,7 +80,7 @@ body::-webkit-scrollbar-thumb{
     border: 2px solid var(--corP);
     border-radius: 8px;
     box-shadow: 0px 0px 5px var(--corP);
-    transition: .3s;
+    transition: .4s;
 }
 
 .btn-menu:hover{
@@ -89,15 +98,69 @@ body::-webkit-scrollbar-thumb{
     background: var(--corD);
 }
 
-.Fundo-Pint{
-    width: 400px;
-    border-radius: 20px;
-    background: var(--corD2);
-    border: 1px solid var(--corP);
-    box-shadow: 0px 0px 15px var(--corP);
+#Cont-Master{
+    margin-top: 100px;
 }
 
-.Pintura{
+#btn-edit,#btn-delete,
+#btn-edit2,#btn-delete2,
+#btn-edit3,#btn-delete3{
+    margin-top: 10px;  
+    margin-left: 50%;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    font-family: 'Gugi', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: none;
+    color: var(--corP);
+    border: 2px solid var(--corP);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--corP);
+    transition: .4s;
+}
+
+#btn-edit:hover,#btn-delete:hover,
+#btn-edit2:hover,#btn-delete2:hover,
+#btn-edit3:hover,#btn-delete3:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.Cont{
+    width: 80%;
+    display: inline-flex;
+}
+
+.Fundo-Pint{
+    margin-left: 20px;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
+}
+
+.IconG{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.Icon{
+    font-size: 50px;
+    color: var(--corP);
+}
+
+.Pintura,.Pintura2,.Pintura3{
     width: 100%;
     border-radius: 20px;
 }
@@ -112,7 +175,11 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Nome-Pint{
+.Fundo-Desc{
+    margin-left: 20px;
+}
+
+#Nome-Pint,#Nome-Pint2,#Nome-Pint3{
     font-size: 35px;
     font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
@@ -121,7 +188,7 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Desc-Pint{
+#Desc-Pint,#Desc-Pint2,#Desc-Pint3{
     margin-top: 10px;
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
@@ -130,7 +197,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 /* ------------------------------------Editar------------------------------------ */
-#Editar{
+
+#Editar,#Editar2,#Editar3{
     width: 100%;
     margin-top: 30px;
     text-align: center;
@@ -138,10 +206,10 @@ body::-webkit-scrollbar-thumb{
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
+    border-bottom: 3px solid var(--corS);
 }
 
-#Editar h2{
+#Editar h2,#Editar2 h2,#Editar3 h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -151,13 +219,18 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Editar input::placeholder {
+#Editar input::placeholder,
+#Editar2 input::placeholder,
+#Editar3 input::placeholder {
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--corL);
 }
 
-#NNPint, #DNPint{
+
+#NNPint,#DNPint,
+#NNPint2,#DNPint2,
+#NNPint3,#DNPint3{
     height: 40px;
     width: 400px;
     font-size: 20px;
@@ -174,12 +247,9 @@ body::-webkit-scrollbar-thumb{
     box-sizing: border-box;
     transition: .3s;
 }
-
-#NNPint:focus{
-    width: 480px;
-    border-bottom: 2px solid var(--corS);
-}
-#DNPint:focus{
+#NNPint:focus,#DNPint:focus,
+#NNPint2:focus,#DNPint2:focus,
+#NNPint3:focus,#DNPint3:focus{
     width: 480px;
     border-bottom: 2px solid var(--corS);
 }
@@ -188,7 +258,15 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 
-.SelectP{
+#PNPint2{
+    display: none;
+}
+
+#PNPint3{
+    display: none;
+}
+
+.SelectP,.SelectP2,.SelectP3{
     padding: 5px 25px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -204,14 +282,16 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 
-.SelectP:hover{
+.SelectP:hover,
+.SelectP2:hover,
+.SelectP3:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-#btn-SP{
+#btn-SP,#btn-SP2,#btn-SP3{
     width: 100px;
     height: 40px;
     margin-bottom: 20px;
@@ -231,7 +311,9 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 
-#btn-SP:hover{
+#btn-SP:hover,
+#btn-SP2:hover,
+#btn-SP3:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
@@ -252,14 +334,29 @@ body::-webkit-scrollbar-thumb{
     box-shadow: 0px 0px 10px var(--corP);
 }
 
+#AdminForm{
+    display: flex;
+}
+
 .Foto-Admin{
-    width: 50%;
+    width: 20%;
     border-radius: 50%;
     border: 2px solid var(--corL);
     box-shadow: 0px 0px 12px var(--corL); 
 }
 
+.Info-Admin{
+    width: 100%;
+    margin-left: 100px;
+	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
+}
+
 .Nome-Admin{
+    margin-left: 20px;
     margin-top: 20px;
     font-size: 35px;
     font-family: 'Gugi', sans-serif;
@@ -270,6 +367,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .Desc-Admin{
+    margin-left: 20px;
     margin-top: 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
@@ -301,7 +399,9 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 .E:hover{
-    color: var(--corP);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
     transform: scale(1.40);
 }
 
@@ -310,8 +410,10 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 .W:hover{
-    transform: scale(1.40);
-    color: #32CD32;
+	background-image: linear-gradient(to top, #007200, #00ff00);
+  	-webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.40);    
 }
 
 .F{
@@ -323,11 +425,10 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 .F:hover{
-    background: white;
-    color: #0000FF;
     border-radius: 50px;
-    border: 1px solid var(--corL);
-    box-shadow: 0px 0px 8px var(--corL);
+	background-image: linear-gradient(to top, #0051ff, #0066ff);
+  	-webkit-background-clip: text;
+    color: transparent;
     transform: scale(1.40);
 }
 
