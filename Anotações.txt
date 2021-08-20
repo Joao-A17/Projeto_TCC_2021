@@ -1,3 +1,11 @@
+Estrutura de HTML Basica
+
+*   O charset UTF-8:
+ é o que usamos na web atual para representar qualquer caractere de qualquer idioma. 
+ Ao usar o charset dentro da tag meta de nosso arquivo estamos dizendo ao navegador: 
+ quando for ler esse arquivo, use as regras do charset UTF-8.
+
+
 Botão de excluir:           https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
 Botão Adicionar:            https://pt.stackoverflow.com/questions/454159/como-duplicar-ou-clonar-uma-div-em-java-script-e-ler-todos-os-elementos-em-asp-n
 
