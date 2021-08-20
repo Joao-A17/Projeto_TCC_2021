@@ -1,9 +1,4 @@
 /* Função de Adicionar a div Pint-Completa */
-let clone = $("#Desc-Pint").clone();
-function Adicionar(){ 
-    console.log("Evento de click de Adicionar Funcionando!!!!");   
-    clone.attr("id", "Desc-Pint" + (count + 1));
-  }
 
 /* Aparecer a div de Editar
    Pegar o butão e a div com o document
@@ -108,60 +103,61 @@ function NPintura3(){
 
 NovaPintura = document.getElementById("PNPint");
 AntigaPintura = document.querySelector(".Pintura");
-
+   
 NovaPintura.addEventListener('change', function(e) {
     showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
 });
-
+   
 function showThumbnail(files) {
     if (files && files[0]) {
     var procurar = new FileReader();
-
+   
     procurar.onload = function (e) {
-       AntigaPintura.src = e.target.result;
+        AntigaPintura.src = e.target.result;
     }
-
+   
     procurar.readAsDataURL(files[0]);
     }
 }
 
 NovaPintura2 = document.getElementById("PNPint2");
 AntigaPintura2 = document.querySelector(".Pintura2");
-
+   
 NovaPintura2.addEventListener('change', function(e) {
     showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
 });
-
+   
 function showThumbnail(files) {
     if (files && files[0]) {
     var procurar2 = new FileReader();
-
+   
     procurar2.onload = function (e) {
-       AntigaPintura2.src = e.target.result;
+        AntigaPintura2.src = e.target.result;
     }
-
+   
     procurar2.readAsDataURL(files[0]);
     }
 }
 
 NovaPintura3 = document.getElementById("PNPint3");
 AntigaPintura3 = document.querySelector(".Pintura3");
-
+   
 NovaPintura3.addEventListener('change', function(e) {
     showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
 });
-
+   
 function showThumbnail(files) {
     if (files && files[0]) {
     var procurar3 = new FileReader();
-
+   
     procurar3.onload = function (e) {
-       AntigaPintura3.src = e.target.result;
+        AntigaPintura3.src = e.target.result;
     }
-
+   
     procurar3.readAsDataURL(files[0]);
     }
 }
+
 
 /* Botão de excluir */
 var deletar = document.getElementById("Pint-Completa1");
