@@ -63,8 +63,7 @@ input::placeholder {
 }
 
 /* Campo de texto Email e Senha*/
-form input[type=email],         /* h */
-form input[type=password]{
+.Inputs{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     display: block;

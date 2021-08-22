@@ -11,16 +11,16 @@
 <body>
     <div class="CimaD"></div>
     <div class="container">
-        <form class="form" antion="LoginAdmin" method="post"> 
+        <form class="form" antion="Login.html" method="POST"> 
             <div class="card">                
                 <div class="card-top">
                     <i class="fas fa-user User"></i>
                     <h2 class="login">Login</h2>                                                                     
                 </div>    
                 <div class="card-group">
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                    <input type="password" name="password" id="password" placeholder="Senha" required>
-                    <a href="#"><input type="submit" value="Entrar"/></a>                    
+                    <input class="Inputs" type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input class="Inputs" type="password" name="password" id="password" placeholder="Senha" required>
+                    <input type="submit" value="Entrar"/>                   
                     <p class="txtC">Cadastre-se com:</p>
                       <div class="social-media">
                         <i class="fab fa-google Redes"></i>
@@ -32,5 +32,7 @@
             </div>
         </form>
     </div>
+                            <!-- Scripts -->
+    <script src="../../public/PHP/Conexao_Login_Admin.php"></script>
 </body>
 </html>
