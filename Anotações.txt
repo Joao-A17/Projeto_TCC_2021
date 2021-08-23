@@ -1,4 +1,38 @@
-Estrutura de HTML Basica
+Estrutura Básica de HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título da página</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html> – Essa tag informa ao navegador a versão do HTML 
+que está sendo utilizada no documento. Por exemplo: no HTML5, 
+basta incluir !DOCTYPE html, e assim o navegador já saberá que 
+se trata de um documento na versão HTML5.
+
+<html></html> – Esta tag é o elemento básico da estrutura do HTML. 
+Assim sendo, ela conterá todos os elementos do seu documento. 
+Todo documento HTML deve iniciar e finalizar com essa tag.
+
+<header></header> – Essas tags definem um cabeçalho. Portanto, 
+todo conteúdo que estiver dentro dela faz parte de um cabeçalho, 
+podendo ser utilizado dentro de outras sessões. 
+
+<title></title> – Essa tag define o título da sua página, 
+o nome que aparecerá na sua aba, janela ou guia.
+
+<meta/> – Essa tag permite inserir metadados ao seu documento, 
+no caso acima, a informação charset=”UTF-8″, que garante a compatibilidade 
+do código com os caracteres de padrão latino americano.
+
+<body></body> – Finalmente, a tag que representa o corpo do documento. 
+Em síntese, é nessa tag que todos os elementos visíveis do seu site devem ser inseridos.
 
 *   O charset UTF-8:
  é o que usamos na web atual para representar qualquer caractere de qualquer idioma. 

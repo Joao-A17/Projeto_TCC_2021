@@ -11,3 +11,17 @@
     --corP2: #ffd9005b;
     --corS: #FF8C00;
 }
+
+body::-webkit-scrollbar{
+    width: 15px;              
+}
+  
+body::-webkit-scrollbar-track{
+    background: var(--corL);
+}
+  
+body::-webkit-scrollbar-thumb{
+    background-color: var(--corD);
+    border-radius: 20px;
+    border: 2px solid var(--corS);
+}

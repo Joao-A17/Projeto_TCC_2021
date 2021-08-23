@@ -1,5 +1,4 @@
 <?php
-
     $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
@@ -16,9 +15,6 @@
 
     if(isseT($_POST['submit'])){
 
-        /* 
-        print_r($_POST['email']);
-        print_r($_POST['password']); */
 
         include_once('LoginA.php');
         
@@ -28,5 +24,4 @@
         $resultadoLoginA = mysqli_query($conexao, "INSERT INTO LoginAdmin(email,senha) 
         VALUES ('$email','$senha')");
     }
-
 ?>
