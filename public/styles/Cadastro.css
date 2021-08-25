@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--corD2), var(--corD));
+}
+
+input::placeholder {
+    color: var(--corP);
+}
+
+#Form-Card{
+    background: var(--tranp);
+    border: 0;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    border-radius: 33px;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;  
+}
+
+.Formulario{ 
+    align-items: center;
+    margin: 30px auto;
+}
+
+.Input{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    height: 38px;
+    width: 320px;
+    outline: none;
+    background: var(--corD2);
+    color: var(--corS);
+    border: none;
+    border-radius: 20px;
+    border-bottom: 3px solid var(--corP);
+    outline: none;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.Input:focus{
+    width: 100%;
+    border-bottom: 2px solid var(--corS);
+}
+
+#botao{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: 0;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    background: var(--tranp);
+    color: var(--corP);
+    border: 2px solid var(--tranp);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;                     
+}
+
+#botao:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+.Formulario p{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: var(--corL);
+}
+
+.Formulario a{
+    color: var(--corP);
+}
+.Formulario a:hover{
+    color: var(--corS);
+}

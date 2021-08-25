@@ -83,8 +83,7 @@ input::placeholder {
 }
 
 /* Animação de clicar nos campos focus*/
-form input[type=email]:focus,
-form input[type=password]:focus{
+.Inputs:focus{
     width: 100%;
     border-bottom: 2px solid var(--corS);
 }
