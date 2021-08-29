@@ -45,10 +45,10 @@ var NovaDesc2 = "";
 var NovoNomeP3 = "";
 var NovaDesc3 = "";
 var NomePintura = document.querySelector("#NNPint");
-var descPintura = document.querySelector("#DNPint");
 var NomePintura2 = document.querySelector("#NNPint2");
-var descPintura2 = document.querySelector("#DNPint2");
 var NomePintura3 = document.querySelector("#NNPint3");
+var descPintura = document.querySelector("#DNPint");
+var descPintura2 = document.querySelector("#DNPint2");
 var descPintura3 = document.querySelector("#DNPint3");
 
 function NPintura(){
@@ -98,65 +98,27 @@ function NPintura3(){
 }
 
 /* Selecionar uma pintura nova */
-/* Pegar os document da pintura noca e antifa
-   e criar um EventListener change(Alterar) */
+/* Pegar os document da pintura nova e antiga,
+   criar um EventListener change(Alterar)      */
 
-NovaPintura = document.getElementById("PNPint");
-AntigaPintura = document.querySelector(".Pintura");
+NovaPintura0 = document.getElementById("SelectIMG0");
+AntigaPintura0 = document.querySelector(".Pintura0");
    
-NovaPintura.addEventListener('change', function(e) {
+NovaPintura0.addEventListener('change', function(trocar0) {
     showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
 });
    
 function showThumbnail(files) {
     if (files && files[0]) {
-    var procurar = new FileReader();
+    var procurar0 = new FileReader();
    
-    procurar.onload = function (e) {
-        AntigaPintura.src = e.target.result;
+    procurar0.onload = function(trocar0) {
+        AntigaPintura0.src = trocar0.target.result;
     }
    
-    procurar.readAsDataURL(files[0]);
+    procurar0.readAsDataURL(files[0]);
     }
-}
-
-NovaPintura2 = document.getElementById("PNPint2");
-AntigaPintura2 = document.querySelector(".Pintura2");
-   
-NovaPintura2.addEventListener('change', function(e) {
-    showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
-});
-   
-function showThumbnail(files) {
-    if (files && files[0]) {
-    var procurar2 = new FileReader();
-   
-    procurar2.onload = function (e) {
-        AntigaPintura2.src = e.target.result;
-    }
-   
-    procurar2.readAsDataURL(files[0]);
-    }
-}
-
-NovaPintura3 = document.getElementById("PNPint3");
-AntigaPintura3 = document.querySelector(".Pintura3");
-   
-NovaPintura3.addEventListener('change', function(e) {
-    showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
-});
-   
-function showThumbnail(files) {
-    if (files && files[0]) {
-    var procurar3 = new FileReader();
-   
-    procurar3.onload = function (e) {
-        AntigaPintura3.src = e.target.result;
-    }
-   
-    procurar3.readAsDataURL(files[0]);
-    }
-}
+} 
 
 
 /* Botão de excluir */

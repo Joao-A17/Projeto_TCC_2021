@@ -1,12 +1,13 @@
 <?php
 
-   include_once("../public/PHP/Conexao_Banco.php");
+   include_once("../assets/PHP/Conexao_Banco.php");
    $Nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
    $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
    $Email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
    $Telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
+   $Senha = filter_input(INPUT_POST, 'password' , FILTER_SANITIZE_STRING);
 
-   $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Telefone', NOW())";
+   $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Senha', '$Telefone', NOW())";
    $Resultado_Cadastro = mysqli_query($conexao, $Result_Cadastro);
 
 ?>
@@ -17,13 +18,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/styles/Geral.css">   
-    <link rel="stylesheet" href="../public/styles/Menu.css">
-    <link rel="stylesheet" href="../public/styles/Cad.css">
+    <link rel="stylesheet" href="../assets/styles/Geral.css">   
+    <link rel="stylesheet" href="../assets/styles/Menu.css">
+    <link rel="stylesheet" href="../assets/styles/Cadastro.css">
     <title>Cadastro | Magics Paintings</title>
 </head>
 <body>
-    <h1 class="logo">Magics Paintings</h1>
+    <div id="divDesign">
+        <h2 class="logo">Cadastro | Magics Paintings</h2>
+        <div class="fancy-border"></div>
+        <div class="fancy-border"></div>
+    </div>
     <div id="DivForm">
         <form name="FormCadastro" id="FormCadastro" antion="./Cadastro.php" method="POST"> 
             <div id="Form-Card">
@@ -40,11 +45,14 @@
                         <input class="Input" type="email" id="email" name="email" placeholder="E-mail">
                     </div>
                     <div class="Form-I">
+                        <input class="Input" type="password" name="password" id="password" placeholder="Senha">
+                    </div>
+                    <div class="Form-I">
                         <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone">
                     </div>
                     <div class="Form-I">
-                        <p>Já possui um <a href="./Login.html">cadastro?</a></p>
-                        <input type="submit" id="botao" name="botao" value="Cadastrar">                        
+                        <p>Já tem uma conta? <a href="./Login.html">Entrar</a></p>
+                        <input type="submit" id="botao" name="botao" value="Cadastrar">                                                
                     </div>
                 </div>
             </div>

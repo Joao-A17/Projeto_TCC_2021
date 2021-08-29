@@ -9,30 +9,74 @@ body{
 }
 
 input::placeholder {
-    color: var(--corP);
+    color: var(--corL);
+}
+
+#divDesign{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.fancy-border{
+    margin-right: 20px;
+    width: 350px;
+    height: 350px;
+    background-image: linear-gradient(to bottom, var(--corS), var(--corP));
+    animation: transformação 5s ease-in-out infinite, cima-baixo 3s infinite alternate;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+    z-index: 5;
+}
+
+@keyframes cima-baixo{
+  from {
+    transform: translateY(70%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes transformação{
+    0% {
+        border-radius:  30% 70% 70% 30% / 30% 30% 70% 70%;
+        background: linear-gradient(45deg, var(--corD) 0%, var(--corD2) 100%);
+    } 
+    
+    50% {
+        border-radius:  30% 60% 70% 40% / 20% 60% 30% 90%;
+        background: linear-gradient(45deg, var(--corD2) 0%, var(--corD) 100%);
+    }
+    
+    100% {
+      border-radius:  30% 70% 70% 30% / 30% 30% 70% 70%;
+      background: linear-gradient(45deg, var(--corD) 0%, var(--corD2) 100%);
+    } 
 }
 
 .logo{
-    margin-top: 0px;
-    margin-left: 70%;
+    position: absolute;
+    margin-left: 50px;
+    z-index: 10;
+    margin-top: 20px;
 }
 
 #Form-Card{
 	background-image: linear-gradient(to top, var(--corD2), var(--corD));
-    border: 3px solid var(--tranp);
-    box-shadow: 0 0 20px var(--tranp);
-    border-radius: 51% 49% 89% 11% / 49% 38% 62% 51% ;
-    width: 780px;
-    height: 550px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px var(--corP);
+    border: none;
+    border-radius: 33px;
+    border-left: 3px solid var(--corP);
+    border-right: 3px solid var(--corP);
+    width: 600px;
+    height: 100vh;
     text-align: center;
 }
 
-#Form-Card h2{
-    margin-top: 10px;
+#Form-Card h2{    
+    margin-top: 20px;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
@@ -40,21 +84,17 @@ input::placeholder {
     font-family: 'Gugi', sans-serif;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 24px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 4px;    
 }
 
 .Icon{
-    font-size: 60px;
+    font-size: 90px;
     margin-top: 20px;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
-}
-
-#Registros{
-    width: 70%;
 }
 
 .Form-I{ 
@@ -65,7 +105,7 @@ input::placeholder {
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
     height: 38px;
     width: 320px;

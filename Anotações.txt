@@ -1,49 +1,14 @@
-Estrutura Básica de HTML
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Título da página</title>
-    <meta charset="utf-8"/>
-</head>
-<body>
-
-</body>
-</html>
-
-<!DOCTYPE html> – Essa tag informa ao navegador a versão do HTML 
-que está sendo utilizada no documento. Por exemplo: no HTML5, 
-basta incluir !DOCTYPE html, e assim o navegador já saberá que 
-se trata de um documento na versão HTML5.
-
-<html></html> – Esta tag é o elemento básico da estrutura do HTML. 
-Assim sendo, ela conterá todos os elementos do seu documento. 
-Todo documento HTML deve iniciar e finalizar com essa tag.
-
-<header></header> – Essas tags definem um cabeçalho. Portanto, 
-todo conteúdo que estiver dentro dela faz parte de um cabeçalho, 
-podendo ser utilizado dentro de outras sessões. 
-
-<title></title> – Essa tag define o título da sua página, 
-o nome que aparecerá na sua aba, janela ou guia.
-
-<meta/> – Essa tag permite inserir metadados ao seu documento, 
-no caso acima, a informação charset=”UTF-8″, que garante a compatibilidade 
-do código com os caracteres de padrão latino americano.
-
-<body></body> – Finalmente, a tag que representa o corpo do documento. 
-Em síntese, é nessa tag que todos os elementos visíveis do seu site devem ser inseridos.
-
-*   O charset UTF-8:
- é o que usamos na web atual para representar qualquer caractere de qualquer idioma. 
- Ao usar o charset dentro da tag meta de nosso arquivo estamos dizendo ao navegador: 
- quando for ler esse arquivo, use as regras do charset UTF-8.
-
-
 Botão de excluir:           https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
 Botão Adicionar:            https://pt.stackoverflow.com/questions/454159/como-duplicar-ou-clonar-uma-div-em-java-script-e-ler-todos-os-elementos-em-asp-n
 Criador de bordas:          https://9elements.github.io/fancy-border-radius/
+duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criando-id%c2%b4s-din%c3%a2micos-para-minhas-div%c2%b4s-no-javascript
 
 Pedentes:
 duplicar o id="Pint-Completa" da tela do pintor
-Criar o Banco de Dados
+Duplicando usuarios do Banco
+Função de trocar de imagem está dando erro
+
+Banco de Dados
+Username:       root
+senha:          TccInfo2021
+PalavraChave:   NtSqF3r0jUpKRhfq

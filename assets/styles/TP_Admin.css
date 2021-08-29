@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px;
     border: 2px solid var(--corS);
 }
-.espaço{
+.espaço{    
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 5px;
@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb{
     color: var(--corP);
 }
 
-.Pintura,.Pintura2,.Pintura3{
+.Pintura0,.Pintura1,.Pintura2{
     width: 100%;
     border-radius: 20px;
 }
@@ -254,7 +254,7 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 2px solid var(--corS);
 }
 
-#PNPint{
+#SelectIMG0{
     display: none;
 }
 
