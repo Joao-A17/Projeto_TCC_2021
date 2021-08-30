@@ -27,13 +27,11 @@ body::-webkit-scrollbar-thumb{
 .espaço{    
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 5px;
+    padding: 1px;
     border-radius: 50px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to left, var(--corP), var(--corS));
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corP); 
 }
 
 .Menu{
@@ -80,7 +78,7 @@ body::-webkit-scrollbar-thumb{
     border: 2px solid var(--corP);
     border-radius: 8px;
     box-shadow: 0px 0px 5px var(--corP);
-    transition: .4s;
+    transition: .3s;
 }
 
 .btn-menu:hover{
@@ -102,9 +100,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 100px;
 }
 
-#btn-edit,#btn-delete,
-#btn-edit2,#btn-delete2,
-#btn-edit3,#btn-delete3{
+#btn-edit,#btn-delete{
     margin-top: 20px;  
     margin-left: 50%;
     margin-bottom: 30px;
@@ -125,16 +121,14 @@ body::-webkit-scrollbar-thumb{
     transition: .4s;
 }
 
-#btn-edit:hover,#btn-delete:hover,
-#btn-edit2:hover,#btn-delete2:hover,
-#btn-edit3:hover,#btn-delete3:hover{
+#btn-edit:hover,#btn-delete:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-.Cont{
+.Pint-Completa{
     width: 80%;
     display: inline-flex;
 }
@@ -179,7 +173,7 @@ body::-webkit-scrollbar-thumb{
     margin-left: 20px;
 }
 
-#Nome-Pint,#Nome-Pint2,#Nome-Pint3{
+#Nome-Pint{
     font-size: 35px;
     font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
@@ -188,7 +182,7 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Desc-Pint,#Desc-Pint2,#Desc-Pint3{
+#Desc-Pint{
     margin-top: 10px;
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
@@ -198,7 +192,7 @@ body::-webkit-scrollbar-thumb{
 
 /* ------------------------------------Editar------------------------------------ */
 
-#Editar,#Editar2,#Editar3{
+#Editar{
     width: 100%;
     margin-top: 30px;
     text-align: center;
@@ -209,7 +203,7 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 3px solid var(--corS);
 }
 
-#Editar h2,#Editar2 h2,#Editar3 h2{
+#Editar h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -219,18 +213,14 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Editar input::placeholder,
-#Editar2 input::placeholder,
-#Editar3 input::placeholder {
+#Editar input::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--corL);
 }
 
 
-#NNPint,#DNPint,
-#NNPint2,#DNPint2,
-#NNPint3,#DNPint3{
+#NNPint,#DNPint{
     height: 40px;
     width: 400px;
     font-size: 20px;
@@ -247,9 +237,7 @@ body::-webkit-scrollbar-thumb{
     box-sizing: border-box;
     transition: .3s;
 }
-#NNPint:focus,#DNPint:focus,
-#NNPint2:focus,#DNPint2:focus,
-#NNPint3:focus,#DNPint3:focus{
+#NNPint:focus,#DNPint:focus{
     width: 480px;
     border-bottom: 2px solid var(--corS);
 }
@@ -258,15 +246,7 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 
-#PNPint2{
-    display: none;
-}
-
-#PNPint3{
-    display: none;
-}
-
-.SelectP,.SelectP2,.SelectP3{
+.SelectP{
     padding: 5px 25px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -282,16 +262,14 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 
-.SelectP:hover,
-.SelectP2:hover,
-.SelectP3:hover{
+.SelectP:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-#btn-SP,#btn-SP2,#btn-SP3{
+#btn-SP{
     width: 100px;
     height: 40px;
     margin-bottom: 20px;
@@ -311,9 +289,7 @@ body::-webkit-scrollbar-thumb{
     transition: .3s;
 }
 
-#btn-SP:hover,
-#btn-SP2:hover,
-#btn-SP3:hover{
+#btn-SP:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
