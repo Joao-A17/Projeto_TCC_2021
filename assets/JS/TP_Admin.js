@@ -1,9 +1,10 @@
 /* Função de Adicionar a div PintCompletaa */
 var FundoPint = document.getElementById("Cont-Master");
 var PintDiv = document.querySelector(".Pint-Completa");
-function Adicionar(){
-    var Clonar = PintDiv.cloneNode(true);
-    FundoPint.appendChild(Clonar);
+
+function Adicionar(){    
+    var Clone = PintDiv.cloneNode(true);
+    FundoPint.appendChild(Clone); 
 }
 /* Aparecer a div de Editar
    Pegar o butão e a div com o document
@@ -12,7 +13,7 @@ function Adicionar(){
    para  para colocar o dislpay block para mostar
    e assim sucessivamente */
 var btnEdit = document.getElementById("btn-edit");
-var menuEdit = document.getElementById("Editar");
+var menuEdit = document.querySelector(".Editar");
 menuEdit.style.display = "none";
 function AparecerE(){
     if(menuEdit.style.display === "none"){
@@ -76,6 +77,6 @@ function showThumbnail(files) {
 /* Botão de excluir */
 function Excluir(){
     if (PintDiv.parentNode) {
-    PintDiv.parentNode.removeChild(PintDiv)[i];
+    PintDiv.parentNode.removeChild(PintDiv);
     }
 }

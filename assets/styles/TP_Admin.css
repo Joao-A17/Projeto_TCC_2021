@@ -11,19 +11,6 @@ body{
     background-image: linear-gradient(to top left, var(--corD), var(--corD2));
 }
 
-body::-webkit-scrollbar{
-    width: 15px;              
-}
-  
-body::-webkit-scrollbar-track{
-    background: var(--corL);
-}
-  
-body::-webkit-scrollbar-thumb{
-    background-color: var(--corD);
-    border-radius: 20px;
-    border: 2px solid var(--corS);
-}
 .espaço{    
     margin-top: 50px;
     margin-bottom: 50px;
@@ -91,7 +78,6 @@ body::-webkit-scrollbar-thumb{
 .container{
     padding-top: 50px;
     border-radius: 10px;
-    border: 2px solid var(--corS);
     box-shadow: 0px 0px 15px var(--corD);
     background: var(--corD);
 }
@@ -100,7 +86,7 @@ body::-webkit-scrollbar-thumb{
     margin-top: 100px;
 }
 
-#btn-edit,#btn-delete{
+.btn-edit,.btn-delete{
     margin-top: 20px;  
     margin-left: 50%;
     margin-bottom: 30px;
@@ -121,7 +107,7 @@ body::-webkit-scrollbar-thumb{
     transition: .4s;
 }
 
-#btn-edit:hover,#btn-delete:hover{
+.btn-edit:hover,.btn-delete:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
@@ -192,7 +178,7 @@ body::-webkit-scrollbar-thumb{
 
 /* ------------------------------------Editar------------------------------------ */
 
-#Editar{
+.Editar{
     width: 100%;
     margin-top: 30px;
     text-align: center;
@@ -203,7 +189,7 @@ body::-webkit-scrollbar-thumb{
     border-bottom: 3px solid var(--corS);
 }
 
-#Editar h2{
+.Editar h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -213,7 +199,7 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 }
 
-#Editar input::placeholder{
+.Editar input::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--corL);
