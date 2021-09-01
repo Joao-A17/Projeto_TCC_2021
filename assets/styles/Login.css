@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-    background: var(--corD2);
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--corD) 100%);
 }
 
 .CimaD{
@@ -58,34 +58,38 @@ body{
 /* mudar a cor dos inputs */
 input::placeholder {
     color: var(--corP);
-    font-family: 'Gugi', cursive;
-    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
 }
 
 /* Campo de texto Email e Senha*/
 .Inputs{
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
     display: block;
     margin: 30px auto;
-    text-align: center;
     height: 38px;
     width: 320px;
     outline: none;
     background: var(--corD2);
     color: var(--corS);
     border: none;
-    border-radius: 20px;
-    border-bottom: 3px solid var(--corP);
+    border-radius: 8px;
+    border-top: 1px solid var(--corP);
+    border-bottom: 1px solid var(--corP);
+    border-left: 5px solid var(--corP);
+    border-right: 5px solid var(--corP);
     outline: none;
     box-sizing: border-box;
-    transition: .5s;
+    transition: .3s;
 }
 
 /* Animação de clicar nos campos focus*/
 .Inputs:focus{
     width: 100%;
-    border-bottom: 2px solid var(--corS);
+    border-top: 1px solid var(--corS);
+    border-bottom: 1px solid var(--corS);
+    border-left: 5px solid var(--corS);
+    border-right: 5px solid var(--corS);
 }
 
 /* Modificação do botão enviar*/
@@ -100,7 +104,7 @@ form input[type=submit]{
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    border-radius: 24px;
+    border-radius: 8px;
     background: var(--tranp);
     color: var(--corP);
     border: 2px solid var(--tranp);
@@ -118,33 +122,18 @@ form input[type=submit]:hover{
 
 /* cadastrar */
 
-.txtC{
+.card-group p{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-	background-image: linear-gradient(to top left, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
-	text-transform: uppercase;
+	color: var(--corL);
 }
 
-.social-media{
-    align-items: center;
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 45px;
+.card-group a{
+    font-family: 'Josefin Sans', sans-serif;
+	color: var(--corP);
+    transition: .7s;
 }
-
-.Redes{
-    width: 80px;
-    border: none;
-    color: var(--corL);
-    cursor: pointer;
-    transition: .5s;
-}
-
-.Redes:hover{
-    background-image: linear-gradient(to top, var(--corS), var(--corP));
-  	-webkit-background-clip: text;
-    color: transparent;
+.card-group a:hover{
+	color: var(--corS);
 }
