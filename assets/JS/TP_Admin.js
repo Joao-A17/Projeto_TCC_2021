@@ -2,9 +2,12 @@
 var FundoPint = document.getElementById("Cont-Master");
 var PintDiv = document.querySelector(".Pint-Completa");
 
-function Adicionar(){    
+function Adicionar(){   /* 
     var Clone = PintDiv.cloneNode(true);
-    FundoPint.appendChild(Clone); 
+    FundoPint.appendChild(Clone); */
+    var NovaPintDiv = document.createElement('div');
+    FundoPint.appendChild(NovaPintDiv);
+    NovaPintDiv.className.add('Pint-Completa')
 }
 /* Aparecer a div de Editar
    Pegar o butão e a div com o document

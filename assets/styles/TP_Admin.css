@@ -86,7 +86,7 @@ body{
     margin-top: 100px;
 }
 
-.btn-edit,.btn-delete{
+.btn-delete{
     margin-top: 20px;  
     margin-left: 50%;
     margin-bottom: 30px;
@@ -255,27 +255,25 @@ body{
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-#btn-SP{
-    width: 100px;
+.btn-SP{
+    width: 200px;
     height: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 40%;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;          
     border: 0;
     cursor: pointer;
-    display: flex;
     justify-content: center;
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
     color: var(--corP);
-    border: 2px solid var(--tranp);
+    border: 2px solid var(--corP);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
-#btn-SP:hover{
+.btn-SP:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);

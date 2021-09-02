@@ -12,6 +12,7 @@
     <nav class="Menu">
         <a href="../InPinturas/InPinturas.html" class="Logo">Magics Paintings</a>            
         <buttom class="btn-menu" onclick="Adicionar()"><i class="fas fa-plus IconG"></i>Adicionar</buttom>
+        <buttom class="btn-menu" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
@@ -30,7 +31,8 @@
                 <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
-                <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>
+                <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>  
+                <input type="submit" value="Salvar Alterações" class="btn-SP" onclick="NPintura()">  
             </div>    
                 <div id="Cont-Master">
                     <div class="Pint-Completa">
@@ -44,15 +46,13 @@
                                 Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
                                 mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
                                 ele é conhecido por sua habilidade, Snatch.</p>
-                                <buttom class="btn-edit" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
                                 <button class="btn-delete" onclick="Excluir()"><i class="fas fa-trash-alt IconG"></i>Excluir</button> 
                             <div class="Editar">
                                 <h2>Novas Alterações</h2>
                                 <input type="text" id="NNPint" maxlength="20" placeholder="Digite o nome da pintura">
                                 <input type="text" id="DNPint" placeholder="Digite a descrição da pintura">
                                 <input type="file" class="form-control-file" name="foto" id="SelectIMG0" accept="image/*">   
-                                <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>        
-                                <input type="submit" value="Salvar" id="btn-SP" onclick="NPintura()">                      
+                                <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>                          
                             </div>   
                         </div>
                     </div>                    
