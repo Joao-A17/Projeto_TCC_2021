@@ -93,6 +93,7 @@ body{
     width: 200px;
     height: 32px;
     cursor: pointer;
+    font-size: 15px;
     font-family: 'Gugi', sans-serif;
     display: flex;
     justify-content: center;
@@ -121,6 +122,7 @@ body{
 
 .Fundo-Pint{
     margin-left: 20px;
+    margin-right: 20px;
     width: 50%;
     height: 100%;
     border-radius: 20px;
@@ -135,12 +137,16 @@ body{
     margin-right: 10px;
 }
 
+.IconE{
+    font-size: 20px;
+    margin-left: 10px;}
+
 .Icon{
     font-size: 50px;
     color: var(--corP);
 }
 
-.Pintura0,.Pintura1,.Pintura2{
+.Pintura0{
     width: 100%;
     border-radius: 20px;
 }
@@ -159,7 +165,7 @@ body{
     margin-left: 20px;
 }
 
-#Nome-Pint{
+.Nome-Pint{
     font-size: 35px;
     font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
@@ -168,7 +174,7 @@ body{
 	text-transform: uppercase;
 }
 
-#Desc-Pint{
+.Desc-Pint{
     margin-top: 10px;
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
@@ -206,7 +212,7 @@ body{
 }
 
 
-#NNPint,#DNPint{
+.NNPint,.DNPint{
     height: 40px;
     width: 400px;
     font-size: 20px;
@@ -223,7 +229,7 @@ body{
     box-sizing: border-box;
     transition: .3s;
 }
-#NNPint:focus,#DNPint:focus{
+.NNPint:focus,.DNPint:focus{
     width: 480px;
     border-bottom: 2px solid var(--corS);
 }
@@ -256,9 +262,11 @@ body{
 }
 
 .btn-SP{
+    position: fixed;
+    right: 30px;
+    top: 100px;
     width: 200px;
     height: 40px;
-    margin-left: 40%;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;          
     border: 0;
