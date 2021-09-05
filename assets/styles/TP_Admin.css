@@ -55,7 +55,7 @@ body{
     height: 32px;
     cursor: pointer;
     font-family: 'Gugi', sans-serif;
-    display: flex;
+    display: inline-flex;
     text-transform: uppercase;
     letter-spacing: 5px;
     justify-content: center;
@@ -73,6 +73,15 @@ body{
     color: var(--corD);
     border: 2px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
+}
+
+.edp{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.botaoA{    
+    margin-left: 20px;
 }
 
 .container{
@@ -123,7 +132,7 @@ body{
 .Fundo-Pint{
     margin-left: 20px;
     margin-right: 20px;
-    width: 50%;
+    width: 60%;
     height: 100%;
     border-radius: 20px;
     border: 0;
@@ -146,19 +155,9 @@ body{
     color: var(--corP);
 }
 
-.Pintura0{
+.Pintura{
     width: 100%;
     border-radius: 20px;
-}
-
-.NomeT{
-    margin-bottom: 20px;
-    font-size: 35px;
-    font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
-	text-transform: uppercase;
 }
 
 .Fundo-Desc{
@@ -186,6 +185,7 @@ body{
 
 .Editar{
     width: 100%;
+    height: 300px;
     margin-top: 30px;
     text-align: center;
 	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
@@ -262,9 +262,6 @@ body{
 }
 
 .btn-SP{
-    position: fixed;
-    right: 30px;
-    top: 100px;
     width: 200px;
     height: 40px;
     font-size: 20px;
@@ -273,19 +270,19 @@ body{
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    border-radius: 24px;
+    border-radius: 8px;
     background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--corP);
+    color: var(--corL);
+    border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;
+    transition: .3s;  
 }
 
 .btn-SP:hover{
-    background: var(--corP);
+    background: var(--corL);
     color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 2px solid var(--corL);
+    box-shadow: 0px 0px 10px var(--corL);
 }
 
 .InfoP{

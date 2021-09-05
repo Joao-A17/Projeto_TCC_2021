@@ -1,92 +1,122 @@
-/* Função de Adicionar a div PintCompletaa */
-var ContMaster = document.getElementById("Cont-Master");
-var PintDiv = document.querySelector(".Pint-Completa");
-
-function Adicionar(){   /* 
-    var Clone = PintDiv.cloneNode(true);
-    FundoPint.appendChild(Clone); */
-    var NovaPintCompleta = document.createElement('div');
-    var NovaFundoPintDiv = document.createElement('div');
-    var NovaPintura = document.createElement('img');
-    var NovoFundoDecs = document.createElement('div');
-    var NovoNomePint = document.createElement('h1');
-    var NovaDescPint = document.createElement('p');
-    var NovoBtnExcluir = document.createElement('buttom');
-    var NovoBtnIcon = document.createElement('i');
-    var NovoMenuEdit = document.createElement('div');
-    var NovotxtAlter = document.createElement('h2');
-    var NovoInputNN = document.createElement('input');
-    var NovoInputDN = document.createElement('input');
-    var NovoInputFoto = document.createElement('input');
-    var NovoLabelSelect = document.createElement('label');
-    ContMaster.appendChild(NovaPintCompleta);
-    NovaPintCompleta.appendChild(NovaFundoPintDiv);
-    NovaFundoPintDiv.appendChild(NovaPintura);
-    NovaPintCompleta.appendChild(NovoFundoDecs);
-    NovoFundoDecs.appendChild(NovoNomePint);    
-    NovoFundoDecs.appendChild(NovaDescPint);    
-    NovoFundoDecs.appendChild(NovoBtnExcluir);
-    NovoNomePint.innerHTML = "Nome da Pintura";
-    NovaDescPint.innerHTML = "Descrição da Pintura";
-    NovoBtnExcluir.innerHTML = "Excluir  ";
-    NovoBtnExcluir.appendChild(NovoBtnIcon);
-    NovoFundoDecs.appendChild(NovoMenuEdit);
-    NovoMenuEdit.appendChild(NovotxtAlter);
-    NovotxtAlter.innerHTML = "Novas Alterações";    
-    NovoMenuEdit.appendChild(NovoInputNN);
-    NovoMenuEdit.appendChild(NovoInputDN);
-    NovoMenuEdit.appendChild(NovoInputFoto);
-    NovoMenuEdit.appendChild(NovoLabelSelect);
-    NovaPintCompleta.className = "Pint-Completa";
-    NovaFundoPintDiv.className = "Fundo-Pint";
-    NovaPintura.src = "../assets/IMAGES/Edits/Ban.png";
-    NovaPintura.className = "Pintura0";
-    NovoFundoDecs.className = "Fundo-desc";
-    NovoNomePint.className = "Nome-Pint";
-    NovaDescPint.className = "Desc-Pint";
-    NovoBtnExcluir.className = "btn-delete";
-    NovoBtnIcon.className = "fas fa-trash-alt IconG";
-    NovoMenuEdit.className = "Editar";
-    NovoInputNN.type = "text";
-    NovoInputNN.className = "NNPint";
-    NovoInputNN.maxLength = "20";
-    NovoInputNN.placeholder = "Digite o nome da pintura";
-    NovoInputDN.type = "text";
-    NovoInputDN.className = "DNPint";
-    NovoInputDN.placeholder = "Digite o nome da pintura";
-    NovoInputFoto.type = "file";
-    NovoInputFoto.className = "form-control-file";
-    NovoInputFoto.name = "foto";
-    NovoInputFoto.id = "SelectIMG0";
-    NovoInputFoto.accept = "image/*";
-    NovoLabelSelect.innerHTML ="Selecionar Imagem";
-    NovoLabelSelect.htmlFor = "SelectIMG0";
-    NovoLabelSelect.className = "SelectP";
-}
 /* Aparecer a div de Editar
    Pegar o butão e a div com o document
    colocando a div com display none para desaparecer 
    e depois adicionando um eventListener 
    para  para colocar o dislpay block para mostar
    e assim sucessivamente */
-var btnEdit = document.getElementById("btn-edit");
+var ContMaster = document.getElementById("Cont-Master");
+var PintDiv = document.querySelector(".Pint-Completa");
+var BtnAdd = document.getElementById("btn-add");
+var btnExcluir = document.querySelector(".btn-delete");
 var menuEdit = document.querySelector(".Editar");
 var btnSalvar = document.querySelector(".btn-SP");
-var btnExcluir = document.querySelector(".btn-delete");
 menuEdit.style.display = "none";
 btnSalvar.style.display = "none";
 btnExcluir.style.display = "none";
+BtnAdd.style.display = "none";
 function AparecerE(){
-    if(menuEdit.style.display === "none", btnSalvar.style.display === "none",btnExcluir.style.display === "none"){
+    if(menuEdit.style.display === "none", btnSalvar.style.display === "none",btnExcluir.style.display === "none",BtnAdd.style.display === "none"){
         menuEdit.style.display = "block";
         btnSalvar.style.display = "block";
         btnExcluir.style.display = "block";
+        BtnAdd.style.display = "inline-flex";
     } else {
         menuEdit.style.display = "none";
         btnSalvar.style.display = "none";
         btnExcluir.style.display = "none";
+        BtnAdd.style.display = "none";
     }
 }
+BtnAdd.addEventListener('click', function(NPintura){
+    var aPintCompleta = document.createElement('div');
+    var aFundoPintDiv = document.createElement('div');
+    var aPintura = document.createElement('img');
+    var aFundoDecs = document.createElement('div');
+    var aNomePint = document.createElement('h1');
+    var aDescPint = document.createElement('p');
+    var aBtnExcluir = document.createElement('buttom');
+    var aBtnIcon = document.createElement('i');
+    var aMenuEdit = document.createElement('div');
+    var atxtAlter = document.createElement('h2');
+    var aInputNN = document.createElement('input');
+    var aInputDN = document.createElement('input');
+    var aInputFoto = document.createElement('input');
+    var aLabelSelect = document.createElement('label');
+    var Espaço1 = document.createElement('div');
+    ContMaster.appendChild(aPintCompleta);
+    aPintCompleta.appendChild(aFundoPintDiv);
+    aFundoPintDiv.appendChild(aPintura);
+    aPintCompleta.appendChild(aFundoDecs);
+    aFundoDecs.appendChild(aNomePint);    
+    aFundoDecs.appendChild(aDescPint);    
+    aFundoDecs.appendChild(aBtnExcluir);
+    aNomePint.innerHTML = "Nome da Pintura";
+    aDescPint.innerHTML = "Descrição da Pintura";
+    aBtnExcluir.innerHTML = "Excluir";
+    aBtnExcluir.appendChild(aBtnIcon);
+    aFundoDecs.appendChild(aMenuEdit);
+    aMenuEdit.appendChild(atxtAlter);
+    atxtAlter.innerHTML = "Novas Alterações";    
+    aMenuEdit.appendChild(aInputNN);
+    aMenuEdit.appendChild(aInputDN);
+    aMenuEdit.appendChild(aInputFoto);
+    aMenuEdit.appendChild(aLabelSelect);
+    ContMaster.appendChild(Espaço1);
+    aPintCompleta.className = "Pint-Completa";
+    aFundoPintDiv.className = "Fundo-Pint";
+    aPintura.src = "../assets/IMAGES/Edits/Ban.png";
+    aPintura.className = "Pintura";
+    aFundoDecs.className = "Fundo-desc";
+    aNomePint.className = "Nome-Pint";
+    aDescPint.className = "Desc-Pint";
+    aBtnExcluir.className = "btn-delete";
+    aBtnIcon.className = "fas fa-trash-alt IconG";
+    aMenuEdit.className = "Editar";
+    aInputNN.type = "text";
+    aInputNN.className = "NNPint";
+    aInputNN.maxLength = "20";
+    aInputNN.placeholder = "Digite o nome da pintura";
+    aInputDN.type = "text";
+    aInputDN.className = "DNPint";
+    aInputDN.placeholder = "Digite o nome da pintura";
+    aInputFoto.type = "file";
+    aInputFoto.className = "form-control-file";
+    aInputFoto.name = "foto";
+    aInputFoto.id = "SelectIMG0";
+    aInputFoto.accept = "image/*";
+    aLabelSelect.innerHTML ="Selecionar Imagem";
+    aLabelSelect.htmlFor = "SelectIMG0";
+    aLabelSelect.className = "SelectP";
+    Espaço1.className = "espaço";
+    /* Botão de excluir */    
+    aBtnExcluir.addEventListener('click', function() {                
+        if (aPintCompleta.parentNode){            
+            aPintCompleta.parentNode.removeChild(aPintCompleta);
+            Espaço1.parentNode.removeChild(Espaço1);
+        }    
+    });
+    /* Alterar Nomes Pint */
+    var NovoTitulo = "";
+    var NocaDescrição = "";
+    btnSalvar.addEventListener('click', function() {
+        if(aNomePint.value.length <= 1){
+            alert("Por favor, preencha o nome da pintura com mais letras");
+            aMenuEdit.style.display = "none";
+        }
+        else if(aDescPint.value.length <= 1){
+            alert("Por favor, preencha a descrição da pintura com mais letras");
+            aMenuEdit.style.display = "none";
+        }
+        else{
+            NovoTitulo = NomePintura.value;
+            aNomePint.innerHTML = NovoNomeP;
+            NocaDescrição = descPintura.value;
+            aDescPint.innerHTML = NovaDesc;
+            aMenuEdit.style.display = "none";
+        }
+    });
+});
+
 /* Editar Pintura
  1º criando variavel para o valor dos campos
    2º chamar a função do click do butão
@@ -97,23 +127,21 @@ function AparecerE(){
 */
 var NovoNomeP = "";
 var NovaDesc = "";
-var NomePintura = document.querySelector("#NNPint");
-var descPintura = document.querySelector("#DNPint");
+var NomePintura = document.querySelector(".NNPint");
+var descPintura = document.querySelector(".DNPint");
 
 function NPintura(){
     if(NomePintura.value.length <= 1){
-        alert("Por favor, preencha o nome da pintura com mais letras");
         menuEdit.style.display = "none";
     }
     else if(descPintura.value.length <= 1){
-        alert("Por favor, preencha a descrição da pintura com mais letras");
         menuEdit.style.display = "none";
     }
     else{
     NovoNomeP = NomePintura.value;
-    document.getElementById("Nome-Pint").innerHTML = NovoNomeP;
+    document.querySelector(".Nome-Pint").innerHTML = NovoNomeP;
     NovaDesc = descPintura.value;
-    document.getElementById("Desc-Pint").innerHTML = NovaDesc;
+    document.querySelector(".Desc-Pint").innerHTML = NovaDesc;
     menuEdit.style.display = "none";
     }
 }
@@ -122,7 +150,7 @@ function NPintura(){
    criar um EventListener change(Alterar)      */
 
 NovaPintura0 = document.getElementById("SelectIMG0");
-AntigaPintura0 = document.querySelector(".Pintura0");
+AntigaPintura0 = document.querySelector(".Pintura");
    
 NovaPintura0.addEventListener('change', function(trocar0) {
     showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
@@ -140,8 +168,8 @@ function showThumbnail(files) {
     }
 } 
 /* Botão de excluir */
-function Excluir(){
+btnExcluir.addEventListener('click', function() {        
     if (PintDiv.parentNode) {
-    PintDiv.parentNode.removeChild(PintDiv);
-    }
-}
+        PintDiv.parentNode.removeChild(PintDiv);        
+    }    
+});

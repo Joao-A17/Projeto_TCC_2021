@@ -4,11 +4,17 @@ Criador de bordas:          https://9elements.github.io/fancy-border-radius/
 duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criando-id%c2%b4s-din%c3%a2micos-para-minhas-div%c2%b4s-no-javascript
 
 Pedentes:
-Botões da tela do Rodolfinho
+Fazer Tela Sobre
+Fazer Tela Ajuda
+Fazer Tela Editar Perfil Do Pintor
+Fazer Tela Editar Perfil Do Usuario
 Erro:   Duplicando usuarios do Banco
 
 Login do Banco de Dados
 Username:       root
 senha:          TccInfo2021
 PalavraChave:   NtSqF3r0jUpKRhfq
+
 A parte mais difícil que eu achei na parte de programação foi a conexão do banco de dados e o evento de adicionar uma nova postagem caso o Artista quisesse
+
+Parei em alterar os nomes da pintura

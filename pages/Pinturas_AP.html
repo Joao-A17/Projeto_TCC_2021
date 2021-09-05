@@ -11,8 +11,7 @@
 <body>
     <nav class="Menu">
         <a href="../InPinturas/InPinturas.html" class="Logo">Magics Paintings</a>            
-        <buttom class="btn-menu" onclick="Adicionar()"><i class="fas fa-plus IconG"></i>Adicionar</buttom>
-        <buttom class="btn-menu" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom>  
+        <input type="submit" value="Salvar Alterações" class="btn-SP" onclick="NPintura()">  
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
@@ -24,6 +23,7 @@
                     <div class="Info-Admin">
                         <h1 class="Nome-Admin">MC Rodolfinho</h1>
                         <p class="Desc-Admin">Ao som do MC Rodolfinho HÀAAAAAAAAAAA os mlk é liso</p>
+                        <a href="./PerfilEdit" class="btn-menu edp">Editar Perfil</a>
                     </div>
                 </div>
                 <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
@@ -32,12 +32,13 @@
                 <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>  
+                <buttom class="btn-menu botaoA" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar</buttom> 
+                <buttom id="btn-add" class="btn-menu botaoA" ><i class="fas fa-plus IconG"></i>Adicionar</buttom>
             </div>    
                 <div id="Cont-Master">
-                    <input type="submit" value="Salvar Alterações" class="btn-SP" onclick="NPintura()">  
                     <div class="Pint-Completa">
                         <div class="Fundo-Pint">
-                            <img class="Pintura0" src="../assets/IMAGES/Edits/Ban.png">
+                            <img class="Pintura" src="../assets/IMAGES/Edits/Ban.png">
                         </div>                                          
                         <div class="Fundo-Desc">   
                             <h1 class="Nome-Pint">Ban</h1>
@@ -46,7 +47,7 @@
                                 Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
                                 mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
                                 ele é conhecido por sua habilidade, Snatch.</p>
-                            <button class="btn-delete" onclick="Excluir()">Excluir<i class="fas fa-trash-alt IconE"></i></button> 
+                            <button class="btn-delete" >Excluir<i class="fas fa-trash-alt IconE"></i></button> 
                             <div class="Editar">
                                 <h2>Novas Alterações</h2>
                                 <input type="text" class="NNPint" maxlength="20" placeholder="Digite o nome da pintura">
@@ -55,7 +56,8 @@
                                 <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>                          
                             </div>   
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="espaço"></div>                                        
                 </div>
         </div>                  
         <!-- Scripts -->
