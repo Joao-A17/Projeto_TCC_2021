@@ -6,9 +6,9 @@ duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criand
 Pedentes:
 Fazer Tela Sobre
 Fazer Tela Ajuda
-Fazer Tela Editar Perfil Do Pintor
 Fazer Tela Editar Perfil Do Usuario
 Erro:   Duplicando usuarios do Banco
+fazer a troca de imagens das pinturas
 
 Login do Banco de Dados
 Username:       root
@@ -16,5 +16,3 @@ senha:          TccInfo2021
 PalavraChave:   NtSqF3r0jUpKRhfq
 
 A parte mais difícil que eu achei na parte de programação foi a conexão do banco de dados e o evento de adicionar uma nova postagem caso o Artista quisesse
-
-Parei em alterar os nomes da pintura

@@ -75,13 +75,13 @@ body{
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-.edp{
-    margin-top: 50px;
-    margin-left: 20px;
-}
 
 .botaoA{    
     margin-left: 20px;
+}
+
+#Aparecer{
+    width: 280px;
 }
 
 .container{
@@ -125,7 +125,7 @@ body{
 }
 
 .Pint-Completa{
-    width: 80%;
+    width: 100%;
     display: inline-flex;
 }
 
@@ -139,6 +139,46 @@ body{
     border-radius: 20px;
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS); 
+}
+
+.InputP{
+    width: 280px;
+    height: 40px;
+    border: 0;
+    text-align: center;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corS);
+    transition: .3s;
+}
+.InputP:focus{
+    border-bottom: 2px solid var(--corP);
+}
+
+#BtnSP{
+    width: 120px;    
+    height: 40px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;    
+    background: var(--tranp);
+    color: var(--corL);    
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corL);
+    animation: Pulse 1s infinite;
+    transition: .4s;    
+}
+#BtnSP:hover{
+    animation: none;
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 8px var(--corL);
 }
 
 .IconG{
@@ -275,10 +315,12 @@ body{
     color: var(--corL);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
+    animation: Pulse 1s infinite;
     transition: .3s;  
 }
 
 .btn-SP:hover{
+    animation: none;
     background: var(--corL);
     color: var(--corD);
     border: 2px solid var(--corL);
@@ -311,6 +353,7 @@ body{
 }
 
 .Info-Admin{
+    display: inline-flex;
     width: 100%;
     margin-left: 100px;
 	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
@@ -320,7 +363,11 @@ body{
     border-bottom: 3px solid var(--corS); 
 }
 
-.Nome-Admin{
+.edp{
+    margin-top: 20px;
+}
+
+#Nome-Admin{
     margin-left: 20px;
     margin-top: 20px;
     font-size: 35px;
@@ -331,7 +378,7 @@ body{
 	text-transform: uppercase;
 }
 
-.Desc-Admin{
+#Desc-Admin{
     margin-left: 20px;
     margin-top: 10px;
     font-family: 'Josefin Sans', sans-serif;
@@ -428,5 +475,15 @@ body{
     .Redes{
         border: None;
         font-size: 35px;
+    }
+}
+
+@keyframes Pulse{
+    from {
+        transform: scale(.7);
+        background: var(--corL);
+        color: var(--corD);
+        border: 2px solid var(--corL);
+        box-shadow: 0px 0px 10px var(--corL);
     }
 }
