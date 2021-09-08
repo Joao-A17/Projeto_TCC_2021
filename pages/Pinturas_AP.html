@@ -1,3 +1,29 @@
+<!--<?php
+
+    require '../assets/PHP/Conexao_Banco.php';
+
+    $msg = false;
+    
+    if(isset($_POST['SalvarTudo'])){
+
+        $NomeFoto = filter_input(INPUT_POST, 'nome-foto', FILTER_SANITIZE_STRING);
+        $DescriçãoFoto = filter_input(INPUT_POST, 'descrição-foto', FILTER_SANITIZE_STRING);
+        $extensao = strtolower(pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION));
+        $novo_nome = md5(time()).".".$extensao;
+        $diretorio = "../assets/IMAGES/Fotos/";
+
+        move_uploaded_file($_FILES['foto']['tmp_name'], $diretorio.$novo_nome);
+
+        $sql_code = "INSERT INTO pinturas (IdPintura, foto, Nome da foto, Descrição da foto, Criado) VALUES(null, '$novo_nome', '$NomeFoto', '$DescriçãoFoto', NOW())";
+
+        if($conexao->query($sql_code))
+            $msg = "Salvo!!";
+        else
+            $msg = "Falha!!"; 
+    }
+
+?>
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,15 +37,16 @@
 <body>
     <nav class="Menu">
         <a href="../InPinturas/InPinturas.html" class="Logo">Magics Paintings</a>            
-        <input type="submit" value="Salvar Alterações" class="btn-SP" onclick="NPintura()">  
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
     <div class="container">
         <div class="Fundo">       
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
-                <div id="AdminForm">
-                    <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400" alt="Astro">
+                <form action="Pinturas_AP.php" method="POST" enctype="multipart/form-data" id="AdminForm">
+                    <input type="file" class="form-control-file" name="foto" id="imgPerfil" accept="image/*">
+                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
+                    <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400">                    
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
                             <h1 id="Nome-Admin">MC Rodolfinho</h1>
@@ -27,12 +54,12 @@
                             <div id="Menu-EditPerfil">                                
                                 <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
                                 <input type="text" id="InputDescAdmin" class="InputP" maxlength="60" placeholder="Alterar a Descrição">
-                                <button type="submit" id="BtnSP">Salvar</button>                                
                             </div>
+                            <button type="submit" id="BtnSP">Salvar</button>                                
                         </div>
-                        <button type="submit" class="btn-menu edp">Editar Perfil</button>
+                        <button type="button" class="btn-menu edp">Editar Perfil</button>
                     </div>
-                </div>
+                </form>
                 <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
                 <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
                 <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
@@ -43,25 +70,27 @@
                 <buttom id="btn-add" class="btn-menu botaoA" ><i class="fas fa-plus IconG"></i>Adicionar</buttom>
             </div>    
                 <div id="Cont-Master">
+                    <div id="MSG">
+                        <!-- <?php if($msg != false) echo "<p style='color: red;'> $msg </p>"?> -->
+                    </div>
                     <div class="Pint-Completa">
                         <div class="Fundo-Pint">
                             <img class="Pintura" src="../assets/IMAGES/Edits/Ban.png">
                         </div>                                          
                         <div class="Fundo-Desc">   
-                            <h1 class="Nome-Pint">Ban</h1>
-                            <p class="Desc-Pint">Ban「バン」 é um membro dos Sete Pecados Capitais, 
-                                conhecido como o Pecado da Ganância da Raposa. 
-                                Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
-                                mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
-                                ele é conhecido por sua habilidade, Snatch.</p>
+                            <h1 class="Nome-Pint">Nome da publicação</h1>
+                            <p class="Desc-Pint">Descrição da publicação</p>
                             <button class="btn-delete" >Excluir<i class="fas fa-trash-alt IconE"></i></button> 
-                            <div class="Editar">
+                            <form action="Pinturas_AP.php" method="POST" enctype="multipart/form-data" class="Editar">
                                 <h2>Novas Alterações</h2>
-                                <input type="text" class="NNPint" maxlength="50" placeholder="Digite o nome da pintura">
-                                <input type="text" class="DNPint" placeholder="Digite a descrição da pintura">
-                                <input type="file" class="form-control-file" name="foto" id="SelectIMG0" accept="image/*">   
-                                <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>                          
-                            </div>   
+                                <input type="text" class="NNPint" maxlength="50" name="nome-foto" placeholder="Digite o nome da pintura">
+                                <input type="text" class="DNPint" name="descrição-foto" placeholder="Digite a descrição da pintura">
+                                <input type="file" class="form-control-file" name="foto" id="SelectIMG0" accept="image/*">  
+                                <div id="BTN-IN">
+                                    <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>
+                                    <input type="submit" name="SalvarTudo" value="Publicar" class="btn-SP" onclick="NPintura()">
+                                </div>
+                            </form>                               
                         </div>
                     </div>
                     <div class="espaço"></div>                                        
@@ -70,5 +99,7 @@
         <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/TP_Admin.js"></script>
+
 </body>
-</html>
+</html>    
+<script>
