@@ -225,7 +225,7 @@ body{
 
 .Editar{
     width: 100%;
-    height: 300px;
+    height: 380px;
     margin-top: 30px;
     text-align: center;
 	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
@@ -251,10 +251,29 @@ body{
     color: var(--corL);
 }
 
-
-.NNPint,.DNPint{
+#InputAlt{
+    width: 320px;
     height: 40px;
+    border: 0;
+    text-align: center;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corL);
+    transition: .3s;
+}
+#InputAlt:focus{
     width: 400px;
+    border-bottom: 2px solid var(--corL);
+    box-shadow: 0 2px 5px var(--corL);
+}
+
+.InputAlt{
+    height: 40px;
+    width: 320px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     display: block;
@@ -269,9 +288,10 @@ body{
     box-sizing: border-box;
     transition: .3s;
 }
-.NNPint:focus,.DNPint:focus{
-    width: 480px;
-    border-bottom: 2px solid var(--corS);
+.InputAlt:focus{
+    width: 400px;
+    border-bottom: 2px solid var(--corP);
+    box-shadow: 0 2px 5px var(--corP);
 }
 
 #SelectIMG0{

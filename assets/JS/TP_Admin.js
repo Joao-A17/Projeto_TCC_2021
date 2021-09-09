@@ -34,8 +34,8 @@ MenuEditPerfil.style.display = "none";
 */
 var NovoNomeP = "";
 var NovaDesc = "";
-var NomePintura = document.querySelector(".NNPint");
-var descPintura = document.querySelector(".DNPint");
+var NomePintura = document.getElementById("NNPint");
+var descPintura = document.getElementById("DNPint");
 
 function NPintura(){
     if(NomePintura.value.length <= 1){
@@ -108,11 +108,11 @@ BtnAdd.addEventListener('click', function(){
     aMenuEdit.className = "Editar";
     aMenuEdit.style.display = "none";
     aInputNN.type = "text";
-    aInputNN.className = "NNPint";
+    aInputNN.id = "NNPint";
     aInputNN.maxLength = "50";
     aInputNN.placeholder = "Digite o nome da pintura";
     aInputDN.type = "text";
-    aInputDN.className = "DNPint";
+    aInputDN.id = "DNPint";
     aInputDN.placeholder = "Digite o nome da pintura";
     aInputFoto.type = "file";
     aInputFoto.className = "form-control-file";

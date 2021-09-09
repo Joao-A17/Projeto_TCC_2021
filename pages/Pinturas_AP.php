@@ -1,11 +1,12 @@
-<!--<?php
+<!-- <?php
 
-    require '../assets/PHP/Conexao_Banco.php';
+    $msg = false;    
 
-    $msg = false;
     
-    if(isset($_POST['SalvarTudo'])){
-
+    if(isset($_POST['Publicar'])){
+        
+        include_once("../assets/PHP/Conexao_Banco.php");
+        $Autor = filter_input(INPUT_POST, 'Autor', FILTER_SANITIZE_STRING);
         $NomeFoto = filter_input(INPUT_POST, 'nome-foto', FILTER_SANITIZE_STRING);
         $DescriçãoFoto = filter_input(INPUT_POST, 'descrição-foto', FILTER_SANITIZE_STRING);
         $extensao = strtolower(pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION));
@@ -14,16 +15,15 @@
 
         move_uploaded_file($_FILES['foto']['tmp_name'], $diretorio.$novo_nome);
 
-        $sql_code = "INSERT INTO pinturas (IdPintura, foto, Nome da foto, Descrição da foto, Criado) VALUES(null, '$novo_nome', '$NomeFoto', '$DescriçãoFoto', NOW())";
-
-        if($conexao->query($sql_code))
-            $msg = "Salvo!!";
+        $sql_code = "INSERT INTO pinturas (Autor, Nome da Foto, Descrição da foto, Imagem, Criado) VALUES ('$Autor', '$NomeFoto', '$DescriçãoFoto', '$novo_nome', NOW())";        
+        if($Resultado_Publicação = mysqli_query($conexao, $sql_code))
+            $msg = "Puiblicado com sucesso :)";            
         else
-            $msg = "Falha!!"; 
+            $msg = "Falha: Tente Novamente ou  espere alguns minutos :(";
+            
     }
 
-?>
--->
+?> -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,7 +43,7 @@
     <div class="container">
         <div class="Fundo">       
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
-                <form action="Pinturas_AP.php" method="POST" enctype="multipart/form-data" id="AdminForm">
+                <form action="Pinturas_AP.php" method="POST" id="AdminForm">
                     <input type="file" class="form-control-file" name="foto" id="imgPerfil" accept="image/*">
                     <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
                     <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400">                    
@@ -70,8 +70,8 @@
                 <buttom id="btn-add" class="btn-menu botaoA" ><i class="fas fa-plus IconG"></i>Adicionar</buttom>
             </div>    
                 <div id="Cont-Master">
-                    <div id="MSG">
-                        <!-- <?php if($msg != false) echo "<p style='color: red;'> $msg </p>"?> -->
+                    <div id="MSG">                        
+                        <?php if($msg != false) echo "<p class='TextE' style='color: red;'>$msg</p>"; else echo "<p class='TextE' style='color: green;'>$msg</p>"; ?> 
                     </div>
                     <div class="Pint-Completa">
                         <div class="Fundo-Pint">
@@ -83,12 +83,13 @@
                             <button class="btn-delete" >Excluir<i class="fas fa-trash-alt IconE"></i></button> 
                             <form action="Pinturas_AP.php" method="POST" enctype="multipart/form-data" class="Editar">
                                 <h2>Novas Alterações</h2>
-                                <input type="text" class="NNPint" maxlength="50" name="nome-foto" placeholder="Digite o nome da pintura">
-                                <input type="text" class="DNPint" name="descrição-foto" placeholder="Digite a descrição da pintura">
+                                <input type="text" id="InputAlt" name="Altor" placeholder="Digite o nome do autor">
+                                <input type="text" class="InputAlt" id="NNPint" maxlength="50" name="nome-foto" placeholder="Digite o nome da pintura">
+                                <input type="text" class="InputAlt" id="DNPint" name="descrição-foto" placeholder="Digite a descrição da pintura">
                                 <input type="file" class="form-control-file" name="foto" id="SelectIMG0" accept="image/*">  
                                 <div id="BTN-IN">
                                     <label for="SelectIMG0" class="SelectP">Selecionar Imagem</label>
-                                    <input type="submit" name="SalvarTudo" value="Publicar" class="btn-SP" onclick="NPintura()">
+                                    <input type="submit" name="Publicar" value="Publicar" class="btn-SP" onclick="NPintura()">
                                 </div>
                             </form>                               
                         </div>

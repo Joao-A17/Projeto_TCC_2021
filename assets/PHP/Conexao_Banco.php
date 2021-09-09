@@ -5,11 +5,11 @@
     $Nome = 'tcc_mpx';
 
     $conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome);
-
-    /* if($conexao->connect_errno){
-        echo "Erro";
+/* 
+    if($conexao->connect_errno){
+        echo "<p class='TextE' style='color: red;'>Não conectado</p>";
     }
     else{
-        echo "Conectado HAHAHAHA";
+        echo "<p class='TextE' style='color: green;'>Conectado ao banco de dados: </p><p class='TextE' style='color: green;'>$Nome</p>";
     }      */
 ?>
