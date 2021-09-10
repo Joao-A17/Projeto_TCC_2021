@@ -1,3 +1,14 @@
+<?php
+  session_start();
+
+  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+    header('Location: ./Login.php');   
+  }
+  $logado = $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/styles/Inicio.css">
+    <link rel="stylesheet" href="../assets/styles/Pinturas.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <title>Pinturas | Magics Paintings</title>
@@ -21,12 +32,13 @@
       <div class="line2"></div>
       <div class="line3"></div>
     </div>
-    <ul class="nav-list">
+    <ul class="nav-list">      
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
       <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pinturas</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
     </ul>
+    <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     <li><a href="../Login_Admin/Login.html" id="login"><i class="fas fa-power-off"></i>  Login</a></li>
   </nav>
     

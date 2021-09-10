@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
 body{
-    background: var(--corD2);
+    height: 100vh;
+    background-image: linear-gradient(to top left, var(--corD), var(--corD2));
 }
 
 nav{
@@ -35,9 +35,11 @@ nav{
 .txt2{
     font-size: 40px;
     margin-top: 200px;
-    color: var(--corS);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
 }
 
 .Icon{
@@ -71,26 +73,4 @@ nav{
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS);
     width: 100%;
-}
-
-/* Fancy-border */
-
-.fancy-border{
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    width: 350px;
-    height: 350px;
-    background-image: linear-gradient(to bottom, var(--corS), var(--corP));
-    border-radius: 30% 70% 70% 30% / 30% 53% 47% 70%;
-    animation: Lado-Lado 2s infinite alternate;
-}
-
-@keyframes Lado-Lado{
-  from {
-    transform: translateX(100vh);
-  }
-  to {
-    transform: translateX(0);
-  }
 }

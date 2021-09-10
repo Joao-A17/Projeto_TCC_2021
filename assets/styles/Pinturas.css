@@ -46,6 +46,25 @@ body::-webkit-scrollbar-thumb{
 .espaço{
     padding: 50px;
 }
+
+#btn-sair{
+    padding: 6px 25px;
+    text-decoration: none;    
+    background: var(--tranp);
+    color: var(--corL);
+    border: none;
+    border-top: 2px solid var(--corL);
+    border-bottom: 2px solid var(--corL);
+    border-radius: 8px;
+    transition: .3s;
+}
+
+#btn-sair:hover{
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 10px var(--corL);
+}
+
 /* ----------------------Inicio---------------------- */
 
 

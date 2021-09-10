@@ -4,10 +4,10 @@
    $Nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
    $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
    $Email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-   $Telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
    $Senha = filter_input(INPUT_POST, 'password' , FILTER_SANITIZE_STRING);
+   $Telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
 
-   $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Senha', '$Telefone', NOW())";
+   $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$NovaSenha', '$Telefone', NOW())";
    $Resultado_Cadastro = mysqli_query($conexao, $Result_Cadastro);
 
 ?>
@@ -51,7 +51,7 @@
                         <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone">
                     </div>
                     <div class="Form-I">
-                        <p>Já tem uma conta? <a href="./Login.html">Entrar</a></p>
+                        <p>Já tem uma conta? <a href="./Login.php">Entrar</a></p>
                         <input type="submit" id="botao" name="botao" value="Cadastrar">                                                
                     </div>
                 </div>
