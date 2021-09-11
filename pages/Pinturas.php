@@ -162,5 +162,6 @@
                     <!--   Scripts   -->
     <script src="../assets/JS/Menu.js"></script>
     <script src="../assets/JS/Geral.js"></script>
+    <script src="../assets/JS/conectBD.js"></script>
 </body>
 </html>

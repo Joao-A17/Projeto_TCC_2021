@@ -5,8 +5,7 @@
    para  para colocar o dislpay block para mostar
    e assim sucessivamente */
 var ContMaster = document.getElementById("Cont-Master");
-var PintDiv = document.querySelector(".Pint-Completa");
-var BtnAdd = document.getElementById("btn-add");
+var BtnPublicar = document.getElementById("btn-publicar");
 var btnExcluir = document.querySelector(".btn-delete");
 var menuEdit = document.querySelector(".Editar");
 var btnSalvar = document.querySelector(".btn-SP");
@@ -22,38 +21,10 @@ var InputNomeAdmin = document.getElementById("InputNomeAdmin");
 var InputDescAdmin = document.getElementById("InputDescAdmin");
 menuEdit.style.display = "none";
 btnSalvar.style.display = "none";
-btnExcluir.style.display = "none";
 MenuEditPerfil.style.display = "none";
-/* Editar Pintura
-    1º criando variavel para o valor dos campos
-    2º chamar a função do click do butão
-    3º criando estrutira de se e se não para mensagem de erro
-    4º por ultimo pegando os document dos inputs e transformando 
-    eles em uma nova string(Nome ou Descrição nova)
-    5º criando um limite de caracteres no nome da pintura 
-*/
-var NovoNomeP = "";
-var NovaDesc = "";
-var NomePintura = document.getElementById("NNPint");
-var descPintura = document.getElementById("DNPint");
 
-function NPintura(){
-    if(NomePintura.value.length <= 1){
-        menuEdit.style.display = "none";
-    }
-    else if(descPintura.value.length <= 1){
-        menuEdit.style.display = "none";
-    }
-    else{
-    NovoNomeP = NomePintura.value;
-    document.querySelector(".Nome-Pint").innerHTML = NovoNomeP;
-    NovaDesc = descPintura.value;
-    document.querySelector(".Desc-Pint").innerHTML = NovaDesc;
-    menuEdit.style.display = "none";
-    }
-}
 /* Evento de Adicionar */
-BtnAdd.addEventListener('click', function(){
+BtnPublicar.addEventListener('click', function(){
     var aPintCompleta = document.createElement('div');
     var aFundoPintDiv = document.createElement('div');
     var aPintura = document.createElement('img');
@@ -240,10 +211,3 @@ function AparecerE() {
         btnExcluir.style.display = "none";
     }
 }
-
-/* Botão de excluir */
-btnExcluir.addEventListener('click', function() {        
-    if (PintDiv.parentNode) {
-        PintDiv.parentNode.removeChild(PintDiv);        
-    }    
-});

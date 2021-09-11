@@ -1,4 +1,5 @@
 <?php
+    header("content-type: text/html;charset=utf-8");
     $Servidor = 'localhost';
     $Usuario = 'root';
     $Senha = '';
@@ -12,4 +13,5 @@
     else{
         echo "<p class='TextE' style='color: green;'>Conectado ao banco de dados: </p><p class='TextE' style='color: green;'>$Nome</p>";
     }       */
+
 ?>
