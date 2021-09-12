@@ -80,7 +80,7 @@ body{
     margin-left: 20px;
 }
 
-#Aparecer{
+#btn-Aparecer{
     width: 280px;
 }
 
@@ -95,16 +95,24 @@ body{
     margin-top: 100px;
 }
 
-.btn-delete{
-    margin-top: 20px;  
-    margin-left: 50%;
-    margin-bottom: 30px;
+#Icon_Potinhos{
+    position: absolute;
+    right: 20px;
+    font-size: 40px;
+    color: var(--corP);
+}
+#Icon_Potinhos:hover{
+    color: var(--corS);
+}
+
+.btn_span{
+    margin-top: 20px;
+    margin-left: 20px;
     width: 200px;
     height: 32px;
     cursor: pointer;
     font-size: 15px;
     font-family: 'Gugi', sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
@@ -116,15 +124,15 @@ body{
     box-shadow: 0px 0px 5px var(--corP);
     transition: .4s;
 }
-
-.btn-edit:hover,.btn-delete:hover{
+.btn_span:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--corP);
 }
 
-.Pint-Completa{
+.Pint_Completa{
     width: 100%;
     display: inline-flex;
 }
@@ -132,8 +140,7 @@ body{
 .Fundo-Pint{
     margin-left: 20px;
     margin-right: 20px;
-    width: 60%;
-    height: 100%;
+    width: 90%;
     border-radius: 20px;
     border: 0;
     border-radius: 20px;
@@ -220,6 +227,8 @@ body{
     font-size: 20px;
     color: var(--corL);
 }
+
+
 
 /* ------------------------------------Publicar---------------------------------- */
 
@@ -354,9 +363,9 @@ textarea::placeholder{
 
 /* ------------------------------------Editar------------------------------------ */
 
-.Editar{
+.Menu_Editar{
     width: 100%;
-    height: 380px;
+    height: 800px;
     margin-top: 30px;
     text-align: center;
 	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
@@ -366,7 +375,7 @@ textarea::placeholder{
     border-bottom: 3px solid var(--corS);
 }
 
-.Editar h2{
+.Menu_Editar h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -374,6 +383,10 @@ textarea::placeholder{
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
+}
+
+#TrocarIMG{
+    display: none;
 }
 
 .Editar input::placeholder{
@@ -421,8 +434,33 @@ textarea::placeholder{
 }
 .InputAlt:focus{
     width: 400px;
+    border-bottom: 2px solid var(--corS);
+    box-shadow: 0 2px 5px var(--corS);
+}
+
+#InputAltD{
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    resize: none;
+    justify-content: space-around;
+    background: var(--tranp);
+    color: var(--corP);
+    border: none;
+    border-radius: 8px;
+    border-top: 2px solid var(--corP);
     border-bottom: 2px solid var(--corP);
-    box-shadow: 0 2px 5px var(--corP);
+    box-sizing: border-box;
+    transition: .3s;
+}
+#InputAltD:focus{
+    border-top: 2px solid var(--corL);
+    border-bottom: 2px solid var(--corL);
+    box-shadow: 0 2px 5px var(--corL);
 }
 
 #SelectIMG0{
@@ -430,11 +468,12 @@ textarea::placeholder{
 }
 
 #BTN-IN{
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-.SelectP{
+.btn-ST{
     padding: 5px 25px;
     margin-left: 20px;
     font-size: 20px;
@@ -450,7 +489,7 @@ textarea::placeholder{
     transition: .3s;
 }
 
-.SelectP:hover{
+.btn-ST:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);

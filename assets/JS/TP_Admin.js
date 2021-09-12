@@ -8,20 +8,86 @@ var ContMaster = document.getElementById("Cont-Master");
 var BtnPublicar = document.getElementById("btn-publicar");
 var btnExcluir = document.querySelector(".btn-delete");
 var menuEdit = document.querySelector(".Editar");
+var MenuPublicar = document.getElementById("MenuPublicar");
+var btn_Adicionar = document.getElementById("btn-Adicionar");
 var btnSalvar = document.querySelector(".btn-SP");
 var AlteraImgPerfil = document.querySelector(".AlteraImg-Perfil");
 var BtnEditarPerfil = document.querySelector(".edp");
 var MenuEditPerfil = document.getElementById("Menu-EditPerfil");
-var BtnAparecer = document.getElementById("Aparecer");
+var BtnAparecer = document.getElementById("btn-Aparecer");
 var BtnSPerfil = document.getElementById("BtnSP");
 var NomeAdmin = document.getElementById("Nome-Admin");
 var DescAdmin = document.getElementById("Desc-Admin");
 var InputP = document.querySelectorAll(".InputP");
 var InputNomeAdmin = document.getElementById("InputNomeAdmin");
 var InputDescAdmin = document.getElementById("InputDescAdmin");
-menuEdit.style.display = "none";
+
+/* Função de aparecer os menus de editar */      
+AlteraImgPerfil.style.display = "none";
+BtnSPerfil.style.display = "none";
+BtnEditarPerfil.addEventListener('click', function(){
+   if(MenuEditPerfil.style.display == "none"){       
+       AlteraImgPerfil.style.display = "block";
+       MenuEditPerfil.style.display = "block";
+       BtnSPerfil.style.display = "block";
+   } 
+   else{
+    MenuEditPerfil.style.display = "none";    
+    AlteraImgPerfil.style.display = "none";
+    BtnSPerfil.style.display = "none";
+   }
+});
+
+/* Novo Nome do admin
+    1º criando variavel para o valor dos campos
+    2º chamar a função do click do butão
+    3º criando estrutira de se e se não para mensagem de erro
+    4º por ultimo pegando os document dos inputs e transformando 
+    eles em uma nova string(Nome ou Descrição nova)
+    5º criando um limite de caracteres no nome da pintura 
+*/
+var NomeNovo = "";
+var DecsNova = "";
+BtnSPerfil.addEventListener('click', function(){
+    NomeNovo = InputNomeAdmin.value;
+    NomeAdmin.innerHTML = NomeNovo;
+    DecsNova = InputDescAdmin.value;
+    DescAdmin.innerHTML = DecsNova;
+})
+
+/*  Mudar a imagem de perfil pegando o documento da imagem e do input tipo file,    criar um EventListener change(Alterar)      */
+var BtnAlterarIMGPerfil = document.getElementById("imgPerfil");
+var ImgPerfil = document.querySelector(".Foto-Admin");
+   
+BtnAlterarIMGPerfil.addEventListener('change', function(ea) {
+    showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
+});
+   
+function showThumbnail(files) {
+    if (files && files[0]) {
+    var procurar = new FileReader();
+   
+    procurar.onload = function(ea) {
+        ImgPerfil.src = ea.target.result;
+    }
+   
+    procurar.readAsDataURL(files[0]);
+    }
+} 
+
 btnSalvar.style.display = "none";
 MenuEditPerfil.style.display = "none";
+MenuPublicar.style.display = 'none';
+
+/* Evento de Aparecer o Publicar e Publicar */
+btn_Adicionar.addEventListener('click', function(){
+    if(MenuPublicar.style.display == 'none'){
+        MenuPublicar.style.display = 'block';
+    }else{
+        MenuPublicar.style.display = 'none';        
+    }
+});
+
 
 /* Evento de Adicionar */
 BtnPublicar.addEventListener('click', function(){
@@ -148,66 +214,35 @@ BtnPublicar.addEventListener('click', function(){
 });
 /* -----------------FORA---------------------- */
 
-/* Novo Nome do admin
-    1º criando variavel para o valor dos campos
-    2º chamar a função do click do butão
-    3º criando estrutira de se e se não para mensagem de erro
-    4º por ultimo pegando os document dos inputs e transformando 
-    eles em uma nova string(Nome ou Descrição nova)
-    5º criando um limite de caracteres no nome da pintura 
-*/
-var NomeNovo = "";
-var DecsNova = "";
-BtnSPerfil.addEventListener('click', function(){
-    NomeNovo = InputNomeAdmin.value;
-    NomeAdmin.innerHTML = NomeNovo;
-    DecsNova = InputDescAdmin.value;
-    DescAdmin.innerHTML = DecsNova;
-})
-/* Função de aparecer os menus de editar */      
-AlteraImgPerfil.style.display = "none";
-BtnSPerfil.style.display = "none";
-BtnEditarPerfil.addEventListener('click', function(){
-   if(MenuEditPerfil.style.display == "none"){       
-       AlteraImgPerfil.style.display = "block";
-       MenuEditPerfil.style.display = "block";
-       BtnSPerfil.style.display = "block";
-   } 
-   else{
-    MenuEditPerfil.style.display = "none";    
-    AlteraImgPerfil.style.display = "none";
-    BtnSPerfil.style.display = "none";
-   }
-})
 
-/*  Mudar a imagem de perfil pegando o documento da imagem e do input tipo file,    criar um EventListener change(Alterar)      */
-var BtnAlterarIMGPerfil = document.getElementById("imgPerfil");
-var ImgPerfil = document.querySelector(".Foto-Admin");
-   
-BtnAlterarIMGPerfil.addEventListener('change', function(ea) {
-    showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
+/* Função dos 3 pontinhos */
+var Menu_Editar = document.querySelector(".Menu_Editar");
+var Icon_Potinhos = document.getElementById("Icon_Potinhos");
+var menubtns = document.getElementById("menubtns");
+var btn_Editar = document.getElementById("btn_Editar");
+
+menubtns.style.display = "none";
+Icon_Potinhos.addEventListener('click', function(){
+    if(menubtns.style.display == "none"){
+        menubtns.style.display = "inline-flex";
+    }else{
+        menubtns.style.display = "none";
+    }
 });
-   
-function showThumbnail(files) {
-    if (files && files[0]) {
-    var procurar = new FileReader();
-   
-    procurar.onload = function(ea) {
-        ImgPerfil.src = ea.target.result;
-    }
-   
-    procurar.readAsDataURL(files[0]);
-    }
-} 
 
-function AparecerE() { 
-    if(menuEdit.style.display == "none"){
-        menuEdit.style.display = "block";
-        btnSalvar.style.display = "block";
-        btnExcluir.style.display = "block";
-    } else {
-        menuEdit.style.display = "none";
-        btnSalvar.style.display = "none";
-        btnExcluir.style.display = "none";
+Menu_Editar.style.display = "none";
+btn_Editar.addEventListener('click', function(){
+    if(Menu_Editar.style.display == "none"){
+        Menu_Editar.style.display = "block";
+    }else{
+        Menu_Editar.style.display = "none";
     }
-}
+});
+/* Botão de excluir */    
+var Pint_Completa = document.querySelector(".Pint_Completa");
+var btn_Excluir = document.getElementById("btn_Excluir");
+btn_Excluir.addEventListener('click', function() {                
+    if(Pint_Completa.parentNode){                        
+        Pint_Completa.parentNode.removeChild(Pint_Completa);
+    }    
+});

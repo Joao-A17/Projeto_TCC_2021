@@ -16,3 +16,5 @@ senha:          TccInfo2021
 PalavraChave:   NtSqF3r0jUpKRhfq
 
 A parte mais difícil que eu achei na parte de programação foi a conexão do banco de dados e o evento de adicionar uma nova postagem caso o Artista quisesse
+
+no botão de piblicar que vai criar elementos novos para postagem
