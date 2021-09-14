@@ -54,6 +54,7 @@ body{
     width: 200px;
     height: 32px;
     cursor: pointer;
+    font-size: 20px;
     font-family: 'Gugi', sans-serif;
     display: inline-flex;
     text-transform: uppercase;
@@ -78,10 +79,6 @@ body{
 
 .botaoA{    
     margin-left: 20px;
-}
-
-#btn-Aparecer{
-    width: 280px;
 }
 
 .container{
@@ -141,11 +138,6 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     width: 90%;
-    border-radius: 20px;
-    border: 0;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
 }
 
 .IconG{
@@ -165,6 +157,9 @@ body{
 .Pintura{
     width: 100%;
     border-radius: 20px;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
 }
 
 .Fundo-Desc{
@@ -293,11 +288,11 @@ textarea::placeholder{
     width: 500px;
 }
 
-.IMGpublic{
+#IMGpublic{
     width: 100%;
 }
 
-#SelectIMG1{
+#SelectIMG{
     display: none;
 }
 
@@ -505,45 +500,14 @@ textarea::placeholder{
 
 #divIMGAdmin{
     width: 20%;
+    height: 20%;
 }
 
 .Foto-Admin{
     width: 100%;
     border-radius: 50%;
-    border: 2px solid var(--corL);
-    box-shadow: 0px 0px 12px var(--corL); 
-}
-
-#imgPerfil{
-    display: none;
-}
-
-.AlteraImg-Perfil{
-    position: absolute;
-    width: 200px;
-    height: 40px;    
-    margin-top: 20%;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;   
-    display: flex;
-    justify-content: center;
-    align-items: center;       
-    border: 0;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 24px;
-    background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--tranp);
-    box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;
-}
-
-.AlteraImg-Perfil:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 2px solid var(--corD);
+    box-shadow: 0px 0px 12px var(--corD2); 
 }
 
 .Info-Admin{
@@ -558,6 +522,7 @@ textarea::placeholder{
 }
 
 .edp{
+    width: 250px;
     position: absolute;
     right: 40px;
     margin-top: 20px;

@@ -13,7 +13,6 @@ var btn_Adicionar = document.getElementById("btn-Adicionar");
 var AlteraImgPerfil = document.querySelector(".AlteraImg-Perfil");
 var BtnEditarPerfil = document.querySelector(".edp");
 var MenuEditPerfil = document.getElementById("MenuModal_EditPerfil");
-var BtnAparecer = document.getElementById("btn-Aparecer");
 var BtnSPerfil = document.getElementById("BtnSP");
 var NomeAdmin = document.getElementById("Nome-Admin");
 var DescAdmin = document.getElementById("Desc-Admin");
@@ -116,6 +115,24 @@ btn_Adicionar.addEventListener('click', function(){
     }else{
         MenuPublicar.style.display = 'none';        
     }
+});
+
+/* Selecionar uma nova Pintura */
+var InputFile_SelectIMG = document.getElementById("SelectIMG");
+var IMGpublic = document.getElementById("IMGpublic");
+
+InputFile_SelectIMG.addEventListener('change', function() {
+    
+    if(InputFile_SelectIMG.files.length < 0){
+        return;
+    }
+    let readerPinturaSelect = new FileReader();
+    
+    readerPinturaSelect.onload = () => {
+        IMGpublic.src = readerPinturaSelect.result;
+    }
+
+    readerPinturaSelect.readAsDataURL(InputFile_SelectIMG.files[0]);
 });
 
 
@@ -258,8 +275,10 @@ menubtns.style.display = "none";
 Icon_Potinhos.addEventListener('click', function(){
     if(menubtns.style.display == "none"){
         menubtns.style.display = "inline-flex";
-    }else{
+    }
+    else{
         menubtns.style.display = "none";
+        Menu_Editar.style.display = "none";
     }
 });
 
@@ -278,4 +297,22 @@ btn_Excluir.addEventListener('click', function() {
     if(Pint_Completa.parentNode){                        
         Pint_Completa.parentNode.removeChild(Pint_Completa);
     }    
+});
+
+/* Trcar Pintura selecionada */
+var InputFile_TrocarIMG = document.getElementById("TrocarIMG");
+var Pintura = document.getElementById("Pintura");
+
+InputFile_TrocarIMG.addEventListener('change', function() {
+    
+    if(InputFile_TrocarIMG.files.length < 0){
+        return;
+    }
+    let readerPintura = new FileReader();
+    
+    readerPintura.onload = () => {
+        Pintura.src = readerPintura.result;
+    }
+
+    readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
 });

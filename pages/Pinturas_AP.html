@@ -37,7 +37,7 @@
 </head>
 <body>
     <nav class="Menu">
-        <a href="../InPinturas/InPinturas.html" class="Logo">Magics Paintings</a>            
+        <a href="./Pinturas.php" class="Logo">Magics Paintings</a>            
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
@@ -45,8 +45,6 @@
         <div class="Fundo">       
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
-                    <input type="file" class="form-control-file" name="foto" id="imgPerfil" accept="image/*">
-                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
                     <div id="divIMGAdmin">
                         <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400">   
                     </div>              
@@ -55,26 +53,32 @@
                             <h1 id="Nome-Admin">Robson</h1>
                             <p id="Desc-Admin">Eu sou o Robson seu grande amigo e companheiro.</p>                                                        
                         </div>
-                        <button type="button" class="btn-menu edp">Editar Perfil</button>
-                        <div id="MenuModal_EditPerfil">
-                            <nav class="Menu menu_modal">
-                                <h2 id="TituloMenu">Menu Alterações</h2>
-                                <button type="submit" id="BtnSP">Salvar</button>
-                                <button class="btn-menu" id="btn_cancelar">Cancelar</button>
-                            </nav>
-                            <div id="divND">
-                                <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
-                                <textarea name="InputDescAdmin" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição" ></textarea>
-                            </div> 
-                            <div id="divRedesSociais">
-                                <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone">
-                                <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook">
-                                <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram">
-                                <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter">
-                                <p> Exemplo do numero do telefone: 548999227431</p>
-                            </div>                                                                
-                        </div> 
+                        <button type="button" class="btn-menu edp">Editar Perfil</button>                         
                     </div>
+                </div>
+                <div id="MenuModal_EditPerfil">
+                    <div id="nav_menu">
+                        <h2 id="TituloMenu">Menu Alterações</h2>
+                        <button class="btn-menu" id="btn_cancelar">Cancelar</button>
+                        <button type="submit" name="salvar" id="BtnSP">Salvar</button>
+                    </div>
+                    <input type="file" class="form-control-file" name="foto" id="imgPerfil" accept="image/*">
+                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
+                    <div id="divND">
+                        <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
+                        <input type="text" name="InputDescAdmin" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição">
+                    </div> 
+                    <div id="divRedesSociais">
+                        <div id="LeftRedes">
+                            <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone">
+                            <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook">                            
+                        </div>
+                        <div id="RightRedes">                            
+                            <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram">
+                            <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter"> 
+                        </div>                                            
+                    </div>
+                    <p> Exemplo do numero do telefone: 548999227431</p>                                                               
                 </div>
                 <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
                 <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
@@ -82,7 +86,6 @@
                 <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>  
-                <buttom id="btn-Aparecer" class="btn-menu botaoA" onclick="AparecerE()"><i class="fas fa-cog IconG"></i>Editar Pinturas</buttom> 
                 <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA" ><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
             </div>    
                 <div id="Cont-Master">
@@ -97,10 +100,10 @@
                             <div id="MS-2">                               
                                 <button type="submit" id="btn-publicar" name="Publicar" class="btn-SP">Publicar</button>                   
                                 <div id="divIMG">
-                                    <img src="../assets/IMAGES/Pinturas/Gamer.jpg" class="IMGpublic">          
+                                    <img src="" id="IMGpublic">          
                                 </div>          
-                                <input type="file" class="form-control-file" name="foto" id="SelectIMG1" accept="image/*">  
-                                <label for="SelectIMG1" id="Select_img_public">Selecionar Imagem</label>                
+                                <input type="file" class="form-control-file" name="foto" id="SelectIMG" accept="image/*">  
+                                <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>                
                             </div>                                          
                         </div> 
                         <br>
@@ -108,7 +111,7 @@
                     
                     <div class="Pint_Completa">
                         <div class="Fundo-Pint">
-                            <img class="Pintura" src="../assets/IMAGES/Edits/Ban.png">
+                            <img id="Pintura" class="Pintura" src="../assets/IMAGES/Edits/Ban.png">
                         </div>                                          
                         <div class="Fundo-Desc">                                
                             <h1 class="Nome-Pint">Nome da publicação</h1>
@@ -138,7 +141,7 @@
                         <?php if($msg != false) echo "<p class='TextE' style='color: red;'>$msg</p>"; else echo "<p class='TextE' style='color: green;'>$msg</p>"; ?> 
                     </div> -->                           
                 </div>           
-        </div>                  
+    </div>                  
         <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/TP_Admin.js"></script>
