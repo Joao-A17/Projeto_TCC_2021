@@ -1,0 +1,104 @@
+#MenuModal_EditPerfil{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: none;
+	background-image: linear-gradient(to bottom, var(--corD), var(--corD2));
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+}
+
+.menu_modal{
+    position: absolute;
+    top: 0;
+    border: none;
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
+}
+
+#TituloMenu{
+    font-family: 'Gugi', sans-serif;
+	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+#BtnSP{
+    width: 120px;    
+    height: 40px;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;    
+    background: var(--tranp);
+    color: var(--corL);    
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corL);
+    animation: Pulse 1s infinite;
+    transition: .4s;    
+}
+#BtnSP:hover{
+    animation: none;
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 8px var(--corL);
+}
+
+#divND{
+    margin-top: 5%;
+}
+
+.InputP{
+    width: 300px;
+    height: 40px;
+    border: 0;
+    text-align: center;
+    outline: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--tranp);
+    transition: .3s;
+}
+.InputP:focus{
+    border-bottom: 2px solid var(--corP);
+    box-shadow: 0 2px 5px var(--corP);
+}
+
+#InputDescAdmin{
+    width: 80%;
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    resize: none;
+    border: none;
+    margin-left: 20px;
+    margin-top: 30px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--tranp);
+    box-sizing: border-box;
+    transition: .3s;
+}
+#InputDescAdmin:focus{
+    border-bottom: 2px solid var(--corP);
+    box-shadow: 0 2px 5px var(--corP);
+}
+
+#divRedesSociais p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--corL);
+}

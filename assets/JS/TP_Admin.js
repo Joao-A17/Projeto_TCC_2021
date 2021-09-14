@@ -5,15 +5,14 @@
    para  para colocar o dislpay block para mostar
    e assim sucessivamente */
 var ContMaster = document.getElementById("Cont-Master");
-var BtnPublicar = document.getElementById("btn-publicar");
+var btn_publicar = document.getElementById("btn-publicar");
 var btnExcluir = document.querySelector(".btn-delete");
 var menuEdit = document.querySelector(".Editar");
 var MenuPublicar = document.getElementById("MenuPublicar");
 var btn_Adicionar = document.getElementById("btn-Adicionar");
-var btnSalvar = document.querySelector(".btn-SP");
 var AlteraImgPerfil = document.querySelector(".AlteraImg-Perfil");
 var BtnEditarPerfil = document.querySelector(".edp");
-var MenuEditPerfil = document.getElementById("Menu-EditPerfil");
+var MenuEditPerfil = document.getElementById("MenuModal_EditPerfil");
 var BtnAparecer = document.getElementById("btn-Aparecer");
 var BtnSPerfil = document.getElementById("BtnSP");
 var NomeAdmin = document.getElementById("Nome-Admin");
@@ -21,10 +20,12 @@ var DescAdmin = document.getElementById("Desc-Admin");
 var InputP = document.querySelectorAll(".InputP");
 var InputNomeAdmin = document.getElementById("InputNomeAdmin");
 var InputDescAdmin = document.getElementById("InputDescAdmin");
+var btn_cancelar = document.getElementById("btn_cancelar");
 
-/* Função de aparecer os menus de editar */      
+/* Função de aparecer os menus de editar   */
 AlteraImgPerfil.style.display = "none";
-BtnSPerfil.style.display = "none";
+BtnSPerfil.style.display = "none"; 
+
 BtnEditarPerfil.addEventListener('click', function(){
    if(MenuEditPerfil.style.display == "none"){       
        AlteraImgPerfil.style.display = "block";
@@ -38,6 +39,11 @@ BtnEditarPerfil.addEventListener('click', function(){
    }
 });
 
+/* Botão cancelar */
+btn_cancelar.addEventListener('click', function(){
+    MenuEditPerfil.style.display = 'none';
+});
+
 /* Novo Nome do admin
     1º criando variavel para o valor dos campos
     2º chamar a função do click do butão
@@ -49,10 +55,34 @@ BtnEditarPerfil.addEventListener('click', function(){
 var NomeNovo = "";
 var DecsNova = "";
 BtnSPerfil.addEventListener('click', function(){
-    NomeNovo = InputNomeAdmin.value;
-    NomeAdmin.innerHTML = NomeNovo;
-    DecsNova = InputDescAdmin.value;
-    DescAdmin.innerHTML = DecsNova;
+
+    if(InputNomeAdmin.value == ""){  
+        alert("Preencha os campos!!");      
+        AlteraImgPerfil.style.display = "none";
+        BtnSPerfil.style.display = "none"; 
+        MenuEditPerfil.style.display = "none";  
+        InputDescAdmin.value = ""; 
+        InputNomeAdmin.value = "";            
+    }
+    else if(InputDescAdmin.value == ""){
+        alert("Preencha os campos!!");      
+        AlteraImgPerfil.style.display = "none";
+        BtnSPerfil.style.display = "none"; 
+        MenuEditPerfil.style.display = "none";  
+        InputDescAdmin.value = ""; 
+        InputNomeAdmin.value = "";      
+    }
+    else{
+        NomeNovo = InputNomeAdmin.value;
+        NomeAdmin.innerHTML = NomeNovo;
+        DecsNova = InputDescAdmin.value;
+        DescAdmin.innerHTML = DecsNova;      
+        AlteraImgPerfil.style.display = "none";
+        BtnSPerfil.style.display = "none"; 
+        MenuEditPerfil.style.display = "none"; 
+        InputDescAdmin.value = ""; 
+        InputNomeAdmin.value = "";      
+    }
 })
 
 /*  Mudar a imagem de perfil pegando o documento da imagem e do input tipo file,    criar um EventListener change(Alterar)      */
@@ -75,7 +105,7 @@ function showThumbnail(files) {
     }
 } 
 
-btnSalvar.style.display = "none";
+
 MenuEditPerfil.style.display = "none";
 MenuPublicar.style.display = 'none';
 
@@ -89,8 +119,8 @@ btn_Adicionar.addEventListener('click', function(){
 });
 
 
-/* Evento de Adicionar */
-BtnPublicar.addEventListener('click', function(){
+/* Evento de Adicionar 
+btn_publicar.addEventListener('click', function(){
     var aPintCompleta = document.createElement('div');
     var aFundoPintDiv = document.createElement('div');
     var aPintura = document.createElement('img');
@@ -166,14 +196,16 @@ BtnPublicar.addEventListener('click', function(){
     aInputPublicar.className = "btn-SP";
     aInputPublicar.onclick = "NPintura()";
     Espaço1.className = "espaço";
-    /* Botão de excluir */    
+
+    /* Botão de excluir  
     aBtnExcluir.addEventListener('click', function() {                
         if(aPintCompleta.parentNode){                        
             aPintCompleta.parentNode.removeChild(aPintCompleta);
             Espaço1.parentNode.removeChild(Espaço1);
         }    
     });
-    /* Alterar Nomes Pint */
+
+    /* Alterar Nomes Pint 
     var NovoTitulo = "";
     var NovaDescrição = "";
     var aNomePintura = aNomePint;
@@ -184,7 +216,8 @@ BtnPublicar.addEventListener('click', function(){
         NovaDescrição = aInputDN.value;
         aDescPintura.innerHTML = NovaDescrição;
     });
-    /* Aparecer o menu de editar */
+
+    /* Aparecer o menu de editar 
     BtnAparecer.addEventListener('click', function() {
         if(aMenuEdit.style.display == "none"){
             aMenuEdit.style.display = "block";
@@ -196,9 +229,9 @@ BtnPublicar.addEventListener('click', function(){
         }
     });
 
-    /* Trocar as images */
+    /* Trocar as images 
     aInputFoto.addEventListener('change', function(e) {
-        showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo */
+        showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo 
     });
        
     function showThumbnail(files) {

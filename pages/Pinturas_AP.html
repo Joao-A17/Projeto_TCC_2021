@@ -32,6 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/TP_Admin.css">  
+    <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
     <title id="Nome-Site">Perfil | Magics Paintings</title>              
 </head>
 <body>
@@ -46,18 +47,33 @@
                 <div id="AdminForm">
                     <input type="file" class="form-control-file" name="foto" id="imgPerfil" accept="image/*">
                     <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
-                    <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400">                    
+                    <div id="divIMGAdmin">
+                        <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&ext=jpg&ga=GA1.2.2045703221.1627862400">   
+                    </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
-                            <h1 id="Nome-Admin">MC Rodolfinho</h1>
-                            <p id="Desc-Admin">Ao som do MC Rodolfinho HÀAAAAAAAAAAA os mlk é liso</p>
-                            <div id="Menu-EditPerfil">                                
-                                <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
-                                <input type="text" id="InputDescAdmin" class="InputP" maxlength="60" placeholder="Alterar a Descrição">
-                            </div>
-                            <button type="submit" id="BtnSP">Salvar</button>                                
+                            <h1 id="Nome-Admin">Robson</h1>
+                            <p id="Desc-Admin">Eu sou o Robson seu grande amigo e companheiro.</p>                                                        
                         </div>
                         <button type="button" class="btn-menu edp">Editar Perfil</button>
+                        <div id="MenuModal_EditPerfil">
+                            <nav class="Menu menu_modal">
+                                <h2 id="TituloMenu">Menu Alterações</h2>
+                                <button type="submit" id="BtnSP">Salvar</button>
+                                <button class="btn-menu" id="btn_cancelar">Cancelar</button>
+                            </nav>
+                            <div id="divND">
+                                <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
+                                <textarea name="InputDescAdmin" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição" ></textarea>
+                            </div> 
+                            <div id="divRedesSociais">
+                                <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone">
+                                <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook">
+                                <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram">
+                                <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter">
+                                <p> Exemplo do numero do telefone: 548999227431</p>
+                            </div>                                                                
+                        </div> 
                     </div>
                 </div>
                 <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
@@ -76,19 +92,18 @@
                             <div id="MS-1">
                                 <input type="text" class="InputPublic" name="Altor" placeholder="Digite o nome do autor">
                                 <input type="text" class="InputPublic" name="nome-foto" placeholder="Digite o nome da pintura">
-                                <textarea id="InputPublicD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>
+                                <textarea id="InputPublicD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                      
                             </div>
-                            <div id="MS-2">       
+                            <div id="MS-2">                               
+                                <button type="submit" id="btn-publicar" name="Publicar" class="btn-SP">Publicar</button>                   
                                 <div id="divIMG">
                                     <img src="../assets/IMAGES/Pinturas/Gamer.jpg" class="IMGpublic">          
                                 </div>          
                                 <input type="file" class="form-control-file" name="foto" id="SelectIMG1" accept="image/*">  
-                                <label for="SelectIMG1" id="Select_img_public">Selecionar Imagem</label>
-                            </div>           
-                            <button id="btn-publicar" name="Publicar" class="btn-SP">Publicar</button>                                      
+                                <label for="SelectIMG1" id="Select_img_public">Selecionar Imagem</label>                
+                            </div>                                          
                         </div> 
                         <br>
-                        <input type="submit" style="display: none">
                     </div>
                     
                     <div class="Pint_Completa">
@@ -108,9 +123,9 @@
                                 <input id="salvar_edicoes" type="submit" name="SalvarTudo" value="Salvar" class="btn-SP">
                                 <input type="text" id="InputAlt" name="Altor" placeholder="Digite o nome do autor">
                                 <input type="text" class="InputAlt" id="NNPint" maxlength="50" placeholder="Digite o nome da pintura">
-                                <textarea id="InputAltD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>
-                                <input type="file" class="form-control-file" name="foto" id="TrocarIMG" accept="image/*">  
+                                <textarea id="InputAltD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                 
                                 <div id="BTN-IN"></div>
+                                    <input type="file" class="form-control-file" name="foto" id="TrocarIMG" accept="image/*"> 
                                     <label for="TrocarIMG" class="btn-ST">Trocar Imagem</label>
                                 </div>
                             </div>                                                           

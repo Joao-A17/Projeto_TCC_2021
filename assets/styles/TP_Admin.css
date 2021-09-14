@@ -148,47 +148,6 @@ body{
     border-bottom: 3px solid var(--corS); 
 }
 
-.InputP{
-    width: 280px;
-    height: 40px;
-    border: 0;
-    text-align: center;
-    outline: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    background: var(--tranp);
-    color: var(--corP);
-    border-radius: 8px;
-    border-bottom: 2px solid var(--tranp);
-    transition: .3s;
-}
-.InputP:focus{
-    border-bottom: 2px solid var(--corP);
-    box-shadow: 0 2px 5px var(--corP);
-}
-
-#BtnSP{
-    width: 120px;    
-    height: 40px;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 30px;
-    cursor: pointer;
-    border: none;    
-    background: var(--tranp);
-    color: var(--corL);    
-    border-radius: 8px;
-    border-bottom: 2px solid var(--corL);
-    animation: Pulse 1s infinite;
-    transition: .4s;    
-}
-#BtnSP:hover{
-    animation: none;
-    background: var(--corL);
-    color: var(--corD);
-    box-shadow: 0px 0px 8px var(--corL);
-}
-
 .IconG{
     font-size: 20px;
     margin-right: 10px;
@@ -324,6 +283,10 @@ textarea::placeholder{
     border-top: 2px solid var(--corL);
     border-bottom: 2px solid var(--corL);
     box-shadow: 0 2px 5px var(--corL);
+}
+
+#btn-publicar{
+    display: block;
 }
 
 #divIMG{
@@ -540,8 +503,12 @@ textarea::placeholder{
     display: flex;
 }
 
-.Foto-Admin{
+#divIMGAdmin{
     width: 20%;
+}
+
+.Foto-Admin{
+    width: 100%;
     border-radius: 50%;
     border: 2px solid var(--corL);
     box-shadow: 0px 0px 12px var(--corL); 
