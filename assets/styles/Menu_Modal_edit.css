@@ -100,7 +100,7 @@
     background: var(--tranp);
     color: var(--corP);
     border-radius: 8px;
-    border-bottom: 2px solid var(--tranp);
+    border-bottom: 2px solid var(--corP);
     transition: .3s;
 }
 .InputP:focus{
@@ -121,7 +121,7 @@
     background: var(--tranp);
     color: var(--corP);
     border-radius: 8px;
-    border-bottom: 2px solid var(--tranp);
+    border-bottom: 2px solid var(--corP);
     box-sizing: border-box;
     transition: .3s;
 }

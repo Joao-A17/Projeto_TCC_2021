@@ -92,21 +92,26 @@ body{
     margin-top: 100px;
 }
 
-#Icon_Potinhos{
+#Icon_Pontinhos{
     position: absolute;
     right: 20px;
     font-size: 40px;
     color: var(--corP);
 }
-#Icon_Potinhos:hover{
+#Icon_Pontinhos:hover{
     color: var(--corS);
+}
+
+#menubtns{
+    display: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .btn_span{
     margin-top: 20px;
     margin-left: 20px;
-    width: 200px;
-    height: 32px;
+    padding: 5px 25px;
     cursor: pointer;
     font-size: 15px;
     font-family: 'Gugi', sans-serif;
@@ -351,26 +356,6 @@ textarea::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--corL);
-}
-
-#InputAlt{
-    width: 320px;
-    height: 40px;
-    border: 0;
-    text-align: center;
-    outline: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    background: var(--tranp);
-    color: var(--corP);
-    border-radius: 8px;
-    border-bottom: 2px solid var(--corL);
-    transition: .3s;
-}
-#InputAlt:focus{
-    width: 400px;
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0 2px 5px var(--corL);
 }
 
 .InputAlt{

@@ -20,22 +20,33 @@ var InputP = document.querySelectorAll(".InputP");
 var InputNomeAdmin = document.getElementById("InputNomeAdmin");
 var InputDescAdmin = document.getElementById("InputDescAdmin");
 var btn_cancelar = document.getElementById("btn_cancelar");
+var inputP_Nome_Pintura = document.getElementById("inputP_Nome_Pintura");
+var input_Desc_Pintura = document.getElementById("InputPublicD");
+var inputP_autor = document.getElementById("inputP_autor");
+var InputFile_SelectIMG = document.getElementById("SelectIMG");
+var IMGpublic = document.getElementById("IMGpublic");
+
 
 /* Função de aparecer os menus de editar   */
 AlteraImgPerfil.style.display = "none";
 BtnSPerfil.style.display = "none"; 
 
+
+
 BtnEditarPerfil.addEventListener('click', function(){
-   if(MenuEditPerfil.style.display == "none"){       
+    InputNomeAdmin.value = NomeAdmin.innerHTML;
+    InputDescAdmin.value = DescAdmin.innerHTML;
+
+    if(MenuEditPerfil.style.display == "none"){       
        AlteraImgPerfil.style.display = "block";
        MenuEditPerfil.style.display = "block";
        BtnSPerfil.style.display = "block";
-   } 
-   else{
-    MenuEditPerfil.style.display = "none";    
-    AlteraImgPerfil.style.display = "none";
-    BtnSPerfil.style.display = "none";
-   }
+    } 
+    else{
+        MenuEditPerfil.style.display = "none";    
+        AlteraImgPerfil.style.display = "none";
+        BtnSPerfil.style.display = "none";
+    }
 });
 
 /* Botão cancelar */
@@ -108,18 +119,29 @@ function showThumbnail(files) {
 MenuEditPerfil.style.display = "none";
 MenuPublicar.style.display = 'none';
 
-/* Evento de Aparecer o Publicar e Publicar */
-btn_Adicionar.addEventListener('click', function(){
-    if(MenuPublicar.style.display == 'none'){
-        MenuPublicar.style.display = 'block';
-    }else{
-        MenuPublicar.style.display = 'none';        
+
+
+/* Trcar Pintura selecionada */
+var InputFile_TrocarIMG = document.getElementById("TrocarIMG");
+var Pintura = document.getElementById("Pintura");
+
+InputFile_TrocarIMG.addEventListener('change', function() {
+    
+    if(InputFile_TrocarIMG.files.length < 0){
+        return;
     }
+    let readerPintura = new FileReader();
+    
+    readerPintura.onload = () => {
+        Pintura.src = readerPintura.result;
+    }
+
+    readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
 });
 
+
+
 /* Selecionar uma nova Pintura */
-var InputFile_SelectIMG = document.getElementById("SelectIMG");
-var IMGpublic = document.getElementById("IMGpublic");
 
 InputFile_SelectIMG.addEventListener('change', function() {
     
@@ -136,143 +158,197 @@ InputFile_SelectIMG.addEventListener('change', function() {
 });
 
 
-/* Evento de Adicionar 
+/* Evento de Aparecer o Publicar e Publicar */
+btn_Adicionar.addEventListener('click', function(){
+    if(MenuPublicar.style.display == 'none'){
+        MenuPublicar.style.display = 'block'; 
+        inputP_autor.value = "";
+        inputP_Nome_Pintura.value = ""; 
+        input_Desc_Pintura.value = "";   
+        IMGpublic.src = "";   
+    }else{
+        MenuPublicar.style.display = 'none'; 
+        inputP_autor.value = "";
+        inputP_Nome_Pintura.value = ""; 
+        input_Desc_Pintura.value = "";   
+        IMGpublic.src = "";   
+    }
+});
+
+
+/* Evento de Adicionar */
 btn_publicar.addEventListener('click', function(){
-    var aPintCompleta = document.createElement('div');
-    var aFundoPintDiv = document.createElement('div');
-    var aPintura = document.createElement('img');
-    var aFundoDecs = document.createElement('div');
-    var aNomePint = document.createElement('h1');
-    var aDescPint = document.createElement('p');
-    var aBtnExcluir = document.createElement('buttom');
-    var aBtnIcon = document.createElement('i');
-    var aMenuEdit = document.createElement('form');
-    var atxtAlter = document.createElement('h2');
-    var aInputNN = document.createElement('input');
-    var aInputDN = document.createElement('input');
-    var aInputFoto = document.createElement('input');
-    var aDivSelecionarPublicar = document.createElement('div');
-    var aLabelSelect = document.createElement('label');
-    var aInputPublicar = document.createElement('input');
-    var Espaço1 = document.createElement('div');
-    ContMaster.appendChild(aPintCompleta);
-    aPintCompleta.appendChild(aFundoPintDiv);
-    aFundoPintDiv.appendChild(aPintura);
-    aPintCompleta.appendChild(aFundoDecs);
-    aFundoDecs.appendChild(aNomePint);    
-    aFundoDecs.appendChild(aDescPint);    
-    aFundoDecs.appendChild(aBtnExcluir);
-    aNomePint.innerHTML = "Nome da publicação";
-    aDescPint.innerHTML = "Descrição da publicação";
-    aBtnExcluir.innerHTML = "Excluir";
-    aBtnExcluir.appendChild(aBtnIcon);
-    aFundoDecs.appendChild(aMenuEdit);
-    aMenuEdit.appendChild(atxtAlter);
-    atxtAlter.innerHTML = "Novas Alterações";    
-    aMenuEdit.appendChild(aInputNN);
-    aMenuEdit.appendChild(aInputDN);
-    aMenuEdit.appendChild(aInputFoto);
-    aMenuEdit.appendChild(aDivSelecionarPublicar);
-    aDivSelecionarPublicar.appendChild(aLabelSelect);
-    aDivSelecionarPublicar.appendChild(aInputPublicar);
-    ContMaster.appendChild(Espaço1);
-    aPintCompleta.className = "Pint-Completa";
-    aFundoPintDiv.className = "Fundo-Pint";
-    aPintura.src = "../assets/IMAGES/Edits/Ban.png";
-    aPintura.className = "Pintura";
-    aFundoDecs.className = "Fundo-desc";
-    aNomePint.className = "Nome-Pint";
-    aDescPint.className = "Desc-Pint";
-    aBtnExcluir.className = "btn-delete";
-    aBtnExcluir.style.display = "none";
-    aBtnIcon.className = "fas fa-trash-alt IconG";
-    aMenuEdit.action = "Pinturas_AP.php";
-    aMenuEdit.method = "POST";
-    aMenuEdit.enctype = "multipart/form-data";
-    aMenuEdit.className = "Editar";
-    aMenuEdit.style.display = "none";
-    aInputNN.type = "text";
-    aInputNN.id = "NNPint";
-    aInputNN.maxLength = "50";
-    aInputNN.placeholder = "Digite o nome da pintura";
-    aInputDN.type = "text";
-    aInputDN.id = "DNPint";
-    aInputDN.placeholder = "Digite o nome da pintura";
-    aInputFoto.type = "file";
-    aInputFoto.className = "form-control-file";
-    aInputFoto.name = "foto";
-    aInputFoto.id = "SelectIMG0";
-    aInputFoto.accept = "image/*";
-    aDivSelecionarPublicar.id = "BTN-IN";
-    aLabelSelect.innerHTML ="Selecionar Imagem";
-    aLabelSelect.htmlFor = "SelectIMG0";
-    aLabelSelect.className = "SelectP";
-    aInputPublicar.type = "submit";
-    aInputPublicar.name = "SalvarTudo";
-    aInputPublicar.value = "Publicar";
-    aInputPublicar.className = "btn-SP";
-    aInputPublicar.onclick = "NPintura()";
-    Espaço1.className = "espaço";
+    MenuPublicar.style.display = 'none';
+    var divP_Pint_Completa = document.createElement('div');
+    var divP_Fundo_Pint = document.createElement('div');
+    var imgP_Pintura = document.createElement('img');
+    var divP_Fundo_Decs = document.createElement('div');
+    var h1P_Nome_Pint = document.createElement('h1');
+    var P_Desc_Pint = document.createElement('p');   
+    var iP_Icon_Pontinhos = document.createElement('i');
+    var divP_menubtns = document.createElement('div');
+    var btnP_Editar = document.createElement('buttom');
+    var iP_Icon_Editar = document.createElement('i');
+    var btnP_Excluir = document.createElement('buttom');
+    var iP_Icon_Excluir = document.createElement('i');
+    var divP_Menu_Editar = document.createElement('div');
+    var h2P_TextoMenu = document.createElement('h2');
+    var InputP_btnSalvar = document.createElement('input');
+    var InputP_Nome_Pintura = document.createElement('input');
+    var textareaP_Desc_Pintura = document.createElement('textarea');
+    var divP_BTN_IN = document.createElement('div');
+    var InputP_Fileimg = document.createElement('input');
+    var labelP_btnFile = document.createElement('label');
 
-    /* Botão de excluir  
-    aBtnExcluir.addEventListener('click', function() {                
-        if(aPintCompleta.parentNode){                        
-            aPintCompleta.parentNode.removeChild(aPintCompleta);
-            Espaço1.parentNode.removeChild(Espaço1);
-        }    
-    });
+    ContMaster.appendChild(divP_Pint_Completa);
+    divP_Pint_Completa.className = "Pint_Completa";
+    divP_Pint_Completa.appendChild(divP_Fundo_Pint);
+    divP_Fundo_Pint.className = "Fundo-Pint";
+    divP_Fundo_Pint.appendChild(imgP_Pintura);
+    imgP_Pintura.id = "Pintura";
+    imgP_Pintura.className = "Pintura";
+    imgP_Pintura.src = IMGpublic.src;    
+    divP_Pint_Completa.appendChild(divP_Fundo_Decs);
+    divP_Fundo_Decs.className = "Fundo-Desc";
+    divP_Fundo_Decs.appendChild(h1P_Nome_Pint);
+    h1P_Nome_Pint.className = "Nome-Pint";
+    h1P_Nome_Pint.innerHTML = inputP_Nome_Pintura.value;
+    divP_Fundo_Decs.appendChild(P_Desc_Pint);
+    P_Desc_Pint.className = "Desc-Pint";
+    P_Desc_Pint.innerHTML = input_Desc_Pintura.value;
+    divP_Fundo_Decs.appendChild(iP_Icon_Pontinhos);
+    iP_Icon_Pontinhos.id = "Icon_Pontinhos";
+    iP_Icon_Pontinhos.className = "fas fa-ellipsis-v";
+    divP_Fundo_Decs.appendChild(divP_menubtns);
+    divP_menubtns.id = "menubtns";
+    divP_menubtns.appendChild(btnP_Editar);
+    btnP_Editar.id = "btn_Editar";
+    btnP_Editar.className = "btn_span";
+    btnP_Editar.innerHTML = "Editar";
+    btnP_Editar.appendChild(iP_Icon_Editar);
+    iP_Icon_Editar.className = "fas fa-paint-brush IconE";
+    divP_menubtns.appendChild(btnP_Excluir);
+    btnP_Excluir.id = "btn_Excluir";
+    btnP_Excluir.className = "btn_span";
+    btnP_Excluir.innerHTML = "Excluir"
+    btnP_Excluir.appendChild(iP_Icon_Excluir);
+    iP_Icon_Excluir.className = "fas fa-trash-alt IconE";
+    divP_Fundo_Decs.appendChild(divP_Menu_Editar);
+    divP_Menu_Editar.className = "Menu_Editar";
+    divP_Menu_Editar.appendChild(h2P_TextoMenu);
+    h2P_TextoMenu.innerHTML = "Novas Alterações"
+    divP_Menu_Editar.appendChild(InputP_btnSalvar);
+    InputP_btnSalvar.id = "salvar_edicoes";
+    InputP_btnSalvar.type = "submit";
+    InputP_btnSalvar.name = "SalvarTudo";
+    InputP_btnSalvar.value = "Salvar";
+    InputP_btnSalvar.className = "btn-SP";
+    divP_Menu_Editar.appendChild(InputP_Nome_Pintura);
+    InputP_Nome_Pintura.type="text";
+    InputP_Nome_Pintura.className="InputAlt";
+    InputP_Nome_Pintura.id="NNPint"
+    InputP_Nome_Pintura.maxlength="50";
+    InputP_Nome_Pintura.placeholder="Digite o nome da pintura";
+    divP_Menu_Editar.appendChild(textareaP_Desc_Pintura);
+    textareaP_Desc_Pintura.id="InputAltD";
+    textareaP_Desc_Pintura.name="descrição-foto";
+    textareaP_Desc_Pintura.placeholder="Digite a descrição da pintura";
+    textareaP_Desc_Pintura.cols="30";
+    textareaP_Desc_Pintura.rows="40";
+    divP_Menu_Editar.appendChild(divP_BTN_IN);
+    divP_BTN_IN.id = "BTN-IN";    
+    divP_BTN_IN.appendChild(InputP_Fileimg);
+    InputP_Fileimg.type="file";
+    InputP_Fileimg.className="form-control-file";
+    InputP_Fileimg.name="foto";
+    InputP_Fileimg.id="TrocarIMG";
+    InputP_Fileimg.accept="image/*";
+    divP_BTN_IN.appendChild(labelP_btnFile);
+    labelP_btnFile.htmlFor ="TrocarIMG";
+    labelP_btnFile.className="btn-ST";
+    labelP_btnFile.innerHTML = "Trocar Imagem";
+    
 
-    /* Alterar Nomes Pint 
-    var NovoTitulo = "";
-    var NovaDescrição = "";
-    var aNomePintura = aNomePint;
-    var aDescPintura = aDescPint;
-    btnSalvar.addEventListener('click', function() {
-        NovoTitulo = aInputNN.value;
-        aNomePintura.innerHTML = NovoTitulo;
-        NovaDescrição = aInputDN.value;
-        aDescPintura.innerHTML = NovaDescrição;
-    });
+    /* Menu para editar */
+    
+    /* Aparecer o menu de editar
+    /* Função dos 3 pontinhos */
+    iP_Icon_Pontinhos.addEventListener('click', function(){
 
-    /* Aparecer o menu de editar 
-    BtnAparecer.addEventListener('click', function() {
-        if(aMenuEdit.style.display == "none"){
-            aMenuEdit.style.display = "block";
-            aBtnExcluir.style.display = "inline-flex";
+        InputP_Nome_Pintura.value = h1P_Nome_Pint.innerHTML;
+        textareaP_Desc_Pintura.value = P_Desc_Pint.innerHTML;
+
+        if(divP_menubtns.style.display == "none"){
+            divP_menubtns.style.display = "block";
         }
         else{
-            aMenuEdit.style.display = "none";
-            aBtnExcluir.style.display = "none";
+            divP_menubtns.style.display = "none";
+            divP_Menu_Editar.style.display = "none";
         }
     });
 
-    /* Trocar as images 
-    aInputFoto.addEventListener('change', function(e) {
-        showThumbnail(this.files); /* mostrar miniatura desse mesmo arquivo 
-    });
-       
-    function showThumbnail(files) {
-        if (files && files) {            
-            var Procurar = new FileReader();       
-            Procurar.onload = function(e) {
-            aPintura.src = e.target.result;
-        }        
-        Procurar.readAsDataURL(files);
+    divP_Menu_Editar.style.display = "none";
+    btnP_Editar.addEventListener('click', function(){
+        if(divP_Menu_Editar.style.display == "none"){
+            divP_Menu_Editar.style.display = "block";
+        }else{
+            divP_Menu_Editar.style.display = "none";
         }
-    }     
+    });
 
+    /* Trocar os nomes da pintura e descrição */
+
+    InputP_btnSalvar.addEventListener('click', function(){  
+
+        if(InputP_Nome_Pintura.value == ""){
+            alert("Preencha os campos!");
+            divP_Menu_Editar.style.display = "none";            
+        }
+        if(textareaP_Desc_Pintura.value == ""){
+            alert("Preencha os campos!");
+            divP_Menu_Editar.style.display = "none";   
+        }
+        else{
+            h1P_Nome_Pint.innerHTML = InputP_Nome_Pintura.value;
+            P_Desc_Pint.innerHTML = textareaP_Desc_Pintura.value;
+        }
+        
+
+    });
+    
+    /* Botão de excluir  */
+    btnP_Excluir.addEventListener('click', function() {                
+        if(divP_Pint_Completa.parentNode){                        
+            divP_Pint_Completa.parentNode.removeChild(divP_Pint_Completa);
+        }    
+    });
+    /* Selecionar uma nova Pintura */
+    
+    InputP_Fileimg.addEventListener('change', function() {
+    
+        if(InputP_Fileimg.files.length < 0){
+            return;
+        }
+        let LerPinturaSelect = new FileReader();
+        
+        LerPinturaSelect.onload = () => {
+            imgP_Pintura.src = LerPinturaSelect.result;
+        }
+    
+        LerPinturaSelect.readAsDataURL(InputP_Fileimg.files[0]);
+    });
 });
 /* -----------------FORA---------------------- */
 
 
 /* Função dos 3 pontinhos */
 var Menu_Editar = document.querySelector(".Menu_Editar");
-var Icon_Potinhos = document.getElementById("Icon_Potinhos");
+var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
 var menubtns = document.getElementById("menubtns");
 var btn_Editar = document.getElementById("btn_Editar");
 
-menubtns.style.display = "none";
-Icon_Potinhos.addEventListener('click', function(){
+
+Icon_Pontinhos.addEventListener('click', function(){
     if(menubtns.style.display == "none"){
         menubtns.style.display = "inline-flex";
     }
@@ -297,22 +373,4 @@ btn_Excluir.addEventListener('click', function() {
     if(Pint_Completa.parentNode){                        
         Pint_Completa.parentNode.removeChild(Pint_Completa);
     }    
-});
-
-/* Trcar Pintura selecionada */
-var InputFile_TrocarIMG = document.getElementById("TrocarIMG");
-var Pintura = document.getElementById("Pintura");
-
-InputFile_TrocarIMG.addEventListener('change', function() {
-    
-    if(InputFile_TrocarIMG.files.length < 0){
-        return;
-    }
-    let readerPintura = new FileReader();
-    
-    readerPintura.onload = () => {
-        Pintura.src = readerPintura.result;
-    }
-
-    readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
 });
