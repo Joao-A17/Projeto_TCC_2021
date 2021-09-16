@@ -121,7 +121,7 @@ MenuPublicar.style.display = 'none';
 
 
 
-/* Trcar Pintura selecionada */
+/* Trcar Pintura selecionada 
 var InputFile_TrocarIMG = document.getElementById("TrocarIMG");
 var Pintura = document.getElementById("Pintura");
 
@@ -137,7 +137,7 @@ InputFile_TrocarIMG.addEventListener('change', function() {
     }
 
     readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
-});
+}); */
 
 
 
@@ -323,25 +323,27 @@ btn_publicar.addEventListener('click', function(){
         }    
     });
     /* Selecionar uma nova Pintura */
-    
+
     InputP_Fileimg.addEventListener('change', function() {
-    
-        if(InputP_Fileimg.files.length < 0){
-            return;
-        }
-        let LerPinturaSelect = new FileReader();
+
+        if(divP_Pint_Completa.parentNode){                      
+            if(InputP_Fileimg.files.length < 0){
+                return;
+            }
+            let LerPinturaSelect = new FileReader();
+            
+            LerPinturaSelect.onload = () => {
+                imgP_Pintura.src = LerPinturaSelect.result;
+            }
         
-        LerPinturaSelect.onload = () => {
-            imgP_Pintura.src = LerPinturaSelect.result;
-        }
-    
-        LerPinturaSelect.readAsDataURL(InputP_Fileimg.files[0]);
+            LerPinturaSelect.readAsDataURL(InputP_Fileimg.files[0]); 
+        }      
     });
 });
 /* -----------------FORA---------------------- */
 
 
-/* Função dos 3 pontinhos */
+/* Função dos 3 pontinhos 
 var Menu_Editar = document.querySelector(".Menu_Editar");
 var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
 var menubtns = document.getElementById("menubtns");
@@ -366,7 +368,7 @@ btn_Editar.addEventListener('click', function(){
         Menu_Editar.style.display = "none";
     }
 });
-/* Botão de excluir */    
+/* Botão de excluir 
 var Pint_Completa = document.querySelector(".Pint_Completa");
 var btn_Excluir = document.getElementById("btn_Excluir");
 btn_Excluir.addEventListener('click', function() {                
@@ -374,3 +376,4 @@ btn_Excluir.addEventListener('click', function() {
         Pint_Completa.parentNode.removeChild(Pint_Completa);
     }    
 });
+*/
