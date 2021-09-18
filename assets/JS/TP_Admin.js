@@ -196,7 +196,7 @@ btn_publicar.addEventListener('click', function(){
         var iP_Icon_Editar = document.createElement('i');
         var btnP_Excluir = document.createElement('buttom');
         var iP_Icon_Excluir = document.createElement('i');
-        var divP_Menu_Editar = document.createElement('div');
+        var divP_Menu_Editar = document.createElement('form');
         var h2P_TextoMenu = document.createElement('h2');
         var InputP_btnSalvar = document.createElement('input');
         var InputP_Nome_Pintura = document.createElement('input');
@@ -240,6 +240,8 @@ btn_publicar.addEventListener('click', function(){
         btnP_Excluir.appendChild(iP_Icon_Excluir);
         iP_Icon_Excluir.className = "fas fa-trash-alt IconE";
         divP_Fundo_Decs.appendChild(divP_Menu_Editar);
+        divP_Menu_Editar.action="./Pinturas_AP.php";
+        divP_Menu_Editar.method='POST';
         divP_Menu_Editar.className = "Menu_Editar";
         divP_Menu_Editar.appendChild(h2P_TextoMenu);
         h2P_TextoMenu.innerHTML = "Novas Alterações"
