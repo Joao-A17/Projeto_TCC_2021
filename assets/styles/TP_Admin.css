@@ -103,7 +103,6 @@ body{
 }
 
 #menubtns{
-    display: none;
     margin-top: 40px;
     margin-bottom: 20px;
 }
@@ -285,8 +284,8 @@ textarea::placeholder{
     box-shadow: 0 2px 5px var(--corL);
 }
 
-#btn-publicar{
-    display: block;
+#btn-publicar{    
+    margin-bottom: 20px;
 }
 
 #divIMG{
