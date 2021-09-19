@@ -8,22 +8,35 @@ body{
 }
 
 #Cont_Master{
-    text-align: center;
+    display: block;
+    padding: 80px;
 }
 
-h2{
-    padding: 20px;
-    font-size: 30px;
-    font-family: 'Josefin Sans', sans-serif;
+#Card_Mensagem{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#T1{
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+    font-size: 58px;
+    font-family: 'Gugi', sans-serif;    
+}
+
+#T2{
     color: var(--corL);
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;    
 }
 
 #Quadros{
-    margin-top: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    text-align: center;
     background: var(--tranp);
     border-radius: 20px;
     border-left: 3px solid var(--corL);
@@ -31,8 +44,7 @@ h2{
 }
 
 #Coluna{
-    display: inline-flex;
-    width: 100%;
+    display: flex;
     list-style: none;
 }
 
