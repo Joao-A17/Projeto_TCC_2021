@@ -49,7 +49,7 @@ body{
     font-family: 'Gugi', cursive;
     background-image: linear-gradient(to top right, var(--corP), var(--corS));
   	-webkit-background-clip: text;
-    color: transparent;;
+    color: transparent;
     text-transform: uppercase;
     margin-left: 5px;
     letter-spacing: 5px;

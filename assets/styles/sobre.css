@@ -11,13 +11,15 @@ body{
 /* ----------------------Desenvolvedores---------------------- */
 
 #desenvolvedores{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-image: linear-gradient(to bottom, var(--tranp), var(--corD));
     border: 0;
     border-top: 3px solid var(--corP);
     border-bottom: 3px solid var(--corP);
     box-shadow: 0px 0px 15px var(--corP);
     border-radius: 33px;
-    padding: 20px;
     text-align: center;
 }
 
@@ -27,9 +29,15 @@ body{
     margin: 20px;
     background-image: linear-gradient(to top, var(--tranp), var(--corD2));
     border: 0;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
     border-radius: 33px;
+    transition: .3s;
+}
+
+#desig:hover{
+    border-top: 4px solid var(--corP);
+    border-bottom: 4px solid var(--corP);    
 }
 
 
