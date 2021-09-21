@@ -1,27 +1,12 @@
-<?php
+<?php 
+session_start();
 
-
-if(isset($_FILES['arquivo'])){
-
-    include_once("../assets/PHP/Conexao_Banco.php");    
-    $Autor = filter_input(INPUT_POST, 'NomeAltor');
-    $NomeFoto = filter_input(INPUT_POST, 'NomeFoto');
-    $DescriçãoFoto = filter_input(INPUT_POST, 'DescriçãoFoto');
-    $arquivoFoto = strtolower(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION));
-    $novo_nome = $NomeFoto.'.'.$arquivoFoto;
-    $diretorio = "../assets/IMAGES/Fotos/";
-
-    move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novo_nome);
-    
-    $Enviar_sql = "INSERT INTO pinturas (Autor, Nome da Foto, Descrição da foto, Imagem, Criado) VALUES ('$Autor', '$NomeFoto', '$DescriçãoFoto', '$arquivoFoto', NOW())";        
-    if($conexao->query($Enviar_sql)){
-        echo 'Sim';
-    }else{
-        echo 'Não';
-    }
-        
+// Encontrar Logado
+if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['senha']);
+  header('Location: ./Login.php');   
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,8 +21,8 @@ if(isset($_FILES['arquivo'])){
 </head>
 <body>
     <nav class="Menu">
-        <a href="./Pinturas.php" class="Logo">Magics Paintings</a>            
-        <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
+        <a href="./Pinturas.php" class="Logo">Magics Paintings</a>       
+        <a class="btn-menu" href="./Pinturas.php"><i class="fas fa-home IconG"></i>Inicio</a>     
     </nav>
 
     <div class="container">
@@ -45,7 +30,7 @@ if(isset($_FILES['arquivo'])){
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
                     <div id="divIMGAdmin">
-                        <img class="Foto-Admin" src="https://img.freepik.com/vetores-gratis/astronauta-bonito-voando-no-espaco-dos-desenhos-animados-icone-ilustracao_138676-2702.jpg?size=338&amp;ext=jpg&amp;ga=GA1.2.2045703221.1627862400">   
+                        <img class="Foto-Admin" src="../assets/IMAGES/img_settings/astronauta.jpg">   
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
@@ -88,7 +73,7 @@ if(isset($_FILES['arquivo'])){
                 <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
             </div>    
                 <div id="Cont-Master">
-                    <form action="./Pinturas_AP.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
+                    <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
                         <h2>Publicar</h2>
                         <div id="MenuSepara">
                             <div id="MS-1">

@@ -1,16 +1,19 @@
 <?php
-    $Servidor = 'localhost';
-    $Usuario = 'root';
-    $Senha = '';
-    $Nome = 'tcc_mpx';
 
-    $conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome);
+session_start();
 
-    /* if($conexao->connect_error){
-        echo "<p class='TextE' style='color: red;'>Não conectado</p>";
-    }
-    else{
-        echo "<p class='TextE' style='color: green;'>Conectado ao banco de dados: </p><p class='TextE' style='color: green;'>$Nome</p>";
-    }       */
+$Servidor = 'localhost';
+$Usuario = 'root';
+$Senha = '';
+$Nome = 'tcc_mpx';
+
+$conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome);
+
+/* if(!$conexao){
+    echo "<p class='TextE' style='color: red;'>Não conectado</p>" . mysqli_connect_error();
+}
+else{
+    echo "<p class='TextE' style='color: green;'>Conectado ao banco de dados: </p><p class='TextE' style='color: green;'>$Nome</p>";
+} */
 
 ?>

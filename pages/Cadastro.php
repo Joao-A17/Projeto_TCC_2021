@@ -38,7 +38,7 @@
                     </div>
                     <div class="Form-I">
                         <p>Já tem uma conta? <a href="./Login.php">Entrar</a></p>
-                        <input type="submit" id="botao" name="botao" value="Cadastrar">               
+                        <input type="submit" id="botao" name="submit" value="Cadastrar">               
                     </div>                    
                 </div>
             </div>
@@ -48,6 +48,7 @@
 </html>
 <?php
 
+if(isset($_POST['submit'])){
     include_once("../assets/PHP/Conexao_Banco.php");
     $Nome = filter_input(INPUT_POST, 'nome');
     $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
@@ -55,8 +56,12 @@
     $Senha = filter_input(INPUT_POST, 'password' , FILTER_SANITIZE_STRING);
     $Telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);    
  
-    $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Senha', '$Telefone', NOW())";
-    $Resultado_Cadastro = mysqli_query($conexao, $Result_Cadastro); 
-    // header('Location: ./Login.php');
+    $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Senha', '$Telefone', NOW())";    
+    if(mysqli_query($conexao, $Result_Cadastro)){
+        header('Location: ./Login');
+    }else{
+        header('Location: ./Cadastro.php');        
+    }
+}
 
 ?>

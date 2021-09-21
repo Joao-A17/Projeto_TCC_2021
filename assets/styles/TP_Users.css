@@ -11,31 +11,6 @@ body{
     background-image: linear-gradient(to top left, var(--corD), var(--corD2));
 }
 
-body::-webkit-scrollbar{
-    width: 15px;              
-}
-  
-body::-webkit-scrollbar-track{
-    background: var(--corL);
-}
-  
-body::-webkit-scrollbar-thumb{
-    background-color: var(--corD);
-    border-radius: 20px;
-    border: 2px solid var(--corS);
-}
-.espaço{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 5px;
-    border-radius: 50px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
-    border: 0;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corP); 
-}
-
 .Menu{
     position: fixed;
     width: 100%;
@@ -44,7 +19,7 @@ body::-webkit-scrollbar-thumb{
     justify-content: space-around;
     align-items: center;
     font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+	background: var(--tranp);
     border-radius: 10px;
     border: 2px solid var(--corS);
     box-shadow: 0px 0px 15px var(--corS);

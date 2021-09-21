@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <title>Login | Magics Paintings</title>
 </head>
-
 <body>
     <div class="CimaD"></div>
     <div class="container">
@@ -23,12 +21,10 @@
                     <input class="Inputs" type="email" name="email" id="email" placeholder="E-mail" required>
                     <input class="Inputs" type="password" name="senha" id="password" placeholder="Senha" required>
                     <input type="submit" name="submit" value="Entrar" />
-                    <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>
-                    </p>
+                    <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
                 </div>
             </div>
         </form>
     </div>
 </body>
-
 </html>

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/TP_Users.css">
-    <title id="Nome-Site">Pintura-Admin</title>              
+    <title id="Nome-Site">Perfil | Magics Painting</title>              
 </head>
 <body>
     <nav class="Menu">
-        <a href="../InPinturas/InPinturas.html" class="Logo">Magics Paintings</a>    
+        <a href="./Pinturas.php" class="Logo">Magics Paintings</a>    
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 
@@ -43,36 +43,6 @@
                                 Após o grupo se separar, Ban foi preso pelo grupo Presas Tortuosas na Prisão de Baste, 
                                 mas escapou quando soube que Meliodas estava vivo à sua procura. Além de ser imortal, 
                                 ele é conhecido por sua habilidade, Snatch.</p>
-                        </div>
-                    </div>
-                    <div class="espaço"></div>
-                    <div id="Pint-Completa2" class="Cont">
-                        <div class="Fundo-Pint">
-                            <img class="Pintura2" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png">
-                        </div>                                          
-                        <div class="Fundo-Desc"> 
-                            <h1 id="Nome-Pintura-U2" class="Nome-Pint">Princesa Elizabeth</h1>
-                            <p id="Desc-Pintura-U2" class="Desc-Pint">Elizabeth Liones é a principal protagonista feminina da série e é a terceira princesa 
-                                do Reino de Liones, uma filha adotada do Rei de Liones e é originalmente do Reino de Danafor. 
-                                Ela começou a trabalhar como uma garçonete no bar Chapéu de Javali quando ela se junta a Meliodas 
-                                em sua jornada para encontrar os Sete Pecados Capitais.
-                                Mais tarde é revelado que Elizabeth é a centésima sétima reencarnação da deusa Elizabeth, 
-                                a filha da Suprema Divindade e amante de Meliodas à três mil anos.</p>                               
-                        </div>
-                    </div>
-                    <div class="espaço"></div>
-                    <div id="Pint-Completa3" class="Cont">
-                        <div class="Fundo-Pint">
-                            <img class="Pintura3" src="../assets/IMAGES/Edits/Tanjiro.png">
-                        </div>                                          
-                        <div class="Fundo-Desc">
-                            <h1 id="Nome-Pintura-U3" class="Nome-Pint">Tanjiro_Kamado</h1>
-                            <p id="Desc-Pintura-U3" class="Desc-Pint">Tanjiro Kamado (竈門かまど 炭たん治じ郎ろう Kamado Tanjirō?) é o principal protagonista 
-                                de Demon Slayer: Kimetsu no Yaiba. Ele é um Caçador de Oni do Esquadrão de Caçadores de Onis, 
-                                que se juntou para encontrar um remédio para transformar sua irmã, Nezuko Kamado, 
-                                que foi transformada em um Oni, de volta em um humano.
-                                Antes de se tornar um Caçador de Oni, sua família foi massacrada pelo Rei dos Onis, 
-                                Muzan Kibutsuji, enquanto sua irmã mais nova, Nezuko, foi transformada em uma Oni.</p>   
                         </div>
                     </div>
                 </div>

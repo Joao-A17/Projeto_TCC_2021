@@ -1,12 +1,14 @@
 <?php
-  session_start();
+session_start();
 
-  if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: ./Login.php');   
-  }
-  $logado = $_SESSION['email'];
+if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['senha']);
+  header('Location: ./Login.php');   
+}
+
+$logado = $_SESSION['email'];
+
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +24,11 @@
     <link rel="stylesheet" href="../assets/styles/Pinturas.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <title>Pinturas | Magics Paintings</title>
+    <title>Pinturas | Magics Painting</title>
 </head>
 <body>
   <nav class="MenuH">
-    <a class="logo" href="#topo">Magics Paintings</a>
+    <a class="logo" href="#topo">Magics Painting</a>
     <div class="mobile-menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -38,8 +40,7 @@
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
     </ul>
-    <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
-    <li><a href="../Login_Admin/Login.html" id="login"><i class="fas fa-power-off"></i>  Login</a></li>
+    <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>   
   </nav>
     
       
@@ -47,7 +48,7 @@
       
 
       <section id="topo">
-        <h1>Seja bem-vindo(a) <br> ao <br> Magics Paintings</h1>
+        <h1>Seja bem-vindo(a) <br> ao <br> Magics Painting</h1>
         <p>Compras e vendas de pinturas</p>
       </section>
       <section id="info">
@@ -65,55 +66,43 @@
         <div class="espaço"></div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.html" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png" alt="imgPint"></a>
+          <a href="./Pinturas_UP.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png" alt="imgPint"></a>
           <div class="InfoPint">
             <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
               <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/off.jpg" alt="NomeUsuario">
+                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.html"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
-            </div>
-            <div class="ConteudoInfo-01">         <!-- Conteudo OFF -->
-              <img class="ImgPint" src="../assets/IMAGES/img_settings/off.jpg" alt="imgPint">
-              <h4>Faça <a href="./Login.html">login</a> para ver mais</h4>
+              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.html" class="linkPint2"><img id="Pintura02" class="ImgPint" src="../assets/IMAGES/Edits/Meliodafull.png" alt="imgPint"></a>
+          <a href="./Pinturas_UP.php" class="linkPint2"><img id="Pintura02" class="ImgPint" src="../assets/IMAGES/Edits/Meliodafull.png" alt="imgPint"></a>
           <div class="InfoPint">
-            <div class="ConteudoInfo-2">          <!-- Conteudo ON -->
+            <div class="ConteudoInfo-2">
               <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/off.jpg" alt="NomeUsuario">
+                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.html"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
-            </div>
-            <div class="ConteudoInfo-02">         <!-- Conteudo OFF -->
-              <img class="ImgPint" src="../assets/IMAGES/img_settings/off.jpg" alt="imgPint">
-              <h4>Faça <a href="./Login.html">login</a> para ver mais</h4>
+              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.html" class="linkPint3"><img id="Pintura03" class="ImgPint" src="../assets/IMAGES/Edits/Tanjiro.png" alt="imgPint"></a>
+          <a href="./Pinturas_UP.php" class="linkPint3"><img id="Pintura03" class="ImgPint" src="../assets/IMAGES/Edits/Tanjiro.png" alt="imgPint"></a>
           <div class="InfoPint">
-            <div class="ConteudoInfo-3">          <!-- Conteudo ON -->
+            <div class="ConteudoInfo-3">
               <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/off.jpg" alt="NomeUsuario">
+                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.html"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
-            </div>
-            <div class="ConteudoInfo-03">         <!-- Conteudo OFF -->
-              <img class="ImgPint" src="../assets/IMAGES/img_settings/off.jpg" alt="imgPint">
-              <h4>Faça <a href="./Login.html">login</a> para ver mais</h4>
+              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>
@@ -127,7 +116,7 @@
         <h2>Desenvolvedores</h2>
         
         <div id="desig">
-          <img class="img-P" src="../assets/IMAGES/img_settings/off.jpg" alt="João">
+          <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="João">
           <h3>João Victor</h3>
           <p>Bla bla bla</p>
           <div class="social-media">
@@ -138,7 +127,7 @@
         </div>
         <div id="desig">
           <div class="desen">
-            <img class="img-P" src="../assets/IMAGES/img_settings/off.jpg" alt="Isabella">
+            <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
             <h3>Isabella Oliveira</h3>
           </div>
           <p>Bla bla bla</p>
@@ -149,7 +138,7 @@
           </div>
         </div>
         <div id="desig">
-          <img class="img-P" src="../assets/IMAGES/img_settings/off.jpg" alt="Kauã">
+          <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Kauã">
           <h3>Kauã Vieria</h3>
           <p>Bla bla bla</p>
           <div class="social-media">
@@ -162,6 +151,5 @@
                     <!--   Scripts   -->
     <script src="../assets/JS/Menu.js"></script>
     <script src="../assets/JS/Geral.js"></script>
-    <script src="../assets/JS/conectBD.js"></script>
 </body>
 </html>

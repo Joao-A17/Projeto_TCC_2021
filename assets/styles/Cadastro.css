@@ -115,7 +115,6 @@ input::placeholder {
     border: none;
     border-radius: 20px;
     border-bottom: 3px solid var(--corP);
-    outline: none;
     box-sizing: border-box;
     transition: .3s;
 }

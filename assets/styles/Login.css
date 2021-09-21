@@ -65,20 +65,18 @@ input::placeholder {
 /* Campo de texto Email e Senha*/
 .Inputs{
     font-size: 20px;
-    display: block;
-    margin: 30px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    margin: 20px auto;
+    text-align: center;
     height: 38px;
     width: 320px;
     outline: none;
     background: var(--corD2);
     color: var(--corS);
     border: none;
-    border-radius: 8px;
-    border-top: 1px solid var(--corP);
-    border-bottom: 1px solid var(--corP);
-    border-left: 5px solid var(--corP);
-    border-right: 5px solid var(--corP);
-    outline: none;
+    border-radius: 20px;
+    border-bottom: 3px solid var(--corP);
     box-sizing: border-box;
     transition: .3s;
 }
