@@ -5,7 +5,7 @@ duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criand
 
 Pedentes:
 Fazer Tela Ajuda
-Fazer
+Fazer o sistema de perfil
 
 Login do Banco de Dados
 Username:       root

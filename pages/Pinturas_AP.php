@@ -1,12 +1,17 @@
 <?php 
-session_start();
-
+include '../assets/PHP/Conexao_Banco.php';
 // Encontrar Logado
 if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
   unset($_SESSION['email']);
   unset($_SESSION['senha']);
   header('Location: ./Login.php');   
 }
+
+// Buscar Dados da tabela
+
+$ConsultarNome = "SELECT * FROM usuarios WHERE nome = '$Nome' ";
+$resultNome = $conexao->query($ConsultarNome);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,7 +39,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
-                            <h1 id="Nome-Admin">Robson</h1>
+                            <h1 id="Nome-Admin"><?php echo $Nome ?></h1>
                             <p id="Desc-Admin">Eu sou o Robson seu grande amigo e companheiro.</p>                                                        
                         </div>
                         <button type="button" class="btn-menu edp">Editar Perfil</button>                         

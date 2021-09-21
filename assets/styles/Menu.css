@@ -84,8 +84,7 @@ nav {
   }
   
 .nav-list li {
-    letter-spacing: 2px;
-    margin-left: 42px;
+    margin: 10px;
   }
   
 .mobile-menu {
