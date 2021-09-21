@@ -35,6 +35,7 @@ $logado = $_SESSION['email'];
       <div class="line3"></div>
     </div>
     <ul class="nav-list">      
+      <li><a class="menu-link" href="./Pinturas_AP.php"><i class="fas fa-user"></i>  Perfil</a></li>
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
       <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pinturas</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>

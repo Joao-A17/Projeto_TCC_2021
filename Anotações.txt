@@ -4,11 +4,8 @@ Criador de bordas:          https://9elements.github.io/fancy-border-radius/
 duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criando-id%c2%b4s-din%c3%a2micos-para-minhas-div%c2%b4s-no-javascript
 
 Pedentes:
-Fazer Tela Sobre
 Fazer Tela Ajuda
-Fazer Tela Editar Perfil Do Usuario
-Erro:   Duplicando usuarios do Banco
-fazer a troca de imagens das pinturas
+Fazer
 
 Login do Banco de Dados
 Username:       root

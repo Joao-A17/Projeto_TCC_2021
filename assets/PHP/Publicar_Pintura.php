@@ -15,7 +15,7 @@ if(isset($_FILES['arquivo'])){
     
     $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";        
     if(mysqli_query($conexao, $Inserir_Publicação)){
-        header('Location: ../../pages/Pinturas.php');
+        header('Location: ../../pages/Pinturas_AP.php');
     }else{
         header('Location: ../../pages/Pinturas_AP.php');
     }

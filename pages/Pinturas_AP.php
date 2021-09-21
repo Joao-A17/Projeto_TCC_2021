@@ -21,8 +21,8 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
 </head>
 <body>
     <nav class="Menu">
-        <a href="./Pinturas.php" class="Logo">Magics Paintings</a>       
-        <a class="btn-menu" href="./Pinturas.php"><i class="fas fa-home IconG"></i>Inicio</a>     
+        <a href="./Inicio.php" class="Logo">Magics Paintings</a>       
+        <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>     
     </nav>
 
     <div class="container">

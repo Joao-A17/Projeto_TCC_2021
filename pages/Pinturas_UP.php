@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+// Encontrar Logado
+if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+  unset($_SESSION['email']);
+  unset($_SESSION['senha']);
+  header('Location: ./Login.php');   
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

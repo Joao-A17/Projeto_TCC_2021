@@ -25,7 +25,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
         /* print_r('Existe'); */
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        header('Location: ../../pages/Pinturas.php');
+        header('Location: ../../pages/Inicio.php');
     }
 
 }
