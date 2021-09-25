@@ -6,6 +6,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
+
     /* print_r('Email: ' . $email);
     print_r('<br>');
     print_r('Senha: ' . $senha); */
@@ -25,7 +26,7 @@ if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])
         /* print_r('Existe'); */
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        header('Location: ../../pages/Inicio.php');
+        header('Location: ../../pages/Perfil_edit.php');
     }
 
 }

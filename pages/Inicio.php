@@ -1,13 +1,12 @@
 <?php
 session_start();
-
 if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
   unset($_SESSION['email']);
   unset($_SESSION['senha']);
   header('Location: ./Login.php');   
 }
 
-$logado = $_SESSION['email'];
+$email_logado = $_SESSION['email'];
 
 ?>
 
@@ -35,7 +34,7 @@ $logado = $_SESSION['email'];
       <div class="line3"></div>
     </div>
     <ul class="nav-list">      
-      <li><a class="menu-link" href="./Pinturas_AP.php"><i class="fas fa-user"></i>  Perfil</a></li>
+      <li><a class="menu-link" href="./Perfil_edit.php"><i class="fas fa-user"></i>  Perfil</a></li>
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
       <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pinturas</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
@@ -49,7 +48,7 @@ $logado = $_SESSION['email'];
       
 
       <section id="topo">
-        <h1>Seja bem-vindo(a) <br> ao <br> Magics Painting</h1>
+        <h1>Seja bem-vindo(a) <br><?php echo $email_logado ?><br> ao <br> Magics Painting</h1>
         <p>Compras e vendas de pinturas</p>
       </section>
       <section id="info">
@@ -67,7 +66,7 @@ $logado = $_SESSION['email'];
         <div class="espaço"></div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png" alt="imgPint"></a>
+          <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png" alt="imgPint"></a>
           <div class="InfoPint">
             <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
               <div class="User">
@@ -75,13 +74,13 @@ $logado = $_SESSION['email'];
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
+              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.php" class="linkPint2"><img id="Pintura02" class="ImgPint" src="../assets/IMAGES/Edits/Meliodafull.png" alt="imgPint"></a>
+          <a href="./Perfil_edit.php" class="linkPint2"><img id="Pintura02" class="ImgPint" src="../assets/IMAGES/Edits/Meliodafull.png" alt="imgPint"></a>
           <div class="InfoPint">
             <div class="ConteudoInfo-2">
               <div class="User">
@@ -89,13 +88,13 @@ $logado = $_SESSION['email'];
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
+              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>
 
         <div class="PintArt">
-          <a href="./Pinturas_UP.php" class="linkPint3"><img id="Pintura03" class="ImgPint" src="../assets/IMAGES/Edits/Tanjiro.png" alt="imgPint"></a>
+          <a href="./Perfil_edit.php" class="linkPint3"><img id="Pintura03" class="ImgPint" src="../assets/IMAGES/Edits/Tanjiro.png" alt="imgPint"></a>
           <div class="InfoPint">
             <div class="ConteudoInfo-3">
               <div class="User">
@@ -103,7 +102,7 @@ $logado = $_SESSION['email'];
                 <h3 class="NomeUsuario">Pintor(a)</h3>
               </div>
               <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Pinturas_UP.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
+              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
           </div>
         </div>

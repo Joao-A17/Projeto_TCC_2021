@@ -8,6 +8,16 @@ $Senha = '';
 $Nome = 'tcc_mpx';
 
 $conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome);
+/* Conexão orientada a objeto com pdo 
+
+$pdo = new PDO("mysql:dbname=".$Nome."; host=".$Servidor, $Usuario, $Senha);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); Padrão de conexão di banco de dados PDO 
+
+/*  $sql = $pdo->query("SELECT * FROM usuarios");
+$sql->execute();
+echo $sql->rowCount(); rowCount serve para contar quantos registros tem */
+
+
 
 /* if(!$conexao){
     echo "<p class='TextE' style='color: red;'>Não conectado</p>" . mysqli_connect_error();

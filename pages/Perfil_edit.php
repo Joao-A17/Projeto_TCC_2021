@@ -7,10 +7,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   header('Location: ./Login.php');   
 }
 
+$email_logado = $_SESSION['email'];
 // Buscar Dados da tabela
 
-$ConsultarNome = "SELECT * FROM usuarios WHERE nome = '$Nome' ";
-$resultNome = $conexao->query($ConsultarNome);
 
 ?>
 <!DOCTYPE html>
@@ -39,8 +38,8 @@ $resultNome = $conexao->query($ConsultarNome);
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
-                            <h1 id="Nome-Admin"><?php echo $Nome ?></h1>
-                            <p id="Desc-Admin">Eu sou o Robson seu grande amigo e companheiro.</p>                                                        
+                            <h1 id="Nome-Admin"><?php echo $email_logado ?></h1>
+                            <p id="Desc-Admin">Eu sou o <?php echo $email_logado ?> seu grande amigo e companheiro.</p>                                                        
                         </div>
                         <button type="button" class="btn-menu edp">Editar Perfil</button>                         
                     </div>
@@ -103,5 +102,7 @@ $resultNome = $conexao->query($ConsultarNome);
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/TP_Admin.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
  </body>
 </html> 
