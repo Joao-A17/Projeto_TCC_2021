@@ -15,6 +15,7 @@ if(isset($_POST['submit'])){
     }else{
         header('Location: ../../pages/Cadastro.php');                
     }
+    $IdUser = mysqli_insert_id($conexao);
 
 }
 ?>

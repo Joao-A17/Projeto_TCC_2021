@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--corD) 100%);
+}
+
+#Menu_Etapa{
+    align-items: center;
+    text-align: center;
+}
+
+#TituloMenu{
+    margin-top: 10px;
+    font-family: 'Gugi', sans-serif;
+	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+}
+
+p{    
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--corL);
+}
+
+#card_grop{
+    display: inline-flex;
+}
+
+#DimgEtapa{
+    width: 30%;
+}
+
+#pintura_etapa{
+    width: 100%;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    transition: .3s;
+}
+
+#pintura_etapa:hover{
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+}
+
+
+#inputIMG{
+    display: none;
+}
+
+.AlteraImg-Pintura{
+    padding: 10px 8px;  
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;  
+    justify-content: center;
+    align-items: center;       
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    background: var(--tranp);
+    color: var(--corP);
+    border: 2px solid var(--tranp);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;
+}
+
+.AlteraImg-Pintura:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+#divND{
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.InputP{
+    width: 350px;
+    height: 40px;
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corP);
+}
+.InputP:focus{
+    border-bottom: 2px solid var(--corP);
+    box-shadow: 0 2px 5px var(--corP);
+}
+
+#InputDesc{
+    width: 60%;
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    margin-top: 30px;
+    background: var(--tranp);
+    color: var(--corP);
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corP);
+    box-sizing: border-box;
+}
+#InputDesc:focus{
+    border-bottom: 2px solid var(--corP);
+    box-shadow: 0 2px 5px var(--corP);
+}
+
+#BtnSP{
+    width: 120px;    
+    height: 40px;
+    font-size: 20px;    
+    cursor: pointer;
+    border: none;    
+    background: var(--tranp);
+    color: var(--corL);    
+    border-radius: 8px;
+    border-bottom: 2px solid var(--corL);
+    animation: Pulse 1s infinite;
+    transition: .4s;    
+}
+#BtnSP:hover{
+    animation: none;
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 8px var(--corL);
+}

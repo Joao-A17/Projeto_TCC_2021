@@ -166,6 +166,11 @@ body{
     border-bottom: 3px solid var(--corS); 
 }
 
+.Pintura:hover{
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+}
+
 .Fundo-Desc{
     margin-left: 20px;
 }
@@ -238,6 +243,10 @@ textarea::placeholder{
     align-items: center;
 }
 
+#inputP_autor{
+    display: none;
+}
+
 .InputPublic{
     height: 40px;
     width: 400px;
@@ -294,6 +303,15 @@ textarea::placeholder{
 
 #IMGpublic{
     width: 100%;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    transition: .3s;
+}
+
+#IMGpublic:hover{
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
 }
 
 #SelectIMG{
@@ -630,4 +648,31 @@ textarea::placeholder{
         border: 2px solid var(--corL);
         box-shadow: 0px 0px 10px var(--corL);
     }
+}
+
+/* Div das Pinturas */
+
+.Fundo_Card{
+	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
+    border-radius: 8px;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+}
+
+.Card_Pinturas{
+    display: contents;
+}
+
+.Pinturas{
+    margin: 20px auto;
+    border-radius: 20px;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
+}
+
+.Pinturas:hover{
+    opacity: .7;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
 }

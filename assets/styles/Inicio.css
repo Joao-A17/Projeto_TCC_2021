@@ -68,6 +68,18 @@ body{
     font-family: 'Gugi', sans-serif;
 }
 
+.usuario_logado{
+    font-family: 'Gugi', sans-serif;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+    transition: .3s;
+}
+
+.usuario_logado:hover {
+    opacity: 0.7;
+}
+
 #topo p{
     padding-top: 30px;
     color: var(--corS);

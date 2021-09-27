@@ -7,9 +7,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   header('Location: ./Login.php');   
 }
 
-$email_logado = $_SESSION['email'];
-// Buscar Dados da tabela
-
+$usuario_logado = $_SESSION['nome-user'];
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +17,7 @@ $email_logado = $_SESSION['email'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <link rel="stylesheet" href="../assets/styles/TP_Admin.css"> 
+    <link rel="stylesheet" href="../assets/styles/Perfil_edit.css"> 
     <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
     <title id="Nome-Site">Perfil | Magics Paintings</title>              
 </head>
@@ -34,27 +32,26 @@ $email_logado = $_SESSION['email'];
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
                     <div id="divIMGAdmin">
-                        <img class="Foto-Admin" src="../assets/IMAGES/img_settings/astronauta.jpg">   
+                        <?php require '../assets/PHP/pegarFotoP.php'; ?>   
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
-                            <h1 id="Nome-Admin"><?php echo $email_logado ?></h1>
-                            <p id="Desc-Admin">Eu sou o <?php echo $email_logado ?> seu grande amigo e companheiro.</p>                                                        
+                            <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
+                            <p id="Desc-Admin">Mude a descrição e altere sua imagem</p>                                                        
                         </div>
                         <button type="button" class="btn-menu edp">Editar Perfil</button>                         
                     </div>
                 </div>
-                <div id="MenuModal_EditPerfil">
+                <form id="MenuModal_EditPerfil" action="../assets/PHP/alterPerfil.php" method="POST">
                     <div id="nav_menu">
                         <h2 id="TituloMenu">Menu Alterações</h2>
-                        <button type="submit" name="salvar" id="BtnSP">Salvar</button>
-                        <button class="btn-menu" id="btn_cancelar">Cancelar</button>
                     </div>
-                    <input type="file" class="form-control-file" name="imgPerfil" id="imgPerfil" accept="image/*">
-                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>   
+                    <input type="file" class="form-control-file" name="fotop" id="imgPerfil" accept="image/*">
+                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>
                     <div id="divND">
-                        <input type="text" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome">
-                        <input type="text" name="InputDescAdmin" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição">
+                        <input type="text" name="Nome-Perfil" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome"> 
+                    <input type="submit" name="salvarP" id="BtnSP" value="Salvar">  
+                        <input type="text" name="Desc-Perfil" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição">
                     </div> 
                     <div id="divRedesSociais">
                         <div id="LeftRedes">
@@ -67,7 +64,7 @@ $email_logado = $_SESSION['email'];
                         </div>                                            
                     </div>
                     <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                               
-                </div>
+                </form>
                 <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
                 <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
                 <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
@@ -83,7 +80,7 @@ $email_logado = $_SESSION['email'];
                             <div id="MS-1">
                                 <input type="text" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor">
                                 <input type="text" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura">
-                                <textarea id="InputPublicD" name="DescriçãoFoto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                      
+                                <textarea id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                      
                             </div>
                             <div id="MS-2">                               
                                 <a href="#Pint_Completa"><button type="submit" id="btn-publicar" name="Publicar" class="btn-SP">Publicar</button></a>                   
@@ -95,14 +92,40 @@ $email_logado = $_SESSION['email'];
                             </div>                                          
                         </div> 
                         <br>
-                    </form>                            
-            </div>                  
+                    </form>
+                    <div class="Fundo_Card">
+                        <div class="Card_Pinturas"> 
+                            <?php require '../assets/PHP/listar_pinturas.php' ?>
+                        </div>
+                    </div>                    
+
+                    <!-- <div class="Pint_Completa">
+                        <div class="Fundo-Pint"> 
+                            <?php //require '../assets/PHP/listar_imagens.php' ?>
+                        </div>
+                        <div class="Fundo-Desc">
+                            <h1 class="Nome-Pint">Carro</h1>
+                            <p class="Desc-Pint">carrinho da sorte</p>
+                            <i id="Icon_Pontinhos" class="fas fa-ellipsis-v"></i>
+                            <div id="menubtns">
+                                <buttom id="btn_Editar" class="btn_span">Editar<i class="fas fa-paint-brush IconE"></i></buttom>
+                                <buttom id="btn_Excluir" class="btn_span">Excluir<i class="fas fa-trash-alt IconE"></i></buttom>
+                            </div>
+                            <form action="./Pinturas_AP.php" method="POST" class="Menu_Editar">
+                                <h2>Novas Alterações</h2>
+                                <input id="salvar_edicoes" type="submit" name="SalvarTudo" value="Salvar" class="btn-SP">
+                                <input type="text" name="arquivoX" class="InputAlt" id="NNPint" placeholder="Digite o nome da pintura">
+                                <textarea id="InputAltD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>
+                            </form>
+                        </div>
+                    </div> --> 
+                    
+                    
+                </div>                 
         </div>         
     </div>          
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
-    <script src="../assets/JS/TP_Admin.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../assets/JS/Perfil_edit.js"></script>
  </body>
 </html> 

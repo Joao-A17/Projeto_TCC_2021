@@ -6,7 +6,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   header('Location: ./Login.php');   
 }
 
-$email_logado = $_SESSION['email'];
+$usuario_logado = $_SESSION['nome-user'];
 
 ?>
 
@@ -16,10 +16,6 @@ $email_logado = $_SESSION['email'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/styles/Inicio.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
@@ -48,7 +44,7 @@ $email_logado = $_SESSION['email'];
       
 
       <section id="topo">
-        <h1>Seja bem-vindo(a) <br><?php echo $email_logado ?><br> ao <br> Magics Painting</h1>
+        <h1>Seja bem-vindo(a) <br><h1 class="usuario_logado"><?php echo $usuario_logado ?></h1><br><h1> ao </h1><br><h1> Magics Painting</h1>
         <p>Compras e vendas de pinturas</p>
       </section>
       <section id="info">

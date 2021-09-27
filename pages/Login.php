@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Login.css">
-    <link rel="stylesheet" href="../assets/styles/Geral.css">
+    <link rel="stylesheet" href="../assets/styles/Geral.css">    
     <title>Login | Magics Paintings</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
                     <h2 class="login">Login</h2>
                 </div>
                 <div class="card-group">
-                    <input class="Inputs" type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
                     <input class="Inputs" type="password" name="senha" id="password" placeholder="Senha" required>
                     <input type="submit" name="submit" value="Entrar" />
                     <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
