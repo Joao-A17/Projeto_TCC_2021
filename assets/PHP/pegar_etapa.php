@@ -1,9 +1,11 @@
+
 <?php
 
 // Enviar Uma nova publicação
+
 if(isset($_POST['submit'])){
-    echo 'asdasdasd';
-    include_once("./Conexao_Banco.php");  
+    include_once('./Conexao_Banco.php');
+    echo 'isso ai meno';
     $Autor = $_SESSION['nome-user'];
     $Nome_Foto = filter_input(INPUT_POST, 'Nome-pintura');
     $Desc_Foto = filter_input(INPUT_POST, 'Desc-pintura');
@@ -15,6 +17,9 @@ if(isset($_POST['submit'])){
     if(move_uploaded_file($_FILES['pintura']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem)){
         header('Location: ../../pages/Perfil_edit.php');        
     }
+}
+else{
+    echo 'Pulat';
 }
 
 ?>

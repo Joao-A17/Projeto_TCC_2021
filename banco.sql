@@ -63,7 +63,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `pinturas` (
 
 LOCK TABLES `pinturas` WRITE;
 /*!40000 ALTER TABLE `pinturas` DISABLE KEYS */;
-INSERT INTO `pinturas` VALUES (49,'Gustavo','Kachinho pequenino','Sei lÃ¡','Kachinho pequenino.jpg','2021-09-26 21:16:20'),(48,'Gustavo','Pika blindada','NÃ³s somos os Pink blinders','Pika blindada.jpg','2021-09-26 21:14:33'),(47,'JoaoZin','Coringa','hahaha','Coringa.jpg','2021-09-26 21:04:13'),(43,'JoaoZin','Carinha','Cara\r\n','Carinha.jpg','2021-09-26 19:32:05'),(44,'','','','.jpg','2021-09-26 20:56:34'),(45,'JoaoZin','Carro','Vrum vrum da sorte','Carro.jpg','2021-09-26 20:59:57'),(46,'JoaoZin','Outro Carro','vrum vrum legal','Outro Carro.jpg','2021-09-26 21:02:33'),(42,'JoaoZin','Outro Carro','asdasd','Outro Carro.jpg','2021-09-26 17:28:55'),(41,'JoaoZin','Carro','Vrum Vrum','Carro.jpg','2021-09-26 17:26:14');
+INSERT INTO `pinturas` VALUES (52,'feloz','Carro','Carrinho vrum vrum','Carro.jpg','2021-09-27 19:32:48'),(49,'Gustavo','Kachinho pequenino','Sei lÃ¡','Kachinho pequenino.jpg','2021-09-26 21:16:20'),(50,'Robson_Xpro','Perna Longa','Pegati meno meu dente de ouro\r\n','Perna Longa.jpg','2021-09-27 18:47:26'),(53,'feloz','Pika blindada','As pink blinders','Pika blindada.jpg','2021-09-27 19:48:45'),(51,'feloz','Carro','carrinho vrum vrum','Carro.jpg','2021-09-27 19:27:35'),(48,'Gustavo','Pika blindada','NÃ³s somos os Pink blinders','Pika blindada.jpg','2021-09-26 21:14:33'),(47,'JoaoZin','Coringa','hahaha','Coringa.jpg','2021-09-26 21:04:13'),(43,'JoaoZin','Carinha','Cara\r\n','Carinha.jpg','2021-09-26 19:32:05'),(44,'','','','.jpg','2021-09-26 20:56:34'),(45,'JoaoZin','Carro','Vrum vrum da sorte','Carro.jpg','2021-09-26 20:59:57'),(46,'JoaoZin','Outro Carro','vrum vrum legal','Outro Carro.jpg','2021-09-26 21:02:33'),(42,'JoaoZin','Outro Carro','asdasd','Outro Carro.jpg','2021-09-26 17:28:55'),(41,'JoaoZin','Carro','Vrum Vrum','Carro.jpg','2021-09-26 17:26:14'),(54,'feloz','Pika Blin Solo','huehue','Pika Blin Solo.jpg','2021-09-27 19:50:40'),(55,'feloz','Outro Carro','asdasd','Outro Carro.','2021-09-27 19:53:21'),(56,'feloz','Carro','vrum vrum','Carro.jpg','2021-09-27 20:08:17'),(57,'feloz','Minato','Minato do drip','Minato.jpg','2021-09-27 22:09:58');
 /*!40000 ALTER TABLE `pinturas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (109,'Gustavo','Hola','gustavo@gmail.com','12345',321654987,'2021-09-25 15:32:58',NULL),(110,'Robson_Xpro','blindada','robson@gmail.com','1234',154554,'2021-09-25 16:01:38',NULL),(111,'JoaoZin','Victor','JoaoZin@gmail.com','123',99227431,'2021-09-26 12:29:13',NULL);
+INSERT INTO `usuarios` VALUES (109,'Gustavo','Hola','gustavo@gmail.com','12345',321654987,'2021-09-25 15:32:58',NULL),(110,'Robson_Xpro','blindada','robson@gmail.com','1234',154554,'2021-09-25 16:01:38',NULL),(111,'JoaoZin','Victor','JoaoZin@gmail.com','123',99227431,'2021-09-26 12:29:13',NULL),(112,'Feloz','brabo','Feloz@gmail.com','feloz123',98666999,'2021-09-27 19:08:50',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -117,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-26 23:35:42
+-- Dump completed on 2021-09-27 22:21:51

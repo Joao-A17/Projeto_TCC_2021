@@ -93,32 +93,15 @@ $usuario_logado = $_SESSION['nome-user'];
                         </div> 
                         <br>
                     </form>
-                    <div class="Fundo_Card">
+                    <!-- <div class="Fundo_Card">
                         <div class="Card_Pinturas"> 
-                            <?php require '../assets/PHP/listar_pinturas.php' ?>
+                            <?php // require '../assets/PHP/listar_pinturas.php' ?>
                         </div>
-                    </div>                    
-
-                    <!-- <div class="Pint_Completa">
-                        <div class="Fundo-Pint"> 
-                            <?php //require '../assets/PHP/listar_imagens.php' ?>
-                        </div>
-                        <div class="Fundo-Desc">
-                            <h1 class="Nome-Pint">Carro</h1>
-                            <p class="Desc-Pint">carrinho da sorte</p>
-                            <i id="Icon_Pontinhos" class="fas fa-ellipsis-v"></i>
-                            <div id="menubtns">
-                                <buttom id="btn_Editar" class="btn_span">Editar<i class="fas fa-paint-brush IconE"></i></buttom>
-                                <buttom id="btn_Excluir" class="btn_span">Excluir<i class="fas fa-trash-alt IconE"></i></buttom>
-                            </div>
-                            <form action="./Pinturas_AP.php" method="POST" class="Menu_Editar">
-                                <h2>Novas Alterações</h2>
-                                <input id="salvar_edicoes" type="submit" name="SalvarTudo" value="Salvar" class="btn-SP">
-                                <input type="text" name="arquivoX" class="InputAlt" id="NNPint" placeholder="Digite o nome da pintura">
-                                <textarea id="InputAltD" name="descrição-foto" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>
-                            </form>
-                        </div>
-                    </div> --> 
+                    </div> -->            
+                    
+                    
+                    <?php require '../assets/PHP/listar_pinturas.php' ?>
+                     
                     
                     
                 </div>                 
@@ -127,5 +110,6 @@ $usuario_logado = $_SESSION['nome-user'];
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/Perfil_edit.js"></script>
+    <script src="../assets/JS/btn_publicar.js"></script>
  </body>
 </html> 

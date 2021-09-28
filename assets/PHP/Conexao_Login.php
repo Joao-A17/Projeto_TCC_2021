@@ -26,7 +26,7 @@ if(isset($_POST['submit']) && !empty($_POST['nome-user']) && !empty($_POST['senh
         /* print_r('Existe'); */
         $_SESSION['nome-user'] = $usuario;
         $_SESSION['senha'] = $senha;
-        header('Location: ../../pages/etapa.php');
+        header('Location: ./verificarETAPA.php');
     }
 
 }

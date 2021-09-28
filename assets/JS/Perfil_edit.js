@@ -115,9 +115,9 @@ MenuPublicar.style.display = 'none';
 
 
 
-/* Trcar Pintura selecionada 
-var InputFile_TrocarIMG = document.getElementById("TrocarIMG");
-var Pintura = document.getElementById("Pintura");
+/* Trocar Pintura selecionada */
+var InputFile_TrocarIMG = document.getElementById("SelectIMG");
+var Pintura_Public = document.getElementById("IMGpublic");
 
 InputFile_TrocarIMG.addEventListener('change', function() {
     
@@ -127,15 +127,15 @@ InputFile_TrocarIMG.addEventListener('change', function() {
     let readerPintura = new FileReader();
     
     readerPintura.onload = () => {
-        Pintura.src = readerPintura.result;
+        Pintura_Public.src = readerPintura.result;
     }
 
     readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
-}); */
+}); 
 
 
 
-/* Selecionar uma nova Pintura */
+/* Selecionar uma nova Pintura 
 
 InputFile_SelectIMG.addEventListener('change', function() {
     
@@ -150,7 +150,7 @@ InputFile_SelectIMG.addEventListener('change', function() {
 
     readerPinturaSelect.readAsDataURL(InputFile_SelectIMG.files[0]);
 });
-
+*/
 
 /* Evento de Aparecer o Publicar e Publicar */
 btn_Adicionar.addEventListener('click', function(){
@@ -166,5 +166,61 @@ btn_Adicionar.addEventListener('click', function(){
         inputP_Nome_Pintura.value = ""; 
         input_Desc_Pintura.value = "";   
         IMGpublic.src = "";   
+    }
+});
+
+/* Função dos 3 pontinhos */
+var Menu_Editar = document.querySelector(".Menu_Editar");
+var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
+var menubtns = document.getElementById("menubtns");
+var btn_Editar = document.getElementById("btn_Editar");
+menubtns.style.display = "none";
+
+Icon_Pontinhos.addEventListener('click', function(){
+    if(menubtns.style.display == "none"){
+        menubtns.style.display = "inline-flex";
+    }
+    else{
+        menubtns.style.display = "none";
+        Menu_Editar.style.display = "none";
+    }
+});
+
+Menu_Editar.style.display = "none";
+btn_Editar.addEventListener('click', function(){
+    if(Menu_Editar.style.display == "none"){
+        Menu_Editar.style.display = "block";
+    }else{
+        Menu_Editar.style.display = "none";
+    }
+});
+/* Botão de excluir */
+var Pint_Completa = document.querySelector(".Pint_Completa");
+var btn_Excluir = document.getElementById("btn_Excluir");
+btn_Excluir.addEventListener('click', function() {                
+    if(Pint_Completa.parentNode){                        
+        Pint_Completa.parentNode.removeChild(Pint_Completa);
+    }    
+});
+/* trocar os nomes */
+btnSalvarPint = document.getElementById('salvar_edicoes');
+input_nome_Pint = document.getElementById('NNPint');
+input_Desc_Pint = document.getElementById('InputAltD');
+NomeH1 = document.querySelector('.Nome-Pint');
+DescP = document.querySelector('.Desc-Pint');
+
+btnSalvarPint.addEventListener('click', function(){  
+    
+    if(input_nome_Pint.value == ""){
+        alert("Preencha os campos!");
+        Menu_Editar.style.display = "none";            
+    }
+    if(input_Desc_Pint.value == ""){
+        alert("Preencha os campos!");
+        Menu_Editar.style.display = "none";   
+    }
+    else{
+        NomeH1.innerHTML = input_nome_Pint.value;
+        DescP.innerHTML = input_Desc_Pint.value;
     }
 });

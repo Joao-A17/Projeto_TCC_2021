@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once('../assets/PHP/Conexao_Banco.php');
 if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
   unset($_SESSION['email']);
   unset($_SESSION['senha']);
@@ -32,7 +32,7 @@ $usuario_logado = $_SESSION['nome-user'];
     <ul class="nav-list">      
       <li><a class="menu-link" href="./Perfil_edit.php"><i class="fas fa-user"></i>  Perfil</a></li>
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
-      <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pinturas</a></li>
+      <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pintores</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
     </ul>
@@ -57,50 +57,41 @@ $usuario_logado = $_SESSION['nome-user'];
         </div>
       </section>
       <section id="pinturas">           <!-- AQUI VAI FICAR AS POSTAGENS RECENTES DAS PESSOAS -->
-        <h2>Pinturas</h2>
+        <h2>Pintores</h2>
         
         <div class="espaço"></div>
-
-        <div class="PintArt">
-          <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/Edits/Princesa-Elizabeth.png" alt="imgPint"></a>
-          <div class="InfoPint">
-            <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
-              <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
-                <h3 class="NomeUsuario">Pintor(a)</h3>
+        <div class=row>
+          <?php
+          $pegarUsuarios = "SELECT * FROM usuarios";
+          if($resultado_pegarUsuarios = mysqli_query($conexao,$pegarUsuarios)){
+            $nomeUser = array();
+            $IdUser = array();
+            $i = 0;
+            while($registro=mysqli_fetch_assoc($resultado_pegarUsuarios)){
+              $nomeUser[$i] = $registro['nome'];
+              $IdUser[$i] = $registro['id'];
+              ?>       
+              
+              <div class="PintArt">
+              <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
+              <div class="InfoPint">
+                <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
+                  <div class="User">
+                    <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
+                    <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
+                  </div>
+                  <p id="Nome-Pint">Nome da pintura</p>
+                  <a href="./perfil/"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
+                </div>
               </div>
-              <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
             </div>
-          </div>
-        </div>
 
-        <div class="PintArt">
-          <a href="./Perfil_edit.php" class="linkPint2"><img id="Pintura02" class="ImgPint" src="../assets/IMAGES/Edits/Meliodafull.png" alt="imgPint"></a>
-          <div class="InfoPint">
-            <div class="ConteudoInfo-2">
-              <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
-                <h3 class="NomeUsuario">Pintor(a)</h3>
-              </div>
-              <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
-            </div>
-          </div>
-        </div>
+              <?php
 
-        <div class="PintArt">
-          <a href="./Perfil_edit.php" class="linkPint3"><img id="Pintura03" class="ImgPint" src="../assets/IMAGES/Edits/Tanjiro.png" alt="imgPint"></a>
-          <div class="InfoPint">
-            <div class="ConteudoInfo-3">
-              <div class="User">
-                <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
-                <h3 class="NomeUsuario">Pintor(a)</h3>
-              </div>
-              <p id="Nome-Pint">Nome da pintura</p>
-              <a href="./Perfil_edit.php"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
-            </div>
-          </div>
+            }
+          }
+          ?>
+
         </div>
 
         <div class="espaço"></div>
