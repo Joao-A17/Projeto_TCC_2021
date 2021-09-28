@@ -92,17 +92,17 @@ body{
     margin-top: 100px;
 }
 
-#Icon_Pontinhos{
+.Icon_Pontinhos{
     position: absolute;
     right: 20px;
     font-size: 40px;
     color: var(--corP);
 }
-#Icon_Pontinhos:hover{
+.Icon_Pontinhos:hover{
     color: var(--corS);
 }
 
-#menubtns{
+.menubtns{
     margin-top: 40px;
     margin-bottom: 20px;
 }

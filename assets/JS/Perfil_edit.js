@@ -171,12 +171,13 @@ btn_Adicionar.addEventListener('click', function(){
 
 /* Função dos 3 pontinhos */
 var Menu_Editar = document.querySelector(".Menu_Editar");
-var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
-var menubtns = document.getElementById("menubtns");
-var btn_Editar = document.getElementById("btn_Editar");
+var Icon_Pontinhos = document.querySelector(".Icon_Pontinhos");
+var menubtns = document.querySelector(".menubtns");
+var btn_Editar = document.querySelector(".btn_Editar");
+
 menubtns.style.display = "none";
 
-Icon_Pontinhos.addEventListener('click', function(){
+Icon_Pontinhos.addEventListener('click', function(){    
     if(menubtns.style.display == "none"){
         menubtns.style.display = "inline-flex";
     }
@@ -187,21 +188,16 @@ Icon_Pontinhos.addEventListener('click', function(){
 });
 
 Menu_Editar.style.display = "none";
+
 btn_Editar.addEventListener('click', function(){
+    console.log('Krai poha');
     if(Menu_Editar.style.display == "none"){
         Menu_Editar.style.display = "block";
     }else{
         Menu_Editar.style.display = "none";
     }
 });
-/* Botão de excluir */
-var Pint_Completa = document.querySelector(".Pint_Completa");
-var btn_Excluir = document.getElementById("btn_Excluir");
-btn_Excluir.addEventListener('click', function() {                
-    if(Pint_Completa.parentNode){                        
-        Pint_Completa.parentNode.removeChild(Pint_Completa);
-    }    
-});
+
 /* trocar os nomes */
 btnSalvarPint = document.getElementById('salvar_edicoes');
 input_nome_Pint = document.getElementById('NNPint');

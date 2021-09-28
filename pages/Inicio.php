@@ -30,7 +30,7 @@ $usuario_logado = $_SESSION['nome-user'];
       <div class="line3"></div>
     </div>
     <ul class="nav-list">      
-      <li><a class="menu-link" href="./Perfil_edit.php"><i class="fas fa-user"></i>  Perfil</a></li>
+      <li><a class="menu-link" href="./Perfil_edit.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
       <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pintores</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
@@ -60,14 +60,14 @@ $usuario_logado = $_SESSION['nome-user'];
         <h2>Pintores</h2>
         
         <div class="espaço"></div>
-        <div class=row>
+        <div class='fileira'>
           <?php
           $pegarUsuarios = "SELECT * FROM usuarios";
           if($resultado_pegarUsuarios = mysqli_query($conexao,$pegarUsuarios)){
             $nomeUser = array();
             $IdUser = array();
             $i = 0;
-            while($registro=mysqli_fetch_assoc($resultado_pegarUsuarios)){
+            while($registro = mysqli_fetch_assoc($resultado_pegarUsuarios)){
               $nomeUser[$i] = $registro['nome'];
               $IdUser[$i] = $registro['id'];
               ?>       
@@ -80,7 +80,7 @@ $usuario_logado = $_SESSION['nome-user'];
                     <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
                     <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
                   </div>
-                  <p id="Nome-Pint">Nome da pintura</p>
+                  <p id="Nome-Pint">Veja mais sobre esse perfil</p>
                   <a href="./perfil/"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
                 </div>
               </div>

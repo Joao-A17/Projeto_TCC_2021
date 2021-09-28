@@ -65,7 +65,7 @@ $usuario_logado = $_SESSION['nome-user'];
                     </div>
                     <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                               
                 </form>
-                <h4 class="TextE">Envie uma mensagem para o pintor atrévez:</h4>
+                <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
                 <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
                 <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
@@ -74,6 +74,9 @@ $usuario_logado = $_SESSION['nome-user'];
                 <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
             </div>    
                 <div id="Cont-Master">
+
+                    <?php require '../assets/PHP/listar_pinturas.php' ?>
+
                     <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
                         <h2>Publicar</h2>
                         <div id="MenuSepara">
@@ -97,19 +100,12 @@ $usuario_logado = $_SESSION['nome-user'];
                         <div class="Card_Pinturas"> 
                             <?php // require '../assets/PHP/listar_pinturas.php' ?>
                         </div>
-                    </div> -->            
-                    
-                    
-                    <?php require '../assets/PHP/listar_pinturas.php' ?>
-                     
-                    
-                    
+                    </div> -->                                                                                        
                 </div>                 
         </div>         
     </div>          
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/Perfil_edit.js"></script>
-    <script src="../assets/JS/btn_publicar.js"></script>
  </body>
 </html> 
