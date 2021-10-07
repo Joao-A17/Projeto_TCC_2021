@@ -22,19 +22,19 @@
                 <h2>Cadastro</h2>
                 <div id="Registros">
                     <div class="Form-I">
-                        <input class="Input" type="text" id="nome" name="nome" placeholder="Nome">
+                        <input class="Input" type="text" id="nome" name="nome" placeholder="Nome" require>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                        <input class="Input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" require>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="email" id="email" name="email" placeholder="E-mail">
+                        <input class="Input" type="email" id="email" name="email" placeholder="E-mail" require>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="password" name="password" id="password" placeholder="Senha">
+                        <input class="Input" type="password" name="password" id="password" placeholder="Senha" require>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone">
+                        <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone" require>
                     </div>
                     <div class="Form-I">
                         <p>Já tem uma conta? <a href="./Login.php">Entrar</a></p>
@@ -43,6 +43,7 @@
                 </div>
             </div>
         </form>
-    </div>    
+    </div>   
+    <script src="../assets/JS/Tcadastro.js"></script> 
 </body>
 </html>

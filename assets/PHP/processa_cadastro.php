@@ -5,7 +5,6 @@ if(isset($_POST['submit'])){
     $Nome = filter_input(INPUT_POST, 'nome');
     $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
     $Email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-/*     $Senha = filter_input(INPUT_POST, 'password' , FILTER_SANITIZE_STRING); */
     $Telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT); 
     $Senha = $_POST['password'];
  
@@ -13,9 +12,9 @@ if(isset($_POST['submit'])){
     if(mysqli_query($conexao, $Result_Cadastro)){
         header('Location: ../../pages/Login.php');
     }else{
-        header('Location: ../../pages/Cadastro.php');                
+        header('Location: ../../pages/Cadastro.php');          
     }
-    $IdUser = mysqli_insert_id($conexao);
+    $IdUser = mysqli_insert_id($conexao);     
 
 }
 ?>
