@@ -19,11 +19,11 @@ $usuario_logado = $_SESSION['nome-user'];
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/Perfil_edit.css"> 
     <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
-    <title id="Nome-Site">Perfil | Magics Paintings</title>              
+    <title id="Nome-Site">Perfil | Magic Paintings</title>              
 </head>
 <body>
     <nav class="Menu">
-        <a href="./Inicio.php" class="Logo">Magics Paintings</a>       
+        <a href="./Inicio.php" class="Logo">Magic Paintings</a>       
         <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>     
     </nav>
 
@@ -32,7 +32,7 @@ $usuario_logado = $_SESSION['nome-user'];
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
                     <div id="divIMGAdmin">
-                        <?php require '../assets/PHP/pegarFotoP.php'; ?>   
+                    <?php require '../assets/PHP/FP_UsuarioLogado.php' ?> 
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">

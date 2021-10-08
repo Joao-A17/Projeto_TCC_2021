@@ -161,3 +161,9 @@ input::placeholder {
 .Form-I a:hover{
     color: var(--corS);
 }
+
+
+.botão{
+    background: black;
+    color: white;
+}

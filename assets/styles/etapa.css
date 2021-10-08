@@ -82,7 +82,10 @@ p{
 
 #divND{
     margin-top: 20px;
-    display: inline-block;
+}
+
+#grade{
+    margin-top: 20px;
 }
 
 .InputP{
@@ -126,6 +129,7 @@ p{
 }
 
 #BtnSP{
+    margin-top: 20px;
     width: 120px;    
     height: 40px;
     font-size: 20px;    

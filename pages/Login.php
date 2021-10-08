@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Login.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">    
-    <title>Login | Magics Paintings</title>
+    <title>Login | Magic Paintings</title>
 </head>
 <body>
-    <div class="CimaD"></div>
     <div class="container">
         <form class="form" action="../assets/PHP/Conexao_Login.php" method="POST">
             <div class="card">
@@ -20,7 +19,7 @@
                 <div class="card-group">
                     <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
                     <input class="Inputs" type="password" name="senha" id="password" placeholder="Senha" required>
-                    <input type="submit" name="submit" value="Entrar" />
+                    <input id="entrar" type="submit" name="submit" value="Entrar" />
                     <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
                 </div>
             </div>

@@ -5,9 +5,11 @@ session_start();
 $Servidor = 'localhost';
 $Usuario = 'root';
 $Senha = '';
-$Nome = 'tcc_mpx';
+$Nome_Banco = 'tcc_mpx';
 
-$conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome);
+$conexao = mysqli_connect($Servidor,$Usuario,$Senha,$Nome_Banco);
+
+
 /* Conexão orientada a objeto com pdo 
 
 $pdo = new PDO("mysql:dbname=".$Nome."; host=".$Servidor, $Usuario, $Senha);

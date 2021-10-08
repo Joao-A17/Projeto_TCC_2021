@@ -1,5 +1,8 @@
 <?php
 include_once('../assets/PHP/Conexao_Banco.php');
+
+
+
 if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
   unset($_SESSION['email']);
   unset($_SESSION['senha']);
@@ -19,11 +22,11 @@ $usuario_logado = $_SESSION['nome-user'];
     <link rel="stylesheet" href="../assets/styles/Inicio.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <title>Pinturas | Magics Painting</title>
+    <title>Pinturas | Magic Paintings</title>
 </head>
 <body>
   <nav class="MenuH">
-    <a class="logo" href="#topo">Magics Painting</a>
+    <a class="logo" href="#topo">Magic Paintings</a>
     <div class="mobile-menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -44,7 +47,7 @@ $usuario_logado = $_SESSION['nome-user'];
       
 
       <section id="topo">
-        <h1>Seja bem-vindo(a) <br><h1 class="usuario_logado"><?php echo $usuario_logado ?></h1><br><h1> ao </h1><br><h1> Magics Painting</h1>
+        <h1>Seja bem-vindo(a) <br><h1 class="usuario_logado"><?php echo $usuario_logado ?></h1><br><h1> ao </h1><br><h1> Magic Paintings</h1>
         <p>Compras e vendas de pinturas</p>
       </section>
       <section id="info">
@@ -72,24 +75,27 @@ $usuario_logado = $_SESSION['nome-user'];
               $IdUser[$i] = $registro['id'];
               ?>       
               
-              <div class="PintArt">
-              <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
-              <div class="InfoPint">
-                <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
-                  <div class="User">
-                    <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
-                    <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
-                  </div>
+              <div class="PintArt">                
+                <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
+                <div class="InfoPint">
+                  <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
+                    <div class="User">
+                      <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
+                      <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
+                    </div>
                   <p id="Nome-Pint">Veja mais sobre esse perfil</p>
-                  <a href="./perfil/"><button id="Consultar" onclick="ConsutarImg()">Consultar</button></a>
+                  <form action="./Perfil.php" method="GET">
+                    <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $nomeUser[$i]?>>                  
+                    <button id="Consultar" onclick="ConsutarImg()">Consultar</button>
+                  </form>
+                  </div>
                 </div>
               </div>
-            </div>
 
               <?php
 
             }
-          }
+          }                
           ?>
 
         </div>
