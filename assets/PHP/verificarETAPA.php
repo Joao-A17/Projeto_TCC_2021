@@ -7,7 +7,7 @@ $caminho_da_pasta = '../../assets/IMAGES/Foto_Perfil/'.$usuario_logado;
 
 if (file_exists("$caminho_da_pasta")) {
     /* Existe */
-    header('Location: ../../pages/Perfil_edit.php');
+    header('Location: ../../pages/Meu_Perfil.php');
 } else {
     /* Não Existe */
     header('Location: ../../pages/etapa.php');

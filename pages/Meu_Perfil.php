@@ -6,8 +6,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   unset($_SESSION['senha']);
   header('Location: ./Login.php');   
 }
-
 $usuario_logado = $_SESSION['nome-user'];
+
+require '../assets/PHP/dados_perfil.php';
 
 ?>
 <!DOCTYPE html>
@@ -17,9 +18,9 @@ $usuario_logado = $_SESSION['nome-user'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <link rel="stylesheet" href="../assets/styles/Perfil_edit.css"> 
+    <link rel="stylesheet" href="../assets/styles/Meu_Perfil.css"> 
     <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
-    <title id="Nome-Site">Perfil | Magic Paintings</title>              
+    <title id="Nome-Site">Perfil | <?php echo $usuario_logado ?></title>              
 </head>
 <body>
     <nav class="Menu">
@@ -37,16 +38,16 @@ $usuario_logado = $_SESSION['nome-user'];
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
                             <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
-                            <p id="Desc-Admin">Mude a descrição e altere sua imagem</p>                                                        
+                            <p id="Desc-Admin"><?php echo $Desc_Perfil ?></p>                                                        
                         </div>
                         <button type="button" class="btn-menu edp">Editar Perfil</button>                         
                     </div>
                 </div>
-                <form id="MenuModal_EditPerfil" action="../assets/PHP/alterPerfil.php" method="POST">
+                <form id="MenuModal_EditPerfil" action="../assets/PHP/alterPerfil.php" method="POST" enctype="multipart/form-data">
                     <div id="nav_menu">
                         <h2 id="TituloMenu">Menu Alterações</h2>
                     </div>
-                    <input type="file" class="form-control-file" name="fotop" id="imgPerfil" accept="image/*">
+                    <input type="file" name="Foto_perfil" class="form-control-file" id="imgPerfil" accept="image/*">
                     <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>
                     <div id="divND">
                         <input type="text" name="Nome-Perfil" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome"> 
@@ -55,12 +56,12 @@ $usuario_logado = $_SESSION['nome-user'];
                     </div> 
                     <div id="divRedesSociais">
                         <div id="LeftRedes">
-                            <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone">
-                            <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook">                            
+                            <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone" value=<?php echo $Telefone_Perfil ?>>
+                            <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook" value=<?php echo $Face_Perfil ?>>                            
                         </div>
                         <div id="RightRedes">                            
-                            <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram">
-                            <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter"> 
+                            <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram" value=<?php echo $Insta_Perfil ?>>
+                            <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter" value=<?php echo $Twitter_Perfil ?>> 
                         </div>                                            
                     </div>
                     <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                               

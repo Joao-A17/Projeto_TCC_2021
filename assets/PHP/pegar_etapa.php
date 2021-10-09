@@ -24,7 +24,7 @@ if(isset($_FILES['Foto_perfil'])){
     $pasta_arquivo['pasta'] = '../IMAGES/Foto_Perfil/'.$usuario_logado.'/'; 
     mkdir($pasta_arquivo['pasta'], 0777);
     if(move_uploaded_file($_FILES['Foto_perfil']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem)){
-        header('Location: ../../pages/Perfil_edit.php');        
+        header('Location: ../../pages/Meu_Perfil.php');        
     }
 }
 else{

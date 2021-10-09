@@ -33,7 +33,7 @@ $usuario_logado = $_SESSION['nome-user'];
       <div class="line3"></div>
     </div>
     <ul class="nav-list">      
-      <li><a class="menu-link" href="./Perfil_edit.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
+      <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
       <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
       <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pintores</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
@@ -75,12 +75,25 @@ $usuario_logado = $_SESSION['nome-user'];
               $IdUser[$i] = $registro['id'];
               ?>       
               
-              <div class="PintArt">                
-                <a href="./Perfil_edit.php" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
+              <div class="PintArt">           
+                <a href="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
                 <div class="InfoPint">
                   <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
                     <div class="User">
-                      <img id="Img-Usuario" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="NomeUsuario">
+                      <?php 
+                      $pasta = '../assets/IMAGES/Foto_Perfil/'.$nomeUser[$i].'/';
+                      if (file_exists("$pasta")) {
+                          $diretorio = dir($pasta);
+
+                          while($FP_OutroUsuario = $diretorio->read()){
+                              if($FP_OutroUsuario != '.' && $FP_OutroUsuario != '..'){                
+                                
+                                echo "<img id='Img-Usuario' src='".$pasta.$FP_OutroUsuario."' alt=".$nomeUser[$i].">";
+                              
+                              }    
+                          }
+                      }                      
+                      ?>             
                       <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
                     </div>
                   <p id="Nome-Pint">Veja mais sobre esse perfil</p>

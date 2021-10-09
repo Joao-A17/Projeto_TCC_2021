@@ -1,5 +1,5 @@
 <?php
-include_once('../assets/PHP/Conexao_Banco.php');
+session_start();
 $usuario_logado = $_SESSION['nome-user'];
 
 ?>

@@ -44,6 +44,5 @@
             </div>
         </form>
     </div>   
-    <script src="../assets/JS/Tcadastro.js"></script> 
 </body>
 </html>
