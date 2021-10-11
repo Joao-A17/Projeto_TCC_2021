@@ -13,8 +13,8 @@ if($pegar_tabela){
         $Twitter_Perfil = $registro['twitterp'];
         $Telefone_Perfil = $registro['telefonep'];
         }
-        if(isset($usuario)){
-            if($verificar_u = $Nome_Perfil == $usuario){
+        if(isset($Outro_Usuario)){
+            if($verificar_u = $Nome_Perfil == $Outro_Usuario){
                 $Desc_Perfil_u = $registro['descp'];
                 $Insta_Perfil_u = $registro['instagramp'];
                 $Face_Perfil_u = $registro['facebookp'];

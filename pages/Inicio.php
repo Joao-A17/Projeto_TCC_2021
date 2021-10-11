@@ -36,8 +36,8 @@ $usuario_logado = $_SESSION['nome-user'];
     <ul class="nav-list">      
       <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
       <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
-    </ul>
-    <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>   
+      <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
+    </ul>       
   </nav>
     
       

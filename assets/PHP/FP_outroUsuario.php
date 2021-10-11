@@ -1,7 +1,7 @@
 <?php
 
 $usuario_logado = $_SESSION['nome-user'];
-$pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario.'/';
+$pasta = '../assets/IMAGES/Foto_Perfil/'.$Outro_Usuario.'/';
 
 if (file_exists("$pasta")) {
     /* echo 'existe'; */
@@ -9,11 +9,8 @@ if (file_exists("$pasta")) {
 
     while($pintura = $diretorio->read()){
         if($pintura != '.' && $pintura != '..'){                
-            ?>
             
-            <?php echo "<img src='".$pasta.$pintura."' id='Foto-Admin-U' alt=".$usuario.">" ?>                
-            
-            <?php
+            echo "<div id='DivFP'><img src='".$pasta.$pintura."' id='Foto-Admin' alt=".$Outro_Usuario."></div>"; 
         }    
     }
 }
