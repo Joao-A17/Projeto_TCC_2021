@@ -5,8 +5,8 @@
    para  para colocar o dislpay block para mostar
    e assim sucessivamente */
 var ContMaster = document.getElementById("Cont-Master");
+var Pint_Completa = document.querySelector(".Pint_Completa");
 var btn_publicar = document.getElementById("btn-publicar");
-var btnExcluir = document.querySelector(".btn-delete");
 var menuEdit = document.querySelector(".Editar");
 var MenuPublicar = document.getElementById("MenuPublicar");
 var btn_Adicionar = document.getElementById("btn-Adicionar");
@@ -24,12 +24,22 @@ var input_Desc_Pintura = document.getElementById("InputPublicD");
 var inputP_autor = document.getElementById("inputP_autor");
 var InputFile_SelectIMG = document.getElementById("SelectIMG");
 var IMGpublic = document.getElementById("IMGpublic");
-
+var btnSalvarPint = document.querySelector('.salvar_edicoes');
+var input_nome_Pint = document.querySelector('.NNPint');
+var input_Desc_Pint = document.querySelector('.InputAltD');
+var NomeH1 = document.querySelector('.Nome-Pint');
+var DescP = document.querySelector('.Desc-Pint');
+var Menu_Editar = document.querySelector(".Menu_Editar");
+var Icon_Pontinhos = document.querySelector(".Icon_Pontinhos");
+var menubtns = document.querySelector(".menubtns");
+var btn_Editar = document.querySelector(".btn_Editar");
+var btn_Excluir = document.querySelector(".btn_Excluir");
+var InputFile_TrocarIMG = document.getElementById("SelectIMG");
+var Pintura_Public = document.getElementById("IMGpublic");
 
 /* Função de aparecer os menus de editar   */
 AlteraImgPerfil.style.display = "none";
 BtnSPerfil.style.display = "none"; 
-
 
 
 BtnEditarPerfil.addEventListener('click', function(){
@@ -116,8 +126,6 @@ MenuPublicar.style.display = 'none';
 
 
 /* Trocar Pintura selecionada */
-var InputFile_TrocarIMG = document.getElementById("SelectIMG");
-var Pintura_Public = document.getElementById("IMGpublic");
 
 InputFile_TrocarIMG.addEventListener('change', function() {
     
@@ -170,40 +178,18 @@ btn_Adicionar.addEventListener('click', function(){
 });
 
 /* Função dos 3 pontinhos */
-var Menu_Editar = document.querySelector(".Menu_Editar");
-var Icon_Pontinhos = document.querySelector(".Icon_Pontinhos");
-var menubtns = document.querySelector(".menubtns");
-var btn_Editar = document.querySelector(".btn_Editar");
-
 menubtns.style.display = "none";
-
-Icon_Pontinhos.addEventListener('click', function(){    
+Icon_Pontinhos.addEventListener('click', function(){
     if(menubtns.style.display == "none"){
-        menubtns.style.display = "inline-flex";
-    }
-    else{
+    menubtns.style.display = "inline-flex";
+    }else{
         menubtns.style.display = "none";
         Menu_Editar.style.display = "none";
     }
 });
 
-Menu_Editar.style.display = "none";
-
-btn_Editar.addEventListener('click', function(){
-    console.log('Krai poha');
-    if(Menu_Editar.style.display == "none"){
-        Menu_Editar.style.display = "block";
-    }else{
-        Menu_Editar.style.display = "none";
-    }
-});
 
 /* trocar os nomes */
-btnSalvarPint = document.getElementById('salvar_edicoes');
-input_nome_Pint = document.getElementById('NNPint');
-input_Desc_Pint = document.getElementById('InputAltD');
-NomeH1 = document.querySelector('.Nome-Pint');
-DescP = document.querySelector('.Desc-Pint');
 
 btnSalvarPint.addEventListener('click', function(){  
     

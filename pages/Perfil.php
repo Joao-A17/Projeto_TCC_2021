@@ -34,7 +34,7 @@ require '../assets/PHP/dados_perfil.php';
 </head>
 <body>
     <nav class="Menu">
-        <a href="./Pinturas.php" class="Logo">Magic Paintings</a>    
+        <a href="./Inicio.php" class="Logo">Magic Paintings</a>    
         <a class="btn-menu" onclick="Voltar()"><i class="fas fa-chevron-left IconG"></i>Voltar</a>
     </nav>
 

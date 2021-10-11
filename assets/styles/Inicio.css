@@ -82,7 +82,7 @@ body{
 
 #topo p{
     padding-top: 30px;
-    color: var(--corS);
+    color: var(--corP);
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -131,10 +131,6 @@ body{
     justify-content: center;
     align-items: center;
     background: var(--tranp);
-    border: 0;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 12px var(--corS);
     border-radius: 50px;
 }
 
@@ -239,15 +235,6 @@ body{
 
 .PintArt a:hover{
     color: var(--corS);
-}
-
-.ImgPint {
-    border-radius: 33px;
-    background: var(--tranp);
-    border: 0;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    width: 100%;
 }
 
 .User{

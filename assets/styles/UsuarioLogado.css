@@ -1,0 +1,42 @@
+#CardUser{
+    background: var(--tranp);
+    border: 0;
+    border-radius: 8px;
+    position: fixed;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    top: 30%;
+    right:0px;
+    width: .5px;
+    transition: .3s;
+}
+
+
+#CardUser:hover{   
+    width: 220px; 
+}
+
+#Img-UsuarioL{
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#Img-UsuarioL:hover{
+    opacity: 0.7;
+}
+
+#Img_UserL{
+    display: flex;
+}
+
+#Nome_User{
+    color: var(--corP);
+    font-family: 'Gugi', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    float: left;
+    font-size: 20px;
+}

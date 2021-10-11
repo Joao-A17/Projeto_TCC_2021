@@ -103,6 +103,7 @@ body{
 }
 
 .menubtns{
+    display: none;
     margin-top: 40px;
     margin-bottom: 20px;
 }
@@ -344,6 +345,7 @@ textarea::placeholder{
 /* ------------------------------------Editar------------------------------------ */
 
 .Menu_Editar{
+    display: none;
     width: 100%;
     height: 800px;
     margin-top: 30px;
@@ -398,7 +400,7 @@ textarea::placeholder{
     box-shadow: 0 2px 5px var(--corS);
 }
 
-#InputAltD{
+.InputAltD{
     width: 400px;
     height: 400px;
     margin-top: 20px;
@@ -417,10 +419,10 @@ textarea::placeholder{
     box-sizing: border-box;
     transition: .3s;
 }
-#InputAltD:focus{
-    border-top: 2px solid var(--corL);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0 2px 5px var(--corL);
+.InputAltD:focus{
+    border-top: 2px solid var(--corS);
+    border-bottom: 2px solid var(--corS);
+    box-shadow: 0 2px 5px var(--corS);
 }
 
 #SelectIMG0{

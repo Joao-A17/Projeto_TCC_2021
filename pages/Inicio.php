@@ -20,9 +20,10 @@ $usuario_logado = $_SESSION['nome-user'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Inicio.css">
+    <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <title>Pinturas | Magic Paintings</title>
+    <title>Inicio | Magic Paintings</title>
 </head>
 <body>
   <nav class="MenuH">
@@ -34,9 +35,6 @@ $usuario_logado = $_SESSION['nome-user'];
     </div>
     <ul class="nav-list">      
       <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
-      <li><a class="menu-link" href="#info"><i class="fas fa-info-circle"></i>  Informações</a></li>
-      <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i>  Pintores</a></li>
-      <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
     </ul>
     <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>   
@@ -45,13 +43,40 @@ $usuario_logado = $_SESSION['nome-user'];
       
       <a href="#topo"><i class="fas fa-chevron-circle-up Seta-Up"></i></a>
       
+        <div id="CardUser">
+          <div id="Img_UserL">
+            <?php
+            // pegar a foto do usuario logado 
+
+            $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';
+
+            if (file_exists("$pasta")) {
+                /* echo 'existe'; */
+                $diretorio = dir($pasta);
+
+                while($FP_Usuario = $diretorio->read()){
+                    if($FP_Usuario != '.' && $FP_Usuario != '..'){                
+                        ?>
+                        
+                        <?php echo "<a id='linkUser' href='./Meu_Perfil.php'><img src='".$pasta.$FP_Usuario."' id='Img-UsuarioL'></a>"; ?>           
+                        
+                        <?php
+                    }    
+                }
+            }
+            ?>                                      
+          </div>
+          <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+        </div>
+      
+      
 
       <section id="topo">
         <h1>Seja bem-vindo(a) <br><h1 class="usuario_logado"><?php echo $usuario_logado ?></h1><br><h1> ao </h1><br><h1> Magic Paintings</h1>
-        <p>Compras e vendas de pinturas</p>
+        <p>Exposição e vendas de artes</p>
       </section>
       <section id="info">
-        <h2>Informações</h2>
+        <h2><i class="fas fa-info-circle"></i>  Informações</h2>
         <p class="info-P">Site feito para divulgações e compras de pinturas<br>
         Clique em Consultas nas imagens para negociar com o pintor</p>
         <div class="caixa-help"><p class="help">Se precisar de ajuda ou o site tenha o mau funcionamento <a href="./Help">Clique aqui</a></p></div>
@@ -60,7 +85,7 @@ $usuario_logado = $_SESSION['nome-user'];
         </div>
       </section>
       <section id="pinturas">           <!-- AQUI VAI FICAR AS POSTAGENS RECENTES DAS PESSOAS -->
-        <h2>Pintores</h2>
+        <h2><i class="fas fa-paint-brush"></i>  Pintores</h2>
         
         <div class="espaço"></div>
         <div class='fileira'>
@@ -76,9 +101,9 @@ $usuario_logado = $_SESSION['nome-user'];
               ?>       
               
               <div class="PintArt">           
-                <a href="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" class="linkPint1"><img id="Pintura01" class="ImgPint" src="../assets/IMAGES/OUTROS - HENRY E ZABUZA/01.jpg" alt="imgPint"></a>
+                <!-- Lugar que ficava Ultima Pintura do artista -->
                 <div class="InfoPint">
-                  <div class="ConteudoInfo-1">          <!-- Conteudo ON -->
+                  <div class="ConteudoInfo-1">
                     <div class="User">
                       <?php 
                       $pasta = '../assets/IMAGES/Foto_Perfil/'.$nomeUser[$i].'/';
@@ -119,7 +144,7 @@ $usuario_logado = $_SESSION['nome-user'];
       <div class="espaço"></div>
 
       <footer id="desenvolvedores">
-        <h2>Desenvolvedores</h2>
+        <h2><i class="fas fa-users"></i>  Desenvolvedores</h2>
         
         <div id="desig">
           <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="João">

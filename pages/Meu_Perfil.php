@@ -76,7 +76,7 @@ require '../assets/PHP/dados_perfil.php';
             </div>    
                 <div id="Cont-Master">
 
-                    <?php require '../assets/PHP/listar_pinturas.php' ?>
+                    <?php require '../assets/PHP/listar_pinturas.php' ?>                                
 
                     <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
                         <h2>Publicar</h2>
@@ -107,6 +107,7 @@ require '../assets/PHP/dados_perfil.php';
     </div>          
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
-    <script src="../assets/JS/Perfil_edit.js"></script>
+    <script src="../assets/JS/Meu_Perfil.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
  </body>
 </html> 
