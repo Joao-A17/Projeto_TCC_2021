@@ -19,6 +19,12 @@ $usuario_logado = $_SESSION['nome-user'];
     <form id="Menu_Etapa" action="../assets/PHP/pegar_etapa.php" method="POST" enctype="multipart/form-data">        
         <h2 id="TituloMenu">Olá <?php echo $usuario_logado ?></h2>
         <p>Antes de continuar preencha os campo<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></p>
+        <?php
+        if(isset($_SESSION['msg_etapa'])){
+            echo $_SESSION['msg_etapa'];
+            unset($_SESSION['msg_etapa']);
+        }
+        ?>
         <div id="card_grop">
             <div id="E">                
                 <img src="" id="pintura_etapa">
@@ -32,16 +38,16 @@ $usuario_logado = $_SESSION['nome-user'];
                 <input style="display:none;" type="text" name="Nome_perfil" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Nome" value=<?php echo $usuario_logado ?>> 
                 <input type="text" name="Desc_perfil" id="InputDesc" maxlength="60" placeholder="Descrição do seu perfil">
                 <div id="grade">                  
-                    <input type="text" name="instagram_perfil" class="InputP" maxlength="60" placeholder="Link do seu Instagram (opcional)">                  
-                    <input type="text" name="facebook_perfil" class="InputP" maxlength="60" placeholder="Link do seu Facebook (opcional)">                  
-                    <input type="text" name="twitter_perfil" class="InputP" maxlength="60" placeholder="Link do seu Twitter (opcional)">                  
-                    <input type="text" name="telefone_perfil" class="InputP" maxlength="60" placeholder="Link do seu Whatsapp (opcional)"> 
+                    <input type="text" name="instagram_perfil" id="I_inst" class="InputP" maxlength="60" placeholder="Link do seu Instagram (opcional)">                  
+                    <input type="text" name="facebook_perfil" id="I_face" class="InputP" maxlength="60" placeholder="Link do seu Facebook (opcional)">                  
+                    <input type="text" name="twitter_perfil" id="I_twi" class="InputP" maxlength="60" placeholder="Link do seu Twitter (opcional)">                  
+                    <input type="text" name="telefone_perfil" id="I_tel" class="InputP" maxlength="60" placeholder="Link do seu Whatsapp (opcional)"> 
                 </div>                 
             </div> 
             <input type="submit" name="submit" id="BtnSP" value="Salvar">
             </div>
         </div>                                                            
     </form>
-    <script src="../assets/JS/tela_etapa.js"></script>
+    <script src="../assets/JS/etapaUser.js"></script>
 </body>
 </html>

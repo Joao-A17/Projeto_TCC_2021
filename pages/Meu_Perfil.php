@@ -18,7 +18,7 @@ require '../assets/PHP/dados_perfil.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <link rel="stylesheet" href="../assets/styles/Meu_Perfil.css"> 
+    <link rel="stylesheet" href="../assets/styles/PerfilUser.css"> 
     <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
     <title id="Nome-Site">Perfil | <?php echo $usuario_logado ?></title>              
 </head>
@@ -64,7 +64,13 @@ require '../assets/PHP/dados_perfil.php';
                             <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter" value=<?php echo $Twitter_Perfil ?>> 
                         </div>                                            
                     </div>
-                    <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                               
+                    <?php
+                    if(isset($_SESSION['msg_publicar'])){
+                        echo $_SESSION['msg_publicar'];
+                        unset($_SESSION['msg_publicar']);
+                    }                        
+                    ?>  
+                    <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                                                 
                 </form>
                 <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
                 <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
@@ -72,12 +78,9 @@ require '../assets/PHP/dados_perfil.php';
                 <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
                 <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>  
-                <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
+                <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Publicar</buttom></a>
             </div>    
                 <div id="Cont-Master">
-
-                    <?php require '../assets/PHP/listar_pinturas.php' ?>                                
-
                     <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
                         <h2>Publicar</h2>
                         <div id="MenuSepara">
@@ -87,7 +90,7 @@ require '../assets/PHP/dados_perfil.php';
                                 <textarea id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                      
                             </div>
                             <div id="MS-2">                               
-                                <a href="#Pint_Completa"><button type="submit" id="btn-publicar" name="Publicar" class="btn-SP">Publicar</button></a>                   
+                                <a href="#Pint_Completa"><button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button></a>                   
                                 <div id="divIMG">
                                     <img src="" id="IMGpublic">          
                                 </div>          
@@ -97,6 +100,9 @@ require '../assets/PHP/dados_perfil.php';
                         </div> 
                         <br>
                     </form>
+                    <?php require '../assets/PHP/Pinturas_Usuario.php' ?>                                
+
+                    
                     <!-- <div class="Fundo_Card">
                         <div class="Card_Pinturas"> 
                             <?php // require '../assets/PHP/listar_pinturas.php' ?>

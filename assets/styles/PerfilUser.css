@@ -142,7 +142,7 @@ body{
 .Fundo-Pint{
     margin-left: 20px;
     margin-right: 20px;
-    width: 90%;
+    width: 50%;
 }
 
 .IconG{
@@ -666,6 +666,7 @@ textarea::placeholder{
 }
 
 .Pinturas{
+    width: 100%;
     margin: 20px auto;
     border-radius: 20px;
     border-radius: 20px;

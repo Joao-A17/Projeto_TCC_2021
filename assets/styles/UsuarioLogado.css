@@ -21,9 +21,12 @@
     width: 50px;
     margin: 10px;
     border-radius: 50%;
+    border: 2px solid var(--corL);
+    transition: .3s;
 }
 
 #Img-UsuarioL:hover{
+    box-shadow: 0 0 30px var(--corL);
     opacity: 0.7;
 }
 

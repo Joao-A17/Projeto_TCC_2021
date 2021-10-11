@@ -19,7 +19,7 @@ $usuario_logado = $_SESSION['nome-user'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/Inicio.css">
+    <link rel="stylesheet" href="../assets/styles/Tela_Inicio.css">
     <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
     <link rel="stylesheet" href="../assets/styles/Menu.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
@@ -39,9 +39,6 @@ $usuario_logado = $_SESSION['nome-user'];
       <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     </ul>       
   </nav>
-    
-      
-      <a href="#topo"><i class="fas fa-chevron-circle-up Seta-Up"></i></a>
       
         <div id="CardUser">
           <div id="Img_UserL">
@@ -121,7 +118,7 @@ $usuario_logado = $_SESSION['nome-user'];
                       ?>             
                       <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
                     </div>
-                  <p id="Nome-Pint">Veja mais sobre esse perfil</p>
+                  <p id="Info_Pintor">Veja mais sobre esse perfil</p>
                   <form action="./Perfil.php" method="GET">
                     <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $nomeUser[$i]?>>                  
                     <button id="Consultar" onclick="ConsutarImg()">Consultar</button>

@@ -141,6 +141,9 @@ body{
 #AdminForm{
     margin-top: 20px;
     display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    border-bottom: 3px solid var(--corS);
 }
 
 #DivFP{
@@ -151,6 +154,8 @@ body{
     width: 70%;
     margin-left: 20px;
     border-radius: 50%;
+    border-top: 5px solid var(--corS);
+    border-left: 3px solid var(--corS); 
 }
 
 #Info_Admin{

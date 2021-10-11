@@ -18,6 +18,7 @@ if(isset($_POST['submit']) && !empty($_POST['nome-user']) && !empty($_POST['senh
 
     if(mysqli_num_rows($resultado) < 1){
         /* print_r('Não existe'); */
+        $_SESSION['msg_Login'] = "<p style='color:red; font-size:20px;'>Usuário não foi encontrado ou senha incorreta!</p>"; 
         unset($_SESSION['nome-user']);
         unset($_SESSION['senha']);
         header('Location: ../../pages/Login.php');     

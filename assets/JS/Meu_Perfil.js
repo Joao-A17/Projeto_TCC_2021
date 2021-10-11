@@ -6,7 +6,7 @@
    e assim sucessivamente */
 var ContMaster = document.getElementById("Cont-Master");
 var Pint_Completa = document.querySelector(".Pint_Completa");
-var btn_publicar = document.getElementById("btn-publicar");
+var btn_publicar = document.getElementById("btn_publicar");
 var menuEdit = document.querySelector(".Editar");
 var MenuPublicar = document.getElementById("MenuPublicar");
 var btn_Adicionar = document.getElementById("btn-Adicionar");
@@ -204,5 +204,13 @@ btnSalvarPint.addEventListener('click', function(){
     else{
         NomeH1.innerHTML = input_nome_Pint.value;
         DescP.innerHTML = input_Desc_Pint.value;
+    }
+});
+
+/* Verificar se os campos de publicar imagem estão vazios */
+
+btn_publicar.addEventListener('click', function(){
+    if(inputP_Nome_Pintura.value.length < 0){
+        alert('campo vazio');
     }
 });

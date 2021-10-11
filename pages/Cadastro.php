@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,6 +25,12 @@
             <div id="Form-Card">
                 <i class="fas fa-user-plus Icon"></i>
                 <h2>Cadastro</h2>
+                <?php
+                if(isset($_SESSION['msg_cad'])){
+                    echo $_SESSION['msg_cad'];
+                    unset($_SESSION['msg_cad']);
+                }
+                ?>
                 <div id="Registros">
                     <div class="Form-I">
                         <input class="Input" type="text" id="nome" name="nome" placeholder="Nome" require>
@@ -44,5 +55,6 @@
             </div>
         </form>
     </div>   
+    <script src="../assets/JS/verificarCAD.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +19,12 @@
                 <div class="card-top">
                     <i class="fas fa-user User"></i>
                     <h2 class="login">Login</h2>
+                    <?php
+                    if(isset($_SESSION['msg_Login'])){
+                        echo $_SESSION['msg_Login'];
+                        unset($_SESSION['msg_Login']);
+                    }
+                    ?>
                 </div>
                 <div class="card-group">
                     <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>

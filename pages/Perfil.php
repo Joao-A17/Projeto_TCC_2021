@@ -29,7 +29,7 @@ require '../assets/PHP/dados_perfil.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <link rel="stylesheet" href="../assets/styles/Perfil.css">
+    <link rel="stylesheet" href="../assets/styles/Perfil_OU.css">
     <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
     <title>Perfil | <?php echo $Outro_Usuario ?></title>              
 </head>
