@@ -33,19 +33,19 @@ session_start();
                 ?>
                 <div id="Registros">
                     <div class="Form-I">
-                        <input class="Input" type="text" id="nome" name="nome" placeholder="Nome" require>
+                        <input class="Input" type="text" id="nome" name="nome" placeholder="Nome" required>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" require>
+                        <input class="Input" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="email" id="email" name="email" placeholder="E-mail" require>
+                        <input class="Input" type="email" id="email" name="email" placeholder="E-mail" required>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="password" name="password" id="password" placeholder="Senha" require>
+                        <input class="Input" type="password" name="password" id="password" placeholder="Senha" required>
                     </div>
                     <div class="Form-I">
-                        <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone" require>
+                        <input class="Input" type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
                     </div>
                     <div class="Form-I">
                         <p>Já tem uma conta? <a href="./Login.php">Entrar</a></p>

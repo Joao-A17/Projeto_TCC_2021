@@ -7,11 +7,13 @@ if($pegar_tabela){
     while($registro = mysqli_fetch_assoc($pegar_tabela)){
         $Nome_Perfil = $registro['nomep'];
         if($Nome_Perfil == $usuario_logado){
+            $Id_perfil = $registro['idperfil'];
             $Desc_Perfil = $registro['descp'];
             $Insta_Perfil = $registro['instagramp'];
             $Face_Perfil = $registro['facebookp'];
             $Twitter_Perfil = $registro['twitterp'];
             $Telefone_Perfil = $registro['telefonep'];
+            $FotoP = $registro['fotop'];
         }
         if(isset($Outro_Usuario)){
             if($Nome_Perfil == $Outro_Usuario){
@@ -20,6 +22,7 @@ if($pegar_tabela){
                 $Face_Perfil_u = $registro['facebookp'];
                 $Twitter_Perfil_u = $registro['twitterp'];
                 $Telefone_Perfil_u = $registro['telefonep'];
+                $FotoP_u = $registro['fotop'];
             }
         }
     }
@@ -31,6 +34,7 @@ if($pegar_usuarios){
     while($registro_usuario = mysqli_fetch_assoc($pegar_usuarios)){
         $NPerfil = $registro_usuario['nome'];
         if($NPerfil == $usuario_logado){
+            $IdUser = $registro_usuario['id'];
             $Email = $registro_usuario['email'];
             $Whats = $registro_usuario['telefone'];
         }

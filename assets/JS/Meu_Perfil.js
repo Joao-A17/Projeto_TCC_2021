@@ -24,16 +24,8 @@ var input_Desc_Pintura = document.getElementById("InputPublicD");
 var inputP_autor = document.getElementById("inputP_autor");
 var InputFile_SelectIMG = document.getElementById("SelectIMG");
 var IMGpublic = document.getElementById("IMGpublic");
-var btnSalvarPint = document.querySelector('.salvar_edicoes');
-var input_nome_Pint = document.querySelector('.NNPint');
-var input_Desc_Pint = document.querySelector('.InputAltD');
 var NomeH1 = document.querySelector('.Nome-Pint');
 var DescP = document.querySelector('.Desc-Pint');
-var Menu_Editar = document.querySelector(".Menu_Editar");
-var Icon_Pontinhos = document.querySelector(".Icon_Pontinhos");
-var menubtns = document.querySelector(".menubtns");
-var btn_Editar = document.querySelector(".btn_Editar");
-var btn_Excluir = document.querySelector(".btn_Excluir");
 var InputFile_TrocarIMG = document.getElementById("SelectIMG");
 var Pintura_Public = document.getElementById("IMGpublic");
 
@@ -43,8 +35,6 @@ BtnSPerfil.style.display = "none";
 
 
 BtnEditarPerfil.addEventListener('click', function(){
-    InputNomeAdmin.value = NomeAdmin.innerHTML;
-    InputDescAdmin.value = DescAdmin.innerHTML;
 
     if(MenuEditPerfil.style.display == "none"){       
        AlteraImgPerfil.style.display = "block";
@@ -177,13 +167,32 @@ btn_Adicionar.addEventListener('click', function(){
     }
 });
 
-/* Função dos 3 pontinhos */
+/*                                                                           Função dos 3 pontinhos */
+var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
+var menubtns = document.querySelector(".menubtns");
+var btn_Editar = document.getElementById("btn_Editar");
+var btn_Excluir = document.getElementById("btn_Excluir");
+var Menu_Editar = document.querySelector(".Menu_Editar");
+var btnSalvarPint = document.getElementById('salvar_edicoes');
+var input_nome_Pint = document.getElementById('NNPint');
+var input_Desc_Pint = document.getElementById('InputAltD');
+
 menubtns.style.display = "none";
+Menu_Editar.style.display = "none";
+
 Icon_Pontinhos.addEventListener('click', function(){
     if(menubtns.style.display == "none"){
     menubtns.style.display = "inline-flex";
     }else{
         menubtns.style.display = "none";
+        Menu_Editar.style.display = "none";
+    }
+});
+
+btn_Editar.addEventListener('click', function(){
+    if(Menu_Editar.style.display == "none"){
+        Menu_Editar.style.display = "block";
+    }else{
         Menu_Editar.style.display = "none";
     }
 });
@@ -214,3 +223,4 @@ btn_publicar.addEventListener('click', function(){
         alert('campo vazio');
     }
 });
+

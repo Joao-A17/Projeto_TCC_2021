@@ -10,13 +10,13 @@ if(isset($_POST['submit'])){
  
     $Result_Cadastro = "INSERT INTO usuarios (nome, sobrenome, email, password, telefone, criado) VALUES ('$Nome', '$Sobrenome', '$Email', '$Senha', '$Telefone', NOW())";
     $sqlL = mysqli_query($conexao, $Result_Cadastro);
-    if($sqlL){
+    if($sqlL){         
         header("Location: ../../pages/Login.php");
     }else{
         $_SESSION['msg_cad'] = "<p style='color:red; font-size:20px;'>Usuário não foi Cadastrado</p>";        
         header("Location: ../../pages/Cadastro.php");
     }
-    $IdUser = mysqli_insert_id($conexao);     
+        
 
 }
 ?>

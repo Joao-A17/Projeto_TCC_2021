@@ -7,6 +7,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   header('Location: ./Login.php');   
 }
 $usuario_logado = $_SESSION['nome-user'];
+$IdUser = mysqli_insert_id($conexao);
 
 require '../assets/PHP/dados_perfil.php';
 
@@ -33,7 +34,7 @@ require '../assets/PHP/dados_perfil.php';
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
                     <div id="divIMGAdmin">
-                    <?php require '../assets/PHP/FP_UsuarioLogado.php' ?>                     
+                    <?php require '../assets/PHP/FP_UsuarioLogado.php' ?>                      
                     <?php
                     if(isset($_SESSION['msg_publicar'])){
                         echo $_SESSION['msg_publicar'];
@@ -51,38 +52,9 @@ require '../assets/PHP/dados_perfil.php';
                             <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
                             <p id="Desc-Admin"><?php echo $Desc_Perfil ?></p>                                                        
                         </div>
-                        <button type="button" class="btn-menu edp">Editar Perfil</button>                         
+                        <a href="./editar_perfil.php"><button type="button" class="btn-menu edp">Editar Perfil</button></a>                      
                     </div>
-                </div>
-                <form id="MenuModal_EditPerfil" action="../assets/PHP/alterPerfil.php" method="POST" enctype="multipart/form-data">
-                    <div id="nav_menu">
-                        <h2 id="TituloMenu">Menu Alterações</h2>
-                    </div>
-                    <input type="file" name="Foto_perfil" class="form-control-file" id="imgPerfil" accept="image/*">
-                    <label for="imgPerfil" class="AlteraImg-Perfil">Alterar imagem<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>
-                    <div id="divND">
-                        <input type="text" name="Nome-Perfil" id="InputNomeAdmin" class="InputP" maxlength="60" placeholder="Alterar o Nome"> 
-                    <input type="submit" name="salvarP" id="BtnSP" value="Salvar">  
-                        <input type="text" name="Desc-Perfil" id="InputDescAdmin" maxlength="60" placeholder="Alterar a Descrição">
-                    </div> 
-                    <div id="divRedesSociais">
-                        <div id="LeftRedes">
-                            <?php echo "<input type='text' name='telefone' class='InputP' placeholder='Digite o link do seu telefone' value='".$Whats."'>";?>
-                            <?php echo "<input type='text' name='facebook' class='InputP' placeholder='Digite o link do seu facebook' value='".$Face_Perfil."'>";?>                           
-                        </div>
-                        <div id="RightRedes">                            
-                            <?php echo "<input type='text' name='instagram' class='InputP' placeholder='Digite o link do seu instagram' value='".$Face_Perfil."'>";?>
-                            <?php echo "<input type='text' name='twitter' class='InputP' placeholder='Digite o link do seu twitter' value='".$Face_Perfil."'>";?>
-                        </div>                                            
-                    </div>
-                    <?php
-                    if(isset($_SESSION['msg_publicar'])){
-                        echo $_SESSION['msg_publicar'];
-                        unset($_SESSION['msg_publicar']);
-                    }                        
-                    ?>  
-                    <p> Exemplo do numero do telefone: 5548999227431</p>                                                                                 
-                </form>
+                </div>                
                 <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
                 <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
                 <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
@@ -111,7 +83,12 @@ require '../assets/PHP/dados_perfil.php';
                         </div> 
                         <br>
                     </form>
-                    <?php require '../assets/PHP/Pinturas_Usuario.php' ?>                                
+
+                    
+
+                    <?php                     
+                    
+                    require '../assets/PHP/Pinturas_Usuario.php' ?>                                
 
                     
                     <!-- <div class="Fundo_Card">

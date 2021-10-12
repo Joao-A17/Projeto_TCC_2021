@@ -1,6 +1,6 @@
 <?php
-session_start();
-$usuario_logado = $_SESSION['nome-user'];
+require '../assets/PHP/Conexao_Banco.php';
+require '../assets/PHP/dados_perfil.php';
 
 ?>
 
@@ -41,7 +41,7 @@ $usuario_logado = $_SESSION['nome-user'];
                     <input type="text" name="instagram_perfil" id="I_inst" class="InputP" maxlength="60" placeholder="Link do seu Instagram (opcional)">                  
                     <input type="text" name="facebook_perfil" id="I_face" class="InputP" maxlength="60" placeholder="Link do seu Facebook (opcional)">                  
                     <input type="text" name="twitter_perfil" id="I_twi" class="InputP" maxlength="60" placeholder="Link do seu Twitter (opcional)">                  
-                    <input type="text" name="telefone_perfil" id="I_tel" class="InputP" maxlength="60" placeholder="Link do seu Whatsapp (opcional)"> 
+                    <?php echo "<input type='text' name='telefone_perfil' id='I_tel' class='InputP' maxlength='60' value='".$Whats."'>"; ?> 
                 </div>                 
             </div> 
             <input type="submit" name="submit" id="BtnSP" value="Salvar">

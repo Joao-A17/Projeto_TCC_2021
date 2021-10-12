@@ -29,16 +29,16 @@ if (file_exists("$pasta")) {
                     <div class='Fundo-Desc'>
                         <h1 class='Nome-Pint'><?php echo $Nome_Foto ?></h1>
                         <p class='Desc-Pint'><?php echo $Desc_Foto ?></p>
-                        <i class='fas fa-ellipsis-v Icon_Pontinhos'></i>
+                        <i id="Icon_Pontinhos" class='fas fa-ellipsis-v'></i>
                         <div class="menubtns">
-                            <buttom class='btn_span btn_Editar'>Editar<i class='fas fa-paint-brush IconE'></i></buttom>
-                            <buttom class='btn_span btn_Excluir'>Excluir<i class='fas fa-trash-alt IconE'></i></buttom>
+                            <buttom id="btn_Editar" class='btn_span'>Editar<i class='fas fa-paint-brush IconE'></i></buttom>
+                            <buttom id='btn_Excluir' class='btn_span'>Excluir<i class='fas fa-trash-alt IconE'></i></buttom>
                         </div>
                     <form action='./Meu_Perfil.php' method='POST' class='Menu_Editar'>
                         <h2>Novas Alterações</h2>
-                        <input type='submit' name='SalvarTudo' value='Salvar' class='btn-SP salvar_edicoes'>
-                        <input type='text' name='arquivoX' class='InputAlt NNPint' placeholder='Digite o nome da pintura'>
-                        <textarea name='descrição-foto' class="InputAltD" placeholder='Digite a descrição da pintura' cols='30' rows='40'></textarea>
+                        <input type='submit' name='SalvarTudo' value='Salvar' id="salvar_edicoes" class='btn-SP'>
+                        <?php echo "<input type='text' name='arquivoX' id='NNPint' class='InputAlt' placeholder='Digite o nome da pintura' value='".$Nome_Foto."' >";?>
+                        <?php echo "<input type='text' name='descrição-foto' id='InputAltD' placeholder='Digite a descrição da pintura' value='".$Desc_Foto."' >";?>
                     </form>
                     </div>
                 </div>
