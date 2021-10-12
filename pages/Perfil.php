@@ -72,11 +72,11 @@ require '../assets/PHP/dados_perfil.php';
                     <h1 id="Nome_Usuario"><?php echo $Outro_Usuario ?></h1>
                     <p id="Desc_Usuario"><?php echo $Desc_Perfil_u ?></p>
                     <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
-                    <a class="Redes" href=<?php echo $Insta_Perfil_u ?>><i class="fas fa-envelope E"></i></a>
-                    <a class="Redes" href=<?php echo $Telefone_Perfil_u ?>><i class="fab fa-whatsapp W"></i></a>
-                    <a class="Redes" href=<?php echo $Face_Perfil_u ?>><i class="fab fa-facebook F"></i></a>
-                    <a class="Redes" href=<?php echo $Insta_Perfil_u ?>><i class="fab fa-instagram I"></i></a>
-                    <a class="Redes" href=<?php echo $Twitter_Perfil_u ?>><i class="fab fa-twitter T"></i></a>
+                <?php echo "<a class='Redes' href='".'mail:'.$Email_u."'><i class='fas fa-envelope E'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats_u."'><i class='fab fa-whatsapp W'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Face_Perfil_u."'><i class='fab fa-facebook F'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Insta_Perfil_u."'><i class='fab fa-instagram I'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Twitter_Perfil_u."'><i class='fab fa-twitter T'></i></a>"; ?> 
                 </div>                
             </div>        
         <div id="Cont-Master">

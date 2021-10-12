@@ -6,23 +6,23 @@ if(isset($_POST['salvarP'])){
     include_once('./Conexao_Banco.php');
 
     $usuario_logado = $_SESSION['nome-user'];
-    $Nome_Perfil = filter_input(INPUT_POST, 'Nome-Perfil');
-    $Desc_Perfil = filter_input(INPUT_POST, 'Desc-Perfil');    
+    $Nome_Perfil = filter_input(INPUT_POST, 'Nome-Perfil', FILTER_SANITIZE_STRING);
+    $Desc_Perfil = filter_input(INPUT_POST, 'Desc-Perfil', FILTER_SANITIZE_STRING);    
     $Foto_Perfil = strtolower(pathinfo($_FILES['Foto_perfil']['name'], PATHINFO_EXTENSION)); 
     $Nova_Foto_Perfil = $Nome_Perfil.'.'.$Foto_Perfil;
-    $instagram_Perfil = filter_input(INPUT_POST, 'instagram');
-    $facebook_Perfil = filter_input(INPUT_POST, 'facebook');
-    $twitter_Perfil = filter_input(INPUT_POST, 'twitter');
-    $telefone_Perfil = filter_input(INPUT_POST, 'telefone');
+    $instagram_Perfil = filter_input(INPUT_POST, 'instagram', FILTER_SANITIZE_STRING);
+    $facebook_Perfil = filter_input(INPUT_POST, 'facebook', FILTER_SANITIZE_STRING);
+    $twitter_Perfil = filter_input(INPUT_POST, 'twitter', FILTER_SANITIZE_STRING);
+    $telefone_Perfil = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 
     /* $tebela_usarios = "UPDATE usuarios SET (nome, telefone) VALUES ('$Nome_Perfil', '$telefone__Perfil')"; */
 
     $novo_perfil = "UPDATE perfil SET nomep='$Nome_Perfil', descp='$Desc_Perfil', fotop='$Nova_Foto_Perfil', instagramp='$instagram_Perfil' facebookp='$facebook_Perfil', twitterp='$twitter_Perfil', telefonep='$telefone_Perfil', WHERE nome='$usuario_logado'";
     if(mysqli_affected_rows($conexao)){
-        $_SESSION['msg'] = "<p style='color:green;'>Usuário editado com sucesso</p>";
+        $_SESSION['msg'] = "<p style='color:green; margin-bottom: 20px; font-size:24px; text-align: center;'>Usuário editado com sucesso</p>";
         header("Location: ../../pages/Meu_Perfil.php");
     }else{
-        $_SESSION['msg'] = "<p style='color:red;'>Usuário não foi editado com sucesso</p>";
+        $_SESSION['msg'] = "<p style='color:red; font-size:30px; text-align: center; font-family: 'Josefin Sans', sans-serif;'>Usuário não foi editado com sucesso</p>";
         header("Location: ../../pages/Meu_Perfil.php");
     }
 

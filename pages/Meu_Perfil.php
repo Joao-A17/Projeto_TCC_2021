@@ -33,7 +33,18 @@ require '../assets/PHP/dados_perfil.php';
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
                 <div id="AdminForm">
                     <div id="divIMGAdmin">
-                    <?php require '../assets/PHP/FP_UsuarioLogado.php' ?> 
+                    <?php require '../assets/PHP/FP_UsuarioLogado.php' ?>                     
+                    <?php
+                    if(isset($_SESSION['msg_publicar'])){
+                        echo $_SESSION['msg_publicar'];
+                        unset($_SESSION['msg_publicar']);
+                    }    
+                    
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }                        
+                    ?>  
                     </div>              
                     <div class="Info-Admin">
                         <div id="AreaPerfil">
@@ -56,12 +67,12 @@ require '../assets/PHP/dados_perfil.php';
                     </div> 
                     <div id="divRedesSociais">
                         <div id="LeftRedes">
-                            <input type="text" name="telefone" class="InputP" placeholder="Digite o link do seu telefone" value=<?php echo $Telefone_Perfil ?>>
-                            <input type="text" name="facebook" class="InputP" placeholder="Digite o link do seu facebook" value=<?php echo $Face_Perfil ?>>                            
+                            <?php echo "<input type='text' name='telefone' class='InputP' placeholder='Digite o link do seu telefone' value='".$Whats."'>";?>
+                            <?php echo "<input type='text' name='facebook' class='InputP' placeholder='Digite o link do seu facebook' value='".$Face_Perfil."'>";?>                           
                         </div>
                         <div id="RightRedes">                            
-                            <input type="text" name="instagram" class="InputP" placeholder="Digite o link do seu instagram" value=<?php echo $Insta_Perfil ?>>
-                            <input type="text" name="twitter" class="InputP" placeholder="Digite o link do seu twitter" value=<?php echo $Twitter_Perfil ?>> 
+                            <?php echo "<input type='text' name='instagram' class='InputP' placeholder='Digite o link do seu instagram' value='".$Face_Perfil."'>";?>
+                            <?php echo "<input type='text' name='twitter' class='InputP' placeholder='Digite o link do seu twitter' value='".$Face_Perfil."'>";?>
                         </div>                                            
                     </div>
                     <?php
@@ -70,14 +81,14 @@ require '../assets/PHP/dados_perfil.php';
                         unset($_SESSION['msg_publicar']);
                     }                        
                     ?>  
-                    <p> Exemplo do numero do telefone: wa.me/+5548999227431</p>                                                                                 
+                    <p> Exemplo do numero do telefone: 5548999227431</p>                                                                                 
                 </form>
                 <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
-                <a class="Redes" href="mailto:joaovictorca2004@gmail.com"><i class="fas fa-envelope E"></i></a>
-                <a class="Redes" href="https://wa.me/+554899227431"><i class="fab fa-whatsapp W"></i></a>
-                <a class="Redes" href="#"><i class="fab fa-facebook F"></i></a>
-                <a class="Redes" href="#"><i class="fab fa-instagram I"></i></a>
-                <a class="Redes" href="#"><i class="fab fa-twitter T"></i></a>  
+                <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Face_Perfil."'><i class='fab fa-facebook F'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
+                <?php echo "<a class='Redes' href='".$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
                 <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Publicar</buttom></a>
             </div>    
                 <div id="Cont-Master">
@@ -87,7 +98,7 @@ require '../assets/PHP/dados_perfil.php';
                             <div id="MS-1">
                                 <input type="text" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor">
                                 <input type="text" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura">
-                                <textarea id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" cols="30" rows="40"></textarea>                                      
+                                <input type="text" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura">
                             </div>
                             <div id="MS-2">                               
                                 <a href="#Pint_Completa"><button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button></a>                   

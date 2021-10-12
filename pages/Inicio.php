@@ -69,7 +69,10 @@ $usuario_logado = $_SESSION['nome-user'];
       
 
       <section id="topo">
-        <h1>Seja bem-vindo(a) <br><h1 class="usuario_logado"><?php echo $usuario_logado ?></h1><br><h1> ao </h1><br><h1> Magic Paintings</h1>
+        <h1>Seja bem-vindo(a)</h1>
+        <h2 class="usuario_logado"><?php echo $usuario_logado ?></h2>
+        <h1> ao </h1>
+        <h1> Magic Paintings</h1>
         <p>Exposição e vendas de artes</p>
       </section>
       <section id="info">
@@ -95,10 +98,22 @@ $usuario_logado = $_SESSION['nome-user'];
             while($registro = mysqli_fetch_assoc($resultado_pegarUsuarios)){
               $nomeUser[$i] = $registro['nome'];
               $IdUser[$i] = $registro['id'];
+
               ?>       
+              
               
               <div class="PintArt">           
                 <!-- Lugar que ficava Ultima Pintura do artista -->
+                <?php 
+                
+                if($nomeUser[$i] != $usuario_logado){
+                  $NU = 'NomeUsuario';
+                }
+                if($nomeUser[$i] == $usuario_logado){
+                  $NU = 'NomeUsuario2';
+                }
+
+                ?>
                 <div class="InfoPint">
                   <div class="ConteudoInfo-1">
                     <div class="User">
@@ -116,12 +131,12 @@ $usuario_logado = $_SESSION['nome-user'];
                           }
                       }                      
                       ?>             
-                      <h3 class="NomeUsuario"><?php echo $nomeUser[$i]?></h3>
+                      <h3 class=<?php echo $NU?>><?php echo $nomeUser[$i]?></h3>
                     </div>
                   <p id="Info_Pintor">Veja mais sobre esse perfil</p>
                   <form action="./Perfil.php" method="GET">
                     <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $nomeUser[$i]?>>                  
-                    <button id="Consultar" onclick="ConsutarImg()">Consultar</button>
+                    <button id="Consultar" class="BConsultar" onclick="ConsutarImg()">Consultar</button>
                   </form>
                   </div>
                 </div>

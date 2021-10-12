@@ -7,6 +7,7 @@
 }
 
 body{
+    height: 100%;
 	background-image: linear-gradient(45deg, var(--corD) 0%, var(--corD2) 100%);
 }
 
@@ -20,8 +21,8 @@ body{
     background: var(--tranp);
     color: var(--corL);
     border: none;
-    border-top: 2px solid var(--corL);
-    border-bottom: 2px solid var(--corL);
+    border-top: 3px solid var(--corL);
+    border-bottom: 3px solid var(--corL);
     border-radius: 8px;
     transition: .3s;
 }
@@ -36,7 +37,7 @@ body{
 
 
 #topo{
-    padding: 100px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,13 +46,14 @@ body{
 
 #topo h1{
     color: var(--corL);
-    font-size: 70px;
+    font-size: 100px;
     font-family: 'Gugi', sans-serif;
 }
 
 .usuario_logado{
+    font-size: 70px;
     font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
   	-webkit-background-clip: text;
     color: transparent;
     transition: .3s;
@@ -188,6 +190,14 @@ body{
     float: left;
     font-size: 30px;
 }
+.NomeUsuario2{
+    color: var(--corL);
+    font-family: 'Gugi', sans-serif;
+    margin-top: 15px;
+    margin-left: 10px;
+    float: left;
+    font-size: 30px;
+}
 
 .InfoPint{
     width: 100%;
@@ -199,6 +209,12 @@ body{
     margin-top: 10px;
     align-items: center;
     text-align: center;
+    transition: .3s;
+}
+.InfoPint:hover{
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0 0 12px var(--corS);
 }
 
 .PintArt h4{
@@ -231,7 +247,7 @@ body{
     padding: 10px;
 }
 
-#Consultar{
+.BConsultar{
     width: 100px;
     height: 40px;
     margin-bottom: 20px;
@@ -250,7 +266,7 @@ body{
     transition: .3s;  
 }
 
-#Consultar:hover{
+.BConsultar:hover{
     background: var(--corP);
     color: var(--corD);
     border: 2px solid var(--corP);

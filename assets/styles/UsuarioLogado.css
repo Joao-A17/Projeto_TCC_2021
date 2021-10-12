@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-    top: 30%;
+    top: 20%;
     right:0px;
     width: .5px;
     transition: .3s;
@@ -21,7 +21,8 @@
     width: 50px;
     margin: 10px;
     border-radius: 50%;
-    border: 2px solid var(--corL);
+    border: 3px solid var(--corL);
+    box-shadow: 0 0 12px var(--corL);
     transition: .3s;
 }
 
@@ -35,7 +36,7 @@
 }
 
 #Nome_User{
-    color: var(--corP);
+    color: var(--corL);
     font-family: 'Gugi', sans-serif;
     margin-top: 15px;
     margin-bottom: 15px;

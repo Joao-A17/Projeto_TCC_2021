@@ -208,7 +208,7 @@ body{
 }
 
 #MenuPublicar h2{
-    margin-top: 10px;
+    margin-top: 80px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
 	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
@@ -271,8 +271,9 @@ textarea::placeholder{
 
 #InputPublicD{
     width: 400px;
-    height: 400px;
+    height: 200px;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
@@ -289,9 +290,9 @@ textarea::placeholder{
     transition: .3s;
 }
 #InputPublicD:focus{
-    border-top: 2px solid var(--corL);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0 2px 5px var(--corL);
+    border-top: 2px solid var(--corS);
+    border-bottom: 2px solid var(--corS);
+    box-shadow: 0 2px 5px var(--corS);
 }
 
 #btn-publicar{    
@@ -303,7 +304,8 @@ textarea::placeholder{
 }
 
 #IMGpublic{
-    width: 100%;
+    margin: 20px;
+    width: 50%;
     border-radius: 20px;
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS);
