@@ -32,10 +32,10 @@ CREATE TABLE `perfil` (
   `instagramp` varchar(220) NOT NULL,
   `facebookp` varchar(220) NOT NULL,
   `twitterp` varchar(220) NOT NULL,
-  `telefonep` int(100) NOT NULL,
+  `telefonep` varchar(100) NOT NULL,
   PRIMARY KEY (`idperfil`),
   UNIQUE KEY `NomeUser` (`nomep`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
-INSERT INTO `perfil` VALUES (2,'','','.','instagram','facebook','twitter',99227431);
+INSERT INTO `perfil` VALUES (17,'Usuario-1','Perfil do usuario-1','Usuario-1.jpg','instagram do usuario-1','facebook do usuario-1','twitter do usuario-1','whatsapp do usuario-1'),(18,'Usuario-2','Perfil do Usuario-2','Usuario-2.jpg','Instagram do Usuario-2','Facebook do Usuario-2','Twitter do Usuario-2','Whatsapp do Usuario-2'),(20,'Usuario-3','Perfil do usuario-3','Usuario-3.jpg','instagram do usuario-3','facebook do usuario-3','twitter do usuario-3','whatsapp do usuario-3'),(21,'Usuario-4','Perfil do usuario-4','Usuario-4.jpg','https://www.instagram.com/sr.alone_edits/','https://www.facebook.com/','https://twitter.com','wa.me/+5548999227431'),(22,'Usuario-5','Perfil do usuario-5 huehuheuheuhe','Usuario-5.jpg','instagram do usuario-5','facebook do usuario-5','twitter do usuario-5','whatsapp do usuario-5'),(24,'Usuario-6','Perfil do usuario-6','Usuario-6.jpg','instagram do usuario-6','facebook do usuario-6','twitter do usuario-6','whatsapp do usuario-6'),(44,'Usuario-7','User 7','Usuario-7.jpg','instagram do Usuario-7','facebook do Usuario-7','twitter do Usuario-7','465879123'),(40,'Lacoste','Moda Casual De Luxo','Lacoste.jpg','instagram do Lacoste','facebook do Lacoste','twitter do Lacoste','whatsapp do Lacoste'),(43,'DogzÃ£o','DogzÃ£o dos criar','DogzÃ£o.jpg','instagram do DogzÃ£o','facebook do DogzÃ£o','twitter do DogzÃ£o','whatsapp do DogzÃ£o');
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `pinturas` (
 
 LOCK TABLES `pinturas` WRITE;
 /*!40000 ALTER TABLE `pinturas` DISABLE KEYS */;
-INSERT INTO `pinturas` VALUES (52,'feloz','Carro','Carrinho vrum vrum','Carro.jpg','2021-09-27 19:32:48'),(49,'Gustavo','Kachinho pequenino','Sei lÃ¡','Kachinho pequenino.jpg','2021-09-26 21:16:20'),(50,'Robson_Xpro','Perna Longa','Pegati meno meu dente de ouro\r\n','Perna Longa.jpg','2021-09-27 18:47:26'),(53,'feloz','Pika blindada','As pink blinders','Pika blindada.jpg','2021-09-27 19:48:45'),(51,'feloz','Carro','carrinho vrum vrum','Carro.jpg','2021-09-27 19:27:35'),(48,'Gustavo','Pika blindada','NÃ³s somos os Pink blinders','Pika blindada.jpg','2021-09-26 21:14:33'),(47,'JoaoZin','Coringa','hahaha','Coringa.jpg','2021-09-26 21:04:13'),(43,'JoaoZin','Carinha','Cara\r\n','Carinha.jpg','2021-09-26 19:32:05'),(44,'','','','.jpg','2021-09-26 20:56:34'),(45,'JoaoZin','Carro','Vrum vrum da sorte','Carro.jpg','2021-09-26 20:59:57'),(46,'JoaoZin','Outro Carro','vrum vrum legal','Outro Carro.jpg','2021-09-26 21:02:33'),(42,'JoaoZin','Outro Carro','asdasd','Outro Carro.jpg','2021-09-26 17:28:55'),(41,'JoaoZin','Carro','Vrum Vrum','Carro.jpg','2021-09-26 17:26:14'),(54,'feloz','Pika Blin Solo','huehue','Pika Blin Solo.jpg','2021-09-27 19:50:40'),(55,'feloz','Outro Carro','asdasd','Outro Carro.','2021-09-27 19:53:21'),(56,'feloz','Carro','vrum vrum','Carro.jpg','2021-09-27 20:08:17'),(57,'feloz','Minato','Minato do drip','Minato.jpg','2021-09-27 22:09:58');
+INSERT INTO `pinturas` VALUES (123,'Lacoste','Raspadin','Desenho do meu Amiguin BK','Raspadin.jpg','2021-10-11 21:52:55'),(117,'Usuario-4','Madara','Madara edit trash gang','Madara.jpg','2021-10-11 19:55:13'),(118,'Usuario-1','Detetives','Anime Death note','Detetives.jpg','2021-10-11 19:57:52'),(102,'Usuario-4','Sasuke','Sasuke da trash gang','Sasuke.jpg','2021-10-10 21:42:39'),(101,'Usuario-4','AnimeEdit','Edit Estilo Trash Gang','AnimeEdit.jpg','2021-10-10 20:21:43'),(100,'Usuario-4','Tobi','Tobi animado','Tobi.jpg','2021-10-10 20:19:44'),(99,'Usuario-4','Carrinho','Vrum Vrum Vrum Vrum ','Carrinho.jpg','2021-10-10 18:47:50'),(97,'Usuario-3','Hinata','Desc da Hinata','Hinata.jpg','2021-10-10 18:19:43'),(98,'Usuario-4','Pika blindada','Trio da alegira','Pika blindada.jpg','2021-10-10 18:47:03'),(93,'Usuario-1','Patolino','Patolino e seus Moneys','Patolino.jpg','2021-10-10 17:55:31'),(94,'Usuario-1','Obito','EditAnime do Obito','Obito.jpg','2021-10-10 17:58:44'),(95,'Usuario-2','Sasuke','SakukeEdits','Sasuke.jpg','2021-10-10 18:13:10'),(96,'Usuario-3','Orochimaru','Desc do Orochimaru','Orochimaru.jpg','2021-10-10 18:17:48'),(91,'Usuario-2','Kiba e Akamaro','AnimeEdit','Kiba e Akamaro.jpg','2021-10-10 17:48:02'),(92,'Usuario-2','Itachi Uchiha','Edit do VRTENSHI','Itachi Uchiha.jpg','2021-10-10 17:51:21'),(90,'Usuario-1','Perna Longa','Dente de ouro','Perna Longa.jpg','2021-10-10 17:44:19'),(122,'Lacoste','@THELEGIONX','Edit da Aktsuki','@THELEGIONX.jpg','2021-10-11 20:14:28'),(121,'Lacoste','TRASH','Edit Trash Demon','TRASH.jpg','2021-10-11 20:12:02'),(125,'Lacoste','Lobin','Guardian Lobo','Lobin.jpg','2021-10-11 23:45:27'),(126,'Lacoste','Nuvem Red Aktsuki','Wallpaper para celular','Nuvem Red Aktsuki.jpg','2021-10-12 00:33:30'),(127,'Lacoste','RpXWall','Wallpaper PC 9000K','RpXWall.jpg','2021-10-12 00:42:41');
 /*!40000 ALTER TABLE `pinturas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (109,'Gustavo','Hola','gustavo@gmail.com','12345',321654987,'2021-09-25 15:32:58',NULL),(110,'Robson_Xpro','blindada','robson@gmail.com','1234',154554,'2021-09-25 16:01:38',NULL),(111,'JoaoZin','Victor','JoaoZin@gmail.com','123',99227431,'2021-09-26 12:29:13',NULL),(112,'Feloz','brabo','Feloz@gmail.com','feloz123',98666999,'2021-09-27 19:08:50',NULL);
+INSERT INTO `usuarios` VALUES (133,'Usuario-6','hola','usuario6@gmail.com','123',213546879,'2021-10-10 23:08:55',NULL),(132,'Usuario-5','seila','usuario5@gmail.com','123',456781932,'2021-10-10 21:46:27',NULL),(129,'Usuario-2','nadaha','usuario2@gmail.com','123',321654987,'2021-10-10 17:45:47',NULL),(130,'Usuario-3','nadis','usuario3@gmail.com','123',654987321,'2021-10-10 18:14:26',NULL),(131,'Usuario-4','Sobre','usuario4@gmail.com','123',789654123,'2021-10-10 18:42:38',NULL),(128,'Usuario-1','nada','usuario1@gmail.com','123',321654987,'2021-10-10 17:42:31',NULL),(134,'Usuario-7','asd','usuario7@gmail.com','123',465879123,'2021-10-11 16:29:08',NULL),(138,'Lacoste','Reizin','lacoste@gmail.com','lacoste123',99227431,'2021-10-11 20:08:34',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -117,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-27 22:21:51
+-- Dump completed on 2021-10-12 20:34:57
