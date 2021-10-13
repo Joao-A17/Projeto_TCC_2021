@@ -20,7 +20,6 @@ require '../assets/PHP/dados_perfil.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/PerfilUser.css"> 
-    <link rel="stylesheet" href="../assets/styles/Menu_Modal_edit.css">
     <title id="Nome-Site">Perfil | <?php echo $usuario_logado ?></title>              
 </head>
 <body>

@@ -20,43 +20,40 @@ $usuario_logado = $_SESSION['nome-user'];
     <form id="MenuModal_EditPerfil" action="../assets/PHP/alterPerfil.php" method="POST" enctype="multipart/form-data">
         <div id="nav_menu">
             <h2 id="TituloMenu">Menu Alterações</h2>
-        </div>                           
+        </div>  
+        <div id="dividir">                                    
         <div id="divIMG">
-            <img src="" id="IMGpublic">          
-        </div>          
-        <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
-        <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>     
+            <?php 
+            $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
+            echo "<img src='".$pasta.$FotoP."' class='Foto_Perfil'>"; ?> 
+            <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
+            <label for="SelectIMG" id="Select_img_public">Tracar Imagem</label>        
+        </div>            
         <div id="INPUTS">
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Nome do Usuario' required>
-                <label for="nome_usuario" class="label">Nome do Usuario</label>
+            <div id="e">
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Nome do Usuario' required>
+                </div>
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Descrição do Usuario' required>
+                </div>
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Instagram do Usuario' required>
+                </div>
             </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Descrição do Usuario' required>
-                <label for="nome_usuario" class="label">Descrição do Usuario</label>
+            <div id="d">
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Nome do Usuario' required>
+                </div>
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Descrição do Usuario' required>
+                </div>
+                <div class="menu-box">
+                    <input type='text' name='nome_usuario' id='nome_usuario' class="Inputs" placeholder='Instagram do Usuario' required>
+                </div>
             </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Instagram do Usuario' required>
-                <label for="nome_usuario" class="label">Instagram do Usuario</label>
-            </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Nome do Usuario' required>
-                <label for="nome_usuario" class="label">FaceBook do Usuario</label>
-            </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Nome do Usuario' required>
-                <label for="nome_usuario" class="label">Descrição do Usuario</label>
-            </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Nome do Usuario' required>
-                <label for="nome_usuario" class="label">Instagram do Usuario</label>
-            </div>
-            <div class="meu-box">
-                <input type='text' name='nome_usuario' id='nome_usuario' class="Input" placeholder='Nome do Usuario' required>
-                <label for="nome_usuario" class="label">Instagram do Usuario</label>
-            </div>
-        </div>
-                                                                                        
+        </div> 
+        </div>                                                                                        
     </form>
     <script src="../assets/JS/etapaUser.js"></script>
 </body>

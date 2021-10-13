@@ -31,8 +31,19 @@
 	text-transform: uppercase;
 }
 
-#INPUTS{
-    display: inline-grid;
+#dividir{
+  display: flex;
+}
+
+#divIMG{
+  width: 20%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.Foto_Perfil{
+  width: 100%;
+  border-radius: 50%;
 }
 
 #SelectIMG{
@@ -62,45 +73,39 @@
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-.meu-box{
-  position: relative;
-  margin: 20px;
+#INPUTS{
+  margin: 100px;
+  display: flex;
 }
 
-.Input{
-  position: relative;
-  width: 350px;
-  height: 40px;
-  border: 0;
+.menu-box{
+  margin: 10px;
+}
+
+/* Campo de texto Email e Senha*/
+.Inputs{
   font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  margin: 20px auto;
   text-align: center;
+  height: 38px;
+  width: 320px;
   outline: none;
-  margin-left: 20px;
   background: var(--corD2);
-  color: var(--corP);
-  border-radius: 8px;
-  border-bottom: 2px solid var(--corP);
-  z-index: 2;
-}
-.InputP:focus{
-  border-bottom: 2px solid var(--corP);
-  box-shadow: 0 2px 5px var(--corP);
+  color: var(--corS);
+  border: none;
+  border-radius: 20px;
+  border-bottom: 3px solid var(--corP);
+  box-sizing: border-box;
+  transition: .3s;
 }
 
-.label{
-  position: absolute;
-  font-size: 20px;
-  color: var(--corP);
-  top: 0; 
-  bottom: 0; 
-  left: 0; 
-  right: 0;
-  transition: 0.5s;                
-}
-
-.Input:focus + .label{
-  margin-top: 0px;
-  top: -50%;
-  z-index: 2;
-  transition: 0.2s;  
+/* Animação de clicar nos campos focus*/
+.Inputs:focus{
+  width: 100%;
+  border-top: 1px solid var(--corS);
+  border-bottom: 1px solid var(--corS);
+  border-left: 5px solid var(--corS);
+  border-right: 5px solid var(--corS);
 }
