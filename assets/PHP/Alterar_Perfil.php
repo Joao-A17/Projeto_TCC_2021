@@ -28,14 +28,46 @@ if(isset($_POST['btn_salvar'])){
     echo "Id_Usuario: ", $IdUser, "<br>"; 
     echo "Id_Perfil: ", $Id_perfil, "<br>"; 
 
-    $UP_perfil = "UPDATE perfil SET nomep = '$Nome', descp = '$Desc', instagramp = '$Insta', facebookp = '$Face', twitterp = '$Twit', telefonep = '$Whats' WHERE idperfil='$Id_perfil'";
-    $sql_perfil = mysqli_query($conexao, $UP_perfil);
+    
+    
     $UP_usuarios = "UPDATE usuarios SET nome = '$Nome', sobrenome = '$Sobrenome', email = '$Email', password = '$Senha', telefone = '$Whats' WHERE id='$IdUser'";    
     $sql_usuarios = mysqli_query($conexao, $UP_usuarios);
-    if($sql_usuarios){
-        echo "<h1 style='color: green;'>Enviado</h1>";
+
+    $UP_perfil = "UPDATE perfil SET nomep = '$Nome', descp = '$Desc', instagramp = '$Insta', facebookp = '$Face', twitterp = '$Twit', telefonep = '$Whats' WHERE idperfil='$Id_perfil'";
+    $sql_perfil = mysqli_query($conexao, $UP_perfil);
+
+    $UP_Pintura = "UPDATE pinturas SET Autor = '$Nome' WHERE Autor ='$usuario_logado'";
+    $sql_pinturas = mysqli_query($conexao, $UP_Pintura);
+    
+    // renomear os caminhos das pastas de pinturas e perfil
+    $pasta_Pintura = '../IMAGES/Pinturas/'.$usuario_logado.'/';
+    $novo_nome_pasta_Pintura = '../IMAGES/Pinturas/'.$Nome.'/';
+    $Renomear = rename($pasta_Pintura,$novo_nome_pasta_Pintura);
+    // renomear o perfil
+    $pasta_perfil = '../IMAGES/Foto_Perfil/'.$usuario_logado.'/';
+    $novo_nome_pasta_Perfil = '../IMAGES/Foto_Perfil/'.$Nome.'/';
+    $Renomear = rename($pasta_perfil,$novo_nome_pasta_Perfil);
+
+
+    
+    if($sql_pinturas){
+        header('Location: ../PHP/loginOFF.php');       
+        $_SESSION['msg_update'] = "        
+        <div id='msg_true'>
+            <h1> Perfil Alterado <i class='fas fa-smile-beam icon'></i></h1>
+            <br>
+            <h1> Faça Login Novamente </h1>
+        </div>         
+        "; 
     }else{
-        echo "<h1 style='color: red;'>Não enviado</h1>";
+        $_SESSION['msg_update'] = "
+        
+        <div id='msg_false'>
+            <h1> Perfil Não Alterado <i class='fas fa-frown icon'></i></h1>
+        </div>
+        
+        "; 
+        header('Location: ../../pages/editar_perfil');
     }
 
 }else{

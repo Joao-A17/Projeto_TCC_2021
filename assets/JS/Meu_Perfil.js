@@ -86,7 +86,7 @@ btn_Adicionar.addEventListener('click', function(){
 
 /*                                                                           Função dos 3 pontinhos */
 var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
-var menubtns = document.querySelector(".menubtns");
+var menubtns = document.getElementById("menubtns");
 var btn_Editar = document.getElementById("btn_Editar");
 var btn_Excluir = document.getElementById("btn_Excluir");
 var Menu_Editar = document.querySelector(".Menu_Editar");
@@ -140,4 +140,3 @@ btn_publicar.addEventListener('click', function(){
         alert('campo vazio');
     }
 });
-

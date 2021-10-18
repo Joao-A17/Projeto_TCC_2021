@@ -19,18 +19,24 @@ $usuario_logado = $_SESSION['nome-user'];
 <body>
     <div id="nav_menu">
         <h2 id="TituloMenu">MAGIC PAINTINGS</h2>
-        <a class="menu-link" href="../index.html"><i class="fas fa-home"></i>   Inicio</a>  
+        <a class="menu-link" href="./Inicio.php"><i class="fas fa-home"></i>   Inicio</a>  
     </div> 
-    <div id="divIMG">
+    <form action="../assets/PHP/Alterar_FP.php" method="POST" enctype="multipart/form-data" id="divIMG">
+        <input type="submit" id='btn_SI' value="Salvar imagem">
         <?php 
         $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
         echo "<img src='".$pasta.$FotoP."' id='pintura_etapa'>"; ?> 
-        <input type="submit" value="Salvar imagem">
+        <?php echo "<input type='text' style='display: none' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
         <input type="file" class="form-control-file" name="arquivo" id="inputIMG" accept="image/*">  
         <label for="inputIMG" id="Select_img_public">Tracar Imagem</label>        
-    </div> 
-    <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST" enctype="multipart/form-data">
-         
+    </form> 
+    <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST">                               
+        <?php
+        if(isset($_SESSION['msg_update'])){
+            echo $_SESSION['msg_update'];
+            unset($_SESSION['msg_update']);
+        }                          
+        ?> 
         <div id="dividir">              
             <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar">                                             
             <div id="INPUTS">                     
@@ -85,6 +91,29 @@ $usuario_logado = $_SESSION['nome-user'];
             </div> 
         </div>                                                                                        
     </form>
-    <script src="../assets/JS/etapaUser.js"></script>
+    <script>
+        var btn_imagem = document.getElementById('Select_img_public');
+        var btn_salvarImagem = document.getElementById('btn_SI');
+        btn_salvarImagem.style.display = 'none';
+        /* Pegar a imagem que o usuario pegou */
+        var btn_select = document.getElementById("inputIMG");
+        var Pintura = document.getElementById("pintura_etapa");
+        console.log('eu existo no JS');
+        btn_select.addEventListener('change', function() {
+            
+            if(btn_select.files.length < 0){
+                return;
+            }
+            let readerPinturaSelect = new FileReader();
+            
+            readerPinturaSelect.onload = () => {
+                Pintura.src = readerPinturaSelect.result;
+                btn_salvarImagem.style.display = 'block';
+            }
+
+            readerPinturaSelect.readAsDataURL(btn_select.files[0]);
+        });
+    </script>
+    
 </body>
 </html>

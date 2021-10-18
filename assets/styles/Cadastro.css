@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-    background: var(--corD2);
+	background-image: linear-gradient(45deg, var(--tranp) 0%, var(--corD) 100%);
 }
 
 input::placeholder {
@@ -64,7 +64,7 @@ input::placeholder {
 }
 
 #Form-Card{
-	background-image: linear-gradient(to top, var(--corD2), var(--corD));
+    background: var(--tranp);
     box-shadow: 0 0 20px var(--corP);
     border: none;
     border-radius: 33px;
@@ -110,7 +110,7 @@ input::placeholder {
     height: 38px;
     width: 320px;
     outline: none;
-    background: var(--corD2);
+    background: var(--tranp);
     color: var(--corS);
     border: none;
     border-radius: 20px;

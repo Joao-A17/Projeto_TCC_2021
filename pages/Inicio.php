@@ -35,7 +35,7 @@ $usuario_logado = $_SESSION['nome-user'];
     </div>
     <ul class="nav-list">      
       <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
-      <li><a class="menu-link" href="#"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
+      <li><a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
       <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     </ul>       
   </nav>
@@ -79,7 +79,7 @@ $usuario_logado = $_SESSION['nome-user'];
         <h2><i class="fas fa-info-circle"></i>  Informações</h2>
         <p class="info-P">Site feito para divulgações e compras de pinturas<br>
         Clique em Consultas nas imagens para negociar com o pintor</p>
-        <div class="caixa-help"><p class="help">Se precisar de ajuda ou o site tenha o mau funcionamento <a href="./Help">Clique aqui</a></p></div>
+        <div class="caixa-help"><p class="help">Se precisar de ajuda ou o site tenha o mau funcionamento <a href="../ajuda.php">Clique aqui</a></p></div>
 
         <div>
         </div>
@@ -182,7 +182,7 @@ $usuario_logado = $_SESSION['nome-user'];
         </div>
         <div id="desig">
           <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Kauã">
-          <h3>Kauã Vieria</h3>
+          <h3>Kauã Vieira</h3>
           <p>Bla bla bla</p>
           <div class="social-media">
             <a href="#"><i class="fab fa-instagram Redes"></i></a>

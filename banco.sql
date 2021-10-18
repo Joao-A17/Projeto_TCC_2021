@@ -35,7 +35,7 @@ CREATE TABLE `perfil` (
   `telefonep` varchar(100) NOT NULL,
   PRIMARY KEY (`idperfil`),
   UNIQUE KEY `NomeUser` (`nomep`)
-) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
-INSERT INTO `perfil` VALUES (17,'Usuario-1','Perfil do usuario-1','Usuario-1.jpg','instagram do usuario-1','facebook do usuario-1','twitter do usuario-1','whatsapp do usuario-1'),(18,'Usuario-2','Perfil do Usuario-2','Usuario-2.jpg','Instagram do Usuario-2','Facebook do Usuario-2','Twitter do Usuario-2','Whatsapp do Usuario-2'),(20,'Usuario-3','Perfil do usuario-3','Usuario-3.jpg','instagram do usuario-3','facebook do usuario-3','twitter do usuario-3','whatsapp do usuario-3'),(21,'Usuario-4','Perfil do usuario-4','Usuario-4.jpg','https://www.instagram.com/sr.alone_edits/','https://www.facebook.com/','https://twitter.com','wa.me/+5548999227431'),(22,'Usuario-5','Perfil do usuario-5 huehuheuheuhe','Usuario-5.jpg','instagram do usuario-5','facebook do usuario-5','twitter do usuario-5','whatsapp do usuario-5'),(24,'Usuario-6','Perfil do usuario-6','Usuario-6.jpg','instagram do usuario-6','facebook do usuario-6','twitter do usuario-6','whatsapp do usuario-6'),(44,'Usuario-7','User 7','Usuario-7.jpg','instagram do Usuario-7','facebook do Usuario-7','twitter do Usuario-7','465879123'),(40,'Lacoste','Moda Casual De Luxo','Lacoste.jpg','instagram do Lacoste','facebook do Lacoste','twitter do Lacoste','whatsapp do Lacoste'),(43,'DogzÃ£o','DogzÃ£o dos criar','DogzÃ£o.jpg','instagram do DogzÃ£o','facebook do DogzÃ£o','twitter do DogzÃ£o','whatsapp do DogzÃ£o');
+INSERT INTO `perfil` VALUES (17,'Usuario-1','Perfil do usuario-1','Usuario-1.jpg','instagram do usuario-1','facebook do usuario-1','twitter do usuario-1','whatsapp do usuario-1'),(18,'Usuario-2','Perfil do Usuario-2','Usuario-2.jpg','Instagram do Usuario-2','Facebook do Usuario-2','Twitter do Usuario-2','Whatsapp do Usuario-2'),(20,'Usuario-3','Perfil do usuario-3','Usuario-3.jpg','instagram do usuario-3','facebook do usuario-3','twitter do usuario-3','whatsapp do usuario-3'),(21,'Usuario-4','Perfil do usuario-4','Usuario-4.jpg','https://www.instagram.com/sr.alone_edits/','https://www.facebook.com/','https://twitter.com','5548999227431'),(22,'Usuario-5','Perfil do usuario-5 huehuheuheuhe','Usuario-5.jpg','instagram do usuario-5','facebook do usuario-5','twitter do usuario-5','whatsapp do usuario-5'),(24,'Tobi','&#34;VocÃª provavelmente vai sofrer de novo daqui em diante... Mas nÃ£o mude, continue seguindo o seu caminho&#34;','Usuario-6.jpg','instagram do usuario-6','facebook do usuario-6','twitter do usuario-6','whatsapp do usuario-6'),(44,'Usuario-7','User 7','Usuario-7.jpg','instagram do Usuario-7','facebook do Usuario-7','twitter do Usuario-7','465879123'),(40,'Lacoste','Moda Casual De Luxo','Lacoste.jpg','instagram do Lacoste','facebook do Lacoste','twitter do Lacoste','whatsapp do Lacoste'),(43,'DogzÃ£o','DogzÃ£o dos criar','DogzÃ£o.jpg','instagram do DogzÃ£o','facebook do DogzÃ£o','twitter do DogzÃ£o','whatsapp do DogzÃ£o'),(45,'Vector','AH Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã© VECTOOOOOR','Vector.jpg','instagram do vector','facebook do vector','twitter do vector','32550201');
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=134 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `pinturas` (
 
 LOCK TABLES `pinturas` WRITE;
 /*!40000 ALTER TABLE `pinturas` DISABLE KEYS */;
-INSERT INTO `pinturas` VALUES (123,'Lacoste','Raspadin','Desenho do meu Amiguin BK','Raspadin.jpg','2021-10-11 21:52:55'),(117,'Usuario-4','Madara','Madara edit trash gang','Madara.jpg','2021-10-11 19:55:13'),(118,'Usuario-1','Detetives','Anime Death note','Detetives.jpg','2021-10-11 19:57:52'),(102,'Usuario-4','Sasuke','Sasuke da trash gang','Sasuke.jpg','2021-10-10 21:42:39'),(101,'Usuario-4','AnimeEdit','Edit Estilo Trash Gang','AnimeEdit.jpg','2021-10-10 20:21:43'),(100,'Usuario-4','Tobi','Tobi animado','Tobi.jpg','2021-10-10 20:19:44'),(99,'Usuario-4','Carrinho','Vrum Vrum Vrum Vrum ','Carrinho.jpg','2021-10-10 18:47:50'),(97,'Usuario-3','Hinata','Desc da Hinata','Hinata.jpg','2021-10-10 18:19:43'),(98,'Usuario-4','Pika blindada','Trio da alegira','Pika blindada.jpg','2021-10-10 18:47:03'),(93,'Usuario-1','Patolino','Patolino e seus Moneys','Patolino.jpg','2021-10-10 17:55:31'),(94,'Usuario-1','Obito','EditAnime do Obito','Obito.jpg','2021-10-10 17:58:44'),(95,'Usuario-2','Sasuke','SakukeEdits','Sasuke.jpg','2021-10-10 18:13:10'),(96,'Usuario-3','Orochimaru','Desc do Orochimaru','Orochimaru.jpg','2021-10-10 18:17:48'),(91,'Usuario-2','Kiba e Akamaro','AnimeEdit','Kiba e Akamaro.jpg','2021-10-10 17:48:02'),(92,'Usuario-2','Itachi Uchiha','Edit do VRTENSHI','Itachi Uchiha.jpg','2021-10-10 17:51:21'),(90,'Usuario-1','Perna Longa','Dente de ouro','Perna Longa.jpg','2021-10-10 17:44:19'),(122,'Lacoste','@THELEGIONX','Edit da Aktsuki','@THELEGIONX.jpg','2021-10-11 20:14:28'),(121,'Lacoste','TRASH','Edit Trash Demon','TRASH.jpg','2021-10-11 20:12:02'),(125,'Lacoste','Lobin','Guardian Lobo','Lobin.jpg','2021-10-11 23:45:27'),(126,'Lacoste','Nuvem Red Aktsuki','Wallpaper para celular','Nuvem Red Aktsuki.jpg','2021-10-12 00:33:30'),(127,'Lacoste','RpXWall','Wallpaper PC 9000K','RpXWall.jpg','2021-10-12 00:42:41');
+INSERT INTO `pinturas` VALUES (123,'Lacoste','Raspadin','Desenho do meu Amiguin BK','Raspadin.jpg','2021-10-11 21:52:55'),(117,'Usuario-4','Madara','Madara edit trash gang','Madara.jpg','2021-10-11 19:55:13'),(118,'Usuario-1','Detetives','Anime Death note','Detetives.jpg','2021-10-11 19:57:52'),(102,'Usuario-4','Sasuke','Sasuke da trash gang','Sasuke.jpg','2021-10-10 21:42:39'),(101,'Usuario-4','AnimeEdit','Edit Estilo Trash Gang','AnimeEdit.jpg','2021-10-10 20:21:43'),(100,'Usuario-4','Tobi','Tobi animado','Tobi.jpg','2021-10-10 20:19:44'),(99,'Usuario-4','Carrinho','Vrum Vrum Vrum Vrum ','Carrinho.jpg','2021-10-10 18:47:50'),(97,'Usuario-3','Hinata','Desc da Hinata','Hinata.jpg','2021-10-10 18:19:43'),(98,'Usuario-4','Pika blindada','Trio da alegira','Pika blindada.jpg','2021-10-10 18:47:03'),(93,'Usuario-1','Patolino','Patolino e seus Moneys','Patolino.jpg','2021-10-10 17:55:31'),(94,'Usuario-1','Obito','EditAnime do Obito','Obito.jpg','2021-10-10 17:58:44'),(95,'Usuario-2','Sasuke','SakukeEdits','Sasuke.jpg','2021-10-10 18:13:10'),(96,'Usuario-3','Orochimaru','Desc do Orochimaru','Orochimaru.jpg','2021-10-10 18:17:48'),(91,'Usuario-2','Kiba e Akamaro','AnimeEdit','Kiba e Akamaro.jpg','2021-10-10 17:48:02'),(92,'Usuario-2','Itachi Uchiha','Edit do VRTENSHI','Itachi Uchiha.jpg','2021-10-10 17:51:21'),(90,'Usuario-1','Perna Longa','Dente de ouro','Perna Longa.jpg','2021-10-10 17:44:19'),(122,'Lacoste','@THELEGIONX','Edit da Aktsuki','@THELEGIONX.jpg','2021-10-11 20:14:28'),(121,'Lacoste','TRASH','Edit Trash Demon','TRASH.jpg','2021-10-11 20:12:02'),(125,'Lacoste','Lobin','Guardian Lobo','Lobin.jpg','2021-10-11 23:45:27'),(126,'Lacoste','Nuvem Red Aktsuki','Wallpaper para celular','Nuvem Red Aktsuki.jpg','2021-10-12 00:33:30'),(127,'Lacoste','RpXWall','Wallpaper PC 9000K','RpXWall.jpg','2021-10-12 00:42:41'),(128,'Vector','Traje do Vectooooooooooooor','Meu Traje de voar  AH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','Traje do Vectooooooooooooor.jpg','2021-10-16 10:31:32'),(129,'Vector','Arma Nova','Para pegar a lua que brilha lÃ¡ no cÃ©u.','Arma Nova.jpg','2021-10-16 10:33:48'),(130,'Vector','AH EEEEEEEEE','AAH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','AH EEEEEEEEE.jpg','2021-10-16 22:18:35'),(131,'Vector','AH EEEEEE','AH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','AH EEEEEE.jpg','2021-10-16 22:19:11'),(132,'Tobi','Obituzin','Tobi modo guerra','Obituzin.jpg','2021-10-17 22:37:35'),(133,'Tobi','Tobi Animado','UUUIIIIIIIIIIIIIIIII','Tobi Animado.jpg','2021-10-17 22:38:33');
 /*!40000 ALTER TABLE `pinturas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,13 +89,13 @@ CREATE TABLE `usuarios` (
   `sobrenome` varchar(220) NOT NULL,
   `email` varchar(220) NOT NULL,
   `password` varchar(220) NOT NULL,
-  `telefone` int(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
   `criado` datetime NOT NULL,
   `modificado` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (133,'Usuario-6','hola','usuario6@gmail.com','123',213546879,'2021-10-10 23:08:55',NULL),(132,'Usuario-5','seila','usuario5@gmail.com','123',456781932,'2021-10-10 21:46:27',NULL),(129,'Usuario-2','nadaha','usuario2@gmail.com','123',321654987,'2021-10-10 17:45:47',NULL),(130,'Usuario-3','nadis','usuario3@gmail.com','123',654987321,'2021-10-10 18:14:26',NULL),(131,'Usuario-4','Sobre','usuario4@gmail.com','123',789654123,'2021-10-10 18:42:38',NULL),(128,'Usuario-1','nada','usuario1@gmail.com','123',321654987,'2021-10-10 17:42:31',NULL),(134,'Usuario-7','asd','usuario7@gmail.com','123',465879123,'2021-10-11 16:29:08',NULL),(138,'Lacoste','Reizin','lacoste@gmail.com','lacoste123',99227431,'2021-10-11 20:08:34',NULL);
+INSERT INTO `usuarios` VALUES (133,'Tobi','Akatsuki','usuario6@gmail.com','123','whatsapp do usuario-6','2021-10-10 23:08:55',NULL),(132,'Usuario-5','seila','usuario5@gmail.com','123','456781932','2021-10-10 21:46:27',NULL),(129,'Usuario-2','nadaha','usuario2@gmail.com','123','321654987','2021-10-10 17:45:47',NULL),(130,'Usuario-3','nadis','usuario3@gmail.com','123','654987321','2021-10-10 18:14:26',NULL),(131,'Usuario-4','bolinhaX','usuario4@gmail.com','321','5548999227431','2021-10-10 18:42:38',NULL),(128,'Usuario-1','nada','usuario1@gmail.com','123','whatsapp do usuario-1','2021-10-10 17:42:31',NULL),(134,'Usuario-7','asd','usuario7@gmail.com','123','465879123','2021-10-11 16:29:08',NULL),(138,'Lacoste','ReizinD','lacoste@gmail.com','lacoste123','whatsapp do Lacoste','2021-10-11 20:08:34',NULL),(141,'Vector','MalvadÃ£o','vector@gmail.com','vector123','32550201','2021-10-16 10:22:23',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -117,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-12 20:34:57
+-- Dump completed on 2021-10-17 23:02:01

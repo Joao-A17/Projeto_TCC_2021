@@ -27,6 +27,7 @@ body{
 }
 
 #TituloMenu{
+  font-size: 30px;
   font-family: 'Gugi', sans-serif;
   background-image: linear-gradient(to bottom, var(--corP), var(--corS));
   -webkit-background-clip: text;
@@ -77,6 +78,33 @@ body{
   margin-top: 20px;
 }
 
+#btn_SI{
+  position: absolute;
+  right: 20px;
+  padding: 5px 25px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;          
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 24px;
+  background: var(--tranp);
+  color: var(--corP);
+  border: 2px solid var(--tranp);
+  box-shadow: 0px 0px 5px var(--tranp);
+  animation: Pulse 1.2s infinite;
+  transition: .3s;
+}
+
+#btn_SI:hover{
+  animation: none;
+  background: var(--corP);
+  color: var(--corD);
+  border: 2px solid var(--corP);
+  box-shadow: 0px 0px 10px var(--corP);
+}
+
 #pintura_etapa{
   width: 100%;
   border-radius: 50%;
@@ -87,6 +115,7 @@ body{
 }
 
 #Select_img_public{
+  margin: 20px;
   height: 38px;
   width: 100%;
   display: flex;
@@ -131,6 +160,7 @@ body{
   transition: .3s;
 }
 #btn_salvar:hover{
+  animation: none;
   background: var(--corP);
   color: var(--corD);
   border: 2px solid var(--corP);
@@ -213,6 +243,51 @@ body{
   box-shadow: 0 2px 5px var(--corS);
 }
 
+/* msg de erro */
+
+#msg_true{
+  margin: 30px;
+  width: 500px;
+  height: 80px;
+  display: inline-block;
+  background: var(--tranp);
+  border-radius: 12px;
+  border-left: 4px solid rgb(0, 255, 0);
+  border-right: 4px solid rgb(0, 255, 0);
+}
+
+#msg_true h1{  
+  color: rgb(0, 255, 0);
+  font-size: 30px;
+  font-family: 'Gugi', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+#msg_false{
+  margin: 30px;
+  width: 500px;
+  height: 80px;
+  display: inline-block;
+  background: var(--tranp);
+  border-radius: 12px;
+  border-left: 4px solid red;
+  border-right: 4px solid red;
+}
+
+#msg_false h1{  
+  color: red;
+  font-size: 30px;
+  font-family: 'Gugi', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.icon{
+  font-size: 40px;
+}
+
+/* animações */
 @keyframes Pulse{
   from {
       transform: scale(.7);

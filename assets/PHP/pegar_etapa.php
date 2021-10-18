@@ -1,6 +1,11 @@
 
 <?php
-
+// pegar o caminho eo nome para o Alterar_FP.php
+if(isset($_FILES['arquivo'])){
+    $Nome = filter_input(INPUT_POST, 'Nome_perfil', FILTER_SANITIZE_STRING);
+    $Arquivo_Imagem = strtolower(pathinfo($_FILES['Foto_perfil']['name'], PATHINFO_EXTENSION));    
+    $Novo_Arquivo_Imagem = $Nome.'.'.$Arquivo_Imagem;
+}
 // Enviar Uma nova publicação
 
 if(isset($_FILES['Foto_perfil'])){

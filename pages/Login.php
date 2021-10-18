@@ -13,8 +13,14 @@ session_start();
     <title>Login | Magic Paintings</title>
 </head>
 <body>
-    <div class="container">
-        <form class="form" action="../assets/PHP/Conexao_Login.php" method="POST">
+    <div id="container">
+        <form id="form" class="form" action="../assets/PHP/Conexao_Login.php" method="POST">
+        <?php
+        if(isset($_SESSION['msg_update'])){
+            echo $_SESSION['msg_update'];
+            unset($_SESSION['msg_update']);
+        }                          
+        ?> 
             <div class="card">
                 <div class="card-top">
                     <i class="fas fa-user User"></i>
@@ -27,6 +33,7 @@ session_start();
                     ?>
                 </div>
                 <div class="card-group">
+                    <input class="Inputs" type="text" name="id-user" style='display: none;'>
                     <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
                     <input class="Inputs" type="password" name="senha" id="password" placeholder="Senha" required>
                     <input id="entrar" type="submit" name="submit" value="Entrar" />

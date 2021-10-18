@@ -30,7 +30,7 @@ if (file_exists("$pasta")) {
                         <h1 class='Nome-Pint'><?php echo $Nome_Foto ?></h1>
                         <p class='Desc-Pint'><?php echo $Desc_Foto ?></p>
                         <i id="Icon_Pontinhos" class='fas fa-ellipsis-v'></i>
-                        <div class="menubtns">
+                        <div id="menubtns">
                             <buttom id="btn_Editar" class='btn_span'>Editar<i class='fas fa-paint-brush IconE'></i></buttom>
                             <buttom id='btn_Excluir' class='btn_span'>Excluir<i class='fas fa-trash-alt IconE'></i></buttom>
                         </div>
