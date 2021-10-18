@@ -25,7 +25,8 @@ require '../assets/PHP/dados_perfil.php';
 <body>
     <nav class="Menu">
         <a href="./Inicio.php" class="Logo">Magic Paintings</a>       
-        <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>     
+        <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>    
+        <a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a>
     </nav>
 
     <div class="container">
@@ -43,7 +44,7 @@ require '../assets/PHP/dados_perfil.php';
                     if(isset($_SESSION['msg'])){
                         echo $_SESSION['msg'];
                         unset($_SESSION['msg']);
-                    }                        
+                    }
                     ?>  
                     </div>              
                     <div class="Info-Admin">
@@ -53,14 +54,16 @@ require '../assets/PHP/dados_perfil.php';
                         </div>
                         <a href="./editar_perfil.php"><button type="button" class="btn-menu edp">Editar Perfil</button></a>                      
                     </div>
-                </div>                
-                <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
-                <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".$Face_Perfil."'><i class='fab fa-facebook F'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
-                <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Publicar</buttom></a>
+                </div>
+                <h4 class="TextE">Clique em Adicionar para publicar uma nova pintura</h4>
+                <div id="div_link">                
+                    <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
+                    <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
+                    <?php echo "<a class='Redes' href='".$Face_Perfil."'><i class='fab fa-facebook F'></i></a>"; ?>
+                    <?php echo "<a class='Redes' href='".'https:/www.instagram.com/'.$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
+                    <?php echo "<a class='Redes' href='".$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
+                    <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
+                </div>
             </div>    
                 <div id="Cont-Master">
                     <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
@@ -83,18 +86,7 @@ require '../assets/PHP/dados_perfil.php';
                         <br>
                     </form>
 
-                    
-
-                    <?php                     
-                    
-                    require '../assets/PHP/Pinturas_Usuario.php' ?>                                
-
-                    
-                    <!-- <div class="Fundo_Card">
-                        <div class="Card_Pinturas"> 
-                            <?php // require '../assets/PHP/listar_pinturas.php' ?>
-                        </div>
-                    </div> -->                                                                                        
+                    <?php require '../assets/PHP/Pinturas_Usuario.php' ?>                                                                                      
                 </div>                 
         </div>         
     </div>          

@@ -89,7 +89,7 @@ var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
 var menubtns = document.getElementById("menubtns");
 var btn_Editar = document.getElementById("btn_Editar");
 var btn_Excluir = document.getElementById("btn_Excluir");
-var Menu_Editar = document.querySelector(".Menu_Editar");
+var Menu_Editar = document.getElementById("Menu_Editar");
 var btnSalvarPint = document.getElementById('salvar_edicoes');
 var input_nome_Pint = document.getElementById('NNPint');
 var input_Desc_Pint = document.getElementById('InputAltD');
@@ -97,13 +97,11 @@ var input_Desc_Pint = document.getElementById('InputAltD');
 menubtns.style.display = "none";
 Menu_Editar.style.display = "none";
 
-Icon_Pontinhos.addEventListener('click', function(){
-    if(menubtns.style.display == "none"){
-    menubtns.style.display = "inline-flex";
-    }else{
-        menubtns.style.display = "none";
-        Menu_Editar.style.display = "none";
-    }
+Icon_Pontinhos.addEventListener("click", function() {
+    
+  var parent = Pint_Completa.parentNode;
+  console.log(parent);
+
 });
 
 btn_Editar.addEventListener('click', function(){

@@ -8,7 +8,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(45deg, var(--corD) 0%, var(--corD2) 100%);
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
 }
 
 .espaço{
@@ -53,7 +53,7 @@ body{
 .usuario_logado{
     font-size: 70px;
     font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+	background-image: linear-gradient(60deg, var(--tranp) 0%, var(--corD2) 100%);
   	-webkit-background-clip: text;
     color: transparent;
     transition: .3s;

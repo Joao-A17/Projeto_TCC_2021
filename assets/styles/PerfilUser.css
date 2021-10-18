@@ -8,8 +8,8 @@
 
 
 body{
-    height: 100vw;
-	background-image: linear-gradient(45deg, var(--corD) 0%, var(--corD) 100%);
+    height: 100%;
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
 }
 
 .espaço{    
@@ -82,11 +82,29 @@ body{
     margin-left: 20px;
 }
 
+#btn-sair{
+    padding: 6px 25px;
+    text-decoration: none;    
+    background: var(--tranp);
+    color: var(--corL);
+    border: none;
+    border-top: 3px solid var(--corL);
+    border-bottom: 3px solid var(--corL);
+    border-radius: 8px;
+    transition: .3s;
+}
+
+#btn-sair:hover{
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 10px var(--corL);
+}
+
 .container{
+	background-image: linear-gradient(250deg, var(--tranp) -3%, var(--corD2) 100%);
     padding-top: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px var(--corD);
-    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
 }
 
 #Cont-Master{
@@ -94,6 +112,7 @@ body{
 }
 
 #Icon_Pontinhos{
+    cursor: pointer;
     position: absolute;
     right: 20px;
     font-size: 40px;
@@ -104,7 +123,6 @@ body{
 }
 
 #menubtns{
-    display: none;
     margin-top: 40px;
     margin-bottom: 20px;
 }
@@ -201,7 +219,6 @@ body{
     width: 100%;;
     margin-top: 30px;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corS);
@@ -347,8 +364,7 @@ textarea::placeholder{
 
 /* ------------------------------------Editar------------------------------------ */
 
-.Menu_Editar{
-    display: none;
+#Menu_Editar{
     width: 100%;
     margin-top: 30px;
     text-align: center;
@@ -359,7 +375,7 @@ textarea::placeholder{
     border-bottom: 3px solid var(--corS);
 }
 
-.Menu_Editar h2{
+#Menu_Editar h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -495,13 +511,14 @@ textarea::placeholder{
 }
 
 .ContAdmin{
-    padding: 30px;
+    margin-top: 20px;
     border-radius: 30px;
-    border: 2px solid  var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 3px solid  var(--corS);
+    box-shadow: 0px 0px 10px var(--corS);
 }
 
 #AdminForm{
+    margin: 20px;
     display: flex;
 }
 
@@ -553,11 +570,15 @@ textarea::placeholder{
     color: var(--corL);
 }
 
+#div_link{
+    display: flex;
+    margin: 20px;
+}
+
 .TextE{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px;
     font-family: 'Josefin Sans', sans-serif; 
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     color: var(--corL);
 }
@@ -681,4 +702,48 @@ textarea::placeholder{
     opacity: .7;
     border-top: 3px solid var(--corP);
     border-bottom: 3px solid var(--corP);
+}
+
+/* msg de erro */
+
+#msg_true{
+  margin: 30px;
+  width: 500px;
+  height: 80px;
+  display: inline-block;
+  background: var(--tranp);
+  border-radius: 12px;
+  border-left: 4px solid rgb(0, 255, 0);
+  border-right: 4px solid rgb(0, 255, 0);
+}
+
+#msg_true h1{  
+  color: rgb(0, 255, 0);
+  font-size: 30px;
+  font-family: 'Gugi', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+#msg_false{
+  margin: 30px;
+  width: 500px;
+  height: 80px;
+  display: inline-block;
+  background: var(--tranp);
+  border-radius: 12px;
+  border-left: 4px solid red;
+  border-right: 4px solid red;
+}
+
+#msg_false h1{  
+  color: red;
+  font-size: 30px;
+  font-family: 'Gugi', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.icon{
+  font-size: 40px;
 }
