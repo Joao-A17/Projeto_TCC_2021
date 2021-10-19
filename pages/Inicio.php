@@ -108,13 +108,21 @@ $usuario_logado = $_SESSION['nome-user'];
                 
                 if($nomeUser[$i] != $usuario_logado){
                   $NU = 'NomeUsuario';
+                  $InfoPint = 'InfoPint';
+                  $BConsultar = 'BConsultar';
+                  $Info_Pintor = 'Info_Pintor';
+                  $Img_Usuario = 'Img-Usuario';
                 }
                 if($nomeUser[$i] == $usuario_logado){
                   $NU = 'NomeUsuario2';
+                  $InfoPint = 'InfoPint2';
+                  $BConsultar = 'BConsultar2';
+                  $Info_Pintor = 'Info_Pintor2';
+                  $Img_Usuario = 'Img-Usuario2';
                 }
 
                 ?>
-                <div class="InfoPint">
+                <div class=<?php echo $InfoPint?>>
                   <div class="ConteudoInfo-1">
                     <div class="User">
                       <?php 
@@ -125,7 +133,7 @@ $usuario_logado = $_SESSION['nome-user'];
                           while($FP_OutroUsuario = $diretorio->read()){
                               if($FP_OutroUsuario != '.' && $FP_OutroUsuario != '..'){                
                                 
-                                echo "<img id='Img-Usuario' src='".$pasta.$FP_OutroUsuario."' alt=".$nomeUser[$i].">";
+                                echo "<img id='".$Img_Usuario."' src='".$pasta.$FP_OutroUsuario."' alt=".$nomeUser[$i].">";
                               
                               }    
                           }
@@ -133,10 +141,10 @@ $usuario_logado = $_SESSION['nome-user'];
                       ?>             
                       <h3 class=<?php echo $NU?>><?php echo $nomeUser[$i]?></h3>
                     </div>
-                  <p id="Info_Pintor">Veja mais sobre esse perfil</p>
+                  <p id=<?php echo $Info_Pintor?>>Veja mais sobre esse perfil</p>
                   <form action="./Perfil.php" method="GET">
                     <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $nomeUser[$i]?>>                  
-                    <button id="Consultar" class="BConsultar" onclick="ConsutarImg()">Consultar</button>
+                    <button id="Consultar" class=<?php echo $BConsultar?> onclick="ConsutarImg()">Consultar</button>
                   </form>
                   </div>
                 </div>
