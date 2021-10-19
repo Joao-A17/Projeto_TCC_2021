@@ -491,12 +491,10 @@ textarea::placeholder{
     color: var(--corL);
     border-bottom: 2px solid var(--corL);
     box-shadow: 0px 0px 5px var(--tranp);
-    animation: Pulse 1.2s infinite;
     transition: .3s;  
 }
 
 .btn-SP:hover{
-    animation: none;
     background: var(--corL);
     color: var(--corD);
     border-bottom: 2px solid var(--corL);
@@ -663,16 +661,6 @@ textarea::placeholder{
     .Redes{
         border: None;
         font-size: 35px;
-    }
-}
-
-@keyframes Pulse{
-    from {
-        transform: scale(.7);
-        background: var(--corL);
-        color: var(--corD);
-        border: 2px solid var(--corL);
-        box-shadow: 0px 0px 10px var(--corL);
     }
 }
 

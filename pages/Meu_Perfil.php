@@ -74,13 +74,13 @@ require '../assets/PHP/dados_perfil.php';
                                 <input type="text" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura">
                                 <input type="text" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura">
                             </div>
-                            <div id="MS-2">                               
-                                <a href="#Pint_Completa"><button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button></a>                   
+                            <div id="MS-2">   
+                                <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
+                                <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>                                                 
                                 <div id="divIMG">
                                     <img src="" id="IMGpublic">          
-                                </div>          
-                                <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
-                                <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>                
+                                </div>    
+                                <a href="#Pint_Completa"><button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button></a>                    
                             </div>                                          
                         </div> 
                         <br>
