@@ -1,7 +1,7 @@
 <?php
 include_once('../assets/PHP/Conexao_Banco.php');
 
-
+$usuario_logado = $_SESSION['nome-user'];
 
 if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
   unset($_SESSION['email']);
@@ -9,7 +9,6 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
   header('Location: ./Login.php');   
 }
 
-$usuario_logado = $_SESSION['nome-user'];
 
 ?>
 

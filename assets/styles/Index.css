@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
 body{
-    height: 100vh;
-    background-image: linear-gradient(to bottom left, var(--corD2), var(--corD));
+    height: 100%;
+	background-image: linear-gradient(0deg, var(--corD2) 0%, var(--tranp) 100%);
 }
 
 #Cont_Master{

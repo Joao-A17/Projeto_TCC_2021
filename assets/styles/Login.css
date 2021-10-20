@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-	background-image: linear-gradient(45deg, var(--tranp) 0%, var(--corD) 100%);
+	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
 }
 
 /* formulário */

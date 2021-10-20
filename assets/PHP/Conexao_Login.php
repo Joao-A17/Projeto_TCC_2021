@@ -34,5 +34,4 @@ if(isset($_POST['submit']) && !empty($_POST['nome-user']) && !empty($_POST['senh
 else{
     header('Location: ../../pages/Login.php');
 }
-
 ?>
