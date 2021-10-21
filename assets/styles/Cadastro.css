@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-	background-image: linear-gradient(45deg, var(--tranp) 0%, var(--corD) 100%);
+	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
 }
 
 input::placeholder {
@@ -121,6 +121,15 @@ input::placeholder {
     width: 420px;
     border-bottom: 2px solid var(--corS);
 }
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
 
 #botao{
     width: 200px;
@@ -161,8 +170,34 @@ input::placeholder {
     color: var(--corS);
 }
 
-
 .botão{
     background: black;
     color: white;
+}
+
+.Isenha{
+    color: var(--corL);
+    position: absolute;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 125px;
+    transition: .7s;
+}
+
+.Isenha:hover{
+    color: var(--corS);
+}
+
+.Isenha2{
+    color: var(--corL);
+    position: absolute;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 125px;
+    transition: .7s;
+}
+
+
+.Isenha2:hover{
+    color: var(--corS);
 }

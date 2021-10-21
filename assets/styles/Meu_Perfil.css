@@ -128,6 +128,7 @@ body{
 .btn_span{
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
     padding: 5px 25px;
     cursor: pointer;
     font-size: 15px;
@@ -362,18 +363,19 @@ textarea::placeholder{
 
 /* ------------------------------------Editar------------------------------------ */
 
-#Menu_Editar{
-    width: 100%;
-    margin-top: 30px;
+.Menu_Editar{
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
+    background: var(--tranp);
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS);
 }
 
-#Menu_Editar h2{
+.Menu_Editar h2{
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Gugi', sans-serif;
@@ -732,4 +734,8 @@ textarea::placeholder{
 
 .icon{
   font-size: 40px;
+}
+
+#Div_Erro{
+    background: var(--tranp);
 }

@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+  background-image: linear-gradient(343deg, var(--corD2) 0%, var(--tranp) 100%);
 }
 
 #MenuModal_EditPerfil{
@@ -12,7 +12,6 @@ body{
   width: 100%; 
   border-radius: 10px;
   border: none;
-  background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
   border-bottom: 3px solid var(--corS);
 }
 
@@ -142,11 +141,9 @@ body{
 }
 
 #btn_salvar{
-  position: fixed;
-  right: 10px;
-  height: 50px;
-  width: 180px;
-  font-size: 30px;
+  height: 40px;
+  width: 120px;
+  font-size: 25px;
   font-family: 'Josefin Sans', sans-serif;          
   border: 0;
   cursor: pointer;
@@ -156,7 +153,6 @@ body{
   color: var(--corP);
   border: 2px solid var(--tranp);
   box-shadow: 0px 0px 5px var(--tranp);
-  animation: Pulse 1.2s infinite;
   transition: .3s;
 }
 #btn_salvar:hover{
@@ -170,10 +166,6 @@ body{
 #INPUTS{
   width: 100%;
   margin-left: 50px;
-  background: var(--tranp);
-  border-radius: 20px;
-  border-top: 3px solid var(--corP);
-  border-bottom: 3px solid var(--corP);
 }
 
 #d{
@@ -194,7 +186,7 @@ body{
   margin-bottom: 10px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 25px;
-  color: var(--corL);  
+  color: var(--corD);  
   display: flex;
 }
 

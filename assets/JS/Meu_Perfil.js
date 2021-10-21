@@ -30,8 +30,6 @@ var Pintura_Public = document.getElementById("IMGpublic");
 
 MenuPublicar.style.display = 'none';
 
-
-
 /* Trocar Pintura selecionada */
 
 InputFile_TrocarIMG.addEventListener('change', function() {
@@ -46,26 +44,7 @@ InputFile_TrocarIMG.addEventListener('change', function() {
     }
 
     readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
-}); 
-
-
-
-/* Selecionar uma nova Pintura 
-
-InputFile_SelectIMG.addEventListener('change', function() {
-    
-    if(InputFile_SelectIMG.files.length < 0){
-        return;
-    }
-    let readerPinturaSelect = new FileReader();
-    
-    readerPinturaSelect.onload = () => {
-        IMGpublic.src = readerPinturaSelect.result;
-    }
-
-    readerPinturaSelect.readAsDataURL(InputFile_SelectIMG.files[0]);
-});
-*/
+});  
 
 /* Evento de Aparecer o Publicar e Publicar */
 btn_Adicionar.addEventListener('click', function(){
@@ -89,13 +68,10 @@ var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
 var menubtns = document.getElementById("menubtns");
 var btn_Editar = document.getElementById("btn_Editar");
 var btn_Excluir = document.getElementById("btn_Excluir");
-var Menu_Editar = document.getElementById("Menu_Editar");
+var Menu_Editar = document.querySelector(".Menu_Editar");
 var btnSalvarPint = document.getElementById('salvar_edicoes');
 var input_nome_Pint = document.getElementById('NNPint');
 var input_Desc_Pint = document.getElementById('InputAltD');
-
-menubtns.style.display = "none";
-Menu_Editar.style.display = "none";
 
 Icon_Pontinhos.addEventListener("click", function() {
     
@@ -133,8 +109,15 @@ btnSalvarPint.addEventListener('click', function(){
 
 /* Verificar se os campos de publicar imagem estão vazios */
 
-btn_publicar.addEventListener('click', function(){
-    if(inputP_Nome_Pintura.value.length < 0){
-        alert('campo vazio');
+btn_publicar.addEventListener('click', function() {
+    if(InputFile_SelectIMG.value.length < 3){
+        var msg_false = document.createElement('div');
+        msg_false.id = 'msg_false';
+        var h1_msg_false = document.createElement('h1');
+        h1_msg_false.style.fontSize = '20px';
+        h1_msg_false.innerHTML = 'Para publicar precisa ter uma imagem!';
+        MenuPublicar.appendChild(msg_false);
+        msg_false.appendChild(h1_msg_false);
+        location.reload();
     }
 });

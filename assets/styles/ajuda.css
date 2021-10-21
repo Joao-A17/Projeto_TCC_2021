@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
 }
 
 #MenuModal_EditPerfil{
@@ -12,7 +12,6 @@ body{
   width: 100%; 
   border-radius: 10px;
   border: none;
-  background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
   border-bottom: 3px solid var(--corS);
 }
 
@@ -75,7 +74,7 @@ body{
     display: inline-block;
     margin: 40px;
     text-align: center;
-    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    background: var(--tranp);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);

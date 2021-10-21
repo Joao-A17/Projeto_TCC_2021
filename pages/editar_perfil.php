@@ -27,8 +27,9 @@ $usuario_logado = $_SESSION['nome-user'];
         $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
         echo "<img src='".$pasta.$FotoP."' id='pintura_etapa'>"; ?> 
         <?php echo "<input type='text' style='display: none' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
-        <input type="file" class="form-control-file" name="arquivo" id="inputIMG" accept="image/*">  
-        <label for="inputIMG" id="Select_img_public">Tracar Imagem</label>        
+        <input type="file" class="form-control-file" name="arquivo" id="inputIMG" accept="image/*">
+        <h2 id="TituloMenu"><?php echo $usuario_logado; ?></h2>         
+        <label for="inputIMG" id="Select_img_public">Tracar Imagem</label> 
     </form> 
     <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST">                               
         <?php
@@ -37,9 +38,9 @@ $usuario_logado = $_SESSION['nome-user'];
             unset($_SESSION['msg_update']);
         }                          
         ?> 
-        <div id="dividir">              
-            <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar">                                             
+        <div id="dividir">                                                          
             <div id="INPUTS">                     
+            <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar"> 
                 <div id="Nome_Desc">
                     <div id="div_1">
                         <div class="menu-box">
@@ -68,21 +69,21 @@ $usuario_logado = $_SESSION['nome-user'];
                     <div id="links">
                         <div id="e">
                             <div class="menu-box">
-                                <label for="inst_usuario" class="label">Link do instagram</label>
+                                <label for="inst_usuario" style='color: var(--corL);' class="label">Link do instagram</label>
                                 <?php echo "<input type='text' name='inst_usuario' id='inst_usuario' class='Inputs' value='".$Insta_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                             </div>
                             <div class="menu-box">
-                                <label for="face_usuario" class="label">Link do facebook</label>
+                                <label for="face_usuario" style='color: var(--corL);' class="label">Link do facebook</label>
                                 <?php echo "<input type='text' name='face_usuario' id='face_usuario' class='Inputs' value='".$Face_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                             </div>
                         </div>
                         <div id="d">
                             <div class="menu-box">
-                                <label for="twit_usuario" class="label">Link do twitter</label>
+                                <label for="twit_usuario" style='color: var(--corL);' class="label">Link do twitter</label>
                                 <?php echo "<input type='text' name='twit_usuario' id='twit_usuario' class='Inputs' value='".$Twitter_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                             </div>
                             <div class="menu-box">
-                                <label for="tele_usuario" class="label">Numero do telefone</label>
+                                <label for="tele_usuario" style='color: var(--corL);' class="label">Numero do telefone</label>
                                 <?php echo "<input type='tel' name='tele_usuario' id='tele_usuario' class='Inputs' value='".$Telefone_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                             </div>
                         </div>

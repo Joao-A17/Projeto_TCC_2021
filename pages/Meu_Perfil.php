@@ -19,7 +19,7 @@ require '../assets/PHP/dados_perfil.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
-    <link rel="stylesheet" href="../assets/styles/PerfilUser.css"> 
+    <link rel="stylesheet" href="../assets/styles/Meu_Perfil.css"> 
     <title id="Nome-Site">Perfil | <?php echo $usuario_logado ?></title>              
 </head>
 <body>
@@ -70,12 +70,12 @@ require '../assets/PHP/dados_perfil.php';
                         <h2>Publicar</h2>
                         <div id="MenuSepara">
                             <div id="MS-1">
-                                <input type="text" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor">
-                                <input type="text" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura">
-                                <input type="text" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura">
+                                <input type="text" minlength = "3" maxlength = "150" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor" required>
+                                <input type="text" minlength = "3" maxlength = "150" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" pattern="[a-zA-Z0-9_]+" placeholder="Digite o nome da pintura" required>
+                                <input type="text" minlength = "3" maxlength = "150" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" required>
                             </div>
                             <div id="MS-2">   
-                                <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
+                                <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*" required>  
                                 <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>                                                 
                                 <div id="divIMG">
                                     <img src="" id="IMGpublic">          
@@ -93,6 +93,5 @@ require '../assets/PHP/dados_perfil.php';
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/Meu_Perfil.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
  </body>
 </html> 

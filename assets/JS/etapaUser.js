@@ -25,7 +25,7 @@ var InputNomeAdmin = document.getElementById('InputNomeAdmin');
 var BtnSP = document.getElementById('BtnSP');
  
 BtnSP.addEventListener('click', function(){
-    if(I_ins.value.length < 3, I_fac.value.length < 3, I_twi.value.length < 3, I_tel.value.length < 3, InputNomeAdmin.value.length < 3){
-        alert('Algum campo se encontra vazio!');
+    if(btn_select.value.length < 3){
+        alert('Adicione uma imagem para o seu perfil!');
     }
 });
