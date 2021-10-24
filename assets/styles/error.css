@@ -56,7 +56,7 @@ body{
 	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
   	-webkit-background-clip: text;
     color: transparent;
-    font-family: 'Gugi', sans-serif; 
+    font-family: 'Calibri', sans-serif; 
     font-size: 80px;   
 }
 

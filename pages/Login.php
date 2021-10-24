@@ -20,7 +20,7 @@ session_start();
             echo $_SESSION['msg_update'];
             unset($_SESSION['msg_update']);
         }                          
-        ?> 
+        ?>
             <div class="card">
                 <div class="card-top">
                     <i class="fas fa-user User"></i>
@@ -35,12 +35,16 @@ session_start();
                 <div class="card-group">
                     <input class="Inputs" type="text" name="id-user" style='display: none;'>
                     <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
-                    <input class="Inputs" type="password" name="senha" id="password" placeholder="Senha" required>
+                    <div class="menu_input">
+                        <i class="far fa-eye Isenha"></i>
+                        <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>
+                    </div>
                     <input id="entrar" type="submit" name="submit" value="Entrar" />
                     <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
                 </div>
             </div>
         </form>
     </div>
+    <script src="../assets/JS/Ver_Senha.js"></script>
 </body>
 </html>

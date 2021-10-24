@@ -4,9 +4,10 @@
 }
 
 body{
-    height: 100vh;
-    background-image: linear-gradient(to top left, var(--corD), var(--corD2));
+    height: 100%;
+	background-image: linear-gradient(150deg, var(--corD2) 0%, var(--corC) 100%);
 }
+
 #Master{
     display: block;
     padding: 80px;
@@ -41,7 +42,7 @@ body{
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 40px;
-    font-family: 'Gugi', sans-serif;    
+    font-family: 'Calibri', sans-serif;    
 }
 
 #T2{
@@ -70,7 +71,7 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    background: var(--tranp);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);
@@ -105,7 +106,7 @@ body{
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores h3{
@@ -114,7 +115,7 @@ body{
     background-image: linear-gradient(to top, var(--corP), var(--corS));
     -webkit-background-clip: text;
     color: transparent;  
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores p{
@@ -132,18 +133,54 @@ body{
     justify-content: center;
 }
 
-.Redes{
+.F{
     justify-content: space-around;
     margin: 20px;
     font-size: 3rem;
-    color: var(--corL);  
     width: 5rem;
+    color: var(--corL);
+    border-radius: 50px;
+    transition: .3s;
+}
+.F:hover{
+    border-radius: 50px;
+	background-image: linear-gradient(to top, #0051ff, #0066ff);
+  	-webkit-background-clip: text;
+    color: transparent;
+}
+
+.I{
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 3rem;
+    width: 5rem;
+    color: var(--corL);
+    border-radius: 50px;
+    transition: .3s;
+    color: var(--corL);
     transition: .3s;
 }
 
-.Redes:hover{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
-    -webkit-background-clip: text;
-    color: transparent;  
-    transform: scale(1.40)
+.I:hover{
+    background-image: linear-gradient(to top, #FF1493, #8A2BE2);
+  	-webkit-background-clip: text;
+    color: transparent;
+}
+
+.G{
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 3rem;
+    width: 5rem;
+    color: var(--corL);
+    border-radius: 50px;
+    transition: .3s;
+    color: var(--corL);
+    transition: .3s;
+}
+
+.G:hover{
+    background-image: linear-gradient(to top, var(--corD), var(--corL));
+  	-webkit-background-clip: text;
+    color: transparent;
 }

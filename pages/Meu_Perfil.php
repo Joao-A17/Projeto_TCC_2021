@@ -27,8 +27,7 @@ require '../assets/PHP/dados_perfil.php';
         <a href="./Inicio.php" class="Logo">Magic Paintings</a>       
         <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>    
         <a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a>
-    </nav>
-
+    </nav>    
     <div class="container">
         <div class="Fundo">       
             <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
@@ -44,7 +43,7 @@ require '../assets/PHP/dados_perfil.php';
                     if(isset($_SESSION['msg'])){
                         echo $_SESSION['msg'];
                         unset($_SESSION['msg']);
-                    }
+                    }                    
                     ?>  
                     </div>              
                     <div class="Info-Admin">
@@ -52,31 +51,43 @@ require '../assets/PHP/dados_perfil.php';
                             <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
                             <p id="Desc-Admin"><?php echo $Desc_Perfil ?></p>                                                        
                         </div>
-                        <a href="./editar_perfil.php"><button type="button" class="btn-menu edp">Editar Perfil</button></a>                      
+                        <a href="./editar_perfil.php"><button type="button" id="btn_editP">Editar Perfil</button></a>                      
                     </div>
                 </div>
-                <h4 class="TextE">Clique em Adicionar para publicar uma nova pintura</h4>
+                <h4 class="TextE">Clique em ADICIONAR para publicar uma nova pintura</h4>
                 <div id="div_link">                
                     <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".$Face_Perfil."'><i class='fab fa-facebook F'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".'https:/www.instagram.com/'.$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
-                    <a href="#MenuPublicar"><buttom id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</buttom></a>
+                    <a href="#MenuPublicar" id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</a>
                 </div>
+                <?php
+                if(isset($_SESSION['msg_pintura'])){
+                    echo $_SESSION['msg_pintura'];
+                    unset($_SESSION['msg_pintura']);
+                }
+                ?>
+                <?php                
+                if(isset($_SESSION['msg_deletar'])){
+                    echo $_SESSION['msg_deletar'];
+                    unset($_SESSION['msg_deletar']);
+                }                
+                ?>
             </div>    
-                <div id="Cont-Master">
+                <div id="Cont-Master">                    
                     <form action="../assets/PHP/Publicar_Pintura.php" method="POST" enctype="multipart/form-data" id="MenuPublicar">
                         <h2>Publicar</h2>
                         <div id="MenuSepara">
                             <div id="MS-1">
                                 <input type="text" minlength = "3" maxlength = "150" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor" required>
-                                <input type="text" minlength = "3" maxlength = "150" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" pattern="[a-zA-Z0-9_]+" placeholder="Digite o nome da pintura" required>
+                                <input type="text" minlength = "3" maxlength = "50" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" pattern='[a-zA-Z0-9_]+' placeholder="Digite o nome da pintura" required>
                                 <input type="text" minlength = "3" maxlength = "150" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" required>
                             </div>
                             <div id="MS-2">   
                                 <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*" required>  
-                                <label for="SelectIMG" id="Select_img_public">Selecionar Imagem</label>                                                 
+                                <label for="SelectIMG" id="Select_img_public"><i class="fas fa-images"></i> Imagem</label>                                                 
                                 <div id="divIMG">
                                     <img src="" id="IMGpublic">          
                                 </div>    

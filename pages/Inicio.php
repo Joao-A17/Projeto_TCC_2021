@@ -62,7 +62,10 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             }
             ?>                                      
           </div>
-          <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+          <div id="sla">            
+            <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+            <p style='color: var(--corP); margin-bottom: 10px;'>Online</p>
+          </div>
         </div>
       
       
@@ -83,79 +86,16 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
         <div>
         </div>
       </section>
-      <section id="pinturas">           <!-- AQUI VAI FICAR AS POSTAGENS RECENTES DAS PESSOAS -->
-        <h2><i class="fas fa-paint-brush"></i>  Pintores</h2>
-        
+      <section id="pinturas">           
+        <h2><i class="fas fa-paint-brush"></i>  Pinturas</h2>        
         <div class="espaço"></div>
         <div class='fileira'>
-          <?php
-          $pegarUsuarios = "SELECT * FROM usuarios";
-          if($resultado_pegarUsuarios = mysqli_query($conexao,$pegarUsuarios)){
-            $nomeUser = array();
-            $IdUser = array();
-            $i = 0;
-            while($registro = mysqli_fetch_assoc($resultado_pegarUsuarios)){
-              $nomeUser[$i] = $registro['nome'];
-              $IdUser[$i] = $registro['id'];
-
-              ?>       
-              
-              
-              <div class="PintArt">           
-                <!-- Lugar que ficava Ultima Pintura do artista -->
-                <?php 
-                
-                if($nomeUser[$i] != $usuario_logado){
-                  $NU = 'NomeUsuario';
-                  $InfoPint = 'InfoPint';
-                  $BConsultar = 'BConsultar';
-                  $Info_Pintor = 'Info_Pintor';
-                  $Img_Usuario = 'Img-Usuario';
-                }
-                if($nomeUser[$i] == $usuario_logado){
-                  $NU = 'NomeUsuario2';
-                  $InfoPint = 'InfoPint2';
-                  $BConsultar = 'BConsultar2';
-                  $Info_Pintor = 'Info_Pintor2';
-                  $Img_Usuario = 'Img-Usuario2';
-                }
-
-                ?>
-                <div class=<?php echo $InfoPint?>>
-                  <div class="ConteudoInfo-1">
-                    <div class="User">
-                      <?php 
-                      $pasta = '../assets/IMAGES/Foto_Perfil/'.$nomeUser[$i].'/';
-                      if (file_exists("$pasta")) {
-                          $diretorio = dir($pasta);
-
-                          while($FP_OutroUsuario = $diretorio->read()){
-                              if($FP_OutroUsuario != '.' && $FP_OutroUsuario != '..'){                
-                                
-                                echo "<img id='".$Img_Usuario."' src='".$pasta.$FP_OutroUsuario."' alt=".$nomeUser[$i].">";
-                              
-                              }    
-                          }
-                      }                      
-                      ?>             
-                      <h3 class=<?php echo $NU?>><?php echo $nomeUser[$i]?></h3>
-                    </div>
-                  <p id=<?php echo $Info_Pintor?>>Veja mais sobre esse perfil</p>
-                  <form action="./Perfil.php" method="GET">
-                    <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $nomeUser[$i]?>>                  
-                    <button id="Consultar" class=<?php echo $BConsultar?> onclick="ConsutarImg()">Consultar</button>
-                  </form>
-                  </div>
-                </div>
-              </div>
-
-              <?php
-
-            }
-          }                
-          ?>
-
-        </div>
+        <?php 
+        
+        require '../assets/PHP/todas_pinturas.php' // AQUI VAI FICAR AS POSTAGENS RECENTES DAS PESSOAS 
+        
+        ?>        
+        </div>        
 
         <div class="espaço"></div>
       </section>

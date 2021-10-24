@@ -3,13 +3,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"); /* link para conectar o site dos icones */
 
 :root {
+    --corC: #acacac;
+    --corC2: #17202b;
     --tranp: #0000004d;
     --corD: #0B1219;
     --corD2:#17202b;
     --corL: #E7F1F7;
-    --corP: #FFD700;
-    --corP2: #ffd9005b;
-    --corS: #ff8800;
+    --corP: #76d4df;
+    --corS: #8176df;
 }
 
 body::-webkit-scrollbar{

@@ -1,5 +1,5 @@
 #CardUser{
-    background: var(--tranp);
+    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
     border: 0;
     border-radius: 8px;
     position: fixed;  
@@ -15,10 +15,13 @@
 
 #CardUser:hover{   
     width: 220px; 
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
 }
 
 #Img-UsuarioL{
-    width: 50px;
+    width: 60px;
+    height: 60px;
     margin: 10px;
     border-radius: 50%;
     border: 3px solid var(--corL);
@@ -37,7 +40,7 @@
 
 #Nome_User{
     color: var(--corL);
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-right: 20px;

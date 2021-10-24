@@ -14,7 +14,7 @@ $usuario_logado = $_SESSION['nome-user'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/editar_usuario.css">
-    <title><?php echo $usuario_logado ?></title>
+    <title>Editar Perfil | <?php echo $usuario_logado ?></title>
 </head>
 <body>
     <div id="nav_menu">
@@ -23,6 +23,7 @@ $usuario_logado = $_SESSION['nome-user'];
     </div> 
     <form action="../assets/PHP/Alterar_FP.php" method="POST" enctype="multipart/form-data" id="divIMG">
         <input type="submit" id='btn_SI' value="Salvar imagem">
+        <input style='display: none' type="text" name="nome_fp" value=<?php echo $FotoP?> >     
         <?php 
         $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
         echo "<img src='".$pasta.$FotoP."' id='pintura_etapa'>"; ?> 
@@ -40,7 +41,6 @@ $usuario_logado = $_SESSION['nome-user'];
         ?> 
         <div id="dividir">                                                          
             <div id="INPUTS">                     
-            <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar"> 
                 <div id="Nome_Desc">
                     <div id="div_1">
                         <div class="menu-box">
@@ -89,13 +89,12 @@ $usuario_logado = $_SESSION['nome-user'];
                         </div>
                     </div>
                 </div>
+                <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar"> 
             </div> 
         </div>                                                                                        
     </form>
     <script>
         var btn_imagem = document.getElementById('Select_img_public');
-        var btn_salvarImagem = document.getElementById('btn_SI');
-        btn_salvarImagem.style.display = 'none';
         /* Pegar a imagem que o usuario pegou */
         var btn_select = document.getElementById("inputIMG");
         var Pintura = document.getElementById("pintura_etapa");
@@ -109,7 +108,6 @@ $usuario_logado = $_SESSION['nome-user'];
             
             readerPinturaSelect.onload = () => {
                 Pintura.src = readerPinturaSelect.result;
-                btn_salvarImagem.style.display = 'block';
             }
 
             readerPinturaSelect.readAsDataURL(btn_select.files[0]);

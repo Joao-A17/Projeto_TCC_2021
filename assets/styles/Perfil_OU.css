@@ -18,8 +18,8 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Gugi', sans-serif;
-	background: var(--tranp);
+    font-family: 'Calibri', sans-serif;
+	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
     border-radius: 10px;
     border: 2px solid var(--corS);
     box-shadow: 0px 0px 15px var(--corS);
@@ -29,8 +29,8 @@ body{
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
-    font-family: 'Gugi', sans-serif;
-    font-size: 24px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 5px;
     transition: .3s;
@@ -41,10 +41,11 @@ body{
 }
 
 .btn-menu{
+    font-size: 20px;
     width: 200px;
     height: 32px;
     cursor: pointer;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     display: flex;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -102,15 +103,23 @@ body{
     color: var(--corP);
 }
 
-.Pintura,.Pintura2,.Pintura3{
+.Pintura{
     width: 100%;
     border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+}
+.Pintura{
+    width: 100%;
+    border-radius: 20px;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
 }
 
 .NomeT{
     margin-bottom: 20px;
     font-size: 35px;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
@@ -123,8 +132,8 @@ body{
 
 .Nome-Pint{
     font-size: 35px;
-    font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+    font-family: 'Calibri', sans-serif;
+	background-image: linear-gradient(to top, var(--corC2), var(--corD2));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -150,7 +159,8 @@ body{
 }
 
 #Foto-Admin{
-    width: 70%;
+    width: 220px;
+    height: 220px;
     margin-left: 20px;
     border-radius: 50%;
     border-top: 5px solid var(--corS);
@@ -158,11 +168,18 @@ body{
 }
 
 #Info_Admin{
+    width: 100%;
     margin-left: 20px;
+	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
 }
 
 #Nome_Usuario{
-    font-family: 'Gugi', sans-serif;
+    margin: 20px;
+    font-family: 'Calibri', sans-serif;
     font-size: 40px;
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
@@ -170,6 +187,7 @@ body{
 }
 
 #Desc_Usuario{
+    margin: 20px;
     margin-top: 5px;
     margin-bottom: 15px;
     font-family: 'Josefin Sans', sans-serif; 
@@ -184,6 +202,10 @@ body{
     font-size: 20px;
     text-align: center;
     color: var(--corL);
+}
+
+#Redes{
+    margin-bottom: 20px;
 }
 
 .Redes{
@@ -223,8 +245,6 @@ body{
     background: var(--tramp);
     color: var(--corL);
     border-radius: 50px;
-    border: 1px solid var(--corD);
-    box-shadow: 0px 0px 8px var(--tranp);
     transition: .3s;
 }
 .F:hover{

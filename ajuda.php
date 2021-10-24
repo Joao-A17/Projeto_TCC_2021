@@ -57,9 +57,12 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
                   }    
               }
           }
-          ?>                                      
-        </div>
-          <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+          ?>                                           
+          </div>
+          <div id="sla">            
+            <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+            <p style='color: var(--corP); margin-bottom: 10px;'>Online</p>
+          </div>
         </div>
         <?php
       }

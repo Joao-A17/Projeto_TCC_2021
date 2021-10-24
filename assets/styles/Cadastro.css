@@ -12,75 +12,23 @@ input::placeholder {
     color: var(--corL);
 }
 
-#divDesign{
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-}
-
-.fancy-border{
-    margin-right: 20px;
-    width: 350px;
-    height: 350px;
-    animation: transformação 5s ease-in-out infinite, cima-baixo 3s infinite alternate;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transition: all 1s ease-in-out;
-    z-index: 5;
-}
-
-@keyframes cima-baixo{
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes transformação{
-    0% {
-        border-radius:  100% 0% 100% 0% / 100% 0% 100% 0% ;
-        background: linear-gradient(45deg, var(--tranp) 0%, var(--corD2) 100%);
-    } 
-    
-    50% {
-        border-radius:  67% 33% 100% 0% / 100% 24% 76% 0% ;
-        background: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
-    }
-    
-    100% {
-      border-radius:  100% 0% 100% 0% / 100% 0% 100% 0% ;
-      background: linear-gradient(45deg, var(--tranp) 0%, var(--corD2) 100%);
-    } 
-}
-
-.logo{
-    position: absolute;
-    margin-left: 50px;
-    z-index: 10;
-    margin-top: 20px;
-}
-
 #Form-Card{
-    background: var(--tranp);
-    box-shadow: 0 0 20px var(--corP);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: none;
-    border-radius: 33px;
-    border-left: 3px solid var(--corP);
-    border-right: 3px solid var(--corP);
-    width: 600px;
-    height: 100vh;
     text-align: center;
+    border-radius: 33px;
 }
 
 #Form-Card h2{    
     margin-top: 20px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--corD2), var(--corC2));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     text-decoration: none;
     transition: 0.3s;
     font-size: 30px;
@@ -88,16 +36,32 @@ input::placeholder {
     letter-spacing: 4px;    
 }
 
+#Registros{
+    display: inline-flex;
+}
+
+#e{
+    margin: 20px;
+} 
+
+#d{
+    margin: 20px;
+}
+
 .Icon{
     font-size: 90px;
     margin-top: 20px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--tranp), var(--corC2));
   	-webkit-background-clip: text;
     color: transparent;
 }
 
-.Form-I{ 
-    margin: 30px;
+.label{
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: var(--corL);  
+    display: flex;
 }
 
 .Input{
@@ -112,23 +76,14 @@ input::placeholder {
     background: var(--tranp);
     color: var(--corS);
     border: none;
-    border-radius: 20px;
+    border-radius: 8px;
     border-bottom: 3px solid var(--corP);
     box-sizing: border-box;
     transition: .3s;
 }
 .Input:focus{
-    width: 420px;
-    border-bottom: 2px solid var(--corS);
-}
-input[type="number"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
+    box-shadow: 0 0 5px var(--corS);
+    border-bottom: 3px solid var(--corS);
 }
 
 #botao{
@@ -157,16 +112,20 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0px 0px 10px var(--corP);
 }
 
-.Form-I p{
+.menu_input{
+    margin: 30px;
+}
+
+.menu_input p{
     margin-bottom: 20px;
     font-size: 30px;
     color: var(--corL);
 }
 
-.Form-I a{
+.menu_input a{
     color: var(--corP);
 }
-.Form-I a:hover{
+.menu_input a:hover{
     color: var(--corS);
 }
 
@@ -179,7 +138,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--corL);
     position: absolute;
     font-size: 20px;
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 125px;
     transition: .7s;
 }
@@ -192,7 +151,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--corL);
     position: absolute;
     font-size: 20px;
-    margin-top: 8px;
+    margin-top: 15px;
     margin-left: 125px;
     transition: .7s;
 }

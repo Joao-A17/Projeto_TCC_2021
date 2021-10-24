@@ -45,15 +45,17 @@ body{
 }
 
 #topo h1{
-    color: var(--corL);
+	background-image: linear-gradient(0deg, var(--corD) 0%, var(--corC2)70%);
+  	-webkit-background-clip: text;
+    color: transparent;
     font-size: 100px;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 .usuario_logado{
     font-size: 70px;
-    font-family: 'Gugi', sans-serif;
-	background-image: linear-gradient(60deg, var(--tranp) 0%, var(--corD2) 100%);
+    font-family: 'Calibri', sans-serif;
+	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corL) 100%);
   	-webkit-background-clip: text;
     color: transparent;
     transition: .3s;
@@ -65,7 +67,9 @@ body{
 
 #topo p{
     padding-top: 30px;
-    color: var(--corP);
+	background-image: linear-gradient(to top, var(--corD2), var(--corP));
+  	-webkit-background-clip: text;
+    color: transparent;
     font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -132,7 +136,46 @@ body{
 .help a:hover{
     color: var(--corS);
 }
-/* ----------------------Pintura---------------------- */
+/* ----------------------   Pinturaa    ---------------------- */
+
+.imgpp{
+    margin: 20px;
+}
+
+.pint{
+    border-radius: 8px;
+    width: 100%;
+    border-top: 3px solid var(--corS);  
+    border-bottom: 3px solid var(--corS);  
+}
+
+.pint:hover{
+    width: 100%;
+    border-top: 3px solid var(--corP);  
+    border-bottom: 3px solid var(--corP);  
+}
+
+.textospp{
+    margin: 20px;
+}
+
+.Nome_Foto{
+    color: var(--corS);
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.Desc_Foto{
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--corS);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.data_pint{
+    color: var(--corS);
+    font-family: 'Josefin Sans', sans-serif;
+}
 
 #pinturas{
     margin-top: 200px;
@@ -152,7 +195,7 @@ body{
 	text-transform: uppercase;
 	letter-spacing: .5em;    
     text-align: center;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     padding-top: 100px;
 }
 
@@ -165,10 +208,9 @@ body{
 }
 
 .PintArt{
-    display: inline-block;
-    margin-left: 60px;
-    width: 350px;
-    padding-top: 70px;
+    display: inline-flex;
+    margin: 80px;
+    width: 500px;
 }
 
 #Img-Usuario{
@@ -193,7 +235,7 @@ body{
 
 .NomeUsuario{
     color: var(--corP);
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-left: 10px;
     float: left;
@@ -201,7 +243,7 @@ body{
 }
 .NomeUsuario2{
     color: var(--corL);
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-left: 10px;
     float: left;
@@ -357,16 +399,17 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    background: var(--tranp);
     border: 0;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
     border-radius: 33px;
     transition: .3s;
 }
-#desig:hover{    
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+
+#desig:hover{
+    border-top: 4px solid var(--corP);
+    border-bottom: 4px solid var(--corP);    
 }
 
 
@@ -388,7 +431,7 @@ body{
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores h3{
@@ -397,7 +440,7 @@ body{
     background-image: linear-gradient(to top, var(--corP), var(--corS));
     -webkit-background-clip: text;
     color: transparent;  
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores p{

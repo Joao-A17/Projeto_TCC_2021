@@ -1,0 +1,162 @@
+body{
+    height: 100%;
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+}
+
+#Pint_Completa{
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Fundo_img{
+    width: 400px;
+}
+
+#IMG{
+    width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+    border: none;
+    border-top: 4px solid var(--corP);
+    border-bottom: 4px solid var(--corP);
+    transition: .4s;
+}
+
+#IMG:hover{
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
+}
+
+#Menu_Editar{
+    margin: 20px;
+    margin-left: 100px;
+}
+
+#grupo{
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+.Nome_Pint{
+    font-size: 35px;
+    font-family: 'Calibri', sans-serif;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+}
+
+.Desc_Pint{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: var(--corL);
+}
+
+#menu_Excluir{
+    margin-left: 100px;
+}
+
+
+#btn_Excluir{
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    color: var(--corP);
+    border: 2px solid var(--corP);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--corP);
+    transition: .4s;
+}
+
+#btn_Excluir:hover{
+    background: var(--corP);
+    color: var(--corD);
+    border: 2px solid var(--corP);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+#formulario{    
+    margin-top: 50px;
+}
+
+#NNPint{
+    margin: 20px;
+    height: 40px;
+    width: 380px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    text-align: center;
+    outline: none;
+    background: var(--tranp);
+    color: var(--corP);
+    border: none;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--corP);
+    box-sizing: border-box;
+    transition: .3s;
+}
+#NNPint:focus{
+    border-bottom: 2px solid var(--corS);
+    box-shadow: 0 2px 5px var(--corS);
+}
+
+#InputAltD{
+    margin: 20px;
+    width: 100%;
+    height: 200px;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    justify-content: space-around;
+    background: var(--tranp);
+    color: var(--corP);
+    border: none;
+    border-radius: 8px;
+    border-top: 2px solid var(--corP);
+    border-bottom: 2px solid var(--corP);
+    box-sizing: border-box;
+    transition: .3s;
+  }
+  #InputAltD:focus{
+    border-top: 2px solid var(--corS);
+    border-bottom: 2px solid var(--corS);
+    box-shadow: 0 2px 5px var(--corS);
+  }
+
+#salvar_edicoes{
+    margin-left: 50px;
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    background: var(--tranp);
+    color: var(--corL);
+    border-bottom: 2px solid var(--corL);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s;  
+}
+
+#salvar_edicoes:hover{
+    background: var(--corL);
+    color: var(--corD);
+    border-bottom: 2px solid var(--corL);
+    box-shadow: 0px 0px 10px var(--corL);
+}

@@ -21,13 +21,13 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Gugi', sans-serif;
+  font-family: 'Calibri', sans-serif;
   border-bottom: 3px solid var(--corS);
 }
 
 #TituloMenu{
   font-size: 30px;
-  font-family: 'Gugi', sans-serif;
+  font-family: 'Calibri', sans-serif;
   background-image: linear-gradient(to bottom, var(--corP), var(--corS));
   -webkit-background-clip: text;
   color: transparent;
@@ -93,7 +93,7 @@ body{
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 40px;
-    font-family: 'Gugi', sans-serif;    
+    font-family: 'Calibri', sans-serif;    
 }
 
 #T2{
@@ -249,7 +249,7 @@ body{
     margin: 20px;
     color: var(--corL);
     font-size: 50px;
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores h3{
@@ -258,7 +258,7 @@ body{
     background-image: linear-gradient(to top, var(--corP), var(--corS));
     -webkit-background-clip: text;
     color: transparent;  
-    font-family: 'Gugi', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores p{

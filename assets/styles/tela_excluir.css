@@ -1,0 +1,86 @@
+body{
+    height: 100%;
+	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+}
+
+.Pint_Completa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form_excluir{
+    display: inline-flex;
+}
+
+h2{
+    font-size: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--corL);
+}
+
+#btn_Excluir{
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background: var(--tranp);
+    color: var(--corP);
+    border: none;
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
+    border-radius: 8px;
+    transition: .4s;
+}
+
+#btn_Excluir:hover{
+    background: var(--corP);
+    color: var(--corD);
+    box-shadow: 0px 0px 10px var(--corP);
+}
+
+#btn_cancelar{
+    margin-left: 50px;
+    width: 200px;
+    height: 32px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    background: var(--tranp);
+    color: var(--corL);
+    border-top: 3px solid var(--corL);
+    border-bottom: 3px solid var(--corL);
+    border-radius: 8px;
+    transition: .3s;  
+}
+
+#btn_cancelar:hover{
+    background: var(--corL);
+    box-shadow: 0px 0px 10px var(--corL);
+    color: var(--corD);
+}
+
+.Fundo_Pint{
+    margin-top: 30px;
+    width: 600px;
+}
+
+.Pintura{
+    width: 50%;
+    border-radius: 20px;
+    border-top: 3px solid var(--corL);
+    border-bottom: 3px solid var(--corL);
+}

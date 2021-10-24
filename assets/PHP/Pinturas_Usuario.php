@@ -9,8 +9,7 @@ $pasta = '../assets/IMAGES/Pinturas/'.$usuario_logado.'/';
 if (file_exists("$pasta")) {
     /* echo 'existe'; */     
 
-    $diretorio = dir($pasta);
-
+    $diretorio = dir($pasta);    
     while($pintura = $diretorio->read()){
         if($pintura != '.' && $pintura != '..'){ 
             $Registrar_Pinturas = mysqli_fetch_assoc($pegar_pinturas);
@@ -31,20 +30,26 @@ if (file_exists("$pasta")) {
                     <div class='Fundo-Desc'>
                         <h1 class='Nome-Pint'><?php echo $Nome_Foto ?></h1>
                         <p class='Desc-Pint'><?php echo $Desc_Foto ?></p>
-                        <i style="display: none;" id='Icon_Pontinhos' class='fas fa-ellipsis-v'></i>
+                        <!-- <i style="display: none;" id='Icon_Pontinhos' class='fas fa-ellipsis-v'></i>
                         <div style="display: none;" id="menubtns">
                             <buttom id="btn_Editar" class='btn_span'>Editar<i class='fas fa-paint-brush IconE'></i></buttom>
                             <buttom id='btn_Excluir' class='btn_span'>Excluir<i class='fas fa-trash-alt IconE'></i></buttom>
-                        </div>                        
-                    <form action='../assets/PHP/editar_pinturas.php' method='POST' class='Menu_Editar'>
-                        <input style='display: none;' type="number" name="id_pintura" value=<?php echo $Id_Foto ?> required>
-                        <input style='display: none;' type="text" name="Pint_Foto" value=<?php echo $Pint_Foto ?> required>
-                        <buttom stule='margin: 20px' id='btn_Excluir' class='btn_span'>Excluir<i class='fas fa-trash-alt IconE'></i></buttom>
-                        <input type='submit' name='SalvarTudo' value='Editar' id="btn_Editar" class='btn-SP'>
-                        <!-- <input type='submit' name='SalvarTudo' value='Salvar' id="salvar_edicoes" class='btn-SP'> -->
-                        <?php echo "<input type='text' style='display: none;' name='nome_foto' id='NNPint' class='InputAlt' placeholder='Digite o nome da pintura' value='".$Nome_Foto."' >";?>
-                        <?php echo "<input type='text' style='display: none;' name='desc_foto' id='InputAltD' placeholder='Digite a descrição da pintura' value='".$Desc_Foto."' >";?>
-                    </form>
+                        </div>    -->   
+                        <div id='menu_btns'>
+                            <form action="./tela_de_excluir.php" method="post">   
+                                <input style='display: none;' type="text" name="Pint_Foto" value=<?php echo $Pint_Foto ?> required>
+                                <input style='display: none;' type="number" name="id_pintura" value=<?php echo $Id_Foto ?> required>
+                                <input type='submit' id='btn_Excluir'name='btn_Excluir' value='Excluir'>
+                            </form>                  
+                            <form action='./editar_pinturas.php' method='POST' class='Menu_Editar'>
+                                <input style='display: none;' type="number" name="id_pintura" value=<?php echo $Id_Foto ?> required>
+                                <input style='display: none;' type="text" name="Pint_Foto" value=<?php echo $Pint_Foto ?> required>
+                                <input type='submit' name='SalvarTudo' value='Editar' id="btn_Editar" class='btn-SP'>
+                                <!-- <input type='submit' name='SalvarTudo' value='Salvar' id="salvar_edicoes" class='btn-SP'>  -->
+                                <?php echo "<input type='text' style='display: none;' name='nome_foto' id='NNPint' class='InputAlt' placeholder='Digite o nome da pintura' value='".$Nome_Foto."' >";?>
+                                <?php echo "<input type='text' style='display: none;' name='desc_foto' id='InputAltD' placeholder='Digite a descrição da pintura' value='".$Desc_Foto."' >";?>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 
