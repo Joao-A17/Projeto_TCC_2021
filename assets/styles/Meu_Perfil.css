@@ -124,28 +124,21 @@ body{
 }
 
 #btn_Excluir{
-    width: 180px;
+    font-family: 'Calibri', sans-serif;
     height: 40px;
+    width: 120px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;          
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     border-radius: 8px;
     background: var(--tranp);
     color: var(--corL);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;  
+    border: 2px solid #dc3545;
+    transition: .3s; 
 }
 
 #btn_Excluir:hover{
-    background: var(--corL);
-    color: var(--corD);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
+    background: #dc3545;
+    color: var(--corL);
+    border: 2px solid #dc3545;
 }
 
 .Pint_Completa{

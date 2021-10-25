@@ -8,7 +8,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+    background: var(--corC);
 }
 
 .espaço{
@@ -85,7 +85,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--tranp);
+	background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corP);  
@@ -93,14 +93,14 @@ body{
 }
 
 #info h2{
-    font-size: 30px;
+    font-size: 50px;
     padding-top: 30px;
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
-	letter-spacing: .5em;
-    font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+    font-family: 'Calibri', sans-serif;
 }
 
 .info-P{
@@ -139,18 +139,17 @@ body{
 /* ----------------------   Pinturaa    ---------------------- */
 
 .imgpp{
-    margin: 20px;
+    margin: 80px;
 }
 
 .pint{
     border-radius: 8px;
-    width: 100%;
+    width: 400px;
     border-top: 3px solid var(--corS);  
     border-bottom: 3px solid var(--corS);  
 }
 
 .pint:hover{
-    width: 100%;
     border-top: 3px solid var(--corP);  
     border-bottom: 3px solid var(--corP);  
 }
@@ -173,6 +172,9 @@ body{
 }
 
 .data_pint{
+    font-size: 20px;
+    position: relative;
+    left: 100px;
     color: var(--corS);
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -180,7 +182,7 @@ body{
 #pinturas{
     margin-top: 200px;
     height: 100%;
-    background: var(--tranp);
+	background-image: linear-gradient(270deg, var(--tranp) 0%, var(--corD2) 100%);
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corS);  
@@ -203,21 +205,21 @@ body{
     border: 2px solid var(--tranp);
     border-radius: 10px;
     padding: 15px;
-}.itensCad{
+}
+
+.itensCad{
     background: var(--corD);
 }
 
 .PintArt{
-    display: inline-flex;
-    margin: 80px;
-    width: 500px;
+    margin-top: 20px;
 }
 
 #Img-Usuario{
     margin-left: 20px;
-    width: 100px;
-    height: 100px;    
-    border: 2px solid var(--corP);
+    width: 80px;
+    height: 80px;    
+    border: 3px solid var(--corS);
     box-shadow: 0 0 8px var(--corP);
     display: block;
     border-radius: 50%;
@@ -234,12 +236,12 @@ body{
 }
 
 .NomeUsuario{
-    color: var(--corP);
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
     font-family: 'Calibri', sans-serif;
-    margin-top: 15px;
-    margin-left: 10px;
-    float: left;
-    font-size: 30px;
+    margin-left: 40px;
+    font-size: 40px;
 }
 .NomeUsuario2{
     color: var(--corL);
@@ -251,7 +253,7 @@ body{
 }
 
 .InfoPint{
-    width: 100%;
+    margin: 300px;
     background: var(--tranp);
     border: 0;
     border-top: 3px solid var(--corP);
@@ -260,7 +262,7 @@ body{
     margin-top: 10px;
     align-items: center;
     text-align: center;
-    transition: .3s;
+    transition: .1s;
 }
 .InfoPint:hover{
     border-top: 3px solid var(--corS);
@@ -269,7 +271,7 @@ body{
 }
 
 .InfoPint2{
-    width: 100%;
+    margin: 300px;
     background: var(--tranp);
     border: 0;
     border-top: 3px solid var(--corL);
@@ -284,6 +286,10 @@ body{
     border-top: 3px solid var(--corL);
     border-bottom: 3px solid var(--corL);
     box-shadow: 0 0 12px var(--corL);
+}
+
+.ConteudoInfo-1{
+    border-bottom: 3px solid var(--corP);
 }
 
 .PintArt h4{
@@ -313,7 +319,7 @@ body{
     color: var(--corP);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
 #Info_Pintor2{
@@ -472,4 +478,23 @@ body{
     -webkit-background-clip: text;
     color: transparent;  
     transform: scale(1.40)
+}
+
+#divVermais{
+    text-align: center;
+    position: relative;
+    display: inline-grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+}
+
+.Icon_UP{
+    display: none;
+}
+
+.Recarregar:hover .Icon_UP{
+    display: block;
+    font-size: 50px;
+    color: var(--corP);
 }

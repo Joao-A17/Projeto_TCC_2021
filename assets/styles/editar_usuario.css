@@ -72,6 +72,7 @@ body{
 }
 
 #divIMG{
+  text-align: center;
   width: 20%;
   margin-left: 20px;
   margin-top: 20px;
@@ -294,4 +295,55 @@ body{
       border: 2px solid var(--corP);
       box-shadow: 0px 0px 10px var(--corP);
   }
+}
+
+
+.Isenha{
+  color: var(--corL);
+  position: absolute;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 150px;
+  transition: .7s;
+}
+
+.Isenha:hover{
+  color: var(--corS);
+}
+
+.Isenha2{
+  color: var(--corL);
+  position: absolute;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 150px;
+  transition: .7s;
+}
+
+.Isenha2:hover{
+  color: var(--corS);
+}
+
+#form_excluir_conta{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50px, -50px);
+}
+
+#btn_excluir_conta{
+  height: 40px;
+  width: 120px;
+  font-size: 15px;
+  border-radius: 8px;
+  background: var(--tranp);
+  color: var(--corL);
+  border: 2px solid #dc3545;
+  transition: .3s;
+}
+
+#btn_excluir_conta:hover{
+  background: #dc3545;
+  color: var(--corL);
+  border: 2px solid #dc3545;
 }

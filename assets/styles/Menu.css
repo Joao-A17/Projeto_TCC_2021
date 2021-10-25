@@ -14,7 +14,7 @@ nav {
 }
 
 .logo{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--corP), var(--corL));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -30,7 +30,8 @@ nav {
     opacity: 0.7;
 }
 .menu-link{
-    padding: 6px 25px;
+    padding: 3px 20px;
+    font-size: 20px;
     text-decoration: none;
     transition: .3s;
     background: none;
@@ -43,7 +44,7 @@ nav {
 .menu-link:hover{
     background: var(--corP);
     color: var(--corD);
-    border: 2px solid var(--corP);
+    border: 3px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 

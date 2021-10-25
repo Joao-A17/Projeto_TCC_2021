@@ -32,6 +32,11 @@ $usuario_logado = $_SESSION['nome-user'];
         <h2 id="TituloMenu"><?php echo $usuario_logado; ?></h2>         
         <label for="inputIMG" id="Select_img_public">Tracar Imagem</label> 
     </form> 
+    <form action="./apagar_conta.php" method="post" id="form_excluir_conta">   
+        <input style='display: none;' type="text" name="Input_usuario" value=<?php echo $usuario_logado ?> required>
+        <input style='display: none;' type="number" name="Input_id_usuario" value=<?php echo $IdUser ?> required>
+        <input type='submit' id='btn_excluir_conta'name='btn_excluir_conta' value='Apagar Conta'>
+    </form>
     <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST">                               
         <?php
         if(isset($_SESSION['msg_update'])){
@@ -59,7 +64,8 @@ $usuario_logado = $_SESSION['nome-user'];
                         </div>
                         <div class="menu-box">
                             <label for="Senha" class="label">Senha</label>
-                            <?php echo "<input type='password' name='Senha' id='Senha' class='Inputs' value='".$Senha."' placeholder='Digite Aqui...' required>"; ?>
+                            <i class="far fa-eye Isenha"></i>                            
+                            <?php echo "<input type='password' name='Senha' id='senha' class='Inputs' value='".$Senha."' placeholder='Digite Aqui...' required>"; ?>
                         </div>
                     </div>
                     <div class="menu-box" style="margin: 100px;">
@@ -89,10 +95,10 @@ $usuario_logado = $_SESSION['nome-user'];
                         </div>
                     </div>
                 </div>
-                <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar"> 
+                <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar">                  
             </div> 
         </div>                                                                                        
-    </form>
+    </form> 
     <script>
         var btn_imagem = document.getElementById('Select_img_public');
         /* Pegar a imagem que o usuario pegou */
@@ -113,6 +119,6 @@ $usuario_logado = $_SESSION['nome-user'];
             readerPinturaSelect.readAsDataURL(btn_select.files[0]);
         });
     </script>
-    
+    <script src="../assets/JS/Ver_Senha.js"></script>
 </body>
 </html>

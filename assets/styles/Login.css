@@ -85,7 +85,6 @@ input::placeholder {
     transition: .3s;
   }
   .Inputs:focus{
-      width: 100%;
     border-bottom: 3px solid var(--corS);
     box-shadow: 0 2px 5px var(--corS);
   }

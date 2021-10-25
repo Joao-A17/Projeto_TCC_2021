@@ -62,10 +62,7 @@ require '../assets/PHP/dados_perfil.php';
         }
         ?>                                        
         </div>
-        <div id="sla">            
-          <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-          <p style='color: var(--corS); margin-bottom: 10px;'>Online</p>
-        </div>
+        <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
       </div>
 
     <div id="container">  

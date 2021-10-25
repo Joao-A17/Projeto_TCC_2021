@@ -35,6 +35,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
     <ul class="nav-list">      
       <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
       <li><a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle"></i>  Ajuda</a></li>
+      <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i>  Desenvolvedores</a></li>
       <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     </ul>       
   </nav>
@@ -62,10 +63,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             }
             ?>                                      
           </div>
-          <div id="sla">            
-            <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-            <p style='color: var(--corP); margin-bottom: 10px;'>Online</p>
-          </div>
+          <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
         </div>
       
       
@@ -80,7 +78,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
       <section id="info">
         <h2><i class="fas fa-info-circle"></i>  Informações</h2>
         <p class="info-P">Site feito para divulgações e compras de pinturas<br>
-        Clique em Consultas nas imagens para negociar com o pintor</p>
+        Clique em Ver Mais para entrar no perfil do pintor</p>
         <div class="caixa-help"><p class="help">Se precisar de ajuda ou o site tenha o mau funcionamento <a href="../ajuda.php">Clique aqui</a></p></div>
 
         <div>
@@ -101,6 +99,25 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
       </section>
 
       <div class="espaço"></div>
+      
+      <div id="divVermais">
+        <i class="fas fa-sort-up Icon_UP"></i>
+        <a href="" class='menu-link Recarregar'>Recarregar</a>
+      </div>
+
+      <script>
+        var Recarregar = document.querySelector('.Recarregar');
+        var Icon_UP = document.querySelector('.Icon_UP');
+
+        Icon_UP.addEventListener('click', function(){
+          Recarregar.click();          
+        });
+
+        Recarregar.addEventListener('click', function(){
+          location.reload();
+        })
+
+      </script>
 
       <footer id="desenvolvedores">
         <h2><i class="fas fa-users"></i>  Desenvolvedores</h2>

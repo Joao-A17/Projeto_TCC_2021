@@ -78,19 +78,20 @@ body{
 
 .Cont{
     margin-top: 50px;
-    width: 80%;
+    width: 100%;
     display: inline-flex;
+	background-image: linear-gradient(130deg, var(--corD2) 0%, var(--tranp) 100%);
+    border-radius: 20px;
 }
 
 .Fundo-Pint{
-    margin-left: 20px;
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    border: 0;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
+    margin: 40px;
+}
+
+.data_public{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--corS);
 }
 
 .IconG{
@@ -103,12 +104,6 @@ body{
     color: var(--corP);
 }
 
-.Pintura{
-    width: 100%;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-}
 .Pintura{
     width: 100%;
     border-radius: 20px;
@@ -127,31 +122,35 @@ body{
 }
 
 .Fundo-Desc{
-    margin-left: 20px;
+    margin: 20px;
+}
+
+.fundo_Fpintura{
+    width: 500px;
 }
 
 .Nome-Pint{
-    font-size: 35px;
-    font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corC2), var(--corD2));
+    font-size: 40px;
+	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
+    font-family: 'Calibri', sans-serif;
 }
 
 .Desc-Pint{
-    margin-top: 10px;
-    width: 500px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     color: var(--corL);
 }
 
 #AdminForm{
+    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
     margin-top: 20px;
     display: flex;
     padding: 20px;
     border-radius: 20px;
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS); 
 }
 
 #DivFP{
@@ -170,11 +169,8 @@ body{
 #Info_Admin{
     width: 100%;
     margin-left: 20px;
-	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
 }
 
 #Nome_Usuario{
