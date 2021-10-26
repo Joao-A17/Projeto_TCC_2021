@@ -75,8 +75,7 @@ require '../assets/PHP/dados_perfil.php';
                     <div id="Redes">
                         <?php echo "<a class='Redes' href='".'mail:'.$Email_u."'><i class='fas fa-envelope E'></i></a>"; ?>
                         <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats_u."'><i class='fab fa-whatsapp W'></i></a>"; ?>
-                        <?php echo "<a class='Redes' href='".$Face_Perfil_u."'><i class='fab fa-facebook F'></i></a>"; ?>
-                        <?php echo "<a class='Redes' href='".$Insta_Perfil_u."'><i class='fab fa-instagram I'></i></a>"; ?>
+                        <?php echo "<a class='Redes' href='".'https:/instagram.com/'.$Insta_Perfil_u."'><i class='fab fa-instagram I'></i></a>"; ?>
                         <?php echo "<a class='Redes' href='".$Twitter_Perfil_u."'><i class='fab fa-twitter T'></i></a>"; ?> 
                     </div>
                 </div>                

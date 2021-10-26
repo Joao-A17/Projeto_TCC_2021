@@ -14,13 +14,12 @@ if(isset($_FILES['Foto_perfil'])){
     $Desc = filter_input(INPUT_POST, 'Desc_perfil', FILTER_SANITIZE_STRING);
     $Foto = $_FILES['Foto_perfil'];
     $instagram = filter_input(INPUT_POST, 'instagram_perfil', FILTER_SANITIZE_STRING);
-    $facebook = filter_input(INPUT_POST, 'facebook_perfil', FILTER_SANITIZE_STRING);
     $twitter = filter_input(INPUT_POST, 'twitter_perfil', FILTER_SANITIZE_STRING);
     $telefone = filter_input(INPUT_POST, 'telefone_perfil', FILTER_SANITIZE_STRING);
     $Arquivo_Imagem = strtolower(pathinfo($_FILES['Foto_perfil']['name'], PATHINFO_EXTENSION));    
     $Novo_Arquivo_Imagem = $Nome.'.'.$Arquivo_Imagem;
 
-    $Result_Perfil = "INSERT INTO perfil (nomep, descp, fotop, instagramp, facebookp, twitterp, telefonep) VALUES ('$Nome', '$Desc', '$Novo_Arquivo_Imagem', '$instagram', '$facebook', '$twitter', '$telefone')";
+    $Result_Perfil = "INSERT INTO perfil (nomep, descp, fotop, instagramp, twitterp, telefonep) VALUES ('$Nome', '$Desc', '$Novo_Arquivo_Imagem', '$instagram', '$twitter', '$telefone')";
     $sql_perfil = mysqli_query($conexao,$Result_Perfil);    
     
     $usuario_logado = $_SESSION['nome-user'];

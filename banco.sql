@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `tcc_mpx` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `tcc_mpx`;
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
 -- Host: localhost    Database: tcc_mpx
@@ -28,12 +30,11 @@ CREATE TABLE `perfil` (
   `descp` varchar(220) NOT NULL,
   `fotop` varchar(10000) NOT NULL,
   `instagramp` varchar(220) NOT NULL,
-  `facebookp` varchar(220) NOT NULL,
   `twitterp` varchar(220) NOT NULL,
   `telefonep` varchar(100) NOT NULL,
   PRIMARY KEY (`idperfil`),
   UNIQUE KEY `NomeUser` (`nomep`)
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +43,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
-INSERT INTO `perfil` VALUES (51,'tumaho','Ola este perfil Ã© do tumaho mas conhecido como Toninho ou AntÃ´nio aqui vc vera artes muito feias porque eu nao sei desenha','tumaho.jpg','instagram do Usuario-8','facebook do Usuario-8','twitter do Usuario-8','99227431'),(24,'Tobi','&#34;VocÃª provavelmente vai sofrer de novo daqui em diante... Mas nÃ£o mude, continue seguindo o seu caminho&#34;','Usuario-6.jpg','instagram do usuario-6','facebook do usuario-6','twitter do usuario-6','whatsapp do usuario-6'),(50,'Dogzao','Au Au Au Au Au Au Au ','Dogzao.jpg','Dogzao','facebook do Dogzao ','twitter do Dogzao','554899227431'),(40,'Lacoste','Moda Casual De Luxo','Lacoste.jpg','instagram do Lacoste','facebook do Lacoste','twitter do Lacoste','whatsapp do Lacoste'),(43,'DogzÃ£o','DogzÃ£o dos criar','DogzÃ£o.jpg','instagram do DogzÃ£o','facebook do DogzÃ£o','twitter do DogzÃ£o','whatsapp do DogzÃ£o'),(45,'Vector','AH Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã©Ã© VECTOOOOOR','Vector.jpg','instagram do vector','facebook do vector','twitter do vector','32550201'),(46,'Cria','piquezin dos cria','Cria.jpg','https://www.instagram.com/cria_do_cpx_phlopex024/','https://www.facebook.com/doscrias','https://twitter.com/doscrias','5548999227431'),(47,'Admin','I am Admin ','Admin.jpg','Admin','AdminÃ£o','TwAdmin','5548999227431');
+INSERT INTO `perfil` VALUES (56,'Admin','I&#39;m Admin ','Admin.jpg','admin_instagram','admin_twitter','32168654656'),(53,'Isabella','Isaaaaa','Isabella.jpg','bell220904','bellinhart524','5548966666666'),(54,'Alex','OlÃ¡ aqui Ã© o meu perfil onde postarei as minha pinturas','Alex.jpeg','Alex_insta','Alex_twitter','554876985468'),(55,'Luana','Vejam minhas artes e me mandem mensagens :)','Luana.jpeg','luanamart_insta','luanamart_twitter','5548955554444');
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +62,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=192 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +71,7 @@ CREATE TABLE `pinturas` (
 
 LOCK TABLES `pinturas` WRITE;
 /*!40000 ALTER TABLE `pinturas` DISABLE KEYS */;
-INSERT INTO `pinturas` VALUES (123,'Lacoste','Raspadin','Desenho do meu Amiguin BK','Raspadin.jpg','2021-10-11 21:52:55'),(153,'Dogzao','Dogzin','Meu Filho Dogzin AU AU ','Dogzin.jpg','2021-10-24 19:43:12'),(122,'Lacoste','@THELEGIONX','Edit da Aktsuki','@THELEGIONX.jpg','2021-10-11 20:14:28'),(121,'Lacoste','TRASH','Edit Trash Demon','TRASH.jpg','2021-10-11 20:12:02'),(125,'Lacoste','Lobin','Guardian Lobo','Lobin.jpg','2021-10-11 23:45:27'),(128,'Vector','Traje do Vectooooooooooooor','Meu Traje de voar  AH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','Traje do Vectooooooooooooor.jpg','2021-10-16 10:31:32'),(129,'Vector','Arma Nova','Para pegar a lua que brilha lÃ¡ no cÃ©u.','Arma Nova.jpg','2021-10-16 10:33:48'),(130,'Vector','AH EEEEEEEEE','AAH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','AH EEEEEEEEE.jpg','2021-10-16 22:18:35'),(131,'Vector','AH EEEEEE','AH ÃˆÃ‰Ã‰Ã‰Ã‰EEEEEEE','AH EEEEEE.jpg','2021-10-16 22:19:11'),(133,'Tobi','Tobi_Animado','UUIIIIIIIIII','Tobi_Animado.jpg','2021-10-17 22:38:33'),(151,'Cria','Morte','Morte de glokada','Morte.jpg','2021-10-23 13:23:00');
+INSERT INTO `pinturas` VALUES (154,'Isabella','Kuraminha','Meu desenho da kurama','Kuraminha.jpg','2021-10-25 18:23:17'),(155,'Isabella','Constantine','Constantine - Attack On Titan','Constantine.jpg','2021-10-25 18:26:47');
 /*!40000 ALTER TABLE `pinturas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +103,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (133,'Tobi','Akatsuki','usuario6@gmail.com','123','whatsapp do usuario-6','2021-10-10 23:08:55',NULL),(147,'tumaho','dos crias','toninhocxzoficial@gmail.com','0098','99227431','2021-10-24 22:06:20',NULL),(146,'Dogzao','cachorro','dogzao@gmail.com','dog','554899227431','2021-10-24 19:38:21',NULL),(138,'Lacoste','ReizinD','lacoste@gmail.com','lacoste123','whatsapp do Lacoste','2021-10-11 20:08:34',NULL),(141,'Vector','MalvadÃ£o','vector@gmail.com','vector123','32550201','2021-10-16 10:22:23',NULL),(142,'Cria','dos crias','criadoscrias@gmail.com','doscrias2','5548999227431','2021-10-20 16:00:41',NULL),(143,'Admin','sobrenome do Admin','Admin@gmail.com','Admin123','5548999227431','2021-10-23 14:41:33',NULL);
+INSERT INTO `usuarios` VALUES (149,'Alex','seilex','alex@gmail.com','Alex123','554876985468','2021-10-25 18:33:15',NULL),(150,'Luana','Mart','luana@gmail.com','Luana123','5548955554444','2021-10-25 18:51:51',NULL),(148,'Isabella','Isa','isabella@gmail.com','220904','5548966666666','2021-10-25 17:37:26',NULL),(151,'Admin','Adis','Admin@gmail.com','Admin123','32168654656','2021-10-25 20:04:29',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-24 22:24:05
+-- Dump completed on 2021-10-25 21:47:52

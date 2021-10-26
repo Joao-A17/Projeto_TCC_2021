@@ -7,6 +7,14 @@ body{
   background-image: linear-gradient(343deg, var(--corD2) 0%, var(--tranp) 100%);
 }
 
+#forms_1_2{
+  display: inline-flex;
+}
+
+#form1{
+  display: inline-table;
+}
+
 #MenuModal_EditPerfil{
   text-align: center;
   width: 100%; 
@@ -59,7 +67,6 @@ body{
 }
 
 #dividir{
-  padding: 50px;
   display: flex;
 }
 
@@ -78,33 +85,6 @@ body{
   margin-top: 20px;
 }
 
-#btn_SI{
-  position: absolute;
-  left: 300px;
-  padding: 5px 25px;
-  font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;          
-  border: 0;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 24px;
-  background: var(--tranp);
-  color: var(--corP);
-  border: 2px solid var(--tranp);
-  box-shadow: 0px 0px 5px var(--tranp);
-  animation: Pulse 1.2s infinite;
-  transition: .3s;
-}
-
-#btn_SI:hover{
-  animation: none;
-  background: var(--corP);
-  color: var(--corD);
-  border: 2px solid var(--corP);
-  box-shadow: 0px 0px 10px var(--corP);
-}
-
 #pintura_etapa{
   width: 100%;
   border-radius: 50%;
@@ -115,9 +95,9 @@ body{
 }
 
 #Select_img_public{
-  margin: 20px;
+  margin-top: 20px;
+  width: 200px;
   height: 38px;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -142,6 +122,8 @@ body{
 }
 
 #btn_salvar{
+  position: absolute;
+  right: 50px;
   height: 40px;
   width: 120px;
   font-size: 25px;
@@ -169,17 +151,12 @@ body{
   margin-left: 50px;
 }
 
-#d{
-  margin-left: 20px;
-}
-
 #links{
   margin: 100px;
-  display: inline-flex;
 }
 
 .menu-box{
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .label{
@@ -332,18 +309,22 @@ body{
 }
 
 #btn_excluir_conta{
+  margin-left: 100px;
+  font-family: 'Calibri', sans-serif;
   height: 40px;
   width: 120px;
-  font-size: 15px;
+  cursor: pointer;
+  font-size: 20px;
   border-radius: 8px;
+  border: none;
   background: var(--tranp);
   color: var(--corL);
-  border: 2px solid #dc3545;
-  transition: .3s;
+  border-bottom: 3px solid #dc3545;
+  transition: .3s; 
 }
 
 #btn_excluir_conta:hover{
   background: #dc3545;
   color: var(--corL);
-  border: 2px solid #dc3545;
+  box-shadow: 0 0 12px #dc3545;
 }

@@ -57,20 +57,23 @@ h1{
 }
 
 #btn_excluir_conta{
+    font-family: 'Calibri', sans-serif;
     height: 40px;
     width: 120px;
-    font-size: 15px;
+    cursor: pointer;
+    font-size: 20px;
     border-radius: 8px;
+    border: none;
     background: var(--tranp);
     color: var(--corL);
-    border: 2px solid #dc3545;
-    transition: .3s;
+    border-bottom: 3px solid #dc3545;
+    transition: .3s; 
 }
 
 #btn_excluir_conta:hover{
     background: #dc3545;
     color: var(--corL);
-    border: 2px solid #dc3545;
+    box-shadow: 0 0 12px #dc3545;
 }
   
 #btn_cancelar{

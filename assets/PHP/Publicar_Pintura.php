@@ -1,17 +1,38 @@
 <?php
 // Enviar Uma nova publicação
-if(isset($_FILES['arquivo'])){
+include_once("./Conexao_Banco.php"); 
+$usuario_logado = $_SESSION['nome-user'];
 
-    include_once("./Conexao_Banco.php");  
+$select_pinturas = "SELECT * FROM pinturas";
+$pegar_pinturas = mysqli_query($conexao,$select_pinturas);
+if($pegar_pinturas){
+    while($registro = mysqli_fetch_assoc($pegar_pinturas)){
+        $Autor = $registro['Autor'];
+        if($Autor == $usuario_logado){
+            $Id = $registro['Id'];
+        }
+    }
+}
+if(isset($_FILES['arquivo'])){     
+
     $usuario_logado = $_SESSION['nome-user'];
     $Autor = filter_input(INPUT_POST, 'NomeAltor', FILTER_SANITIZE_STRING);
     $Nome_Foto = filter_input(INPUT_POST, 'NomeFoto', FILTER_SANITIZE_STRING);
     $Desc_Foto = filter_input(INPUT_POST, 'DescriçãoFoto', FILTER_SANITIZE_STRING);
-    $Arquivo_Imagem = strtolower(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION));   
-    $Novo_Arquivo_Imagem = $Nome_Foto.'.'.$Arquivo_Imagem;
+    $Arquivo_Imagem = strtolower(pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION));    
+
+    
+
+    if(isset($Id)){
+        $addID = $Id + 1;
+        echo $Novo_Arquivo_Imagem = 'Pintura_do_'.$Autor.'_id_'.$addID.'.'.$Arquivo_Imagem;
+    }
+    if(!isset($Id)){
+        $Novo_Arquivo_Imagem = 'Pintura_do_'.$Autor.'.'.$Arquivo_Imagem;
+    }
     
     $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";       
-    $IdPintura = mysqli_insert_id($conexao);
+    
     $pasta_arquivo['pasta'] = '../IMAGES/Pinturas/'.$Autor.'/'; 
     mkdir($pasta_arquivo['pasta'], 0777); 
     

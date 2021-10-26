@@ -21,89 +21,92 @@ $usuario_logado = $_SESSION['nome-user'];
         <h2 id="TituloMenu">MAGIC PAINTINGS</h2>
         <a class="menu-link" href="./Inicio.php"><i class="fas fa-home"></i>   Inicio</a>  
     </div> 
-    <form action="../assets/PHP/Alterar_FP.php" method="POST" enctype="multipart/form-data" id="divIMG">
-        <input type="submit" id='btn_SI' value="Salvar imagem">
-        <input style='display: none' type="text" name="nome_fp" value=<?php echo $FotoP?> >     
-        <?php 
-        $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
-        echo "<img src='".$pasta.$FotoP."' id='pintura_etapa'>"; ?> 
-        <?php echo "<input type='text' style='display: none' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
-        <input type="file" class="form-control-file" name="arquivo" id="inputIMG" accept="image/*">
-        <h2 id="TituloMenu"><?php echo $usuario_logado; ?></h2>         
-        <label for="inputIMG" id="Select_img_public">Tracar Imagem</label> 
-    </form> 
-    <form action="./apagar_conta.php" method="post" id="form_excluir_conta">   
-        <input style='display: none;' type="text" name="Input_usuario" value=<?php echo $usuario_logado ?> required>
-        <input style='display: none;' type="number" name="Input_id_usuario" value=<?php echo $IdUser ?> required>
-        <input type='submit' id='btn_excluir_conta'name='btn_excluir_conta' value='Apagar Conta'>
-    </form>
-    <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST">                               
-        <?php
-        if(isset($_SESSION['msg_update'])){
-            echo $_SESSION['msg_update'];
-            unset($_SESSION['msg_update']);
-        }                          
-        ?> 
-        <div id="dividir">                                                          
-            <div id="INPUTS">                     
-                <div id="Nome_Desc">
-                    <div id="div_1">
-                        <div class="menu-box">
-                            <label for="nome_usuario" class="label">Nome do usuario</label>
-                            <?php echo "<input type='text' name='nome_usuario' id='nome_usuario' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
-                        </div>
-                        <div class="menu-box">
-                            <label for="sobrenome" class="label">Sobrenome</label>
-                            <?php echo "<input type='text' name='sobrenome' id='sobrenome' class='Inputs' value='".$Sobrenome."' placeholder='Digite Aqui...' required>"; ?>
-                        </div>
-                    </div>
-                    <div id="div_2">
-                        <div class="menu-box">
-                            <label for="Email" class="label">Email</label>
-                            <?php echo "<input type='email' name='Email' id='Email' class='Inputs' value='".$Email."' placeholder='Digite Aqui...' required>"; ?>
-                        </div>
-                        <div class="menu-box">
-                            <label for="Senha" class="label">Senha</label>
-                            <i class="far fa-eye Isenha"></i>                            
-                            <?php echo "<input type='password' name='Senha' id='senha' class='Inputs' value='".$Senha."' placeholder='Digite Aqui...' required>"; ?>
-                        </div>
-                    </div>
-                    <div class="menu-box" style="margin: 100px;">
-                        <label for="desc_usuario" class="label">Nova descrição do perfil</label>
-                        <?php echo "<input type='text' name='desc_usuario' id='desc_usuario' value='".$Desc_Perfil."' placeholder='Digite Aqui...' required>"; ?>
-                    </div>
-                    <div id="links">
-                        <div id="e">
-                            <div class="menu-box">
-                                <label for="inst_usuario" style='color: var(--corL);' class="label">Link do instagram</label>
-                                <?php echo "<input type='text' name='inst_usuario' id='inst_usuario' class='Inputs' value='".$Insta_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+    <section id='forms_1_2'>
+        <div id='form1'>
+            <form action="../assets/PHP/Alterar_FP.php" method="POST" enctype="multipart/form-data" id="divIMG">
+                <input type="submit" style='display: none' id='btn_SI' value="Salvar imagem">
+                <input style='display: none' type="text" name="nome_fp" value=<?php echo $FotoP?> >     
+                <?php 
+                $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';    
+                echo "<img src='".$pasta.$FotoP."' id='pintura_etapa'>"; ?> 
+                <?php echo "<input type='text' style='display: none' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
+                <input type="file" class="form-control-file" name="arquivo" id="inputIMG" accept="image/*">
+                <h2 id="TituloMenu"><?php echo $usuario_logado; ?></h2>         
+                <label for="inputIMG" id="Select_img_public">Tracar Imagem</label> 
+            </form> 
+
+            <form id="MenuModal_EditPerfil" action="../assets/PHP/Alterar_Perfil.php" method="POST">   
+                <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar">                               
+                <?php
+                if(isset($_SESSION['msg_update'])){
+                    echo $_SESSION['msg_update'];
+                    unset($_SESSION['msg_update']);
+                }                          
+                ?> 
+                <div id="dividir">                                                          
+                    <div id="INPUTS">                     
+                        <div id="Nome_Desc">
+                            <div id="div_1">
+                                <div class="menu-box">
+                                    <label for="nome_usuario" class="label">Nome do usuario</label>
+                                    <?php echo "<input type='text' name='nome_usuario' id='nome_usuario' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
+                                <div class="menu-box">
+                                    <label for="sobrenome" class="label">Sobrenome</label>
+                                    <?php echo "<input type='text' name='sobrenome' id='sobrenome' class='Inputs' value='".$Sobrenome."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
+                            </div>
+                            <div id="div_2">
+                                <div class="menu-box">
+                                    <label for="Email" class="label">Email</label>
+                                    <?php echo "<input type='email' name='Email' id='Email' class='Inputs' value='".$Email."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
+                                <div class="menu-box">
+                                    <label for="Senha" class="label">Senha</label>
+                                    <i class="far fa-eye Isenha"></i>                            
+                                    <?php echo "<input type='password' name='Senha' id='senha' class='Inputs' value='".$Senha."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
                             </div>
                             <div class="menu-box">
-                                <label for="face_usuario" style='color: var(--corL);' class="label">Link do facebook</label>
-                                <?php echo "<input type='text' name='face_usuario' id='face_usuario' class='Inputs' value='".$Face_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                                <label for="desc_usuario" class="label">Nova descrição do perfil</label>
+                                <?php echo "<input type='text' name='desc_usuario' id='desc_usuario' value='".$Desc_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                             </div>
-                        </div>
-                        <div id="d">
-                            <div class="menu-box">
-                                <label for="twit_usuario" style='color: var(--corL);' class="label">Link do twitter</label>
-                                <?php echo "<input type='text' name='twit_usuario' id='twit_usuario' class='Inputs' value='".$Twitter_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                            <div id="links">
+                                <div class="menu-box">
+                                    <label for="inst_usuario" style='color: var(--corL);' class="label">Link do instagram</label>
+                                    <?php echo "<input type='text' name='inst_usuario' id='inst_usuario' class='Inputs' value='".$Insta_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
+                                <div class="menu-box">
+                                    <label for="twit_usuario" style='color: var(--corL);' class="label">Link do twitter</label>
+                                    <?php echo "<input type='text' name='twit_usuario' id='twit_usuario' class='Inputs' value='".$Twitter_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
+                                <div class="menu-box">
+                                    <label for="tele_usuario" style='color: var(--corL);' class="label">Numero do telefone</label>
+                                    <?php echo "<input type='tel' name='tele_usuario' id='tele_usuario' class='Inputs' value='".$Telefone_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                                </div>
                             </div>
-                            <div class="menu-box">
-                                <label for="tele_usuario" style='color: var(--corL);' class="label">Numero do telefone</label>
-                                <?php echo "<input type='tel' name='tele_usuario' id='tele_usuario' class='Inputs' value='".$Telefone_Perfil."' placeholder='Digite Aqui...' required>"; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" name="btn_salvar" value="Salvar" id="btn_salvar">                  
-            </div> 
-        </div>                                                                                        
-    </form> 
+                        </div>               
+                    </div> 
+                </div>                                                                                        
+            </form> 
+        </div>
+        <div id='form2'>
+            <form action="./apagar_conta.php" method="post" id="form_excluir_conta">   
+                <input style='display: none;' type="text" name="Input_usuario" value=<?php echo $usuario_logado ?> required>
+                <input style='display: none;' type="number" name="Input_id_usuario" value=<?php echo $IdUser ?> required>
+                <input type='submit' id='btn_excluir_conta'name='btn_excluir_conta' value='Apagar Conta'>
+            </form>            
+        </div>  
+    </section>    
+      
     <script>
-        var btn_imagem = document.getElementById('Select_img_public');
-        /* Pegar a imagem que o usuario pegou */
+        /* trocar a imagem que o usuario pegou */
+        var btn_imagem = document.getElementById('Select_img_public');        
         var btn_select = document.getElementById("inputIMG");
         var Pintura = document.getElementById("pintura_etapa");
+        var btn_SI = document.getElementById("btn_SI");
+        var btn_salvar = document.getElementById('btn_salvar');
+
         console.log('eu existo no JS');
         btn_select.addEventListener('change', function() {
             
@@ -113,11 +116,13 @@ $usuario_logado = $_SESSION['nome-user'];
             let readerPinturaSelect = new FileReader();
             
             readerPinturaSelect.onload = () => {
-                Pintura.src = readerPinturaSelect.result;
+                Pintura.src = readerPinturaSelect.result;                
             }
 
-            readerPinturaSelect.readAsDataURL(btn_select.files[0]);
-        });
+            readerPinturaSelect.readAsDataURL(btn_select.files[0]); 
+            btn_SI.click();                                                               
+        });   
+
     </script>
     <script src="../assets/JS/Ver_Senha.js"></script>
 </body>

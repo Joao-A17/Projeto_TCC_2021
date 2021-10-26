@@ -58,9 +58,8 @@ require '../assets/PHP/dados_perfil.php';
                 <div id="div_link">                
                     <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
-                    <?php echo "<a class='Redes' href='".$Face_Perfil."'><i class='fab fa-facebook F'></i></a>"; ?>
                     <?php echo "<a class='Redes' href='".'https:/www.instagram.com/'.$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
-                    <?php echo "<a class='Redes' href='".$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
+                    <?php echo "<a class='Redes' href='".'https://wa.me/'.$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
                     <a href="#MenuPublicar" id="btn-Adicionar" class="btn-menu botaoA"><i class="fas fa-plus IconG"></i>Adicionar</a>
                 </div>
                 <?php
@@ -82,7 +81,7 @@ require '../assets/PHP/dados_perfil.php';
                         <div id="MenuSepara">
                             <div id="MS-1">
                                 <input type="text" minlength = "3" maxlength = "150" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor" required>
-                                <input type="text" minlength = "3" maxlength = "50" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" pattern='[a-zA-Z0-9_]+' placeholder="Digite o nome da pintura" required>
+                                <input type="text" minlength = "3" maxlength = "50" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura" required>
                                 <input type="text" minlength = "3" maxlength = "150" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" required>
                             </div>
                             <div id="MS-2">   

@@ -10,7 +10,6 @@ if($pegar_tabela){
             $Id_perfil = $registro['idperfil'];
             $Desc_Perfil = $registro['descp'];
             $Insta_Perfil = $registro['instagramp'];
-            $Face_Perfil = $registro['facebookp'];
             $Twitter_Perfil = $registro['twitterp'];
             $Telefone_Perfil = $registro['telefonep'];
             $FotoP = $registro['fotop'];
@@ -19,7 +18,6 @@ if($pegar_tabela){
             if($Nome_Perfil == $Outro_Usuario){
                 $Desc_Perfil_u = $registro['descp'];
                 $Insta_Perfil_u = $registro['instagramp'];
-                $Face_Perfil_u = $registro['facebookp'];
                 $Twitter_Perfil_u = $registro['twitterp'];
                 $Telefone_Perfil_u = $registro['telefonep'];
                 $FotoP_u = $registro['fotop'];

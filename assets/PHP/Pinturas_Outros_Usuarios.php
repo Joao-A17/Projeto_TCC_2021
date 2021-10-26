@@ -1,7 +1,7 @@
 <?php
 
    
-$sql_pinturas = "SELECT * FROM pinturas WHERE Autor = '$Outro_Usuario'";
+$sql_pinturas = "SELECT * FROM pinturas WHERE Autor = '$Outro_Usuario' order by id desc";
 $pegar_TabelaPint = mysqli_query($conexao,$sql_pinturas); 
 $pasta = '../assets/IMAGES/Pinturas/'.$Outro_Usuario.'/';
 
