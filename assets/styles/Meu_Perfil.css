@@ -8,7 +8,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+	background-image: linear-gradient(140deg, var(--tranp) 0%, var(--corC) 100%);
 }
 
 .espaço{    
@@ -16,13 +16,14 @@ body{
     margin-bottom: 50px;
     padding: 1px;
     border-radius: 50px;
-	background-image: linear-gradient(to left, var(--corP), var(--corS));
+	background-image: linear-gradient(to left, var(--corS), var(--corC2));
     border: 0;
     border-radius: 20px;
 }
 
 .Menu{
     position: fixed;
+    top: 0;
     width: 100%;
     height: 8vh;
     display: flex;
@@ -61,19 +62,19 @@ body{
     letter-spacing: 5px;
     justify-content: center;
     align-items: center;
-    background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--corP);
+    background: transparent;
+    color: var(--corL);
+    border-left: 3px solid var(--corL);
+    border-right: 3px solid var(--corL);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
+    box-shadow: 0px 0px 5px var(--corL);
     transition: .3s;
 }
 
 .btn-menu:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corL);
+    color: var(--corD2);
+    box-shadow: 0px 0px 20px var(--corL);
 }
 
 
@@ -100,7 +101,7 @@ body{
 }
 
 .container{
-    padding-top: 50px;
+    margin-top: 3.7%;
 }
 
 #Cont-Master{
@@ -154,6 +155,7 @@ body{
     width: 50%;
 }
 
+
 .IconG{
     font-size: 20px;
     margin-right: 10px;
@@ -182,13 +184,24 @@ body{
 }
 
 .Fundo-Desc{
+    width: 600px;
+    height: 100%;
+	border-radius: 20px;
     margin-left: 20px;
+	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
+    box-shadow: 0 0 20px var(--corS);
+}
+
+.margin{
+    margin: 50px;
 }
 
 .Nome-Pint{
-    font-size: 35px;
+    font-size: 45px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--corC2), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -197,7 +210,7 @@ body{
     margin-top: 10px;
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     color: var(--corL);
 }
 
@@ -490,7 +503,6 @@ textarea::placeholder{
 }
 
 .ContAdmin{
-    margin-top: 20px;
     border-radius: 30px;
     border: 3px solid  var(--corS);
     box-shadow: 0px 0px 10px var(--corS);
@@ -518,11 +530,11 @@ textarea::placeholder{
     display: inline-flex;
     width: 100%;
     margin-left: 100px;
-	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
+	background-image: linear-gradient(315deg, var(--corC) 0%, var(--corC2) 100%);
+    border: 3px solid var(--corC2); 
+    box-shadow: 0 0 20px var(--corD);
 }
 
 #btn_editP{
@@ -539,7 +551,7 @@ textarea::placeholder{
     letter-spacing: 5px;
     justify-content: center;
     align-items: center;
-    background: none;
+    background: var(--tranp);
     color: var(--corP);
     border: 2px solid var(--corP);
     border-radius: 8px;
@@ -585,6 +597,32 @@ textarea::placeholder{
     color: var(--corD2);
 }
 
+
+#btn-Adicionar{
+    width: 200px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    display: inline-flex;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    justify-content: center;
+    align-items: center;
+    background: var(--tranp);
+    color: var(--corD);
+    border-bottom: 3px solid var(--corS);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px var(--corS);
+    transition: .3s;
+}
+
+#btn-Adicionar:hover{
+    background: var(--corS);
+    color: var(--corD);
+    box-shadow: 0px 0px 20px var(--corS);
+}
+
 .Redes{
     justify-content: space-around;
     cursor: pointer;
@@ -612,7 +650,7 @@ textarea::placeholder{
     transition: .3s;
 }
 .W:hover{
-	background-image: linear-gradient(to top, #007200, #00ff00);
+	background-image: linear-gradient(to top, #00BB2D, #00ff00);
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);    

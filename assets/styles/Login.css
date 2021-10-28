@@ -2,134 +2,135 @@
     margin: 0;
     padding: 0;
 } 
-
 body{
-    height: 100vh;
-	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
+  overflow-y: hidden;
+  height: 100vh;
+  background-image: linear-gradient(0deg, var(--corL) 0%, var(--corD2) 100%);
 }
+
+
 
 /* formulário */
-.card{
-    background: var(--tranp);
-    border: 0;
-    border-top: 4px solid var(--corP);
-    border-bottom: 4px solid var(--corP);
-    box-shadow: 0 0 20px var(--tranp);
-    border-top-left-radius: 10%;
-    border-bottom-right-radius: 10%;
-    width: 400px;
-    padding: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;  
-    transition: .4s;    
-}
 
-.card:hover{
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  border: 0;
+  width: 1200px;
+  height: 500px;
+  text-align: center;  
+  border-radius: 20px;
+	background-image: linear-gradient(321deg, var(--corD2) 50%, var(--corD) 50%);
+  border: 3px solid var(--corD);
 }
 
 /* Para centralizar a Icon e o Nome Login*/
 .card-top{
-    text-align: center;
+  margin: 20px;
+  text-align: center;
 }
 
 /* Icon do formulário*/
 .User{
-    position: relative;
-    margin-bottom: 20px;
-    font-size: 80px;
-    background-image: linear-gradient(to top right, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 80px;
+  background-image: linear-gradient(to top right, var(--corP), var(--corS));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Texto Login Admin */
 .login{
-    font-size: 42px;
-    font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to top right, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
-    text-transform: uppercase;
-    margin-left: 5px;
-    letter-spacing: 5px;
+  font-size: 42px;
+  font-family: 'Calibri', sans-serif;
+  background-image: linear-gradient(to top right, var(--corP), var(--corS));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  margin-left: 5px;
+  letter-spacing: 5px;
 }
 
 /* mudar a cor dos inputs */
 input::placeholder {
-    color: var(--corP);
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
+  color: var(--corP);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /* Campo de texto Email e Senha*/
 .Inputs{
-    height: 38px;
-    width: 320px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
-    outline: none;
-    background: var(--tranp);
-    color: var(--corP);
-    border: none;
-    border-radius: 4px;
-    border-bottom: 3px solid var(--corP);
-    box-sizing: border-box;
-    transition: .3s;
-  }
-  .Inputs:focus{
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
-  }
+  height: 38px;
+  width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  outline: none;
+  background: none;
+  color: var(--corP);
+  border: none;
+  border-radius: 4px;
+  border-bottom: 3px solid var(--corP);
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.Inputs:focus{
+  color: var(--corS);
+  border-bottom: 3px solid var(--corS);
+}
 
 /* Modificação do botão enviar*/
 #entrar{
-    width: 100px;
-    height: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;          
-    border: 0;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    border-radius: 4px;
-    background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--tranp);
-    box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;                     
+  width: 100px;
+  height: 40px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;          
+  border: 0;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  background: var(--tranp);
+  color: var(--corP);
+  border: 2px solid var(--tranp);
+  box-shadow: 0px 0px 5px var(--tranp);
+  transition: .3s;                     
 }
 
 /* Animação do botão quando passar o mause*/
 #entrar:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+  background: var(--corP);
+  color: var(--corD);
+  border: 2px solid var(--corP);
+  box-shadow: 0px 0px 10px var(--corP);
 }
 
 /* cadastrar */
 
+
+.card-group{
+  margin: 100px;
+}
+
 .card-group p{
-    margin-top: 20px;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
 	color: var(--corL);
 }
 
 .card-group a{
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 	color: var(--corP);
-    transition: .7s;
+  transition: .7s;
 }
 .card-group a:hover{
 	color: var(--corS);
@@ -137,28 +138,70 @@ input::placeholder {
 
 
 .Isenha{
-    color: var(--corL);
-    position: absolute;
-    font-size: 20px;
-    margin-top: 28px;
-    margin-left: 280px;
-    transition: .7s;
+  color: var(--corL);
+  position: absolute;
+  font-size: 20px;
+  margin-top: 28px;
+  margin-left: 280px;
+  transition: .7s;
 }
 
 .Isenha:hover{
-    color: var(--corS);
+  color: var(--corS);
 }
 
 .Isenha2{
-    color: var(--corL);
-    position: absolute;
-    font-size: 20px;
-    margin-top: 28px;
-    margin-left: 280px;
-    transition: .7s;
+  color: var(--corL);
+  position: absolute;
+  font-size: 20px;
+  margin-top: 28px;
+  margin-left: 280px;
+  transition: .7s;
 }
 
 
 .Isenha2:hover{
-    color: var(--corS);
+  color: var(--corS);
+}
+
+/* msg de erro */
+
+#msg_true{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 700px;
+}
+
+#msg_true h1{  
+  color: rgb(0, 255, 0);
+  font-size: 30px;
+  font-family: 'Calibri', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+#msg_true .icon{
+  font-size: 40px;
+  color: rgb(0, 255, 0);
+}
+
+#msg_false{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 700px;
+}
+
+#msg_false h1{  
+  color: red;
+  font-size: 30px;
+  font-family: 'Calibri', sans-serif; 
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+#msg_false .icon{
+  font-size: 40px;
+  color: red;
 }

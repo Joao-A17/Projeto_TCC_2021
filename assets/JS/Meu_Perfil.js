@@ -63,50 +63,6 @@ btn_Adicionar.addEventListener('click', function(){
     }
 });
 
-/*                                                                           Função dos 3 pontinhos */
-var Icon_Pontinhos = document.getElementById("Icon_Pontinhos");
-var menubtns = document.getElementById("menubtns");
-var btn_Editar = document.getElementById("btn_Editar");
-var btn_Excluir = document.getElementById("btn_Excluir");
-var Menu_Editar = document.querySelector(".Menu_Editar");
-var btnSalvarPint = document.getElementById('salvar_edicoes');
-var input_nome_Pint = document.getElementById('NNPint');
-var input_Desc_Pint = document.getElementById('InputAltD');
-
-Icon_Pontinhos.addEventListener("click", function() {
-    
-  var parent = Pint_Completa.parentNode;
-  console.log(parent);
-
-});
-
-btn_Editar.addEventListener('click', function(){
-    if(Menu_Editar.style.display == "none"){
-        Menu_Editar.style.display = "block";
-    }else{
-        Menu_Editar.style.display = "none";
-    }
-});
-
-
-/* trocar os nomes */
-
-btnSalvarPint.addEventListener('click', function(){  
-    
-    if(input_nome_Pint.value == ""){
-        alert("Preencha os campos!");
-        Menu_Editar.style.display = "none";            
-    }
-    if(input_Desc_Pint.value == ""){
-        alert("Preencha os campos!");
-        Menu_Editar.style.display = "none";   
-    }
-    else{
-        NomeH1.innerHTML = input_nome_Pint.value;
-        DescP.innerHTML = input_Desc_Pint.value;
-    }
-});
-
 /* Verificar se os campos de publicar imagem estão vazios */
 
 btn_publicar.addEventListener('click', function() {
@@ -118,6 +74,10 @@ btn_publicar.addEventListener('click', function() {
         h1_msg_false.innerHTML = 'Para publicar precisa ter uma imagem!';
         MenuPublicar.appendChild(msg_false);
         msg_false.appendChild(h1_msg_false);
-        location.reload();
+        
+        function aviso(){
+            location.reload();        
+        }
+        setInterval(aviso, 1000);
     }
 });

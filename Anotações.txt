@@ -1,20 +1,10 @@
-Botão de excluir:           https://developer.mozilla.org/pt-BR/docs/Web/API/Node/removeChild
-Botão Adicionar:            https://pt.stackoverflow.com/questions/454159/como-duplicar-ou-clonar-uma-div-em-java-script-e-ler-todos-os-elementos-em-asp-n
-Criador de bordas:          https://9elements.github.io/fancy-border-radius/
-duplicar id com o FOR:      https://pt.stackoverflow.com/questions/444880/criando-id%c2%b4s-din%c3%a2micos-para-minhas-div%c2%b4s-no-javascript
-
 Pedentes:
-Fazer Tela Ajuda
-Alterar o perfil do usuario
+Adicionar mais coisas na tela de Ajuda
 
 Login do Banco de Dados
 Username:       root
 senha:          TccInfo2021
 PalavraChave:   NtSqF3r0jUpKRhfq
 
-A parte mais difícil que eu achei na parte de programação foi a conexão do banco de dados e o evento de adicionar uma nova postagem caso o Artista quisesse
-
-no botão de piblicar que vai criar elementos novos para postagem.
-
-
-https://pt.stackoverflow.com/questions/173795/como-criar-página-para-cada-usuário-com-php
+A parte mais difícil que eu achei na parte de programação foi a conexão do banco e o evento de publicar
+que será enviado 2 dados a imagem para uma pasta do projeto e pro nosso banco de dados.

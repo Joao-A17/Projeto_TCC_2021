@@ -28,7 +28,7 @@ if(isset($_FILES['Foto_perfil'])){
         $pasta_arquivo['pasta'] = '../IMAGES/Foto_Perfil/'.$usuario_logado.'/'; 
         mkdir($pasta_arquivo['pasta'], 0777);
         move_uploaded_file($_FILES['Foto_perfil']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
-        header('Location: ../../pages/Meu_Perfil.php');        
+        header('Location: ../../pages/Inicio.php');        
     }else{
         $_SESSION['msg_etapa'] = "<p style='color:red; font-size:20px;'>Erro: Algum campo vazio ou imagem Invalida :(</p>";  
         header('Location: ../../pages/etapa.php');  

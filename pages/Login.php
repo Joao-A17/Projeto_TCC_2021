@@ -1,6 +1,17 @@
 <?php
 session_start();
 
+if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+}
+else{    
+    $usuario_logado = $_SESSION['nome-user'];
+    if(isset($usuario_logado)){
+    header('Location: ./Inicio');
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,38 +24,42 @@ session_start();
     <title>Login | Magic Paintings</title>
 </head>
 <body>
-    <div id="container">
-        <form id="form" class="form" action="../assets/PHP/Conexao_Login.php" method="POST">
-        <?php
-        if(isset($_SESSION['msg_update'])){
-            echo $_SESSION['msg_update'];
-            unset($_SESSION['msg_update']);
-        }                          
-        ?>
-            <div class="card">
-                <div class="card-top">
-                    <i class="fas fa-user User"></i>
-                    <h2 class="login">Login</h2>
-                    <?php
-                    if(isset($_SESSION['msg_Login'])){
-                        echo $_SESSION['msg_Login'];
-                        unset($_SESSION['msg_Login']);
-                    }
-                    ?>
+    <section id="container">
+        <form id="form" class="card" action="../assets/PHP/Conexao_Login.php" method="POST">            
+            <div class="card-group">
+                <input class="Inputs" type="text" name="id-user" style='display: none;'>
+                <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
+                <div class="menu_input">
+                    <i class="far fa-eye Isenha"></i>
+                    <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>
                 </div>
-                <div class="card-group">
-                    <input class="Inputs" type="text" name="id-user" style='display: none;'>
-                    <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
-                    <div class="menu_input">
-                        <i class="far fa-eye Isenha"></i>
-                        <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>
-                    </div>
-                    <input id="entrar" type="submit" name="submit" value="Entrar" />
-                    <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
-                </div>
-            </div>
+                <input id="entrar" type="submit" name="submit" value="Entrar" />
+                <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
+            </div> 
+            <?php
+            if(isset($_SESSION['msg_update'])){
+                echo $_SESSION['msg_update'];
+                unset($_SESSION['msg_update']);
+            }                          
+            ?>
+            <div class="card-top">
+                <i class="fas fa-user User"></i>
+                <h2 class="login">Login | MAGIC PAINTINGS</h2>
+                <?php
+                if(isset($_SESSION['msg_Login'])){
+                    echo $_SESSION['msg_Login'];
+                    unset($_SESSION['msg_Login']);
+                }
+                ?>          
+                <?php
+                if(isset($_SESSION['msg_cad'])){
+                    echo $_SESSION['msg_cad'];
+                    unset($_SESSION['msg_cad']);
+                }
+                ?>     
+            </div>           
         </form>
-    </div>
+    </section>
     <script src="../assets/JS/Ver_Senha.js"></script>
 </body>
 </html>

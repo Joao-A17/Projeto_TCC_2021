@@ -4,7 +4,7 @@
 }
 
 body{
-	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
+	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corC) 100%);
 }
 
 #MenuModal_EditPerfil{
@@ -28,7 +28,7 @@ body{
 #TituloMenu{
   font-size: 30px;
   font-family: 'Calibri', sans-serif;
-  background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+  background-image: linear-gradient(315deg, var(--corC2) 0%, var(--corD2) 100%);
   -webkit-background-clip: text;
   color: transparent;
   text-transform: uppercase;
@@ -58,6 +58,94 @@ body{
   box-shadow: 0px 0px 10px var(--corP);
 }
 
+#instrucoes{
+    display: inline-flex;
+}
+
+#div_1{
+    margin: 20px;
+}
+
+#div_2{
+    margin: 20px;
+}
+
+.card_instru{
+    width: 100%;
+    display: inline-block;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 20px;
+	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
+    box-shadow: 0 0 5px var(--corS);
+    transition: .3s;
+}
+
+.card_instru:hover{   
+    box-shadow: 0 0 20px var(--corS);
+}
+
+.card_instru label{
+    font-size: 28px;
+    font-family: 'Calibri', sans-serif;
+    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.card_instru h1{
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.card_instru p{
+    margin: 20px;
+    color: var(--corL);
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;   
+}
+
+#Lembrete{
+    width: 100%;
+    display: inline-block;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 20px;
+	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);
+    box-shadow: 0 0 5px var(--corS);
+    transition: .3s;
+}
+
+#Lembrete:hover{   
+    box-shadow: 0 0 20px var(--corS);
+}
+
+#Lembrete h2{
+    font-size: 40px;
+    font-family: 'Calibri', sans-serif;
+    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+#Lembrete p{
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 #Master{
     display: block;
     padding: 80px;
@@ -74,22 +162,22 @@ body{
     display: inline-block;
     margin: 40px;
     text-align: center;
-    background: var(--tranp);
+	background-image: linear-gradient(315deg, var(--corC2) 0%, var(--corC) 100%);
     border: 0;
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+    border-top: 4px solid var(--corC2);
+    border-bottom: 4px solid var(--corC2);
     border-radius: 33px;
     transition: .3s;
 }
 
 .card:hover{
-    border-top: 4px solid var(--corP);
-    border-bottom: 4px solid var(--corP);    
+    border-top: 4px solid var(--corS);
+    border-bottom: 4px solid var(--corS);    
 }
 
 #T1{
     margin: 20px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--corP), var(--corL));
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 40px;

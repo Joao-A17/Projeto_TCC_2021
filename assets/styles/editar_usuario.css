@@ -20,7 +20,6 @@ body{
   width: 100%; 
   border-radius: 10px;
   border: none;
-  border-bottom: 3px solid var(--corS);
 }
 
 #nav_menu{
@@ -220,7 +219,7 @@ body{
   width: 600px;
   height: 100%;
   display: inline-block;
-  background-image: linear-gradient(to bottom, var(--corD2), var(--corC2));
+  background-image: linear-gradient(to bottom, var(--corC), var(--corD2));
   border-radius: 12px;
   border-left: 4px solid rgb(0, 255, 0);
   border-right: 4px solid rgb(0, 255, 0);
@@ -244,7 +243,7 @@ body{
   width: 600px;
   height: 100%;
   display: inline-block;
-  background-image: linear-gradient(to bottom, var(--corD2), var(--corC2));
+  background-image: linear-gradient(to bottom, var(--corC), var(--corD2));
   border-radius: 12px;
   border-left: 4px solid red;
   border-right: 4px solid red;

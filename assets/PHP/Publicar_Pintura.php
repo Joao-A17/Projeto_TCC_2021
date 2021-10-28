@@ -28,7 +28,7 @@ if(isset($_FILES['arquivo'])){
         echo $Novo_Arquivo_Imagem = 'Pintura_do_'.$Autor.'_id_'.$addID.'.'.$Arquivo_Imagem;
     }
     if(!isset($Id)){
-        $Novo_Arquivo_Imagem = 'Pintura_do_'.$Autor.'.'.$Arquivo_Imagem;
+        $Novo_Arquivo_Imagem = 'Primeira_pintura_do_'.$Autor.'.'.$Arquivo_Imagem;
     }
     
     $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";       
@@ -39,7 +39,7 @@ if(isset($_FILES['arquivo'])){
     if($Result = mysqli_query($conexao, $Inserir_Publicação)){
         move_uploaded_file($_FILES['arquivo']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
         header('Location: ../../pages/Meu_Perfil.php');       
-        $_SESSION['msg_publicar'] = "<p style='color: green; font-size:20px;'>Publicado com sucesso :)</p>"; 
+        $_SESSION['msg_publicar'] = "<p style='color: var(--corD2); font-size:20px;'>Publicado com sucesso :)</p>"; 
     }else{
         $_SESSION['msg_publicar'] = "<p style='color:red; font-size:20px;'>Erro: Campos vazio ou Imagem Invalida :(</p>"; 
         header('Location: ../../pages/Meu_Perfil.php');

@@ -29,6 +29,22 @@ p{
     color: var(--corL);
 }
 
+#link_ajuda{
+    position: absolute;
+    color: var(--corD2);
+    font-size: 25px;
+    bottom: 10px;
+    left: 20px;
+}
+
+#link_ajuda a{
+    color: var(--corL);
+}
+
+#link_ajuda a:hover{
+    color: var(--corD);
+}
+
 #card_grop{
     display: inline-flex;
 }

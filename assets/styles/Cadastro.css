@@ -4,36 +4,40 @@
 }
 
 body{
+    overflow-y: hidden;
     height: 100vh;
-	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corD) 100%);
+	background-image: linear-gradient(0deg, var(--corL) 0%, var(--corD2) 100%);
 }
 
 input::placeholder {
     color: var(--corL);
 }
 
+
 #Form-Card{
+    display: inline-flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: none;
-    text-align: center;
-    border-radius: 33px;
+    border: 0;
+    width: 1200px;
+    height: 500px;
+    text-align: center;  
+    border-radius: 20px;
+    background-image: linear-gradient(160deg, var(--corD2) 50%, var(--corD) 50%);
+    border: 3px solid var(--corD);
 }
 
-#Form-Card h2{    
-    margin-top: 20px;
-	background-image: linear-gradient(to top, var(--corD2), var(--corC2));
-  	-webkit-background-clip: text;
-    color: transparent;
-	text-transform: uppercase;
-    font-family: 'Calibri', sans-serif;
-    text-decoration: none;
-    transition: 0.3s;
+#Form-Card h2{  
     font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+    background-image: linear-gradient(to top right, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;
     text-transform: uppercase;
-    letter-spacing: 4px;    
+    margin-left: 20px;
+    letter-spacing: 5px;
 }
 
 #Registros{
@@ -49,10 +53,11 @@ input::placeholder {
 }
 
 .Icon{
-    font-size: 90px;
-    margin-top: 20px;
-	background-image: linear-gradient(to top, var(--tranp), var(--corC2));
-  	-webkit-background-clip: text;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    background-image: linear-gradient(to top right, var(--corP), var(--corS));
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -68,29 +73,24 @@ input::placeholder {
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
-    margin: 20px auto;
-    text-align: center;
     height: 38px;
     width: 320px;
-    outline: none;
-    background: var(--tranp);
-    color: var(--corS);
     border: none;
-    border-radius: 8px;
-    border-bottom: 3px solid var(--corP);
-    box-sizing: border-box;
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    color: var(--corS);
+    border-bottom: 2px solid var(--corP);
     transition: .3s;
 }
 .Input:focus{
-    box-shadow: 0 0 5px var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-bottom: 2px solid var(--corS);
 }
 
 #botao{
     width: 200px;
     height: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-top: 80px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;          
     border: 0;
@@ -113,7 +113,7 @@ input::placeholder {
 }
 
 .menu_input{
-    margin: 30px;
+    margin: 50px;
 }
 
 .menu_input p{
@@ -158,5 +158,23 @@ input::placeholder {
 
 
 .Isenha2:hover{
+    color: var(--corS);
+}
+
+#card_a p{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: var(--corL);
+}
+
+.menu-link{
+    font-size: 20px;
+    color: var(--corP);
+    transition: .3s;                     
+}
+
+.menu-link:hover{
     color: var(--corS);
 }

@@ -47,3 +47,15 @@
     float: left;
     font-size: 20px;
 }
+
+.menu_usuario{
+    margin: 20px;
+    font-size: 35px;
+    color: var(--corL);
+}
+
+.menu_usuario:hover{
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;  
+}

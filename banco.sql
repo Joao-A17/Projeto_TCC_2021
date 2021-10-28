@@ -34,7 +34,7 @@ CREATE TABLE `perfil` (
   `telefonep` varchar(100) NOT NULL,
   PRIMARY KEY (`idperfil`),
   UNIQUE KEY `NomeUser` (`nomep`)
-) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=192 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=205 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `pinturas` (
 
 LOCK TABLES `pinturas` WRITE;
 /*!40000 ALTER TABLE `pinturas` DISABLE KEYS */;
-INSERT INTO `pinturas` VALUES (154,'Isabella','Kuraminha','Meu desenho da kurama','Kuraminha.jpg','2021-10-25 18:23:17'),(155,'Isabella','Constantine','Constantine - Attack On Titan','Constantine.jpg','2021-10-25 18:26:47');
+INSERT INTO `pinturas` VALUES (201,'Alex','Mal & Normal','Ass: Alex','Pintura_do_Alex.jpeg','2021-10-26 18:05:50'),(202,'Alex','Humanimal','Humanimalzin ASS: Alex','Pintura_do_Alex_id_202.jpeg','2021-10-26 18:07:26'),(203,'Alex','The best couple of 2021','Ass: Alexx','Pintura_do_Alex_id_203.jpeg','2021-10-26 18:09:02'),(204,'Alex','IndianaJoNES','Desenhin do Indio eu acho','Pintura_do_Alex_id_204.jpeg','2021-10-26 18:11:14'),(192,'Luana','Menina do OlhÃ£o','Luana Mart','Pintura_do_Luana.jpeg','2021-10-26 17:42:13'),(193,'Luana','Pessoa de 4 Olhos','Desenho pontilhado','Pintura_do_Luana_id_193.jpeg','2021-10-26 17:46:23'),(194,'Luana','Vidas dos Olhos','Pintura da Luana Mart','Pintura_do_Luana_id_194.jpeg','2021-10-26 17:49:30'),(195,'Luana','VisÃ£o do Futuro','Outra Pintura :)','Pintura_do_Luana_id_195.jpeg','2021-10-26 17:50:37'),(154,'Isabella','Kuraminha','Meu desenho da kurama','Kuraminha.jpg','2021-10-25 18:23:17'),(155,'Isabella','Constantine','Constantine - Attack On Titan','Constantine.jpg','2021-10-25 18:26:47'),(196,'Luana','Ãfrica Espacial','ExpiraÃ§Ã£o das estrelas','Pintura_do_Luana_id_196.jpeg','2021-10-26 17:52:25');
 /*!40000 ALTER TABLE `pinturas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-25 21:47:52
+-- Dump completed on 2021-10-27 23:15:09

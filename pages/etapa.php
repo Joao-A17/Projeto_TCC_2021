@@ -2,6 +2,11 @@
 require '../assets/PHP/Conexao_Banco.php';
 require '../assets/PHP/dados_perfil.php';
 
+$pasta_perfil_do_usuario = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';
+if (file_exists("$pasta_perfil_do_usuario")){
+    header('Location: ./Inicio');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,10 +19,10 @@ require '../assets/PHP/dados_perfil.php';
     <link rel="stylesheet" href="../assets/styles/etapa.css">
     <title>Etapa | Magic Paintings</title>
 </head>
-<body>
-    
+<body>    
     <form id="Menu_Etapa" action="../assets/PHP/pegar_etapa.php" method="POST" enctype="multipart/form-data">        
         <h2 id="TituloMenu">Olá <?php echo $usuario_logado ?></h2>
+        <p id='link_ajuda'>não estar salvando seu perfil? <a href="../ajuda.php">Ajuda</a></p>
         <p>Antes de continuar preencha os campo<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></p>
         <?php
         if(isset($_SESSION['msg_etapa'])){

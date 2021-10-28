@@ -56,7 +56,7 @@ if($Autor == $usuario_logado){
                     </div>
                     <form action="../assets/PHP/up_pintura.php" method="POST" id="formulario">
                         <input style='display: none' type="text" name="id_img" id="id_img" value=<?php echo $id_pintura; ?>>
-                        <?php echo "<input type='text' name='novo_nome' minlength = '3' maxlength = '50' pattern='[a-zA-Z0-9_]+' id='NNPint' placeholder='Digite o nome da pintura' value='".$nome_foto."' >";?>
+                        <?php echo "<input type='text' name='novo_nome' minlength = '3' maxlength = '50' id='NNPint' placeholder='Digite o nome da pintura' value='".$nome_foto."' >";?>
                         <?php echo "<input type='text' name='nova_desc' minlength = '3' maxlength = '50' id='InputAltD' placeholder='Digite a descrição da pintura' value='".$desc_foto."' >";?>
                         <input type='submit' name='alt_img' value='Salvar' id="salvar_edicoes" class='btn-SP'> 
                     </form>                   
