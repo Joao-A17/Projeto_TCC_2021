@@ -1,22 +1,24 @@
 #CardUser{
-    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
     border: 0;
     border-radius: 8px;
-    position: fixed;  
-    display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;  
     top: 20%;
-    right:0px;
-    width: .5px;
+    right:0px;  
+    width: 220px; 
+    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+    border-top: 3px solid var(--corC2);
+    border-bottom: 3px solid var(--corC2);
+    box-shadow: 0 0 12px var(--corC2);
     transition: .3s;
 }
 
 
-#CardUser:hover{   
-    width: 220px; 
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+#CardUser:hover{ 
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0 0 12px var(--corS);
 }
 
 #Img-UsuarioL{
@@ -48,14 +50,32 @@
     font-size: 20px;
 }
 
-.menu_usuario{
+.btn_menuH{
     margin: 20px;
     font-size: 35px;
     color: var(--corL);
+    transition: .5s;
 }
 
-.menu_usuario:hover{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
-    -webkit-background-clip: text;
-    color: transparent;  
+.btn_menuH:hover{
+    color: var(--corS);
+}
+
+#menu_usuario{
+    display: none;
+    right: -50px;
+    position: relative;
+}
+
+.menuU-link{
+    color: var(--corL);
+    font-family: 'Calibri', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.menuU-link:hover{
+    color: var(--corS);
 }

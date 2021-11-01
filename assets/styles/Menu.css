@@ -15,7 +15,7 @@ nav {
 }
 
 .logo{
-	background-image: linear-gradient(to top, var(--corP), var(--corL));
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -28,25 +28,22 @@ nav {
 }
 
 .logo:hover {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 .menu-link{
-    padding: 3px 20px;
+    padding: 8px 20px;
     font-size: 20px;
     text-decoration: none;
-    transition: .3s;
-    background: none;
-    color: var(--corP);
-    border: 3px solid var(--corP);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
+    color: var(--corL);
+    border: 3px solid var(--corS);
+    transition: .3s;
 }
 
 .menu-link:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 3px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corS);
+    color: var(--corL);
+    box-shadow: 0px 0px 10px var(--corS);
 }
 
 #login{
@@ -83,10 +80,6 @@ nav {
 .nav-list {
     list-style: none;
     display: flex;
-  }
-  
-.nav-list li {
-    margin: 10px;
   }
   
 .mobile-menu {

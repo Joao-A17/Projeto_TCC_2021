@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: linear-gradient(343deg, var(--corD2) 0%, var(--tranp) 100%);
+  background-image: linear-gradient(90deg, var(--corC2) 0%, var(--corC) 100%);
 }
 
 #forms_1_2{
@@ -33,9 +33,9 @@ body{
 }
 
 #TituloMenu{
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Calibri', sans-serif;
-  background-image: linear-gradient(to bottom, var(--corD2), var(--corC2));
+  background-image: linear-gradient(to bottom, var(--corS), var(--corL));
   -webkit-background-clip: text;
   color: transparent;
   text-transform: uppercase;
@@ -52,17 +52,17 @@ body{
   text-align: center;
   border-radius: 24px;
   background: var(--tranp);
-  color: var(--corP);
+  color: var(--corL);
   border: 2px solid var(--tranp);
   box-shadow: 0px 0px 5px var(--tranp);
   transition: .3s;
 }
 
 .menu-link:hover{
-  background: var(--corP);
+  background: var(--corS);
   color: var(--corD);
-  border: 2px solid var(--corP);
-  box-shadow: 0px 0px 10px var(--corP);
+  border: 2px solid var(--corS);
+  box-shadow: 0px 0px 10px var(--corS);
 }
 
 #dividir{
@@ -107,22 +107,21 @@ body{
   text-align: center;
   border-radius: 24px;
   background: var(--tranp);
-  color: var(--corP);
+  color: var(--corL);
   border: 2px solid var(--tranp);
   box-shadow: 0px 0px 5px var(--tranp);
   transition: .3s;
 }
 
 #Select_img_public:hover{
-  background: var(--corP);
-  color: var(--corD);
-  border: 2px solid var(--corP);
-  box-shadow: 0px 0px 10px var(--corP);
+  background: var(--corS);
+  border: 2px solid var(--corS);
+  box-shadow: 0px 0px 10px var(--corS);
 }
 
 #btn_salvar{
   position: absolute;
-  right: 50px;
+  right: 600px;
   height: 40px;
   width: 120px;
   font-size: 25px;
@@ -132,17 +131,15 @@ body{
   text-align: center;
   border-radius: 24px;
   background: var(--tranp);
-  color: var(--corP);
-  border: 2px solid var(--tranp);
-  box-shadow: 0px 0px 5px var(--tranp);
+  color: var(--corL);
+  border-bottom: 2px solid var(--corL);
   transition: .3s;
 }
 #btn_salvar:hover{
   animation: none;
-  background: var(--corP);
+  background: var(--corL);
   color: var(--corD);
-  border: 2px solid var(--corP);
-  box-shadow: 0px 0px 10px var(--corP);
+  box-shadow: 0px 0px 10px var(--corL);
 }
 
 #INPUTS{
@@ -176,50 +173,53 @@ body{
   text-align: center;
   outline: none;
   background: var(--tranp);
-  color: var(--corP);
+  color: var(--corL);
   border: none;
   border-radius: 8px;
-  border-bottom: 3px solid var(--corP);
+  border-bottom: 3px solid var(--corC2);
   box-sizing: border-box;
   transition: .3s;
 }
 .Inputs:focus{
-  border-bottom: 2px solid var(--corS);
+  border-bottom: 3px solid var(--corS);
   box-shadow: 0 2px 5px var(--corS);
 }
 
+textarea#desc_usuario {
+  height: auto;
+}
+
 #desc_usuario{
-  width: 100%;
+  width: 1000px;
   height: 200px;
-  display: block;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 21px;
   outline: none;
   justify-content: space-around;
   background: var(--tranp);
-  color: var(--corP);
+  color: var(--corL);
   border: none;
   border-radius: 8px;
-  border-top: 2px solid var(--corP);
-  border-bottom: 2px solid var(--corP);
+  border-top: 3px solid var(--corC2);
+  border-bottom: 3px solid var(--corC2);
   box-sizing: border-box;
   transition: .3s;
 }
 #desc_usuario:focus{
-  border-top: 2px solid var(--corS);
-  border-bottom: 2px solid var(--corS);
+  border-top: 3px solid var(--corS);
+  border-bottom: 3px solid var(--corS);
   box-shadow: 0 2px 5px var(--corS);
 }
 
 /* msg de erro */
 
 #msg_true{
-  margin: 30px;
+  margin-top: 60px;
   width: 600px;
   height: 100%;
   display: inline-block;
-  background-image: linear-gradient(to bottom, var(--corC), var(--corD2));
+  background: var(--tranp);
   border-radius: 12px;
   border-left: 4px solid rgb(0, 255, 0);
   border-right: 4px solid rgb(0, 255, 0);
@@ -239,11 +239,11 @@ body{
 }
 
 #msg_false{
-  margin: 30px;
+  margin-top: 60px;
   width: 600px;
   height: 100%;
   display: inline-block;
-  background-image: linear-gradient(to bottom, var(--corC), var(--corD2));
+  background: var(--tranp);
   border-radius: 12px;
   border-left: 4px solid red;
   border-right: 4px solid red;
@@ -266,10 +266,10 @@ body{
 @keyframes Pulse{
   from {
       transform: scale(.7);
-      background: var(--corP);
+      background: var(--corS);
       color: var(--corD);
-      border: 2px solid var(--corP);
-      box-shadow: 0px 0px 10px var(--corP);
+      border: 2px solid var(--corS);
+      box-shadow: 0px 0px 10px var(--corS);
   }
 }
 

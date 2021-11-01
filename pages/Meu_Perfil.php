@@ -50,15 +50,15 @@ require '../assets/PHP/dados_perfil.php';
                         <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
                         <p id="Desc-Admin"><?php echo $Desc_Perfil ?></p>                                                        
                     </div>
-                    <a href="./editar_perfil.php"><button type="button" id="btn_editP">Editar Perfil</button></a>                      
+                    <a id="btn_editP" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>                                            
                 </div>
             </div>
             <h4 class="TextE">Clique em ADICIONAR para publicar uma nova pintura</h4>
             <div id="div_link">                
-                <?php echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".'https:/www.instagram.com/'.$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>"; ?>
-                <?php echo "<a class='Redes' href='".'https://wa.me/'.$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>"; ?>  
+                <?php if($Email != 'nenhum'){ echo "<a class='Redes' href='".'mail:'.$Email."'><i class='fas fa-envelope E'></i></a>";} ?>
+                <?php if($Whats != 'nenhum'){ echo "<a class='Redes' href='".'https://wa.me/+'.$Whats."'><i class='fab fa-whatsapp W'></i></a>";} ?>
+                <?php if($Insta_Perfil != 'nenhum'){ echo "<a class='Redes' href='".'https:/www.instagram.com/'.$Insta_Perfil."'><i class='fab fa-instagram I'></i></a>";} ?>
+                <?php if($Twitter_Perfil != 'nenhum'){ echo "<a class='Redes' href='".'https://wa.me/'.$Twitter_Perfil."'><i class='fab fa-twitter T'></i></a>";} ?>  
                 <a href="#MenuPublicar" id="btn-Adicionar" class="botaoA"><i class="fas fa-plus IconG"></i>Adicionar</a>
             </div>
             <?php
@@ -81,7 +81,7 @@ require '../assets/PHP/dados_perfil.php';
                         <div id="MS-1">
                             <input type="text" minlength = "3" maxlength = "150" id="inputP_autor" class="InputPublic" name="NomeAltor" placeholder="Digite o nome do autor" required>
                             <input type="text" minlength = "3" maxlength = "50" id="inputP_Nome_Pintura" class="InputPublic" name="NomeFoto" placeholder="Digite o nome da pintura" required>
-                            <input type="text" minlength = "3" maxlength = "150" id="InputPublicD" name="DescriçãoFoto" maxlength="220" placeholder="Digite a descrição da pintura" required>
+                            <textarea name="DescriçãoFoto" id="InputPublicD" style="resize: none;" cols="100" rows="10" minlength = "3" maxlength = "150"  maxlength="220" placeholder="Digite a descrição da pintura"></textarea>
                         </div>
                         <div id="MS-2">   
                             <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*" required>  

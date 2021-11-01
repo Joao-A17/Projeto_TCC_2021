@@ -16,20 +16,21 @@ body{
     margin-bottom: 50px;
     padding: 1px;
     border-radius: 50px;
-	background-image: linear-gradient(to left, var(--corS), var(--corC2));
     border: 0;
     border-radius: 20px;
 }
 
 #btn-sair{
-    padding: 6px 25px;
-    text-decoration: none;    
+    padding: 8px 20px;
+    margin: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none; 
     background: var(--tranp);
     color: var(--corL);
-    border: none;
     border-top: 3px solid var(--corL);
     border-bottom: 3px solid var(--corL);
-    border-radius: 8px;
     transition: .3s;
 }
 
@@ -49,7 +50,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+	background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corP);  
@@ -87,6 +88,123 @@ body{
     animation: rotação 1s;
 }
 
+/* ----------------------Pesquisar------------------------ */
+
+#section_pesquisar{
+    width: 100%;
+    height: 380px;
+    margin-bottom: 5px auto;
+    background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corC2);
+    border-bottom: 3px solid var(--corC2); 
+}
+
+#div_pesquisar{    
+    display: flex;
+    margin: 20px;
+    margin-top: 60px;
+}
+
+#section_pesquisar h1{
+	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+  	-webkit-background-clip: text;
+    color: transparent;
+    font-size: 75px;
+    font-family: 'Calibri', sans-serif;
+    animation: aparecer 10s;
+}
+
+#form_input_procurar{
+    align-items: center;
+    display: flex;
+}
+
+.resultado{
+    display: inline-flex;
+    margin: 20px;
+}
+
+.form-pesquisa{
+    display: inline-flex;
+    width: 200px;
+    margin: 12px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+    border-top: 3px solid var(--corC2);
+    border-bottom: 3px solid var(--corC2);
+    box-shadow: 0 0 12px var(--corC2);
+    transition: .3s;
+}
+
+.form-pesquisa:hover{
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0 0 12px var(--corS);
+    animation: rotação .3s;
+}
+
+#Div_buscar_img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+#FP_img_busca{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#btn_buscar{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 0;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    border-radius: 24px;
+    background: none;
+    color: var(--corP);
+    box-shadow: 0px 0px 5px var(--tranp);
+    transition: .3s; 
+}
+
+#input_procurar{
+  width: 260px;
+  height: 40px;
+  margin: 20px;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  display: block;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: var(--tranp);
+  color: var(--corL);
+  border-bottom: 3px solid var(--corAS);
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+#input_procurar:focus{
+  border-bottom: 3px solid var(--corS);
+  box-shadow: 0 2px 5px var(--corS);
+}
+
+#P_nenhum{
+    margin: 60px;
+    color: var(--corP);
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+    animation: aparecer 2s;
+}
+
 /* ----------------------Informações---------------------- */
 
 #info{
@@ -98,11 +216,11 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+	background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corP);  
-    border-bottom: 3px solid var(--corP);  
+    border-top: 3px solid var(--corC2);  
+    border-bottom: 3px solid var(--corC2);  
 }
 
 #info h2{
@@ -195,7 +313,7 @@ body{
 #pinturas{
     margin-top: 200px;
     height: 100%;
-	background-image: linear-gradient(270deg, var(--tranp) 0%, var(--corD2) 100%);
+    background-image: linear-gradient(270deg, var(--corAS) 0%, var(--corC) 100%);
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corS);  
@@ -232,7 +350,7 @@ body{
     margin-left: 20px;
     width: 80px;
     height: 80px;    
-    border: 3px solid var(--corS);
+    border: 3px solid var(--corP);
     box-shadow: 0 0 8px var(--corP);
     display: block;
     border-radius: 50%;
@@ -404,13 +522,14 @@ body{
 /* ----------------------Desenvolvedores---------------------- */
 
 #desenvolvedores{
-    background-image: linear-gradient(to bottom, var(--tranp), var(--corD));
-    border: 0;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
-    box-shadow: 0px 0px 15px var(--corP);
+    margin-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
+    border: none;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
     border-radius: 33px;
-    padding: 20px;
     text-align: center;
 }
 
@@ -418,7 +537,7 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background: var(--tranp);
+    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);
@@ -437,16 +556,18 @@ body{
     width: 30%;
     background: var(--tranp);
     border: 0;
-    border-radius: 50%;
+    border-radius: 100%;
     transition: .3s;
 }
 
 .img-P:hover{
     opacity: .7;
+    transform: scale(1.5);
 }
 
 #desenvolvedores h2{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    margin: 20px;
+    background-image: linear-gradient(to top, var(--corAS), var(--corS));
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
@@ -456,7 +577,7 @@ body{
 #desenvolvedores h3{
     margin-top: 20px;
     font-size: 30px;
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to bottom, var(--corS), var(--corAS));
     -webkit-background-clip: text;
     color: transparent;  
     font-family: 'Calibri', sans-serif;
@@ -499,7 +620,7 @@ body{
 }
 
 .G:hover{
-    background-image: linear-gradient(to top, #FFFF, #000000);
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);
@@ -524,39 +645,6 @@ body{
     color: var(--corP);
 }
 
-/* Animation huehue */
-
-@keyframes rotação {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(2);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2.2);
-    }
-}
-
-@keyframes aparecer{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: .5;
-    }
-    100%{
-        opacity: 1;
-    }
+#CardUser{
+    animation: rotação 2s;
 }

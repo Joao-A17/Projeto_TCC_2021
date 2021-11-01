@@ -3,12 +3,12 @@
 if(isset($_POST['Input_Usuario'])){
     include_once('./Conexao_Banco.php');
     $usuario_logado = $_SESSION['nome-user'];
-    
+
     $Input_Usuario = filter_input(INPUT_POST, 'Input_Usuario', FILTER_SANITIZE_STRING);
     $pasta_perfil = '../IMAGES/Foto_Perfil/'.$usuario_logado;
     $pasta_pinturas = '../IMAGES/Pinturas/'.$usuario_logado;
 
-    if(isset($pasta_perfil)){
+    if(file_exists("$pasta_perfil")){
         $di = new RecursiveDirectoryIterator($pasta_perfil, FilesystemIterator::SKIP_DOTS);
         $ri = new RecursiveIteratorIterator($di, RecursiveIteratorIterator::CHILD_FIRST);
         foreach ( $ri as $file ) {
@@ -17,7 +17,7 @@ if(isset($_POST['Input_Usuario'])){
         $apagar_pasta_perfil = rmdir($pasta_perfil);
     }
 
-    if(isset($pasta_pinturas)){
+    if(file_exists("$pasta_pinturas")){
         $da = new RecursiveDirectoryIterator($pasta_pinturas, FilesystemIterator::SKIP_DOTS);
         $ra = new RecursiveIteratorIterator($da, RecursiveIteratorIterator::CHILD_FIRST);
         foreach ( $ra as $file ) {
@@ -41,7 +41,7 @@ if(isset($_POST['Input_Usuario'])){
         header('Location: ./loginOFF.php');
 
     }  
-    
+
 }
 else{
     header('Location: ../../pages/Inicio');

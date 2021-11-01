@@ -67,9 +67,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
               <div class="card">
                   <h2 id="T1">Dica para você</h2>
                   <p id="T2">Relate ao lado oque você gostaria que nós 
-                              mudássemos ou tire uma print e mostre o problema que encontruo 
+                              mudássemos ou tire um print e mostre o problema que encontrou 
                               com isso você vai nos ajudar bastante para um melhor funcionamento 
-                              em nosso site.
+                              do nosso site.
                   </p>
                   <p id="T2">Vamos ajuda você no que precisar</p>
               </div>  
@@ -104,25 +104,25 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           <?php
           // pegar a foto do usuario logado 
 
-          $pasta = './assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';
+          $pasta = './assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
 
-          if (file_exists("$pasta")) {
-              /* echo 'existe'; */
+            if (file_exists("$pasta")) {
               $diretorio = dir($pasta);
-
-              while($FP_Usuario = $diretorio->read()){
-                  if($FP_Usuario != '.' && $FP_Usuario != '..'){                
-                      ?>
-                      
-                      <?php echo "<a id='linkUser' href='./pages/Meu_Perfil.php'><img src='".$pasta.$FP_Usuario."' id='Img-UsuarioL'></a>"; ?>           
-                      
-                      <?php
-                  }    
+              while ($FP_Usuario = $diretorio->read()) {
+                if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
+                echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
+                }
               }
-          }
-          ?>                                         
-          </div>
+            }
+            ?>
           <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+          <i class="fas fa-bars btn_menuH"></i>
+          </div>
+          <div id="menu_usuario">
+            <a class="menuU-link" href="./pages/Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+            <a class="menuU-link" href="./pages/editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+            <a class="menuU-link" href="./assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+          </div>
         </div>
         <section id="instrucoes">
           <div id="div_1">
@@ -155,9 +155,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <div class="card">
                     <h2 id="T1">Dica para você <?php echo $usuario_logado; ?></h2>
                     <p id="T2">Relate ao lado oque você gostaria que nós 
-                                mudássemos ou tire um print e mostre o problema que encontruo 
+                                mudássemos ou tire um print e mostre o problema que encontrou 
                                 com isso você vai nos ajudar bastante para um melhor funcionamento 
-                                em nosso site.
+                                do nosso site.
                     </p>
                     <p id="T2">Vamos ajuda você no que precisar</p>
                 </div>
@@ -192,9 +192,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           </div>
           <p>Bla bla bla</p>
           <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes"></i></a>
-            <a href="#"><i class="fab fa-facebook Redes"></i></a>
-            <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes"></i></a>
+            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+            <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes G"></i></a>
           </div>
         </div>
         <div id="desig">
@@ -204,9 +204,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           </div>
           <p>Bla bla bla</p>
           <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes"></i></a>
-            <a href="#"><i class="fab fa-facebook Redes"></i></a>
-            <a href="https://github.com/bellinha524"><i class="fab fa-github Redes"></i></a>
+            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+            <a href="https://github.com/bellinha524"><i class="fab fa-github Redes G"></i></a>
           </div>
         </div>
         <div id="desig">
@@ -216,12 +216,14 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           </div>
           <p>Bla bla bla</p>
           <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes"></i></a>
-            <a href="#"><i class="fab fa-facebook Redes"></i></a>
-            <a href="https://github.com/kah66"><i class="fab fa-github Redes"></i></a>
+            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+            <a href="https://github.com/kah66"><i class="fab fa-github Redes G"></i></a>
           </div>
         </div>
       </footer>
+                <!-- scripts -->
+      <script src="./assets/JS/menuH_usuario.js"></script>
       <script src="./assets/JS/ajuda.js"></script>
 </body>
 </html>

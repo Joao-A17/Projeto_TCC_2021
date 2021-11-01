@@ -5,7 +5,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(150deg, var(--corD2) 0%, var(--corC) 100%);
+	background-image: linear-gradient(180deg, var(--corAS) 0%, var(--corP) 100%);    
 }
 
 #Master{
@@ -58,11 +58,11 @@ body{
 #desenvolvedores{
     margin-top: 20px;
     width: 100%;
-    background-image: linear-gradient(to bottom, var(--tranp), var(--corD));
+    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
     border: none;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
-    box-shadow: 0px 0px 15px var(--corP);
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
     border-radius: 33px;
     text-align: center;
 }
@@ -71,7 +71,7 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background: var(--tranp);
+    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);
@@ -90,19 +90,18 @@ body{
     width: 30%;
     background: var(--tranp);
     border: 0;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corP);
     border-radius: 100%;
     transition: .3s;
 }
 
 .img-P:hover{
-    opacity: 0.5;
+    opacity: .7;
     transform: scale(1.5);
 }
 
 #desenvolvedores h2{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    margin: 20px;
+    background-image: linear-gradient(to top, var(--corAS), var(--corS));
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
@@ -112,7 +111,7 @@ body{
 #desenvolvedores h3{
     margin-top: 20px;
     font-size: 30px;
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to bottom, var(--corS), var(--corAS));
     -webkit-background-clip: text;
     color: transparent;  
     font-family: 'Calibri', sans-serif;
@@ -133,31 +132,12 @@ body{
     justify-content: center;
 }
 
-.F{
+.Redes{
     justify-content: space-around;
     margin: 20px;
     font-size: 3rem;
+    color: var(--corL);  
     width: 5rem;
-    color: var(--corL);
-    border-radius: 50px;
-    transition: .3s;
-}
-.F:hover{
-    border-radius: 50px;
-	background-image: linear-gradient(to top, #0051ff, #0066ff);
-  	-webkit-background-clip: text;
-    color: transparent;
-}
-
-.I{
-    justify-content: space-around;
-    margin: 20px;
-    font-size: 3rem;
-    width: 5rem;
-    color: var(--corL);
-    border-radius: 50px;
-    transition: .3s;
-    color: var(--corL);
     transition: .3s;
 }
 
@@ -165,22 +145,17 @@ body{
     background-image: linear-gradient(to top, #FF1493, #8A2BE2);
   	-webkit-background-clip: text;
     color: transparent;
+    transform: scale(1.40);
 }
 
-.G{
-    justify-content: space-around;
-    margin: 20px;
-    font-size: 3rem;
-    width: 5rem;
-    color: var(--corL);
-    border-radius: 50px;
-    transition: .3s;
-    color: var(--corL);
-    transition: .3s;
+.T:hover{
+    color: #00BFFF;
+    transform: scale(1.40);
 }
 
 .G:hover{
-    background-image: linear-gradient(to top, var(--corD), var(--corL));
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
+    transform: scale(1.40);
 }

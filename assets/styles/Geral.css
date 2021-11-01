@@ -4,13 +4,14 @@
 
 :root {
     --corC: #acacac;
-    --corC2: #4c4589;
+    --corC2: #3b3568;
     --tranp: #0000004d;
     --corD: #0B1219;
     --corD2:#17202b;
     --corL: #E7F1F7;
-    --corP: #76d4df;
-    --corS: #8176df;
+    --corP: #35C1FE;
+    --corS: #2E55D3;
+    --corAS: #0a1136;
 }
 
 body{
@@ -32,4 +33,40 @@ body::-webkit-scrollbar-thumb{
 
 body::-webkit-scrollbar-thumb:hover{
 	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+}
+/* Animation huehue */
+
+@keyframes rotação {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.2);
+    }
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
 }

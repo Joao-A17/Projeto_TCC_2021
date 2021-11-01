@@ -6,11 +6,12 @@
 body{
     overflow-y: hidden;
     height: 100vh;
-	background-image: linear-gradient(0deg, var(--corL) 0%, var(--corD2) 100%);
+    background-image: linear-gradient(180deg, var(--corS) 0%, var(--corAS) 100%);
 }
 
 input::placeholder {
-    color: var(--corL);
+    color: var(--corAS);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -25,14 +26,15 @@ input::placeholder {
     height: 500px;
     text-align: center;  
     border-radius: 20px;
-    background-image: linear-gradient(160deg, var(--corD2) 50%, var(--corD) 50%);
-    border: 3px solid var(--corD);
+    background-image: linear-gradient(22deg, var(--corC) 0%, var(--corL) 100%);
+    border: 3px solid var( --corL);
+    box-shadow: 0 0 20px var(--corP);
 }
 
 #Form-Card h2{  
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to top right, var(--corP), var(--corS));
+    background-image: linear-gradient(180deg, var(--corS) 0%, var(--corAS) 100%);
     -webkit-background-clip: text;
     color: transparent;
     text-transform: uppercase;
@@ -56,17 +58,9 @@ input::placeholder {
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 80px;
-    background-image: linear-gradient(to top right, var(--corP), var(--corS));
+    background-image: linear-gradient(180deg, var(--corS) 0%, var(--corAS) 100%);
     -webkit-background-clip: text;
     color: transparent;
-}
-
-.label{
-    margin-bottom: 10px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 25px;
-    color: var(--corL);  
-    display: flex;
 }
 
 .Input{
@@ -79,12 +73,12 @@ input::placeholder {
     outline: none;
     border-radius: 5px;
     background: none;
-    color: var(--corS);
-    border-bottom: 2px solid var(--corP);
+    border-bottom: 3px solid var(--corAS);
     transition: .3s;
 }
 .Input:focus{
-    border-bottom: 2px solid var(--corS);
+    color: var(--corS);
+    border-bottom: 3px solid var(--corS);
 }
 
 #botao{
@@ -97,19 +91,18 @@ input::placeholder {
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    border-radius: 24px;
-    background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--tranp);
-    box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;                     
+    border-radius: 8px;
+    background: transparent;
+    color: var(--corAS);
+    border-bottom: 3px solid var(--corAS);
+    border-top: 3px solid var(--corAS);
+    transition: .3s;              
 }
 
 #botao:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corAS);
+    color: var(--corL);
+    box-shadow: 0px 0px 10px var(--corAS);
 }
 
 .menu_input{
@@ -117,13 +110,14 @@ input::placeholder {
 }
 
 .menu_input p{
+    font-family: 'Josefin Sans', sans-serif; 
     margin-bottom: 20px;
-    font-size: 30px;
-    color: var(--corL);
+    font-size: 27px;
+    color: var(--corAS);
 }
 
 .menu_input a{
-    color: var(--corP);
+    color: var(--corAS);
 }
 .menu_input a:hover{
     color: var(--corS);
@@ -135,7 +129,7 @@ input::placeholder {
 }
 
 .Isenha{
-    color: var(--corL);
+    color: var(--corAS);
     position: absolute;
     font-size: 20px;
     margin-top: 15px;
@@ -148,7 +142,7 @@ input::placeholder {
 }
 
 .Isenha2{
-    color: var(--corL);
+    color: var(--corAS);
     position: absolute;
     font-size: 20px;
     margin-top: 15px;
@@ -162,17 +156,17 @@ input::placeholder {
 }
 
 #card_a p{
+    font-family: 'Josefin Sans', sans-serif; 
     position: absolute;
     bottom: 20px;
     left: 20px;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--corAS);
 }
 
 .menu-link{
     font-size: 20px;
-    color: var(--corP);
-    transition: .3s;                     
+    color: var(--corAS);               
 }
 
 .menu-link:hover{

@@ -44,26 +44,26 @@ require '../assets/PHP/dados_perfil.php';
         <?php
         // pegar a foto do usuario logado 
 
-        $pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado.'/';
+        $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
 
         if (file_exists("$pasta")) {
-            /* echo 'existe'; */
             $diretorio = dir($pasta);
-
-            while($FP_Usuario = $diretorio->read()){
-                if($FP_Usuario != '.' && $FP_Usuario != '..'){                
-                    ?>
-                    
-                    <?php echo "<a id='linkUser' href='./Meu_Perfil.php'><img src='".$pasta.$FP_Usuario."' id='Img-UsuarioL'></a>"; ?>           
-                    
-                    <?php
-                }    
+            while ($FP_Usuario = $diretorio->read()) {
+            if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
+            echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
+            }
             }
         }
-        ?>                                        
-        </div>
+        ?>
         <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-      </div>
+        <i class="fas fa-bars btn_menuH"></i>
+        </div>
+        <div id="menu_usuario">
+        <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+        <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+        <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+        </div>
+    </div>
 
     <div id="container">  
             <div id="AdminForm">                     
@@ -73,10 +73,10 @@ require '../assets/PHP/dados_perfil.php';
                     <p id="Desc_Usuario"><?php echo $Desc_Perfil_u ?></p>
                     <h4 class="TextE">Envie uma mensagem para o pintor através:</h4>
                     <div id="Redes">
-                        <?php echo "<a class='Redes' href='".'mail:'.$Email_u."'><i class='fas fa-envelope E'></i></a>"; ?>
-                        <?php echo "<a class='Redes' href='".'https://wa.me/+'.$Whats_u."'><i class='fab fa-whatsapp W'></i></a>"; ?>
-                        <?php echo "<a class='Redes' href='".'https:/instagram.com/'.$Insta_Perfil_u."'><i class='fab fa-instagram I'></i></a>"; ?>
-                        <?php echo "<a class='Redes' href='".$Twitter_Perfil_u."'><i class='fab fa-twitter T'></i></a>"; ?> 
+                        <?php if($Email_u != 'nenhum'){ echo "<a class='Redes' href='".'mail:'.$Email_u."'><i class='fas fa-envelope E'></i></a>"; } ?>
+                        <?php if($Whats_u != 'nenhum'){ echo "<a class='Redes' href='".'https://wa.me/+'.$Whats_u."'><i class='fab fa-whatsapp W'></i></a>"; } ?>
+                        <?php if($Insta_Perfil_u != 'nenhum'){ echo "<a class='Redes' href='".'https:/instagram.com/'.$Insta_Perfil_u."'><i class='fab fa-instagram I'></i></a>"; } ?>
+                        <?php if($Twitter_Perfil_u != 'nenhum'){ echo "<a class='Redes' href='".'https://twitter.com/'.$Twitter_Perfil_u."'><i class='fab fa-twitter T'></i></a>"; } ?> 
                     </div>
                 </div>                
             </div>        
@@ -86,6 +86,7 @@ require '../assets/PHP/dados_perfil.php';
     </div>                   
     <!--                Scripts                     -->
     <script src="../assets/JS/Geral.js"></script>
+    <script src="../assets/JS/menuH_usuario.js"></script>
 </body>
 </html>
 

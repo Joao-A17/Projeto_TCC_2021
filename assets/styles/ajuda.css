@@ -162,23 +162,23 @@ body{
     display: inline-block;
     margin: 40px;
     text-align: center;
-	background-image: linear-gradient(315deg, var(--corC2) 0%, var(--corC) 100%);
+	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
     border: 0;
-    border-top: 4px solid var(--corC2);
-    border-bottom: 4px solid var(--corC2);
+    border-top: 4px solid var(--corAS);
+    border-bottom: 4px solid var(--corAS);
     border-radius: 33px;
-    transition: .3s;
 }
 
 .card:hover{
+    box-shadow: 0 0 20px var(--corS);
     border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);    
+    border-bottom: 4px solid var(--corS);
 }
 
 #T1{
     margin: 20px;
-	background-image: linear-gradient(to top, var(--corP), var(--corL));
-  	-webkit-background-clip: text;
+    background-image: linear-gradient(to bottom, var(--corD2), var(--corAS));
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 40px;
     font-family: 'Calibri', sans-serif;    
@@ -205,11 +205,11 @@ body{
     resize: none;
     justify-content: space-around;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--corAS);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corP);
-    border-bottom: 2px solid var(--corP);
+    border-top: 2px solid var(--corAS);
+    border-bottom: 2px solid var(--corAS);
     box-sizing: border-box;
     transition: .3s;
 }
@@ -229,17 +229,17 @@ body{
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--corAS);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 #btn_enviar:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corAS);
+    color: var(--corL);
+    border: 2px solid var(--corAS);
+    box-shadow: 0px 0px 10px var(--corAS);
 }
 
 #divIMG{
@@ -274,17 +274,17 @@ body{
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--corAS);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 #Select_img_public:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corAS);
+    color: var(--corL);
+    border: 2px solid var(--corAS);
+    box-shadow: 0px 0px 10px var(--corAS);
 }
 
 /* ----------------------Desenvolvedores---------------------- */
@@ -292,11 +292,11 @@ body{
 #desenvolvedores{
     margin-top: 20px;
     width: 100%;
-    background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
+    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
     border: none;
-    border-top: 3px solid var(--tranp);
-    border-bottom: 3px solid var(--tranp);
-    box-shadow: 0px 0px 15px var(--corD);
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
     border-radius: 33px;
     text-align: center;
 }
@@ -305,7 +305,7 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);
@@ -335,7 +335,9 @@ body{
 
 #desenvolvedores h2{
     margin: 20px;
-    color: var(--corL);
+    background-image: linear-gradient(to top, var(--corAS), var(--corS));
+    -webkit-background-clip: text;
+    color: transparent;  
     font-size: 50px;
     font-family: 'Calibri', sans-serif;
 }
@@ -343,7 +345,7 @@ body{
 #desenvolvedores h3{
     margin-top: 20px;
     font-size: 30px;
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to bottom, var(--corS), var(--corAS));
     -webkit-background-clip: text;
     color: transparent;  
     font-family: 'Calibri', sans-serif;
@@ -373,9 +375,21 @@ body{
     transition: .3s;
 }
 
-.Redes:hover{
+.I:hover{
+    background-image: linear-gradient(to top, #FF1493, #8A2BE2);
+  	-webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.40);
+}
+
+.T:hover{
+    color: #00BFFF;
+    transform: scale(1.40);
+}
+
+.G:hover{
     background-image: linear-gradient(to top, var(--corP), var(--corS));
-    -webkit-background-clip: text;
-    color: transparent;  
-    transform: scale(1.40)
+  	-webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.40);
 }

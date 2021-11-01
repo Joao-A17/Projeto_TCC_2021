@@ -1,5 +1,5 @@
 Pedentes:
-Adicionar mais coisas na tela de Ajuda
+Fazer tabela de comentários com os amiguinhos
 
 Login do Banco de Dados
 Username:       root

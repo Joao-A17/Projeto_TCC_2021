@@ -41,10 +41,10 @@ if (file_exists("$pasta_perfil_do_usuario")){
             </div>
             <div id="divND">
                 <input style="display:none;" type="text" name="Nome_perfil" id="InputNomeAdmin" class="InputP" minlength = "3" placeholder="Nome" value=<?php echo $usuario_logado ?> required> 
-                <input type="text" name="Desc_perfil" id="InputDesc" minlength = "3" placeholder="Descrição do seu perfil" required>
+                <textarea name="Desc_perfil" id="InputDesc" style="resize: none;" cols="100" rows="10" minlength = "3" maxlength = "150"  maxlength="220" placeholder="Descrição do seu perfil"></textarea>
                 <div id="grade">                  
-                    <input type="text" name="instagram_perfil" id="I_inst" class="InputP" minlength = "3" placeholder="Nome do seu Instagram" required>        
-                    <input type="text" name="twitter_perfil" id="I_twi" class="InputP" minlength = "3" placeholder="Nome do seu Twitter" required>                  
+                    <input type="text" name="instagram_perfil" id="I_inst" class="InputP" minlength = "3" placeholder="Nome do seu Instagram">        
+                    <input type="text" name="twitter_perfil" id="I_twi" class="InputP" minlength = "3" placeholder="Nome do seu Twitter">                  
                     <?php echo "<input style='display: none' type='text' name='telefone_perfil' id='I_tel' class='InputP' maxlength='60' value='".$Whats."' required>"; ?> 
                 </div>                 
             </div> 

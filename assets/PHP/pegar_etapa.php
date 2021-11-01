@@ -19,6 +19,16 @@ if(isset($_FILES['Foto_perfil'])){
     $Arquivo_Imagem = strtolower(pathinfo($_FILES['Foto_perfil']['name'], PATHINFO_EXTENSION));    
     $Novo_Arquivo_Imagem = $Nome.'.'.$Arquivo_Imagem;
 
+    if(empty($instagram)){
+        $instagram = 'nenhum';
+    }
+    if(empty($twitter)){
+        $twitter = 'nenhum';
+    }
+    if(empty($Desc)){
+        $Desc = 'Esse perfil não tem descrição';
+    }
+
     $Result_Perfil = "INSERT INTO perfil (nomep, descp, fotop, instagramp, twitterp, telefonep) VALUES ('$Nome', '$Desc', '$Novo_Arquivo_Imagem', '$instagram', '$twitter', '$telefone')";
     $sql_perfil = mysqli_query($conexao,$Result_Perfil);    
     

@@ -221,6 +221,7 @@ body{
 #MenuPublicar{
     width: 100%;;
     margin-top: 30px;
+    margin-top: 130px;
     text-align: center;
     border: 0;
     border-radius: 20px;
@@ -229,10 +230,11 @@ body{
 }
 
 #MenuPublicar h2{
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 50px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--coC2), var(--corD2));
+	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -290,17 +292,18 @@ textarea::placeholder{
     box-shadow: 0 2px 5px var(--corS);
 }
 
+textarea#InputPublicD {
+    height: auto;
+}
+
 #InputPublicD{
-    width: 400px;
-    height: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    width: 500px;
     font-size: 20px;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 21px;
     outline: none;
-    resize: none;
-    justify-content: space-around;
     background: var(--tranp);
     color: var(--corP);
     border: none;
@@ -524,6 +527,7 @@ textarea::placeholder{
     border-radius: 50%;
     border-top: 5px solid var(--corS);
     border-left: 3px solid var(--corS); 
+    animation: rotação .3s;
 }
 
 .Info-Admin{
@@ -534,7 +538,7 @@ textarea::placeholder{
     border-radius: 20px;
 	background-image: linear-gradient(315deg, var(--corC) 0%, var(--corC2) 100%);
     border: 3px solid var(--corC2); 
-    box-shadow: 0 0 20px var(--corD);
+    box-shadow: 0 0 20px var(--corC2);
 }
 
 #btn_editP{
@@ -552,18 +556,17 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;
     background: var(--tranp);
-    color: var(--corP);
-    border: 2px solid var(--corP);
+    color: var(--corL);
+    border-bottom: 3px solid var(--corS);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
+    box-shadow: 0px 0px 5px var(--corS);
     transition: .3s;
 }
 
 #btn_editP:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--corS);
+    color: var(--corL);
+    box-shadow: 0px 0px 20px var(--corS);
 }
 
 #Nome-Admin{
@@ -574,6 +577,8 @@ textarea::placeholder{
 	background-image: linear-gradient(to top, var(--corP), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
+    animation: pulse 2s ;
+    animation: rotação .3s;
 }
 
 #Desc-Admin{
@@ -582,6 +587,7 @@ textarea::placeholder{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     color: var(--corL);
+    animation: rotação .3s;
 }
 
 #div_link{

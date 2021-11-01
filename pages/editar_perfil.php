@@ -3,6 +3,16 @@ require '../assets/PHP/Conexao_Banco.php';
 require '../assets/PHP/dados_perfil.php';
 $usuario_logado = $_SESSION['nome-user'];
 
+if(!isset($FotoP)){
+    header('Location: ../assets/PHP/loginOFF.php');
+    $_SESSION['msg_update'] = "        
+        <div id='msg_true'>
+            <h1> Perfil Alterado! <i class='fas fa-smile-beam icon'></i></h1>
+            <br>
+            <h1> Faça Login Novamente </h1>
+        </div>         
+    "; 
+}
 
 ?>
 
@@ -20,6 +30,7 @@ $usuario_logado = $_SESSION['nome-user'];
     <div id="nav_menu">
         <h2 id="TituloMenu">MAGIC PAINTINGS</h2>
         <a class="menu-link" href="./Inicio.php"><i class="fas fa-home"></i>   Inicio</a>  
+        <a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i>   Perfil</a>  
     </div> 
     <section id='forms_1_2'>
         <div id='form1'>
@@ -69,7 +80,7 @@ $usuario_logado = $_SESSION['nome-user'];
                             </div>
                             <div class="menu-box">
                                 <label for="desc_usuario" class="label">Nova descrição do perfil</label>
-                                <?php echo "<input type='text' name='desc_usuario' id='desc_usuario' value='".$Desc_Perfil."' placeholder='Digite Aqui...' required>"; ?>
+                                <?php echo "<textarea name='desc_usuario' id='desc_usuario' style='resize: none;' cols='100' rows='10' minlength = '3' maxlength = '150'  maxlength='220' placeholder='Digite Aqui...'>".$Desc_Perfil."</textarea>"; ?>
                             </div>
                             <div id="links">
                                 <div class="menu-box">

@@ -20,6 +20,7 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <link rel="stylesheet" href="../assets/styles/Tela_Inicio.css">
   <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
   <link rel="stylesheet" href="../assets/styles/Menu.css">
@@ -38,6 +39,8 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
     <ul class="nav-list">
       <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
       <li><a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+      <li><a class="menu-link" href="#section_pesquisar"><i class="fas fa-search"></i> Buscar</a></li>
+      <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i> Pinturas</a></li>
       <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     </ul>
@@ -51,33 +54,23 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
       $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
 
       if (file_exists("$pasta")) {
-        /* echo 'existe'; */
         $diretorio = dir($pasta);
-
         while ($FP_Usuario = $diretorio->read()) {
-          if ($FP_Usuario != '.' && $FP_Usuario != '..') {
-      ?>
-
-            <?php echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>"; ?>
-
-      <?php
+          if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
+          echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
           }
         }
       }
       ?>
-    </div>
     <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-    <i class="fas fa-bars menu_usuario"></i>
+    <i class="fas fa-bars btn_menuH"></i>
+    </div>
     <div id="menu_usuario">
-      <ul class="list_menuU">
-        <li><a class="menuU-link" href="./Meu_Perfil.php">Meu perfil</a></li>
-        <li><a class="menuU-link" href="./editar_perfil.php">Editar perfil</a></li>
-        <li><a class="menuU-link" href="../assets/PHP/loginOFF.php">Sair</a></li>
-      </ul>
+      <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+      <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+      <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
     </div>
   </div>
-
-
 
   <?php
 
@@ -94,7 +87,46 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
     </section>
   <?php
   }
+  else{
+    ?>
+    <section id="topo">
+      <div class="espaço"></div>
+      <h1>Olá</h1>
+      <h2 class='usuario_logado'><?php echo $usuario_logado ?></h2> 
+      <h1>Bem-vindo(a)</h1>     
+    </section>
+    <?php
+  }
   ?>
+
+  <section id='section_pesquisar'>
+    <div id="div_pesquisar">      
+      <h1>Procurar usuários</h1> 
+      <form method="POST" action="./Perfil.php" id='form_input_procurar'>
+        <input type="text" name="input_procurar" id="input_procurar" placeholder="Digite o nome do usuário">
+      </form>
+    </div>     
+    <div class="resultado">
+      <script>
+        $(function(){
+          $("#input_procurar").keyup(function(){
+            //Recuperar o valor do campo
+            var pesquisa = $(this).val();
+            //Verificar se há algo digitado
+            if(pesquisa != ''){
+              var dados = {
+                palavra : pesquisa
+              }
+              $.post('../assets/PHP/busca.php', dados, function(retorna){
+                //Mostra dentro da ul os resultado obtidos 
+                $(".resultado").html(retorna);
+              });
+            }
+          });
+        });
+      </script>
+		</div>         
+  </section>
 
   <section id="info">
     <h2><i class="fas fa-info-circle"></i> Informações</h2>
@@ -179,6 +211,7 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <!--   Scripts   -->
   <script src="../assets/JS/Menu.js"></script>
   <script src="../assets/JS/Geral.js"></script>
+  <script src="../assets/JS/menuH_usuario.js"></script>
 </body>
 
 </html>

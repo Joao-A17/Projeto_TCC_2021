@@ -11,7 +11,6 @@ if(isset($_POST['btn_salvar'])){
     $Senha = filter_input(INPUT_POST, 'Senha', FILTER_SANITIZE_STRING);
     $Desc = filter_input(INPUT_POST, 'desc_usuario', FILTER_SANITIZE_STRING);
     $Insta = filter_input(INPUT_POST, 'inst_usuario', FILTER_SANITIZE_STRING);
-    $Face = filter_input(INPUT_POST, 'face_usuario', FILTER_SANITIZE_STRING);
     $Twit = filter_input(INPUT_POST, 'twit_usuario', FILTER_SANITIZE_STRING);
     $Whats = filter_input(INPUT_POST, 'tele_usuario', FILTER_SANITIZE_STRING);
     
@@ -22,7 +21,6 @@ if(isset($_POST['btn_salvar'])){
     echo "Senha: ", $Senha, "<br>"; 
     echo "Descrição: ", $Desc, "<br>";
     echo "Insta: ", $Insta, "<br>";
-    echo "Face: ", $Face, "<br>";
     echo "Twit: ", $Twit, "<br>";
     echo "Whats: ", $Whats, "<br>";
     echo "Id_Usuario: ", $IdUser, "<br>"; 
@@ -33,7 +31,7 @@ if(isset($_POST['btn_salvar'])){
     $UP_usuarios = "UPDATE usuarios SET nome = '$Nome', sobrenome = '$Sobrenome', email = '$Email', password = '$Senha', telefone = '$Whats' WHERE id='$IdUser'";    
     $sql_usuarios = mysqli_query($conexao, $UP_usuarios);
 
-    $UP_perfil = "UPDATE perfil SET nomep = '$Nome', descp = '$Desc', instagramp = '$Insta', facebookp = '$Face', twitterp = '$Twit', telefonep = '$Whats' WHERE idperfil='$Id_perfil'";
+    $UP_perfil = "UPDATE perfil SET nomep = '$Nome', descp = '$Desc', instagramp = '$Insta', twitterp = '$Twit', telefonep = '$Whats' WHERE idperfil='$Id_perfil'";
     $sql_perfil = mysqli_query($conexao, $UP_perfil);
 
     $UP_Pintura = "UPDATE pinturas SET Autor = '$Nome' WHERE Autor ='$usuario_logado'";
@@ -48,17 +46,16 @@ if(isset($_POST['btn_salvar'])){
     $novo_nome_pasta_Perfil = '../IMAGES/Foto_Perfil/'.$Nome.'/';
     $Renomear = rename($pasta_perfil,$novo_nome_pasta_Perfil);
 
-
     
-    if($sql_pinturas){
-        header('Location: ../PHP/loginOFF.php');       
+    if($sql_usuarios){                    
         $_SESSION['msg_update'] = "        
         <div id='msg_true'>
-            <h1> Perfil Alterado <i class='fas fa-smile-beam icon'></i></h1>
+            <h1> Perfil Alterado! <i class='fas fa-smile-beam icon'></i></h1>
             <br>
             <h1> Faça Login Novamente </h1>
         </div>         
         "; 
+        header('Location: ../../pages/editar_perfil');
     }else{
         $_SESSION['msg_update'] = "
         
