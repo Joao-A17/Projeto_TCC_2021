@@ -29,7 +29,7 @@ else{
             <i class="fas fa-user-plus Icon"></i>
             <h2>Cadastro</h2>
             <h2>Magic Paintings</h2>
-            <p>Não está conseguindo cadastrar? <a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle"></i> Ajuda</a></p>
+            <p>Não está conseguindo cadastrar? <a class="menu-link" href="../ajuda"><i class="fas fa-question-circle"></i> Ajuda</a></p>
             <?php
             if(isset($_SESSION['msg_cad'])){
                 echo $_SESSION['msg_cad'];
@@ -59,7 +59,7 @@ else{
                         <input class="Input" minlength = "10" maxlength="20" type="text" id="telefone" name="telefone" pattern="[0-9]+$" placeholder="Telefone" required>
                     </div>
                     <div class="menu_input">
-                        <p>Já tem uma conta? <a href="./Login.php">Entrar</a></p>
+                        <p>Já tem uma conta? <a href="./Login">Entrar</a></p>
                         <input type="submit" id="botao" name="submit" value="Cadastrar">               
                     </div>  
                 </div>                  

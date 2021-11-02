@@ -28,6 +28,9 @@ if($resultado_pegarpintura = mysqli_query($conexao,$pegarpintura)){
             $BConsultar = 'BConsultar';
             $Info_Pintor = 'Info_Pintor';
             $Img_Usuario = 'Img-Usuario';
+            $ConteudoInfo = 'ConteudoInfo';
+            $class_Nome_Foto = 'Nome_Foto';
+            $class_Desc_Foto = 'Desc_Foto';
         }
         if($Autor[$i] == $usuario_logado){
             $NU = 'NomeUsuario2';
@@ -35,12 +38,15 @@ if($resultado_pegarpintura = mysqli_query($conexao,$pegarpintura)){
             $BConsultar = 'BConsultar2';
             $Info_Pintor = 'Info_Pintor2';
             $Img_Usuario = 'Img-Usuario2';
+            $ConteudoInfo = 'ConteudoInfo2';
+            $class_Nome_Foto = 'Nome_Foto2';
+            $class_Desc_Foto = 'Desc_Foto2';
         }
 
         ?>    
         <div class=<?php echo $InfoPint?>>        
             <div id="cont_usuario_pintura">
-                <div class="ConteudoInfo-1">
+                <div class=<?php echo $ConteudoInfo?>>
                     <div class="User">
                         <?php 
                         $pasta = '../assets/IMAGES/Foto_Perfil/'.$Autor[$i].'/';
@@ -59,21 +65,20 @@ if($resultado_pegarpintura = mysqli_query($conexao,$pegarpintura)){
                         <h3 class=<?php echo $NU?>><?php echo $Autor[$i]?></h3>                      
                         <p class='data_pint'>Publicado em: <?php echo $Criado[$i]?></p>                      
                     </div>
-                    <p id=<?php echo $Info_Pintor?>>Veja mais sobre esse perfil</p>
-                    <form action="./Perfil.php" method="GET">
+                    <form action="./Perfil.php" method="GET" id='fomr_consulta'>
                         <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $Autor[$i]?>>                  
-                        <button id="Consultar" class=<?php echo $BConsultar?> onclick="ConsutarImg()">Ver Mais</button>
+                        <button id="Consultar" class=<?php echo $BConsultar?> onclick="ConsutarImg()">Entrar no perfil</button>
                     </form>
                     </div>
                 <div class='div_pint'>  
                     <div class="textospp">
-                        <h1 class="Nome_Foto"><?php echo $Nome_Foto[$i]?></h1>
-                        <p class='Desc_Foto'><?php echo $Desc_Foto[$i]?></p>
+                        <h1 class=<?php echo $class_Nome_Foto ?>><?php echo $Nome_Foto[$i]?></h1>
+                        <p class=<?php echo $class_Desc_Foto ?>><?php echo $Desc_Foto[$i]?></p>
                     </div> 
                     <div class="imgpp">
                         <?php             
                         $pasta_pintura = '../assets/IMAGES/Pinturas/'.$Autor[$i].'/';
-                        echo "<img class='pint' src='".$pasta_pintura.$Pintura_Autor[$i]."' alt=".$Autor[$i].">"; 
+                        echo "<a href='".$pasta_pintura.$Pintura_Autor[$i]."'><img class='pint' src='".$pasta_pintura.$Pintura_Autor[$i]."' alt=".$Autor[$i]."></a>"; 
                         
                         ?>
                     </div>         
@@ -81,6 +86,7 @@ if($resultado_pegarpintura = mysqli_query($conexao,$pegarpintura)){
                 </div>
             </div>
         </div>
+
 
         <?php        
     }

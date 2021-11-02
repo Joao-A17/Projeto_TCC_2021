@@ -12,7 +12,6 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,7 +20,7 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <link rel="stylesheet" href="../assets/styles/Tela_Inicio.css">
+  <link rel="stylesheet" href="../assets/styles/Inicio.css">
   <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
   <link rel="stylesheet" href="../assets/styles/Menu.css">
   <link rel="stylesheet" href="../assets/styles/Geral.css">
@@ -102,14 +101,14 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <section id='section_pesquisar'>
     <div id="div_pesquisar">      
       <h1>Procurar usuários</h1> 
-      <form method="POST" action="./Perfil.php" id='form_input_procurar'>
-        <input type="text" name="input_procurar" id="input_procurar" placeholder="Digite o nome do usuário">
+      <form method="POST" action="./Perfil.php" id='form_outro_usuario'>
+        <input type="text" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
       </form>
     </div>     
     <div class="resultado">
       <script>
         $(function(){
-          $("#input_procurar").keyup(function(){
+          $("#outro_usuario").keyup(function(){
             //Recuperar o valor do campo
             var pesquisa = $(this).val();
             //Verificar se há algo digitado

@@ -21,7 +21,7 @@ body{
 }
 
 #btn-sair{
-    padding: 8px 20px;
+    padding: 6px 20px;
     margin: 20px;
     font-size: 20px;
     text-decoration: none;
@@ -174,7 +174,7 @@ body{
     transition: .3s; 
 }
 
-#input_procurar{
+#outro_usuario{
   width: 260px;
   height: 40px;
   margin: 20px;
@@ -192,7 +192,7 @@ body{
   transition: .3s;
 }
 
-#input_procurar:focus{
+#outro_usuario:focus{
   border-bottom: 3px solid var(--corS);
   box-shadow: 0 2px 5px var(--corS);
 }
@@ -269,8 +269,30 @@ body{
 }
 /* ----------------------   Pinturaa    ---------------------- */
 
+#pinturas{
+    margin-top: 200px;
+    height: 100%;
+    background-image: linear-gradient(269deg, var(--tranp) 0%, var(--corC) 100%);
+    border: 0;
+    border-radius: 20px;
+    border-top: 3px solid var(--corS);  
+    border-bottom: 3px solid var(--corS);  
+}
+
+#pinturas h2{  
+    font-size: 50px;
+	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+	letter-spacing: .5em;    
+    text-align: center;
+    font-family: 'Calibri', sans-serif;
+    padding-top: 100px;
+}
+
 .imgpp{
-    margin: 80px;
+    margin: 50px;
 }
 
 .pint{
@@ -290,7 +312,13 @@ body{
 }
 
 .Nome_Foto{
-    color: var(--corS);
+    color: var(--corP);
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.Nome_Foto2{
+    color: var(--corL);
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
 }
@@ -298,7 +326,14 @@ body{
 .Desc_Foto{
     margin-top: 20px;
     font-size: 20px;
-    color: var(--corS);
+    color: var(--corP);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.Desc_Foto2{
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--corL);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -306,30 +341,14 @@ body{
     font-size: 20px;
     position: relative;
     left: 100px;
-    color: var(--corS);
+    color: var(--corL);
     font-family: 'Josefin Sans', sans-serif;
 }
 
-#pinturas{
-    margin-top: 200px;
-    height: 100%;
-    background-image: linear-gradient(270deg, var(--corAS) 0%, var(--corC) 100%);
-    border: 0;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);  
-    border-bottom: 3px solid var(--corS);  
-}
-
-#pinturas h2{  
-    font-size: 50px;
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
-  	-webkit-background-clip: text;
-    color: transparent;
-	text-transform: uppercase;
-	letter-spacing: .5em;    
-    text-align: center;
-    font-family: 'Calibri', sans-serif;
-    padding-top: 100px;
+#fomr_consulta{
+    position: absolute;
+    left: 800px;
+    margin-top: 20px;
 }
 
 .itensCad{
@@ -367,15 +386,18 @@ body{
 }
 
 .NomeUsuario{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
+    height: 20px;
+    color: var(--corP); 
     font-family: 'Calibri', sans-serif;
-    margin-left: 40px;
-    font-size: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+    float: left;
+    font-size: 30px;
 }
+
 .NomeUsuario2{
-    color: var(--corL);
+    height: 20px;
+    color: var(--corL); 
     font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-left: 10px;
@@ -385,42 +407,36 @@ body{
 
 .InfoPint{
     margin: 300px;
+    width: 650px;
     background: var(--tranp);
     border: 0;
     border-top: 3px solid var(--corP);
     border-bottom: 3px solid var(--corP);
     border-radius: 33px;
-    margin-top: 10px;
     align-items: center;
     text-align: center;
     transition: .1s;
 }
-.InfoPint:hover{
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0 0 12px var(--corS);
-}
 
 .InfoPint2{
     margin: 300px;
+    width: 650px;
     background: var(--tranp);
     border: 0;
     border-top: 3px solid var(--corL);
     border-bottom: 3px solid var(--corL);
     border-radius: 33px;
-    margin-top: 10px;
     align-items: center;
     text-align: center;
-    transition: .3s;
-}
-.InfoPint2:hover{
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
-    box-shadow: 0 0 12px var(--corL);
+    transition: .1s;
 }
 
-.ConteudoInfo-1{
+.ConteudoInfo{
     border-bottom: 3px solid var(--corP);
+}
+
+.ConteudoInfo2{
+    border-bottom: 3px solid var(--corL);
 }
 
 .PintArt h4{
@@ -442,6 +458,7 @@ body{
 
 .User{
     margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
 }
 
@@ -462,21 +479,22 @@ body{
 }
 
 .BConsultar{
-    width: 100px;
+    position: relative;
+    bottom: 80px;
+    width: 180px;
     height: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    right: 80px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;          
+    font-family: 'Josefin Sans', sans-serif;
     border: 0;
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    border-radius: 24px;
-    background: var(--tranp);
+    border-radius: 8px;
+    background: transparent;
     color: var(--corP);
-    border: 2px solid var(--tranp);
-    box-shadow: 0px 0px 5px var(--tranp);
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
     transition: .3s;  
 }
 
@@ -488,22 +506,24 @@ body{
 }
 
 .BConsultar2{
-    width: 100px;
+    position: relative;
+    bottom: 80px;
+    width: 180px;
     height: 40px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    right: 80px;
     font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;          
+    font-family: 'Josefin Sans', sans-serif;
     border: 0;
     cursor: pointer;
     justify-content: center;
     text-align: center;
-    border-radius: 24px;
-    background: var(--tranp);
+    border-radius: 8px;
+    background: transparent;
     color: var(--corL);
-    border: 2px solid var(--tranp);
-    box-shadow: 0px 0px 5px var(--tranp);
-    transition: .3s;  
+    border-top: 3px solid var(--corL);
+    border-bottom: 3px solid var(--corL);
+    box-shadow: 0px 0px 5px var( --tranp);
+    transition: .3s;
 }
 
 .BConsultar2:hover{

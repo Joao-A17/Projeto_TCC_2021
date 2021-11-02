@@ -34,7 +34,7 @@ else{
                     <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>
                 </div>
                 <input id="entrar" type="submit" name="submit" value="Entrar" />
-                <p>Não possui um cadastro? <a href="./Cadastro.php">cadastre-se</a></p>                    
+                <p>Não possui um cadastro? <a href="./Cadastro">cadastre-se</a></p>                    
             </div> 
             <?php
             if(isset($_SESSION['msg_update'])){

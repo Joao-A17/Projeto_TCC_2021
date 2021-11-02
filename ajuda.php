@@ -18,15 +18,19 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
     <link rel="stylesheet" href="./assets/styles/ajuda.css">
     <link rel="stylesheet" href="./assets/styles/Geral.css">
     <link rel="stylesheet" href="./assets/styles/UsuarioLogado.css">
+    <link rel="stylesheet" href="./assets/styles/Menu.css">
     <title>Ajuda | Magic Paintings</title>
 </head>
 <body>            
       <?php  
       if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)){
         ?>  <!-- Usuario OFF -->
-        <nav id="nav_menu">
-          <h2 id="TituloMenu">Magic Paintings</h2>
-          <a class="menu-link" href="./index.html"><i class="fas fa-home"></i>   Inicio</a>  
+        <nav id="MenuH">
+          <h1 class="logo">Magic Paintings</h1>
+          <ul class="nav-list">
+          <li><a class="menu-link" href="./index"><i class="fas fa-home"></i>   Inicio</a></li>
+          <li><a class="menu-link" href="./pages/Login"><i class="fas fa-power-off Icon"></i>   Entrar</a></li>
+          <li><a class="menu-link" href="./pages/Cadastro"><i class="fas fa-user Icon"></i>   Cadastre-se</a></li>
         </nav>         
         <section id="instrucoes">
           <div id="div_1">
@@ -94,10 +98,11 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
       }
       else{
         ?>
-        <nav id="nav_menu">
-          <h2 id="TituloMenu">Magic Paintings</h2>
-          <a class="menu-link" href="./assets/PHP/verificarETAPA.php"><i class="fas fa-home"></i>   Inicio</a>  
-        </nav> 
+        <nav id="MenuH">
+          <h1 class="logo">Magic Paintings</h1>
+          <ul class="nav-list">
+          <li><a class="menu-link" href="./pages/Inicio"><i class="fas fa-home"></i>   Inicio</a></li>
+        </nav>      
 
         <div id="CardUser">
         <div id="Img_UserL">
@@ -119,9 +124,9 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           <i class="fas fa-bars btn_menuH"></i>
           </div>
           <div id="menu_usuario">
-            <a class="menuU-link" href="./pages/Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
-            <a class="menuU-link" href="./pages/editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
-            <a class="menuU-link" href="./assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+            <a class="menuU-link" href="./pages/Meu_Perfil"><i class="fas fa-user "></i>    Meu perfil</a>
+            <a class="menuU-link" href="./pages/editar_perfil"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+            <a class="menuU-link" href="./assets/PHP/loginOFF"><i class="fas fa-power-off "></i>    Sair</a>
           </div>
         </div>
         <section id="instrucoes">
