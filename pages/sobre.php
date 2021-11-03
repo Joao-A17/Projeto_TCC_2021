@@ -34,7 +34,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <li><a class="menu-link" href="./Login"><i class="fas fa-power-off Icon"></i>   Entrar</a></li>
             <li><a class="menu-link" href="./Cadastro"><i class="fas fa-user Icon"></i>   Cadastre-se</a></li>
         </ul>
-      </nav>
+      </nav>      
       <?php
     }else{
       ?>
@@ -45,34 +45,34 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <li><a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle Icon"></i>  Ajuda</a></li>
         </ul>
       </nav>
+      <div id="CardUser">
+        <div id="Img_UserL">
+          <?php
+          // pegar a foto do usuario logado 
+
+          $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
+
+          if (file_exists("$pasta")) {
+            $diretorio = dir($pasta);
+            while ($FP_Usuario = $diretorio->read()) {
+              if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
+              echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
+              }
+            }
+          }
+          ?>
+        <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
+        </div>
+        <div id="menu_usuario">
+          <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+          <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+          <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+        </div>
+      </div>
       <?php
 
     }
-    ?>
-  <div id="CardUser">
-    <div id="Img_UserL">
-      <?php
-      // pegar a foto do usuario logado 
-
-      $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
-
-      if (file_exists("$pasta")) {
-        $diretorio = dir($pasta);
-        while ($FP_Usuario = $diretorio->read()) {
-          if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
-          echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
-          }
-        }
-      }
-      ?>
-    <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-    </div>
-    <div id="menu_usuario">
-      <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
-      <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
-      <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
-    </div>
-  </div>
+    ?>  
   <section id="Master">
     <div id="container">
       <div class="card">

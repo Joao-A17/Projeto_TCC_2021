@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
         ";         
         header("Location: ../../pages/Login.php");
     }else{
-        $_SESSION['msg_cad'] = "<p style='color:red; font-size:20px;'>Usuário não foi Cadastrado</p>";        
+        $_SESSION['msg_cad'] = "<p style='color:red; font-size:20px; margin-bottom: 50px;'>Usuário não foi Cadastrado</p>";        
         header("Location: ../../pages/Cadastro.php");
     }
         

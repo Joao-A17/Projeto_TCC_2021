@@ -66,35 +66,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
         <div id="Lembrete">
           <h2>Lembre-se</h2>
           <p>Você só poderar ver as imagens com cadastro no site Magic Paintings!</p>
-        </div>  
-        <section id="Master">        
-            <div id="container">              
-              <div class="card">
-                  <h2 id="T1">Dica para você</h2>
-                  <p id="T2">Relate ao lado oque você gostaria que nós 
-                              mudássemos ou tire um print e mostre o problema que encontrou 
-                              com isso você vai nos ajudar bastante para um melhor funcionamento 
-                              do nosso site.
-                  </p>
-                  <p id="T2">Vamos ajuda você no que precisar</p>
-              </div>  
-              <form action="./ajuda.html" method="post" enctype="media">
-                <div class="card">
-                  <div id="e">
-                    <h2 id="T1">Conte-nos</h2>
-                    <p id="T2">Mande uma mensagem por aqui e caso deseja adicione uma imagem clique em adicionar imagem abaixo</p> 
-                    <input type="text" name="mensagem" id="Input_mensagem" placeholder='Digite aqui...'>
-                  </div>
-                  <input type="submit" value="Enviar" name="btn_enviar" id="btn_enviar"> 
-                  <div id="divIMG">
-                        <img src="" id="IMGpublic">          
-                  </div>          
-                    <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
-                    <label for="SelectIMG" id="Select_img_public">Adicionar imagem</label>  
-                </div>             
-              </form>
-          </div>       
-      </section>
+        </div>         
         <?php
       }
       else{
@@ -154,35 +126,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
         <div id="Lembrete">
           <h2>Lembre-se</h2>
           <p>Você só poderar ver as imagens com cadastro no site Magic Paintings!</p>
-        </div>
-        <section id="Master">        
-            <div id="container">          
-            <div class="card">
-                    <h2 id="T1">Dica para você <?php echo $usuario_logado; ?></h2>
-                    <p id="T2">Relate ao lado oque você gostaria que nós 
-                                mudássemos ou tire um print e mostre o problema que encontrou 
-                                com isso você vai nos ajudar bastante para um melhor funcionamento 
-                                do nosso site.
-                    </p>
-                    <p id="T2">Vamos ajuda você no que precisar</p>
-                </div>
-                <form action="./ajuda.html" method="post" enctype="media">
-                  <div class="card">
-                    <div id="e">
-                      <h2 id="T1">Conte-nos</h2>
-                      <p id="T2">Mande uma mensagem por aqui e caso deseja adicione uma imagem clique em adicionar imagem abaixo</p> 
-                      <input type="text" name="mensagem" id="Input_mensagem" placeholder='Digite aqui...'>
-                    </div>
-                    <input type="submit" value="Enviar" name="btn_enviar" id="btn_enviar"> 
-                    <div id="divIMG">
-                          <img src="" id="IMGpublic">          
-                    </div>          
-                      <input type="file" class="form-control-file" name="arquivo" id="SelectIMG" accept="image/*">  
-                      <label for="SelectIMG" id="Select_img_public">Adicionar imagem</label>  
-                  </div>             
-                </form>
-            </div>       
-        </section>
+        </div>      
         <?php
       }
     ?>

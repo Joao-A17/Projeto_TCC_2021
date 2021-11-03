@@ -7,7 +7,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
+	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
     border-radius: 12px;
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS);

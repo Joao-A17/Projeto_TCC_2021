@@ -46,7 +46,7 @@ InputFile_TrocarIMG.addEventListener('change', function() {
     readerPintura.readAsDataURL(InputFile_TrocarIMG.files[0]);
 });  
 
-/* Evento de Aparecer o Publicar e Publicar */
+/* Evento de Aparecer o Publicar */
 btn_Adicionar.addEventListener('click', function(){
     if(MenuPublicar.style.display == 'none'){
         MenuPublicar.style.display = 'block';
@@ -67,17 +67,6 @@ btn_Adicionar.addEventListener('click', function(){
 
 btn_publicar.addEventListener('click', function() {
     if(InputFile_SelectIMG.value.length < 3){
-        var msg_false = document.createElement('div');
-        msg_false.id = 'msg_false';
-        var h1_msg_false = document.createElement('h1');
-        h1_msg_false.style.fontSize = '20px';
-        h1_msg_false.innerHTML = 'Para publicar precisa ter uma imagem!';
-        MenuPublicar.appendChild(msg_false);
-        msg_false.appendChild(h1_msg_false);
-        
-        function aviso(){
-            location.reload();        
-        }
-        setInterval(aviso, 1000);
+        alert('Insira uma imagem para publicar!');        
     }
 });

@@ -17,13 +17,10 @@ btn_select.addEventListener('change', function() {
 });
 
 /* Verificar os campos */
-var I_ins = document.getElementById('I_ins');
-var I_fac = document.getElementById('I_fac');
-var I_twi = document.getElementById('I_twi');
-var I_tel = document.getElementById('I_tel');
+
 var InputNomeAdmin = document.getElementById('InputNomeAdmin');
 var BtnSP = document.getElementById('BtnSP');
- 
+
 BtnSP.addEventListener('click', function(){
     if(btn_select.value.length < 3){
         alert('Adicione uma imagem para o seu perfil!');

@@ -56,7 +56,13 @@ else{
                     echo $_SESSION['msg_cad'];
                     unset($_SESSION['msg_cad']);
                 }
-                ?>     
+                ?>    
+                <?php
+                if(isset($_SESSION['msg_apagar'])){
+                    echo $_SESSION['msg_apagar'];
+                    unset($_SESSION['msg_apagar']);
+                }                          
+                ?>  
             </div>           
         </form>
     </section>

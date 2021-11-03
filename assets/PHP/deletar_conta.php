@@ -36,7 +36,12 @@ if(isset($_POST['Input_Usuario'])){
         $deleta_sql_pinturas = mysqli_query($conexao, $sql_pinturas);
 
         $sql_perfil = "DELETE FROM perfil WHERE nomep = '$Input_Usuario'" ;
-        $deleta_sql_perfil = mysqli_query($conexao, $sql_perfil);
+        $deleta_sql_perfil = mysqli_query($conexao, $sql_perfil);                   
+        $_SESSION['msg_apagar'] = "        
+        <div id='msg_true'>
+            <h1> Usuário Apagado! <i class='fas fa-frown icon'></i></h1>            
+        </div>         
+        "; 
 
         header('Location: ./loginOFF.php');
 

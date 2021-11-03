@@ -171,7 +171,7 @@ input::placeholder {
 }
 
 #msg_true h1{  
-  color: rgb(0, 255, 0);
+  color: var(--corAS);
   font-size: 30px;
   font-family: 'Calibri', sans-serif; 
   text-transform: uppercase;
@@ -180,7 +180,7 @@ input::placeholder {
 
 #msg_true .icon{
   font-size: 40px;
-  color: rgb(0, 255, 0);
+  color: var(--corAS);
 }
 
 #msg_false{

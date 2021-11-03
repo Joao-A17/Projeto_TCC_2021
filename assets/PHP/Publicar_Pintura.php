@@ -25,10 +25,10 @@ if(isset($_FILES['arquivo'])){
 
     if(isset($Id)){
         $addID = $Id + 1;
-        echo $Novo_Arquivo_Imagem = 'Pintura_do_'.$Autor.'_id_'.$addID.'.'.$Arquivo_Imagem;
+        echo $Novo_Arquivo_Imagem = 'Pintura_do(a)_'.$Autor.'_id_'.$addID.'.'.$Arquivo_Imagem;
     }
     if(!isset($Id)){
-        $Novo_Arquivo_Imagem = 'Primeira_pintura_do_'.$Autor.'.'.$Arquivo_Imagem;
+        $Novo_Arquivo_Imagem = 'Primeira_pintura_do(a)_'.$Autor.'.'.$Arquivo_Imagem;
     }
     
     $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";       
