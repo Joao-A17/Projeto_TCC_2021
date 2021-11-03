@@ -15,6 +15,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/styles/ajuda.css">
     <link rel="stylesheet" href="./assets/styles/Geral.css">
     <link rel="stylesheet" href="./assets/styles/UsuarioLogado.css">
@@ -105,11 +106,11 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
         </nav>      
 
         <div id="CardUser">
-        <div id="Img_UserL">
-          <?php
-          // pegar a foto do usuario logado 
+          <div id="Img_UserL">
+            <?php
+            // pegar a foto do usuario logado 
 
-          $pasta = './assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
+            $pasta = './assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
 
             if (file_exists("$pasta")) {
               $diretorio = dir($pasta);
@@ -121,12 +122,11 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             }
             ?>
           <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-          <i class="fas fa-bars btn_menuH"></i>
           </div>
           <div id="menu_usuario">
-            <a class="menuU-link" href="./pages/Meu_Perfil"><i class="fas fa-user "></i>    Meu perfil</a>
-            <a class="menuU-link" href="./pages/editar_perfil"><i class="fas fa-user-edit "></i>    Editar perfil</a>
-            <a class="menuU-link" href="./assets/PHP/loginOFF"><i class="fas fa-power-off "></i>    Sair</a>
+            <a class="menuU-link" href="./pages/Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+            <a class="menuU-link" href="./pages/editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
+            <a class="menuU-link" href="./assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
           </div>
         </div>
         <section id="instrucoes">

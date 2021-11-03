@@ -34,7 +34,7 @@ CREATE TABLE `perfil` (
   `telefonep` varchar(100) NOT NULL,
   PRIMARY KEY (`idperfil`),
   UNIQUE KEY `NomeUser` (`nomep`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `perfil` (
 
 LOCK TABLES `perfil` WRITE;
 /*!40000 ALTER TABLE `perfil` DISABLE KEYS */;
-INSERT INTO `perfil` VALUES (56,'Admin','I&#39;m Admin ','Admin.jpg','admin_instagram','admin_twitter','32168654656'),(53,'Isabella','Isaaaaa','Isabella.jpg','bell220904','bellinhart524','5548966666666'),(54,'Alex','OlÃ¡ aqui Ã© o meu perfil onde postarei as minha pinturas','Alex.jpeg','Alex_insta','Alex_twitter','554876985468'),(55,'Luana','Vejam minhas artes e me mandem mensagens :)','Luana.jpeg','luanamart_insta','luanamart_twitter','5548955554444');
+INSERT INTO `perfil` VALUES (56,'Admin','I&#39;m Admin ','Admin.jpg','nenhum','nenhum','32168654656'),(53,'Isabella','Isaaaaa','Isabella.jpg','bell220904','bellinhart524','5548966666666'),(54,'Alex','OlÃ¡ aqui Ã© o meu perfil onde postarei as minha pinturas','Alex.jpeg','Alex_insta','Alex_twitter','554876985468'),(55,'Luana','Vejam aqui minhas pinturas :)','Luana.jpeg','luanamart_insta','luanamart_twitter','5548955554444');
 /*!40000 ALTER TABLE `perfil` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `pinturas` (
   `Arquivo_Imagem` varchar(1000) CHARACTER SET utf8mb4 NOT NULL,
   `Criado` datetime NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=205 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=210 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `nome` (`nome`)
-) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=159 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-27 23:15:09
+-- Dump completed on 2021-11-02 21:51:31

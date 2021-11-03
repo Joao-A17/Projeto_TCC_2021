@@ -5,7 +5,11 @@
 
 body{
     height: 100vh;
-	background-image: linear-gradient(180deg, var(--corAS) 0%, var(--corP) 100%);
+    background-image: linear-gradient(0deg, var(--corL) 0%, var(--corAS) 100%);
+}
+
+i{
+    margin-right: 15px;
 }
 
 #Cont_Master{
@@ -70,9 +74,9 @@ body{
 #btn_piscar{
     background: none;
     color: var(--corP);
-    border: 2px solid var(--corP);
+    border-top: 3px solid var(--corP);
+    border-bottom: 3px solid var(--corP);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
     animation: Pulse 1.2s infinite;
     transition: .3s;  
 }
@@ -81,16 +85,12 @@ body{
     animation: none;
     background: var(--corP);
     color: var(--corD);
-    border-bottom: 2px solid var(--corP);
     box-shadow: 0px 0px 10px var(--corP);
 }
 
 @keyframes Pulse{
     from {
-        transform: scale(.7);
         background: var(--corP);
         color: var(--corD);
-        border: 2px solid var(--corP);
-        box-shadow: 0px 0px 10px var(--corP);
     }
 }

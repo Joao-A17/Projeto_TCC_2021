@@ -22,8 +22,9 @@ body{
 
 #btn-sair{
     padding: 6px 20px;
-    margin: 20px;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     border-radius: 8px;
     border: none; 
@@ -98,22 +99,28 @@ body{
     border: 0;
     border-radius: 20px;
     border-top: 3px solid var(--corC2);
-    border-bottom: 3px solid var(--corC2); 
 }
 
 #div_pesquisar{    
-    display: flex;
+    display: inline-flex;
     margin: 20px;
-    margin-top: 60px;
 }
 
-#section_pesquisar h1{
+#section_pesquisar label{
 	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
   	-webkit-background-clip: text;
     color: transparent;
-    font-size: 75px;
+    font-size: 35px;
     font-family: 'Calibri', sans-serif;
     animation: aparecer 10s;
+}
+
+.IconU{
+	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+  	-webkit-background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    animation: piscar 1.2s infinite;
 }
 
 #form_input_procurar{
@@ -174,10 +181,29 @@ body{
     transition: .3s; 
 }
 
+#form_outro_usuario{
+    margin-left: 20px;
+    text-align: center;
+}
+
+.IconB{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 150px;
+    background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 26px;
+}
+
+input::placeholder {
+    color: var(--corL);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 #outro_usuario{
-  width: 260px;
+  width: 400px;
   height: 40px;
-  margin: 20px;
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
   display: block;
@@ -208,7 +234,6 @@ body{
 /* ----------------------Informações---------------------- */
 
 #info{
-    margin-top: 200px;
     width: 100%;
     height: 380px;
     margin-bottom: 5px auto;
@@ -216,10 +241,9 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
+	background-image: linear-gradient(to top, var(--corAS), var(--corC));
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corC2);  
     border-bottom: 3px solid var(--corC2);  
 }
 

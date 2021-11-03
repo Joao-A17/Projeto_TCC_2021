@@ -28,7 +28,7 @@ else{
         <form id="form" class="card" action="../assets/PHP/Conexao_Login.php" method="POST">            
             <div class="card-group">
                 <input class="Inputs" type="text" name="id-user" style='display: none;'>
-                <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome do Usuário" required>
+                <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome" required>
                 <div class="menu_input">
                     <i class="far fa-eye Isenha"></i>
                     <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>

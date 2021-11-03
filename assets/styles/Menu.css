@@ -30,41 +30,26 @@ nav {
 .logo:hover {
     opacity: 0.5;
 }
+
 .menu-link{
-    padding: 10px 15px;
+    padding: 6px 20px;
     font-size: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     border-radius: 8px;
+    border: none;
+    background: transparent;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
     color: var(--corL);
-    border: 3px solid var(--corS);
     transition: .3s;
 }
 
 .menu-link:hover{
     background: var(--corS);
-    color: var(--corL);
     box-shadow: 0px 0px 10px var(--corS);
-}
-
-#login{
-    text-decoration: none;
-    padding: 6px 25px;
-    transition: .3s;
-    background: none;
-    color: var(--corP);
-    border: 2px solid var(--corP);
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
-    animation: span-login 2s infinite;
-}
-
-#login:hover{
-    text-decoration: none;
-    animation: none;
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
 }
 
 @keyframes span-login{
@@ -80,7 +65,7 @@ nav {
 .nav-list {
     list-style: none;
     display: flex;
-  }
+}
   
 .mobile-menu {
     display: none;

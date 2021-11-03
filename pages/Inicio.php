@@ -36,11 +36,11 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
       <div class="line3"></div>
     </div>
     <ul class="nav-list">
-      <li><a class="menu-link" href="./Meu_Perfil.php"><i class="fas fa-user"></i> Meu Perfil</a></li>
-      <li><a class="menu-link" href="../ajuda.php"><i class="fas fa-question-circle"></i> Ajuda</a></li>
-      <li><a class="menu-link" href="#section_pesquisar"><i class="fas fa-search"></i> Buscar</a></li>
-      <li><a class="menu-link" href="#pinturas"><i class="fas fa-paint-brush"></i> Pinturas</a></li>
-      <li><a class="menu-link" href="#desenvolvedores"><i class="fas fa-users"></i> Desenvolvedores</a></li>
+      <li><a class="menu-link" href="./Meu_Perfil.php"><i style="margin-right: 15px;"  class="fas fa-user"></i> Meu Perfil</a></li>
+      <li><a class="menu-link" href="../ajuda.php"><i style="margin-right: 15px;"  class="fas fa-question-circle"></i> Ajuda</a></li>
+      <li><a class="menu-link" href="#section_pesquisar"><i style="margin-right: 15px;"  class="fas fa-search"></i> Buscar</a></li>
+      <li><a class="menu-link" href="#pinturas"><i style="margin-right: 15px;"  class="fas fa-paint-brush"></i> Pinturas</a></li>
+      <li><a class="menu-link" href="#desenvolvedores"><i style="margin-right: 15px;"  class="fas fa-users"></i> Desenvolvedores</a></li>
       <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
     </ul>
   </nav>
@@ -62,7 +62,6 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
       }
       ?>
     <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-    <i class="fas fa-bars btn_menuH"></i>
     </div>
     <div id="menu_usuario">
       <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
@@ -99,9 +98,11 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   ?>
 
   <section id='section_pesquisar'>
-    <div id="div_pesquisar">      
-      <h1>Procurar usuários</h1> 
+    <div id="div_pesquisar"> 
+      <i class="fas fa-users IconU"></i>     
+      <label>Procurar usuários:</label> 
       <form method="POST" action="./Perfil.php" id='form_outro_usuario'>
+        <i class="fas fa-search IconB"></i>
         <input type="text" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
       </form>
     </div>     
