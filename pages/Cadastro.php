@@ -41,19 +41,19 @@ else{
             <div id="Registros">
                 <div id="e">
                     <div class="menu_input">
-                        <input class="Input" minlength = "3" maxlength = "20" type="text" id="nome" name="nome" placeholder="Nome" pattern="[a-zA-Z0-9]+" required>
+                        <input class="Input" minlength = "3" maxlength = "30" type="text" id="nome" name="nome" placeholder="Nome" required>
                     </div>
                     <div class="menu_input">
-                        <input class="Input" minlength = "3" maxlength = "20" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+                        <input class="Input" minlength = "3" maxlength = "220" type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
                     </div>
                     <div class="menu_input">
-                        <input class="Input" minlength = "3" maxlength = "100" type="email" id="email" name="email" placeholder="Email" required>
+                        <input class="Input" minlength = "3" maxlength = "220" type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div id="d">            
                     <div class="menu_input">
                         <i class="far fa-eye Isenha"></i>
-                        <input class="Input" minlength = "3" type="password" name="password" id="senha" placeholder="Senha" required>
+                        <input class="Input" minlength = "3" maxlength = "220" type="password" name="password" id="senha" placeholder="Senha" required>
                     </div>
                     <div class="menu_input">
                         <input class="Input" minlength = "10" maxlength="20" type="text" id="telefone" name="telefone" pattern="[0-9]+$" placeholder="Telefone" required>

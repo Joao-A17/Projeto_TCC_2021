@@ -6,7 +6,7 @@
 body{
   overflow-y: hidden;
   height: 100vh;
-  background-image: linear-gradient(180deg, var(--corC) 0%, var(--corC) 100%);
+  background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corAS3) 100%);
 }
 
 /* formulário */
@@ -39,7 +39,7 @@ body{
   margin-top: 100px;
   margin-bottom: 20px;
   font-size: 80px;
-  background-image: linear-gradient(180deg, var(--corC) 0%, var(--corAS3) 100%);
+  background-image: linear-gradient(180deg, var(--corL) 0%, var(--corC) 100%);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -48,7 +48,7 @@ body{
 .login{
   font-size: 42px;
   font-family: 'Calibri', sans-serif;
-  background-image: linear-gradient(180deg, var(--corC) 0%, var(--corAS3) 100%);
+  background-image: linear-gradient(180deg, var(--corL) 0%, var(--corC) 100%);
   -webkit-background-clip: text;
   color: transparent;
   text-transform: uppercase;
@@ -128,10 +128,10 @@ input::placeholder {
 .card-group a{
   font-family: 'Josefin Sans', sans-serif;
 	color: var(--corL);
-  transition: .7s;
+  transition: .3s;
 }
 .card-group a:hover{
-	color: var(--corAS2);
+	color: var(--corAS);
 }
 
 
@@ -141,7 +141,7 @@ input::placeholder {
   font-size: 20px;
   margin-top: 28px;
   margin-left: 320px;
-  transition: .7s;
+  transition: .3s;
 }
 
 .Isenha:hover{
@@ -154,7 +154,7 @@ input::placeholder {
   font-size: 20px;
   margin-top: 28px;
   margin-left: 320px;
-  transition: .7s;
+  transition: .3s;
 }
 
 

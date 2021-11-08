@@ -6,7 +6,7 @@
 body{
     overflow-y: hidden;
     height: 100vh;
-    background-image: linear-gradient(180deg, var(--corC) 0%, var(--corC) 100%);
+    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corAS3) 100%);
 }
 
 input::placeholder {
@@ -72,6 +72,7 @@ input::placeholder {
     outline: none;
     border-radius: 5px;
     background: none;
+    color: var(--corL);
     border-bottom: 3px solid var(--corAS);
     transition: .3s;
 }
@@ -126,12 +127,12 @@ input::placeholder {
 }
 
 .Isenha{
-    color: var(--corAS);
+    color: var(--corL);
     position: absolute;
     font-size: 20px;
     margin-top: 15px;
     margin-left: 125px;
-    transition: .7s;
+    transition: .3s;
 }
 
 .Isenha:hover{
@@ -144,7 +145,7 @@ input::placeholder {
     font-size: 20px;
     margin-top: 15px;
     margin-left: 125px;
-    transition: .7s;
+    transition: .3s;
 }
 
 
