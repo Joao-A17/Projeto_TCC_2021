@@ -10,6 +10,7 @@ var btn_publicar = document.getElementById("btn_publicar");
 var menuEdit = document.querySelector(".Editar");
 var MenuPublicar = document.getElementById("MenuPublicar");
 var btn_Adicionar = document.getElementById("btn-Adicionar");
+var btn_Adicionar2 = document.getElementById("btn_Adicionar2");
 var BtnEditarPerfil = document.querySelector(".edp");
 var MenuEditPerfil = document.getElementById("MenuModal_EditPerfil");
 var BtnSPerfil = document.getElementById("BtnSP");
@@ -48,6 +49,22 @@ InputFile_TrocarIMG.addEventListener('change', function() {
 
 /* Evento de Aparecer o Publicar */
 btn_Adicionar.addEventListener('click', function(){
+    if(MenuPublicar.style.display == 'none'){
+        MenuPublicar.style.display = 'block';
+        inputP_autor.value = NomeAdmin.innerHTML;
+        inputP_Nome_Pintura.value = ""; 
+        input_Desc_Pintura.value = "";   
+        IMGpublic.src = "";   
+    }else{
+        MenuPublicar.style.display = 'none'; 
+        inputP_autor.value = "";
+        inputP_Nome_Pintura.value = ""; 
+        input_Desc_Pintura.value = "";   
+        IMGpublic.src = "";   
+    }
+});
+
+btn_Adicionar2.addEventListener('click', function(){
     if(MenuPublicar.style.display == 'none'){
         MenuPublicar.style.display = 'block';
         inputP_autor.value = NomeAdmin.innerHTML;

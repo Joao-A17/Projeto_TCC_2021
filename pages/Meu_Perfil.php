@@ -18,16 +18,36 @@ require '../assets/PHP/dados_perfil.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/styles/Menuhover.css">
     <link rel="stylesheet" href="../assets/styles/Geral.css">
     <link rel="stylesheet" href="../assets/styles/Meu_Perfil.css"> 
     <title id="Nome-Site">Perfil | <?php echo $usuario_logado ?></title>              
 </head>
 <body>
-    <nav class="Menu">
-        <a href="./Inicio.php" class="Logo">Magic Paintings</a>       
-        <a class="btn-menu" href="./Inicio.php"><i class="fas fa-home IconG"></i>Inicio</a>    
-        <a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a>
-    </nav>    
+    <nav id='nav'>        
+        <a class="logo" href="#topo">Magic Paintings</a>
+        <div id='juntar'>
+        <ul class="list_menu">
+            <label for="" class='hoverCLASS' id='B_Nav'>Páginas<i style="display: none; font-size: 24px;" class="fas fa-sort-down"></i></label>                
+            <div class="div_nav" id='d' style="display: none;">
+                <i class="fas fa-sort-up Icon_up"></i>
+                <li><a class="btn_nav" href="./Inicio.php"><i style="margin-right: 15px;"  class="fas fa-home"></i> Inicio</a></li>
+                <li><a class="btn_nav" href="./editar_perfil.php"><i style="margin-right: 15px;"  class="fas fa-user-edit"></i> Editar perfil</a></li>
+                <li><a class="btn_nav" href="../ajuda.php"><i style="margin-right: 15px;"  class="fas fa-question-circle"></i> Ajuda</a></li>
+                <li><a class="btn_nav" href="./Sobre.php"><i style="margin-right: 15px;"  class="fas fa-info-circle"></i> Sobre</a></li>
+            </div>            
+        </ul>
+        <ul class="list_menu">
+            <label for="" class='hoverCLASS' id='B_Nav2'>Atalhos<i style="display: none; font-size: 24px;" class="fas fa-sort-down"></i></label>
+            <div class="div_nav" id='d2' style="display: none;">
+                <i class="fas fa-sort-up Icon_up"></i>                    
+                <li><a class="btn_nav" href="#MenuPublicar" id="btn_Adicionar2"><i style="margin-right: 15px;"  class="fas fa-plus"></i> Publicar</a></li>
+            </div>
+        </ul>
+        <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a></li>
+        </div>
+    </nav> 
     <div class="container">     
         <div class="ContAdmin">         <!-- Foto tem que ser menor que 338 x 338 -->
             <div id="AdminForm">
@@ -101,5 +121,6 @@ require '../assets/PHP/dados_perfil.php';
                     <!-- Scripts -->
     <script src="../assets/JS/Geral.js"></script>
     <script src="../assets/JS/Meu_Perfil.js"></script>
+    <script src="../assets/JS/Menu.js"></script>
  </body>
 </html> 

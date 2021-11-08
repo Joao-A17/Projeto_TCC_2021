@@ -4,6 +4,7 @@
 }
 
 body{
+    overflow-y: hidden;
     height: 100vh;
     background-image: linear-gradient(0deg, var(--corL) 0%, var(--corAS) 100%);
 }
@@ -19,7 +20,7 @@ i{
 
 #Card_Mensagem{
     text-align: center;
-    margin-top: 10%;
+    margin: 50px;
 }
 
 #T1{

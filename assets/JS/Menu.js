@@ -1,44 +1,34 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu);
-    this.navList = document.querySelector(navList);
-    this.navLinks = document.querySelectorAll(navLinks);
-    this.activeClass = "active";
+var d = document.querySelector('#d');
+var d2 = document.querySelector('#d2');
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+$('#B_Nav').on('mouseover', function() {  
+    d.style.display = 'grid';
+});
 
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`);
-    });
-  }
+$('#B_Nav').on('mouseout', function() {
+    d.style.display = 'none';
+});
+/* -----------Menu d----------- */
+$('#d').on('mouseover', function() {  
+    d.style.display = 'grid';
+});
 
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass);
-    this.mobileMenu.classList.toggle(this.activeClass);
-    this.animateLinks();
-  }
+$('#d').on('mouseout', function() {
+    d.style.display = 'none';
+});
+/* ------------------------------------- */
+$('#B_Nav2').on('mouseover', function() {  
+    d2.style.display = 'grid';
+});
 
-  addClickEvent() {
-    this.mobileMenu.addEventListener("click", this.handleClick);
-  }
+$('#B_Nav2').on('mouseout', function() {
+    d2.style.display = 'none';
+});
+/* -----------Menu d2----------- */
+$('#d2').on('mouseover', function() {  
+    d2.style.display = 'grid';
+});
 
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent();
-    }
-    return this;
-  }
-}
-
-const mobileNavbar = new MobileNavbar(
-  ".mobile-menu",
-  ".nav-list",
-  ".nav-list li",
-);
-mobileNavbar.init(); 
+$('#d2').on('mouseout', function() {
+    d2.style.display = 'none';
+});

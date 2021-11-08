@@ -1,0 +1,124 @@
+li{
+    list-style: none;
+}
+
+#nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Calibri', sans-serif;
+	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
+    border-radius: 12px;
+    border-top: 3px solid var(--corS);
+    border-bottom: 3px solid var(--corS);
+    box-shadow: 0px 0px 15px var(--corS);
+}
+
+.logo{
+    background-image: linear-gradient(to top, var(--corP), var(--corS));
+  	-webkit-background-clip: text;
+    color: transparent;
+	text-transform: uppercase;
+    font-family: 'Calibri', sans-serif;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.logo:hover {
+    opacity: 0.5;
+}
+
+#juntar{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.list_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.hoverCLASS{
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    border-radius: 8px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-bottom: 3px solid var(--corL);
+    color: var(--corL);
+}
+
+.hoverCLASS:hover{
+	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
+}
+
+.div_nav{
+    position: absolute;
+    top: 45px;
+    display: grid;
+    text-align: center;
+    width: 250px;
+    height: 180px;
+    border-radius: 8px;
+	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
+    border-top: 3px solid var(--corAS);
+}
+
+.Icon_up{
+    position: relative;
+    top: -18px;
+    font-size: 35px;
+    color: var(--corAS);
+}
+
+.btn_nav{  
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    text-decoration: none;
+    color: var(--corL);
+    transition: .2s;
+}
+
+.btn_nav:hover{
+    color: var(--corS);
+}
+
+#btn-sair{
+    font-size: 20px;
+    font-family: 'Calibri', sans-serif;
+    border-radius: 8px;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none; 
+    background: transparent;
+    color: var(--corL);
+    border-bottom: 3px solid var(--corL);
+    transition: .3s;
+}
+
+#btn-sair:hover{
+    background: var(--corL);
+    color: var(--corD);
+    box-shadow: 0px 0px 10px var(--corL);
+}

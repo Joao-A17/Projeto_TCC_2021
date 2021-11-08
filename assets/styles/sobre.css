@@ -5,7 +5,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(180deg, var(--corC) 0%, var(--corAS) 100%);    
+    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
 }
 
 #Master{
@@ -23,12 +23,13 @@ body{
     display: inline-block;
     margin: 40px;
     text-align: center;
-    background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
     border: 0;
     border-top: 4px solid var(--corS);
     border-bottom: 4px solid var(--corS);
     border-radius: 33px;
     transition: .3s;
+    animation: rotação 1s;
 }
 
 .card:hover{
@@ -38,7 +39,7 @@ body{
 
 #T1{
     margin-top: 20px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to top, var(--corAS), var(--corS));
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 40px;
@@ -60,10 +61,10 @@ body{
     width: 100%;
     background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
     border: none;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
-    border-radius: 33px;
+    border-top: 3px solid var(--corC);
+    border-bottom: 3px solid var(--corC);
+    box-shadow: 0px 0px 15px var(--corC);
+    border-radius: 8px;
     text-align: center;
 }
 

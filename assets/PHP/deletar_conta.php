@@ -42,8 +42,10 @@ if(isset($_POST['Input_Usuario'])){
             <h1> Usuário Apagado! <i class='fas fa-frown icon'></i></h1>            
         </div>         
         "; 
-
-        header('Location: ./loginOFF.php');
+        session_start();
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: ../../pages/Login');
 
     }  
 

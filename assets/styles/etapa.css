@@ -15,7 +15,7 @@ input::placeholder {
 }
 
 textarea::placeholder {
-    color: var(--corP);
+    color: var(--corL);
     font-family: 'Josefin Sans', sans-serif;
 }
 

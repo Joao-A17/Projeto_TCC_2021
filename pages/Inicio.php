@@ -20,29 +20,38 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../assets/styles/Menuhover.css">
   <link rel="stylesheet" href="../assets/styles/Inicio.css">
   <link rel="stylesheet" href="../assets/styles/UsuarioLogado.css">
-  <link rel="stylesheet" href="../assets/styles/Menu.css">
   <link rel="stylesheet" href="../assets/styles/Geral.css">
   <title>Inicio | Magic Paintings</title>
 </head>
 
 <body>
-  <nav class="MenuH">
+  <nav id='nav'>        
     <a class="logo" href="#topo">Magic Paintings</a>
-    <div class="mobile-menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+    <div id='juntar'>
+      <ul class="list_menu">
+          <label for="" class='hoverCLASS' id='B_Nav'>Páginas<i style="display: none; font-size: 24px;" class="fas fa-sort-down"></i></label>                
+          <div class="div_nav" id='d' style="display: none;">
+              <i class="fas fa-sort-up Icon_up"></i>
+              <li><a class="btn_nav" href="./Meu_Perfil.php"><i style="margin-right: 15px;"  class="fas fa-user"></i> Meu Perfil</a></li>
+              <li><a class="btn_nav" href="./editar_perfil.php"><i style="margin-right: 15px;"  class="fas fa-user-edit"></i> Editar perfil</a></li>
+              <li><a class="btn_nav" href="../ajuda.php"><i style="margin-right: 15px;"  class="fas fa-question-circle"></i> Ajuda</a></li>
+              <li><a class="btn_nav" href="./Sobre.php"><i style="margin-right: 15px;"  class="fas fa-info-circle"></i> Sobre</a></li>
+          </div>            
+      </ul>
+      <ul class="list_menu">
+          <label for="" class='hoverCLASS' id='B_Nav2'>Atalhos<i style="display: none; font-size: 24px;" class="fas fa-sort-down"></i></label>
+          <div class="div_nav" id='d2' style="display: none;">
+              <i class="fas fa-sort-up Icon_up"></i>                    
+              <li><a class="btn_nav" href="#section_pesquisar"><i style="margin-right: 15px;"  class="fas fa-search"></i> Buscar</a></li>
+              <li><a class="btn_nav" href="#pinturas"><i style="margin-right: 15px;"  class="fas fa-paint-brush"></i> Pinturas</a></li>
+              <li><a class="btn_nav" href="#desenvolvedores"><i style="margin-right: 15px;"  class="fas fa-users"></i> Desenvolvedores</a></li>
+          </div>
+      </ul>
+      <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a></li>
     </div>
-    <ul class="nav-list">
-      <li><a class="menu-link" href="./Meu_Perfil.php"><i style="margin-right: 15px;"  class="fas fa-user"></i> Meu Perfil</a></li>
-      <li><a class="menu-link" href="../ajuda.php"><i style="margin-right: 15px;"  class="fas fa-question-circle"></i> Ajuda</a></li>
-      <li><a class="menu-link" href="#section_pesquisar"><i style="margin-right: 15px;"  class="fas fa-search"></i> Buscar</a></li>
-      <li><a class="menu-link" href="#pinturas"><i style="margin-right: 15px;"  class="fas fa-paint-brush"></i> Pinturas</a></li>
-      <li><a class="menu-link" href="#desenvolvedores"><i style="margin-right: 15px;"  class="fas fa-users"></i> Desenvolvedores</a></li>
-      <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off Icon"></i>Sair</a></li>
-    </ul>
   </nav>
 
   <div id="CardUser">
