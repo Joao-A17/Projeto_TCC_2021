@@ -366,6 +366,9 @@ input::placeholder {
 
 .PintArt{
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #Img-Usuario{
@@ -482,11 +485,10 @@ input::placeholder {
 }
 
 .BConsultar{
-    position: relative;
-    bottom: 80px;
+    margin-left: 180px;
+    margin-top: 15px;
     width: 180px;
     height: 40px;
-    right: 80px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     border: 0;
@@ -498,7 +500,7 @@ input::placeholder {
     color: var(--corP);
     border-top: 3px solid var(--corP);
     border-bottom: 3px solid var(--corP);
-    transition: .3s;  
+    transition: .3s;
 }
 
 .BConsultar:hover{

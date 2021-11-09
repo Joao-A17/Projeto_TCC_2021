@@ -25,6 +25,7 @@ body{
   background-image: linear-gradient(180deg, var(--corAS2) 0%, var(--corS) 100%);
   border: 3px solid var(--corS);
   box-shadow: 0 0 25px var(--corS);
+  animation: aparecer 1s;
 }
 
 /* Para centralizar a Icon e o Nome Login*/

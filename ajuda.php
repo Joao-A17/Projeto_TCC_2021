@@ -37,8 +37,8 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
           <div id="div_1">
             <div class="card_instru">
               <h1>Como cadastrar usuário?</h1>
-              <p><label for="">Campo Nome: </label> Esse campo só aceita letras maiúsculas, minúsculas e números e não pode existe usuários com o mesmo nome.<br> <br>
-              <label for="">Campo Sobrenome: </label> Esse campo aceita qualquer tipo de letra, numero ou símbolo. <br> <br>
+              <p><label for="">Campo Nome de usuário: </label> Esse campo só aceita letras maiúsculas, minúsculas e números e não pode existe usuários com o mesmo nome.<br> <br>
+              <label for="">Campo Nome completo: </label> Esse campo aceita qualquer tipo de letra, numero ou símbolo. <br> <br>
               <label for="">Campo Email: </label> Esse campo é onde você irar colocar seu email. <br> <br>
               <label for="">Campo Senha: </label> Esse campo aceita qualquer tipo de letra, numero ou símbolo. <br> <br>
               <label for="">Campo Telefone: </label> Esse campo aceita só numeros.</p>

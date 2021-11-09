@@ -16,7 +16,7 @@
 
 
 #CardUser:hover{ 
-    width: 220px; 
+    width: 650px;
     border-top: 3px solid var(--corS);
     border-bottom: 3px solid var(--corS);
     box-shadow: 0 0 12px var(--corS);

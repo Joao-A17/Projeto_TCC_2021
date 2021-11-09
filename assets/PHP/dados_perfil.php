@@ -33,7 +33,7 @@ if($pegar_usuarios){
         $NPerfil = $registro_usuario['nome'];
         if($NPerfil == $usuario_logado){
             $IdUser = $registro_usuario['id'];
-            $Sobrenome = $registro_usuario['sobrenome'];
+            $nome_completo = $registro_usuario['nome_completo'];
             $Email = $registro_usuario['email'];
             $Senha = $registro_usuario['password'];
             $Whats = $registro_usuario['telefone'];

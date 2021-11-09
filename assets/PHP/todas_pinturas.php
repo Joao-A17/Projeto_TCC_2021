@@ -61,14 +61,14 @@ if($resultado_pegarpintura = mysqli_query($conexao,$pegarpintura)){
                                 }    
                             }
                         }                      
-                        ?>             
-                        <h3 class=<?php echo $NU?>><?php echo $Autor[$i]?></h3>                      
-                        <p class='data_pint'>Publicado em: <?php echo $Criado[$i]?></p>                      
-                    </div>
+                        ?>  
                     <form action="./Perfil.php" method="GET" id='fomr_consulta'>
                         <input style="display: none;" type="text" name="outro_usuario" id="outro_usuario" value=<?php echo $Autor[$i]?>>                  
                         <button id="Consultar" class=<?php echo $BConsultar?> onclick="ConsutarImg()">Entrar no perfil</button>
-                    </form>
+                    </form>           
+                        <h3 class=<?php echo $NU?>><?php echo $Autor[$i]?></h3>                      
+                        <p class='data_pint'>Publicado em: <?php echo $Criado[$i]?></p>                      
+                    </div>
                     </div>
                 <div class='div_pint'>  
                     <div class="textospp">

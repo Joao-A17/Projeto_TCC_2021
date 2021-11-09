@@ -63,8 +63,8 @@ if(!isset($FotoP)){
                                     <?php echo "<input type='text' name='nome_usuario' id='nome_usuario' class='Inputs' value='".$usuario_logado."' placeholder='Digite Aqui...' required>"; ?>
                                 </div>
                                 <div class="menu-box">
-                                    <label for="sobrenome" class="label">Sobrenome</label>
-                                    <?php echo "<input type='text' name='sobrenome' id='sobrenome' class='Inputs' value='".$Sobrenome."' placeholder='Digite Aqui...' required>"; ?>
+                                    <label for="nome_completo" class="label">Nome Completo</label>
+                                    <?php echo "<input type='text' name='nome_completo' id='nome_completo' class='Inputs' value='".$nome_completo."' placeholder='Digite Aqui...' required>"; ?>
                                 </div>
                             </div>
                             <div id="div_2">
