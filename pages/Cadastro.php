@@ -41,7 +41,7 @@ else{
             <div id="Registros">
                 <div id="e">
                     <div class="menu_input">
-                        <input class="Input" minlength = "3" maxlength = "20" type="text" id="nome" name="nome" placeholder="Nome de usuário" pattern="[a-zA-Z0-9]+" required>
+                        <input class="Input" minlength = "3" maxlength = "20" type="text" id="nome" name="nome" placeholder="Nome de usuário" pattern="[a-z-0-9]+"required>
                     </div>
                     <div class="menu_input">
                         <input class="Input" minlength = "3" maxlength = "220" type="text" id="nome_completo" name="nome_completo" placeholder="Nome completo" required>
