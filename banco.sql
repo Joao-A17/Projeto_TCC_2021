@@ -27,8 +27,7 @@ DROP TABLE IF EXISTS `perfil`;
 CREATE TABLE `perfil` (
   `idperfil` int(11) NOT NULL AUTO_INCREMENT,
   `nomep` varchar(220) NOT NULL,
-  `
-  ` varchar(220) NOT NULL,
+  `descp` varchar(220) NOT NULL,
   `fotop` varchar(10000) NOT NULL,
   `instagramp` varchar(220) NOT NULL,
   `twitterp` varchar(220) NOT NULL,
@@ -117,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-11  9:38:22
+-- Dump completed on 2021-11-11  9:52:56
