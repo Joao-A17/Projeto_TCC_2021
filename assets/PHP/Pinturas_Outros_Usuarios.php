@@ -27,7 +27,7 @@ if (file_exists("$pasta")) {
                     <div class="Fundo-Desc">   
                         <div style='display: flex; margin: 20px;'>
                             <h1 class='data_public'>Publicado em:</h1>
-                            <?php echo "<h1 style='color: var(--corP); margin-left: 20px' class='data_public'>$Criado</h1>"?>
+                            <?php echo "<h1 style='color: var(--secundary); margin-left: 20px' class='data_public'>$Criado</h1>"?>
                         </div>
                         <h1 id="Nome-Pintura-U1" class="Nome-Pint"><?php echo $Nome_Foto ?></h1>
                         <p id="Desc-Pintura-U1" class="Desc-Pint"><?php echo $Desc_Foto ?></p>

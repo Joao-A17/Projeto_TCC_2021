@@ -5,8 +5,7 @@
 
 body{
     overflow-y: hidden;
-    height: 100vh;
-    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--tranp) 100%);
+    background: var(--dark);
 }
 
 #section{
@@ -24,7 +23,7 @@ h2{
     margin: 20px;
     font-size: 42px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to top right, var(--corD2), var(--corC2));
+    background-image: linear-gradient(to top right, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -41,7 +40,7 @@ h2{
 h1{
     font-size: 42px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to top right, var(--corL), var(--corP));
+    background-image: linear-gradient(to top right, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -66,14 +65,15 @@ h1{
     border-radius: 8px;
     border: none;
     background: var(--tranp);
-    color: var(--corL);
+    color: #dc3545;
+    border-top: 3px solid #dc3545;
     border-bottom: 3px solid #dc3545;
     transition: .3s; 
 }
 
 #btn_excluir_conta:hover{
     background: #dc3545;
-    color: var(--corL);
+    color: var(--light);
     box-shadow: 0 0 12px #dc3545;
 }
   
@@ -92,15 +92,15 @@ h1{
     text-decoration: none;
     border-radius: 8px;
     background: var(--tranp);
-    color: var(--corL);
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    color: var(--light);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
     border-radius: 8px;
     transition: .3s;  
 }
 
 #btn_cancelar:hover{
-    background: var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
-    color: var(--corD);
+    background: var(--light);
+    box-shadow: 0px 0px 10px var(--light);
+    color: var(--dark);
 }

@@ -11,6 +11,11 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 
 $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/';
 
+$verificar_pasta = '../assets/IMAGES/Foto_Perfil/'.$usuario_logado;
+if (!file_exists("$verificar_pasta")) {
+    header('Location: ../assets/PHP/verificarETAPA.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +41,7 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
           <div class="div_nav" id='d' style="display: none;">
               <i class="fas fa-sort-up Icon_up"></i>
               <li><a class="btn_nav" href="./Meu_Perfil.php"><i style="margin-right: 15px;"  class="fas fa-user"></i> Meu Perfil</a></li>
-              <li><a class="btn_nav" href="./editar_perfil.php"><i style="margin-right: 15px;"  class="fas fa-user-edit"></i> Editar perfil</a></li>
+              <li><a class="btn_nav" href="./editar_perfil.php"><i style="margin-right: 15px;"  class="fas fa-user-edit"></i> Conta</a></li>
               <li><a class="btn_nav" href="../ajuda.php"><i style="margin-right: 15px;"  class="fas fa-question-circle"></i> Ajuda</a></li>
               <li><a class="btn_nav" href="./Sobre.php"><i style="margin-right: 15px;"  class="fas fa-info-circle"></i> Sobre</a></li>
           </div>            
@@ -46,11 +51,12 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
           <div class="div_nav" id='d2' style="display: none;">
               <i class="fas fa-sort-up Icon_up"></i>                    
               <li><a class="btn_nav" href="#section_pesquisar"><i style="margin-right: 15px;"  class="fas fa-search"></i> Buscar</a></li>
+              <li><a class="btn_nav" href="#info"><i style="margin-right: 15px;"  class="fas fa-info-circle"></i> Informações</a></li>
               <li><a class="btn_nav" href="#pinturas"><i style="margin-right: 15px;"  class="fas fa-paint-brush"></i> Pinturas</a></li>
               <li><a class="btn_nav" href="#desenvolvedores"><i style="margin-right: 15px;"  class="fas fa-users"></i> Desenvolvedores</a></li>
           </div>
       </ul>
-      <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a></li>
+      <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-sign-out-alt"></i>Sair</a></li>
     </div>
   </nav>
 
@@ -73,9 +79,9 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
     <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
     </div>
     <div id="menu_usuario">
-      <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
-      <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
-      <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+      <a class="menuU-link bp" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+      <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Conta</a>
+      <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-sign-out-alt "></i>    Sair</a>
     </div>
   </div>
 
@@ -107,14 +113,6 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   ?>
 
   <section id='section_pesquisar'>
-    <div id="div_pesquisar"> 
-      <i class="fas fa-users IconU"></i>     
-      <label>Procurar usuários:</label> 
-      <form method="POST" action="./Perfil.php" id='form_outro_usuario'>
-        <i class="fas fa-search IconB"></i>
-        <input type="text" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
-      </form>
-    </div>     
     <div class="resultado">
       <script>
         $(function(){
@@ -134,7 +132,16 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
           });
         });
       </script>
-		</div>         
+		</div>   
+
+    <div id="div_pesquisar"> 
+      <i class="fas fa-users IconU"></i>     
+      <label>Procurar usuários:</label> 
+      <form method="POST" action="./Perfil.php" id='form_outro_usuario'>
+        <i class="fas fa-search IconB"></i>
+        <input type="text" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
+      </form>
+    </div>               
   </section>
 
   <section id="info">
@@ -164,17 +171,11 @@ $pasta_pintura_do_usuario = '../assets/IMAGES/Pinturas/' . $usuario_logado . '/'
   <div class="espaço"></div>
 
   <div id="divVermais">
-    <i class="fas fa-sort-up Icon_UP"></i>
-    <a href="" class='menu-link Recarregar'>Recarregar</a>
+    <a href="#pinturas" class='menu-link Recarregar'>Recarregar</a>
   </div>
 
   <script>
     var Recarregar = document.querySelector('.Recarregar');
-    var Icon_UP = document.querySelector('.Icon_UP');
-
-    Icon_UP.addEventListener('click', function() {
-      Recarregar.click();
-    });
 
     Recarregar.addEventListener('click', function() {
       location.reload();

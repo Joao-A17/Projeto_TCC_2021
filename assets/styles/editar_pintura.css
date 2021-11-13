@@ -1,6 +1,5 @@
 body{
-    height: 100%;
-	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+    background: var(--dark);
 }
 
 #Pint_Completa{
@@ -20,14 +19,14 @@ body{
     margin: 20px;
     border-radius: 20px;
     border: none;
-    border-top: 4px solid var(--corP);
-    border-bottom: 4px solid var(--corP);
+    border-top: 4px solid var(--secundary);
+    border-bottom: 4px solid var(--secundary);
     transition: .4s;
 }
 
 #IMG:hover{
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
 }
 
 #Menu_Editar{
@@ -43,7 +42,7 @@ body{
 .Nome_Pint{
     font-size: 35px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -51,7 +50,7 @@ body{
 .Desc_Pint{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #menu_Excluir{
@@ -60,6 +59,9 @@ body{
 
 
 #btn_Excluir{
+    position: absolute;
+    top: 20px;
+    margin-left: 50px;
     font-family: 'Calibri', sans-serif;
     height: 40px;
     width: 120px;
@@ -68,15 +70,46 @@ body{
     border-radius: 8px;
     border: none;
     background: var(--tranp);
-    color: var(--corL);
+    color: #dc3545;
+    border-top: 3px solid #dc3545;
     border-bottom: 3px solid #dc3545;
     transition: .3s; 
 }
 
 #btn_Excluir:hover{
     background: #dc3545;
-    color: var(--corL);
+    color: var(--light);
     box-shadow: 0 0 12px #dc3545;
+}
+
+#btn_cancelar{
+    position: absolute;
+    top: 20px;
+    margin-left: 400px;
+    width: 200px;
+    height: 32px;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;          
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    background: var(--tranp);
+    color: var(--light);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
+    border-radius: 8px;
+    transition: .3s;  
+}
+
+#btn_cancelar:hover{
+    background: var(--light);
+    box-shadow: 0px 0px 10px var(--light);
+    color: var(--dark);
 }
 
 #formulario{    
@@ -93,46 +126,48 @@ body{
     text-align: center;
     outline: none;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-bottom: 3px solid var(--corP);
+    border-bottom: 3px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 
 #NNPint:focus{
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #InputAltD{
     margin: 20px;
     width: 100%;
     height: 200px;
+    padding: 6px 12px;
     display: block;
     font-size: 20px;
-    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     outline: none;
-    justify-content: space-around;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corP);
-    border-bottom: 2px solid var(--corP);
+    border-top: 2px solid var(--secundary);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
   }
   #InputAltD:focus{
-    border-top: 2px solid var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    color: var(--primary);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
   }
 
 #salvar_edicoes{
-    margin-left: 50px;
+    position: absolute;
+    top: 20px;
     width: 180px;
     height: 40px;
     font-size: 20px;
@@ -143,15 +178,15 @@ body{
     text-align: center;
     border-radius: 8px;
     background: var(--tranp);
-    color: var(--corL);
-    border-bottom: 2px solid var(--corL);
+    color: var(--light);
+    border-bottom: 2px solid var(--light);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;  
 }
 
 #salvar_edicoes:hover{
-    background: var(--corL);
-    color: var(--corD);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
+    background: var(--light);
+    color: var(--dark);
+    border-bottom: 2px solid var(--light);
+    box-shadow: 0px 0px 10px var(--light);
 }

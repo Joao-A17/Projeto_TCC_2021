@@ -38,10 +38,10 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <div class="card_instru">
               <h1>Como cadastrar usuário?</h1>
               <p><label for="">Campo Nome de usuário: </label> Esse campo só aceita letras maiúsculas, minúsculas e números e não pode existe usuários com o mesmo nome.<br> <br>
-              <label for="">Campo Nome completo: </label> Esse campo aceita qualquer tipo de letra, numero ou símbolo. <br> <br>
+              <label for="">Campo Nome completo: </label> Esse campo aceita qualquer tipo de letra, número ou símbolo. <br> <br>
               <label for="">Campo Email: </label> Esse campo é onde você irar colocar seu email. <br> <br>
-              <label for="">Campo Senha: </label> Esse campo aceita qualquer tipo de letra, numero ou símbolo. <br> <br>
-              <label for="">Campo Telefone: </label> Esse campo aceita só numeros.</p>
+              <label for="">Campo Senha: </label> Esse campo aceita qualquer tipo de letra, número ou símbolo. <br> <br>
+              <label for="">Campo Telefone: </label> Esse campo aceita somente números.</p>
             </div>
             <div class="card_instru">
               <h1>Tela Etapa</h1>
@@ -52,7 +52,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <div class="card_instru">
               <h1>Como publicar uma imagem?</h1>
               <p>Para postar uma imagem você tera que ir em seu perfil e clicar em Adicionar <br>
-              Campos de texto: Você pode colocar qualquer tipo de letra, numero ou símbolo. <br>
+              Campos de texto: Você pode colocar qualquer tipo de letra, número ou símbolo. <br>
               E só poderá publicar com uma imagem adicionada.</p>
             </div>
             <div class="card_instru">
@@ -112,7 +112,7 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
             <div class="card_instru">
               <h1>Como publicar uma imagem?</h1>
               <p>Para postar uma imagem você tera que ir em seu perfil e clicar em Adicionar <br>
-              Campos de texto: Você pode colocar qualquer tipo de letra, numero ou símbolo. <br>
+              Campos de texto: Você pode colocar qualquer tipo de letra, número ou símbolo. <br>
               E só poderá publicar com uma imagem adicionada.</p>
             </div>
             <div class="card_instru">

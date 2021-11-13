@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: linear-gradient(90deg, var(--corC2) 0%, var(--corC) 100%);
+  background: var(--dark);
 }
 
 #forms_1_2{
@@ -29,16 +29,15 @@ body{
   justify-content: space-around;
   align-items: center;
   font-family: 'Calibri', sans-serif;
-  border-bottom: 3px solid var(--corS);
+  border-bottom: 3px solid var(--primary);
 }
 
 #TituloMenu{
   font-size: 40px;
   font-family: 'Calibri', sans-serif;
-  background-image: linear-gradient(to bottom, var(--corS), var(--corL));
+  background-image: linear-gradient(to bottom, var(--primary), var(--secundary));
   -webkit-background-clip: text;
   color: transparent;
-  text-transform: uppercase;
 }
 
 .menu-link{
@@ -50,19 +49,19 @@ body{
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  border-radius: 24px;
+  border-radius: 12px;
   background: var(--tranp);
-  color: var(--corL);
-  border: 2px solid var(--tranp);
-  box-shadow: 0px 0px 5px var(--tranp);
+  color: var(--light);
+  border: 2px solid var(--primary3);
+  box-shadow: 0px 0px 5px var(--primary3);
   transition: .3s;
 }
 
 .menu-link:hover{
-  background: var(--corS);
-  color: var(--corD);
-  border: 2px solid var(--corS);
-  box-shadow: 0px 0px 10px var(--corS);
+  background: var(--primary);
+  color: var(--dark);
+  border: 2px solid var(--primary);
+  box-shadow: 0px 0px 10px var(--primary);
 }
 
 #dividir{
@@ -107,16 +106,16 @@ body{
   text-align: center;
   border-radius: 24px;
   background: var(--tranp);
-  color: var(--corL);
+  color: var(--light);
   border: 2px solid var(--tranp);
   box-shadow: 0px 0px 5px var(--tranp);
   transition: .3s;
 }
 
 #Select_img_public:hover{
-  background: var(--corS);
-  border: 2px solid var(--corS);
-  box-shadow: 0px 0px 10px var(--corS);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0px 0px 10px var(--primary);
 }
 
 #btn_salvar{
@@ -129,17 +128,17 @@ body{
   border: 0;
   cursor: pointer;
   text-align: center;
-  border-radius: 24px;
+  border-radius: 12px;
   background: var(--tranp);
-  color: var(--corL);
-  border-bottom: 2px solid var(--corL);
+  color: var(--light);
+  border: 2px solid var(--primary3);
+  box-shadow: 0px 0px 5px var(--primary3);
   transition: .3s;
 }
 #btn_salvar:hover{
-  animation: none;
-  background: var(--corL);
-  color: var(--corD);
-  box-shadow: 0px 0px 10px var(--corL);
+  background: var(--primary);
+  color: var(--dark);
+  box-shadow: 0px 0px 12px var(--primary);
 }
 
 #INPUTS{
@@ -160,7 +159,7 @@ body{
   margin-bottom: 10px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 25px;
-  color: var(--corD);  
+  color: var(--light);  
   display: flex;
 }
 
@@ -173,16 +172,16 @@ body{
   text-align: center;
   outline: none;
   background: var(--tranp);
-  color: var(--corL);
+  color: var(--light);
   border: none;
   border-radius: 8px;
-  border-bottom: 3px solid var(--corC2);
+  border-bottom: 3px solid var(--primary2);
   box-sizing: border-box;
   transition: .3s;
 }
 .Inputs:focus{
-  border-bottom: 3px solid var(--corS);
-  box-shadow: 0 2px 5px var(--corS);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 2px 5px var(--primary);
 }
 
 textarea#desc_usuario {
@@ -198,18 +197,18 @@ textarea#desc_usuario {
   outline: none;
   justify-content: space-around;
   background: var(--tranp);
-  color: var(--corL);
+  color: var(--light);
   border: none;
   border-radius: 8px;
-  border-top: 3px solid var(--corC2);
-  border-bottom: 3px solid var(--corC2);
+  border-top: 3px solid var(--primary2);
+  border-bottom: 3px solid var(--primary2);
   box-sizing: border-box;
   transition: .3s;
 }
 #desc_usuario:focus{
-  border-top: 3px solid var(--corS);
-  border-bottom: 3px solid var(--corS);
-  box-shadow: 0 2px 5px var(--corS);
+  border-top: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 2px 5px var(--primary);
 }
 
 /* msg de erro */
@@ -266,16 +265,16 @@ textarea#desc_usuario {
 @keyframes Pulse{
   from {
       transform: scale(.7);
-      background: var(--corS);
-      color: var(--corD);
-      border: 2px solid var(--corS);
-      box-shadow: 0px 0px 10px var(--corS);
+      background: var(--primary);
+      color: var(--dark);
+      border: 2px solid var(--primary);
+      box-shadow: 0px 0px 10px var(--primary);
   }
 }
 
 
 .Isenha{
-  color: var(--corL);
+  color: var(--light);
   position: absolute;
   font-size: 20px;
   margin-top: 10px;
@@ -284,11 +283,11 @@ textarea#desc_usuario {
 }
 
 .Isenha:hover{
-  color: var(--corS);
+  color: var(--primary);
 }
 
 .Isenha2{
-  color: var(--corL);
+  color: var(--light);
   position: absolute;
   font-size: 20px;
   margin-top: 10px;
@@ -297,7 +296,7 @@ textarea#desc_usuario {
 }
 
 .Isenha2:hover{
-  color: var(--corS);
+  color: var(--primary);
 }
 
 #form_excluir_conta{
@@ -317,13 +316,14 @@ textarea#desc_usuario {
   border-radius: 8px;
   border: none;
   background: var(--tranp);
-  color: var(--corL);
+  color: #dc3545;
+  border-top: 3px solid #dc3545;
   border-bottom: 3px solid #dc3545;
   transition: .3s; 
 }
 
 #btn_excluir_conta:hover{
   background: #dc3545;
-  color: var(--corL);
+  color: var(--light);
   box-shadow: 0 0 12px #dc3545;
 }

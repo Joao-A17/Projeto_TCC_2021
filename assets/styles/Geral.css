@@ -3,17 +3,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"); /* link para conectar o site dos icones */
 
 :root {
-    --corL: #fafafa;
-    --corC: #e5e4fb;
-    --corC2: #3b3568;
-    --corP: #35C1FE;
-    --corS: #2E55D3;
-    --corAS: #0a1136;
-    --corAS2: #1b2868;
-    --corAS3: #545878;
-    --tranp: #0000004d;
-    --corD: #262626;
-    --corD2:#17202b;
+    --dark: #050918;
+    --light: #e5e4fb;
+    --light2: #d0d0d0d0;
+    --tranp: #00000060;
+    --primary: #2E55D3;
+    --primary2: #1c3588;
+    --primary3: #112f8d;
+    --secundary: #35C1FE;
+    --tertiary: #0a1136;
 }
 
 ul {
@@ -24,6 +22,7 @@ ul {
 
 body{
     overflow-x:hidden;
+    animation: aparecer 1.3s;
 }
 
 body::-webkit-scrollbar{
@@ -31,28 +30,19 @@ body::-webkit-scrollbar{
 }
   
 body::-webkit-scrollbar-track{
-    background: var(--corD);
+    background: var(--dark);
 }
-  
+ 
 body::-webkit-scrollbar-thumb{
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+	background-image: linear-gradient(45deg, var(--secundary) 0%, var(--primary) 100%);
     border-radius: 30px;
 }
 
 body::-webkit-scrollbar-thumb:hover{
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+	background-image: linear-gradient(45deg, var(--secundary) 0%, var(--primary) 100%);
 }
+
 /* Animation huehue */
-
-@keyframes rotação {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(359deg);
-    }
-}
 
 @keyframes pulse {
     0% {

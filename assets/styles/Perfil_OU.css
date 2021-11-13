@@ -7,8 +7,7 @@
 }
 
 body{
-    height: 100%;
-	background-image: linear-gradient(45deg, var(--corD2) 0%, var(--tranp) 100%);
+    background: var(--dark);
 }
 
 .Menu{
@@ -19,14 +18,14 @@ body{
     justify-content: space-around;
     align-items: center;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--tranp), var(--corD2));
+	background-image: linear-gradient(to top, var(--tranp), var(--tertiary));
     border-radius: 10px;
-    border: 2px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 15px var(--primary);
 }
 
 .Logo{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     font-family: 'Calibri', sans-serif;
@@ -52,24 +51,24 @@ body{
     justify-content: center;
     align-items: center;
     background: none;
-    color: var(--corP);
-    border: 2px solid var(--corP);
+    color: var(--secundary);
+    border: 2px solid var(--secundary);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corP);
+    box-shadow: 0px 0px 5px var(--secundary);
     transition: .4s;
 }
 
 .btn-menu:hover{
-    background: var(--corP);
+    background: var(--secundary);
     color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 2px solid var(--secundary);
+    box-shadow: 0px 0px 10px var(--secundary);
 }
 
 #container{
     padding-top: 50px;
     border-radius: 10px;
-    border: 2px solid var(--corS);
+    border: 2px solid var(--primary);
 }
 
 #Cont-Master{
@@ -78,9 +77,10 @@ body{
 
 .Cont{
     margin-top: 50px;
+    margin-bottom: 100px;
     width: 100%;
     display: inline-flex;
-	background-image: linear-gradient(270deg, var(--corS) 0%, var(--corAS) 100%);
+	background-image: linear-gradient(180deg, var(--dark) 0%, var(--primary3) 100%);
     border-radius: 20px;
 }
 
@@ -91,7 +91,7 @@ body{
 .data_public{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 .IconG{
@@ -101,21 +101,21 @@ body{
 
 .Icon{
     font-size: 50px;
-    color: var(--corP);
+    color: var(--secundary);
 }
 
 .Pintura{
     width: 100%;
     border-radius: 20px;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 .NomeT{
     margin-bottom: 20px;
     font-size: 35px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -131,7 +131,7 @@ body{
 
 .Nome-Pint{
     font-size: 40px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     font-family: 'Calibri', sans-serif;
@@ -140,17 +140,15 @@ body{
 .Desc-Pint{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #AdminForm{
-	background-image: linear-gradient(270deg, var(--corS) 0%, var(--corAS) 100%);
-    margin-top: 20px;
     display: flex;
     padding: 20px;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
+    border-radius: 12px;
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 #DivFP{
@@ -162,28 +160,26 @@ body{
     height: 220px;
     margin-left: 20px;
     border-radius: 50%;
-    border-top: 5px solid var(--corS);
-    border-left: 3px solid var(--corS); 
-    animation: pulse 2s ;
-    animation: rotação .3s;
+    border-top: 5px solid var(--primary);
+    border-left: 3px solid var(--primary); 
 }
 
 #Info_Admin{
     width: 100%;
-    margin-left: 20px;
-    border: 0;
-    border-radius: 20px;
+    margin-left: 100px;
+    border-radius: 12px;
+    background-image: linear-gradient(315deg, var(--tranp) 0%, var(--primary3) 100%);
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 #Nome_Usuario{
     margin: 20px;
     font-family: 'Calibri', sans-serif;
     font-size: 50px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
-    animation: pulse 2s ;
-    animation: rotação .3s;
 }
 
 #Desc_Usuario{
@@ -192,9 +188,7 @@ body{
     margin-bottom: 15px;
     font-family: 'Josefin Sans', sans-serif; 
     font-size: 30px;
-    color: var(--corL);
-    animation: pulse 2s ;
-    animation: rotação .3s;
+    color: var(--light);
 }
 
 .TextE{
@@ -203,7 +197,7 @@ body{
     font-family: 'Josefin Sans', sans-serif; 
     font-size: 20px;
     text-align: center;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #Redes{
@@ -217,23 +211,23 @@ body{
     margin: 30px;
     font-size: 3rem;
     background: transparent;
-    color: var(--corL);
+    color: var(--light);
     width: 5rem;
 }
 
 .E{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .E:hover{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);
 }
 
 .W{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .W:hover{
@@ -245,7 +239,7 @@ body{
 
 .F{
     background: var(--tramp);
-    color: var(--corL);
+    color: var(--light);
     border-radius: 50px;
     transition: .3s;
 }
@@ -258,7 +252,7 @@ body{
 }
 
 .I{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .I:hover{
@@ -269,7 +263,7 @@ body{
 }
 
 .T{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .T:hover{

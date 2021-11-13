@@ -7,34 +7,34 @@
     top: 20%;
     right:0px;  
     width: 60px; 
-    background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
-    border-top: 3px solid var(--corC2);
-    border-bottom: 3px solid var(--corC2);
-    box-shadow: 0 0 12px var(--corC2);
-    transition: .5s;
+    background-image: linear-gradient(45deg, var(--tertiary), var(--tranp));
+    border: 3px solid var(--tertiary);
+    box-shadow: 0 0 5px var(--tertiary);
+    transition: .7s;
 }
 
 
 #CardUser:hover{ 
     width: 350px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0 0 12px var(--corS);
+    background-image: linear-gradient(0deg, var(--primary), var(--tranp));
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 12px var(--primary);
 }
 
 #Img-UsuarioL{
     width: 80px;
     height: 80px;
     margin: 10px;
+    cursor: pointer;
     border-radius: 50%;
-    border: 3px solid var(--corL);
-    box-shadow: 0 0 12px var(--corL);
+    border: 3px solid var(--light2);
+    box-shadow: 0 0 5px var(--light2);
     transition: .3s;
 }
 
 #Img-UsuarioL:hover{
-    box-shadow: 0 0 30px var(--corL);
-    opacity: 0.7;
+    border: 3px solid var(--light);
+    box-shadow: 0 0 20px var(--light);
 }
 
 #Img_UserL{
@@ -42,7 +42,7 @@
 }
 
 #Nome_User{
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Calibri', sans-serif;
     margin: 20px;
     text-align: center;
@@ -57,7 +57,7 @@
 }
 
 .menuU-link{
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Calibri', sans-serif;
     font-size: 25px;
     margin-top: 20px;
@@ -66,5 +66,5 @@
 }
 
 .menuU-link:hover{
-    color: var(--corS);
+    color: var(--secundary);
 }

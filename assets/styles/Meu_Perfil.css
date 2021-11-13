@@ -8,7 +8,7 @@
 
 body{
     height: 100%;
-	background-image: linear-gradient(140deg, var(--tranp) 0%, var(--corC) 100%);
+    background: var(--dark);
 }
 
 .espaço{    
@@ -16,7 +16,7 @@ body{
     margin-bottom: 50px;
     padding: 1px;
     border-radius: 50px;
-	background-image: linear-gradient(to left, var(--corS), var(--corC2));
+	background-image: linear-gradient(to left, var(--primary), var(--secundary));
     border: 0;
     border-radius: 20px;
 }
@@ -34,10 +34,10 @@ body{
     position: absolute;
     right: 20px;
     font-size: 40px;
-    color: var(--corP);
+    color: var(--secundary);
 }
 #Icon_Pontinhos:hover{
-    color: var(--corS);
+    color: var(--primary);
 }
 
 #menu_btns{
@@ -54,14 +54,15 @@ body{
     border-radius: 8px;
     border: none;
     background: var(--tranp);
-    color: var(--corL);
+    color: #dc3545;
+    border-top: 3px solid #dc3545;
     border-bottom: 3px solid #dc3545;
     transition: .3s; 
 }
 
 #btn_Excluir:hover{
     background: #dc3545;
-    color: var(--corL);
+    color: var(--light);
     box-shadow: 0 0 12px #dc3545;
 }
 
@@ -88,31 +89,17 @@ body{
 
 .Icon{
     font-size: 50px;
-    color: var(--corP);
-}
-
-.Pintura{
-    width: 100%;
-    border-radius: 20px;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
-}
-
-.Pintura:hover{
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    color: var(--secundary);
 }
 
 .Fundo-Desc{
     width: 600px;
     height: 100%;
-	border-radius: 20px;
-    margin-left: 20px;
-	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
-    box-shadow: 0 0 20px var(--corS);
+    border-radius: 20px;
+    margin: 20px auto;
+    background-image: linear-gradient(315deg, var(--primary3) 0%, var(--dark) 100%);
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 .margin{
@@ -122,7 +109,7 @@ body{
 .Nome-Pint{
     font-size: 45px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corC2), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -132,7 +119,7 @@ body{
     width: 500px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
-    color: var(--corL);
+    color: var(--light);
 }
 
 
@@ -146,8 +133,8 @@ body{
     text-align: center;
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 #MenuPublicar h2{
@@ -155,7 +142,7 @@ body{
     margin-bottom: 20px;
     font-size: 50px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+	background-image: linear-gradient(to bottom, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -168,13 +155,13 @@ body{
 input::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 textarea::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #MS-1, #MS-2{
@@ -201,16 +188,16 @@ textarea::placeholder{
     text-align: center;
     outline: none;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-bottom: 2px solid var(--corP);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 .InputPublic:focus{
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 textarea#InputPublicD {
@@ -226,18 +213,18 @@ textarea#InputPublicD {
     font-size: 21px;
     outline: none;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corP);
-    border-bottom: 2px solid var(--corP);
+    border-top: 2px solid var(--secundary);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 #InputPublicD:focus{
-    border-top: 2px solid var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #btn-publicar{    
@@ -252,14 +239,14 @@ textarea#InputPublicD {
     margin: 20px;
     width: 50%;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 #IMGpublic:hover{
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 #SelectIMG{
@@ -272,19 +259,19 @@ textarea#InputPublicD {
     font-size: 20px;   
     font-family: 'Josefin Sans', sans-serif; 
     background: var(--tranp);
-    color: var(--corL);
+    color: var(--light);
     border: none;
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
     border-radius: 8px;
     transition: .3s;
 }
 
 #Select_img_public:hover{
-    background: var(--corL);
+    background: var(--light);
     color: var(--corD);
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
 }
 
 /* ------------------------------------Editar------------------------------------ */
@@ -297,7 +284,7 @@ textarea#InputPublicD {
     margin-top: 10px;
     margin-bottom: 30px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+	background-image: linear-gradient(to bottom, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -310,7 +297,7 @@ textarea#InputPublicD {
 .Editar input::placeholder{
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 .InputAlt{
@@ -323,17 +310,17 @@ textarea#InputPublicD {
     text-align: center;
     outline: none;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-bottom: 2px solid var(--corP);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 .InputAlt:focus{
     width: 400px;
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #InputAltD{
@@ -348,18 +335,18 @@ textarea#InputPublicD {
     resize: none;
     justify-content: space-around;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corP);
-    border-bottom: 2px solid var(--corP);
+    border-top: 2px solid var(--secundary);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 #InputAltD:focus{
-    border-top: 2px solid var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #SelectIMG0{
@@ -382,17 +369,17 @@ textarea#InputPublicD {
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 .btn-ST:hover{
-    background: var(--corP);
+    background: var(--secundary);
     color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 2px solid var(--secundary);
+    box-shadow: 0px 0px 10px var(--secundary);
 }
 
 .btn-SP{
@@ -406,30 +393,30 @@ textarea#InputPublicD {
     text-align: center;
     border-radius: 8px;
     background: var(--tranp);
-    color: var(--corL);
-    border-bottom: 2px solid var(--corL);
+    color: var(--light);
+    border-bottom: 2px solid var(--light);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;  
 }
 
 .btn-SP:hover{
-    background: var(--corL);
+    background: var(--light);
     color: var(--corD);
-    border-bottom: 2px solid var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
+    border-bottom: 2px solid var(--light);
+    box-shadow: 0px 0px 10px var(--light);
 }
 
 .InfoP{
     padding: 30px;
     border-radius: 30px;
-    border: 2px solid  var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    border: 2px solid  var(--secundary);
+    box-shadow: 0px 0px 10px var(--secundary);
 }
 
 .ContAdmin{
     border-radius: 30px;
-    border: 3px solid  var(--corS);
-    box-shadow: 0px 0px 10px var(--corS);
+    border: 3px solid  var(--primary);
+    box-shadow: 0px 0px 10px var(--primary);
 }
 
 #AdminForm{
@@ -446,8 +433,8 @@ textarea#InputPublicD {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border-top: 5px solid var(--corS);
-    border-left: 3px solid var(--corS); 
+    border-top: 5px solid var(--primary);
+    border-left: 3px solid var(--primary); 
     animation: rotação .3s;
 }
 
@@ -455,11 +442,10 @@ textarea#InputPublicD {
     display: inline-flex;
     width: 100%;
     margin-left: 100px;
-    border: 0;
-    border-radius: 20px;
-	background-image: linear-gradient(315deg, var(--corC) 0%, var(--corC2) 100%);
-    border: 3px solid var(--corC2); 
-    box-shadow: 0 0 20px var(--corC2);
+    border-radius: 12px;
+    background-image: linear-gradient(315deg, var(--tranp) 0%, var(--primary3) 100%);
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 #btn_editP{
@@ -467,7 +453,7 @@ textarea#InputPublicD {
     right: 40px;
     margin-top: 20px;
     width: 250px;
-    height: 32px;
+    height: 40px;
     cursor: pointer;
     font-size: 20px;
     font-family: 'Calibri', sans-serif;
@@ -476,18 +462,18 @@ textarea#InputPublicD {
     letter-spacing: 5px;
     justify-content: center;
     align-items: center;
-    background: var(--tranp);
-    color: var(--corL);
-    border-bottom: 3px solid var(--corS);
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corS);
+    background: var(--dark);
+    color: var(--light2);
+    border-bottom: 3px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px var(--primary);
     transition: .3s;
 }
 
 #btn_editP:hover{
-    background: var(--corS);
-    color: var(--corL);
-    box-shadow: 0px 0px 20px var(--corS);
+    background: var(--primary);
+    color: var(--light);
+    box-shadow: 0px 0px 12px var(--primary);
 }
 
 #Nome-Admin{
@@ -495,7 +481,7 @@ textarea#InputPublicD {
     margin-top: 20px;
     font-size: 35px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     animation: pulse 2s ;
@@ -507,7 +493,7 @@ textarea#InputPublicD {
     margin-top: 10px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--light);
     animation: rotação .3s;
 }
 
@@ -521,13 +507,13 @@ textarea#InputPublicD {
     font-family: 'Josefin Sans', sans-serif; 
     font-size: 22px;
     text-align: center;
-    color: var(--corD2);
+    color: var(--light);
 }
 
 
 #btn-Adicionar{
     width: 200px;
-    height: 32px;
+    height: 35px;
     cursor: pointer;
     font-size: 20px;
     font-family: 'Calibri', sans-serif;
@@ -536,18 +522,18 @@ textarea#InputPublicD {
     letter-spacing: 5px;
     justify-content: center;
     align-items: center;
-    background: var(--tranp);
-    color: var(--corD);
-    border-bottom: 3px solid var(--corS);
+    background: var(--dark);
+    color: var(--light2);
+    border-bottom: 3px solid var(--primary);
     border-radius: 8px;
-    box-shadow: 0px 0px 5px var(--corS);
+    box-shadow: 0px 0px 5px var(--primary);
     transition: .3s;
 }
 
 #btn-Adicionar:hover{
-    background: var(--corS);
-    color: var(--corD);
-    box-shadow: 0px 0px 20px var(--corS);
+    background: var(--primary);
+    color: var(--light);
+    box-shadow: 0px 0px 12px var(--primary);
 }
 
 .Redes{
@@ -557,23 +543,23 @@ textarea#InputPublicD {
     margin: 30px;
     font-size: 3rem;
     background: transparent;
-    color: var(--corL);
+    color: var(--light);
     width: 5rem;
 }
 
 .E{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .E:hover{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);
 }
 
 .W{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .W:hover{
@@ -585,7 +571,7 @@ textarea#InputPublicD {
 
 .F{
     background: var(--tramp);
-    color: var(--corL);
+    color: var(--light);
     border-radius: 50px;
     transition: .3s;
 }
@@ -598,7 +584,7 @@ textarea#InputPublicD {
 }
 
 .I{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .I:hover{
@@ -609,7 +595,7 @@ textarea#InputPublicD {
 }
 
 .T{
-    color: var(--corL);
+    color: var(--light);
     transition: .3s;
 }
 .T:hover{
@@ -634,29 +620,24 @@ textarea#InputPublicD {
 /* Div das Pinturas */
 
 .Fundo_Card{
-	background-image: linear-gradient(to bottom, var(--tranp), var(--corD2));
+	background-image: linear-gradient(to bottom, var(--tranp), var(--light));
     border-radius: 8px;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
-}
-
-.Card_Pinturas{
-    display: contents;
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 .Pinturas{
     width: 100%;
     margin: 20px auto;
     border-radius: 20px;
-    border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS); 
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary); 
 }
 
 .Pinturas:hover{
     opacity: .7;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 /* msg de erro */

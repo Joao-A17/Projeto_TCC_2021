@@ -6,7 +6,7 @@ require './dados_perfil.php';
 if(isset($_POST['btn_salvar'])){ 
     $usuario_logado = $_SESSION['nome-user'];   
     $Nome = filter_input(INPUT_POST, 'nome_usuario', FILTER_SANITIZE_STRING);
-    $Sobrenome = filter_input(INPUT_POST, 'sobrenome', FILTER_SANITIZE_STRING);
+    $nome_completo = filter_input(INPUT_POST, 'nome_completo', FILTER_SANITIZE_STRING);
     $Email = filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_STRING);
     $Senha = filter_input(INPUT_POST, 'Senha', FILTER_SANITIZE_STRING);
     $Desc = filter_input(INPUT_POST, 'desc_usuario', FILTER_SANITIZE_STRING);
@@ -16,7 +16,7 @@ if(isset($_POST['btn_salvar'])){
     
     echo "Usuario Logado: ", $usuario_logado, "<br>";
     echo "Nome: ", $Nome, "<br>";
-    echo "Sobrenome: ", $Sobrenome, "<br>";
+    echo "nome_completo: ", $nome_completo, "<br>";
     echo "Email: ", $Email, "<br>";
     echo "Senha: ", $Senha, "<br>"; 
     echo "Descrição: ", $Desc, "<br>";
@@ -28,7 +28,7 @@ if(isset($_POST['btn_salvar'])){
 
     
     
-    $UP_usuarios = "UPDATE usuarios SET nome = '$Nome', sobrenome = '$Sobrenome', email = '$Email', password = '$Senha', telefone = '$Whats' WHERE id='$IdUser'";    
+    $UP_usuarios = "UPDATE usuarios SET nome = '$Nome', nome_completo = '$nome_completo', email = '$Email', password = '$Senha', telefone = '$Whats' WHERE id='$IdUser'";    
     $sql_usuarios = mysqli_query($conexao, $UP_usuarios);
 
     $UP_perfil = "UPDATE perfil SET nomep = '$Nome', descp = '$Desc', instagramp = '$Insta', twitterp = '$Twit', telefonep = '$Whats' WHERE idperfil='$Id_perfil'";
@@ -51,8 +51,6 @@ if(isset($_POST['btn_salvar'])){
         $_SESSION['msg_update'] = "        
         <div id='msg_true'>
             <h1> Perfil Alterado! <i class='fas fa-smile-beam icon'></i></h1>
-            <br>
-            <h1> Faça Login Novamente </h1>
         </div>         
         "; 
         header('Location: ../../pages/editar_perfil');

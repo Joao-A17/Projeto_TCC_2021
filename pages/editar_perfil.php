@@ -84,15 +84,15 @@ if(!isset($FotoP)){
                             </div>
                             <div id="links">
                                 <div class="menu-box">
-                                    <label for="inst_usuario" style='color: var(--corL);' class="label">Link do instagram</label>
+                                    <label for="inst_usuario" class="label">Link do instagram</label>
                                     <?php echo "<input type='text' name='inst_usuario' id='inst_usuario' class='Inputs' value='".$Insta_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                                 </div>
                                 <div class="menu-box">
-                                    <label for="twit_usuario" style='color: var(--corL);' class="label">Link do twitter</label>
+                                    <label for="twit_usuario" class="label">Link do twitter</label>
                                     <?php echo "<input type='text' name='twit_usuario' id='twit_usuario' class='Inputs' value='".$Twitter_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                                 </div>
                                 <div class="menu-box">
-                                    <label for="tele_usuario" style='color: var(--corL);' class="label">Numero do telefone</label>
+                                    <label for="tele_usuario" class="label">Numero do telefone</label>
                                     <?php echo "<input type='tel' name='tele_usuario' id='tele_usuario' class='Inputs' value='".$Telefone_Perfil."' placeholder='Digite Aqui...' required>"; ?>
                                 </div>
                             </div>

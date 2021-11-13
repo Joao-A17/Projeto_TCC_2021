@@ -1,4 +1,5 @@
-<?php
+
+    animation: aparecer 2s;<?php
 include_once('../assets/PHP/Conexao_Banco.php');
 require '../assets/PHP/dados_perfil.php';
 
@@ -52,13 +53,14 @@ if($Autor == $usuario_logado){
                             <input style='display: none;' type="text" name="Pint_Foto" value=<?php echo $Pint_Foto ?> required>
                             <input style='display: none;' type="number" name="id_pintura_ex" value=<?php echo $id_pintura ?> required>
                             <input type='submit' id='btn_Excluir'name='btn_Excluir' value='Excluir'>    
+                            <a href="./Meu_Perfil.php" id='btn_cancelar'>Cancelar</a>                            
                         </form>
                     </div>
                     <form action="../assets/PHP/up_pintura.php" method="POST" id="formulario">
+                        <input type='submit' name='alt_img' value='Salvar' id="salvar_edicoes" class='btn-SP'> 
                         <input style='display: none' type="text" name="id_img" id="id_img" value=<?php echo $id_pintura; ?>>
                         <?php echo "<input type='text' name='novo_nome' minlength = '3' maxlength = '50' id='NNPint' placeholder='Digite o nome da pintura' value='".$nome_foto."' >";?>
-                        <?php echo "<input type='text' name='nova_desc' minlength = '3' maxlength = '50' id='InputAltD' placeholder='Digite a descrição da pintura' value='".$desc_foto."' >";?>
-                        <input type='submit' name='alt_img' value='Salvar' id="salvar_edicoes" class='btn-SP'> 
+                        <?php echo "<textarea name='nova_desc' id='InputAltD' style='resize: none;' cols='100' rows='10' minlength = '3' maxlength = '150'  maxlength='220' placeholder='Digite a descrição da pintura'>".$desc_foto."</textarea>"; ?>
                     </form>                   
                 </div>
             </div>

@@ -4,7 +4,9 @@
 }
 
 body{
-	background-image: linear-gradient(180deg, var(--tranp) 0%, var(--corC) 100%);
+    height: 100vh;
+    background-image: linear-gradient(90deg, var(--tertiary) 0%, var(--primary2) 100%);
+    animation: aparecer 1.3s;
 }
 
 #instrucoes{
@@ -26,21 +28,21 @@ body{
     margin-top: 40px;
     text-align: center;
     border-radius: 20px;
-	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
-    box-shadow: 0 0 5px var(--corS);
+    background: var(--dark);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 .card_instru:hover{   
-    box-shadow: 0 0 20px var(--corS);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 .card_instru label{
     font-size: 28px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;
     text-transform: uppercase;
@@ -49,7 +51,7 @@ body{
 .card_instru h1{
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;
     text-transform: uppercase;
@@ -57,32 +59,34 @@ body{
 
 .card_instru p{
     margin: 20px;
-    color: var(--corL);
+    color: var(--light);
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;   
 }
 
 #Lembrete{
     width: 100%;
+    padding: 50px;
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
     border-radius: 20px;
-	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
-    box-shadow: 0 0 5px var(--corS);
+    background-image: linear-gradient(360deg, var(--tranp) 0%, var(--dark) 100%);
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
+    box-shadow: 0 0 5px var(--primary);
     transition: .3s;
 }
 
 #Lembrete:hover{   
-    box-shadow: 0 0 20px var(--corS);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 #Lembrete h2{
     font-size: 40px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;
     text-transform: uppercase;
@@ -91,9 +95,7 @@ body{
 #Lembrete p{
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(to bottom, var(--corC2), var(--corD2));
-    -webkit-background-clip: text;
-    color: transparent;
+    color: var(--light);
 }
 
 #Master{
@@ -112,22 +114,22 @@ body{
     display: inline-block;
     margin: 40px;
     text-align: center;
-	background-image: linear-gradient(315deg, var(--corS) 0%, var(--corC) 100%);
+	background-image: linear-gradient(315deg, var(--primary) 0%, var(--light2) 100%);
     border: 0;
-    border-top: 4px solid var(--corAS);
-    border-bottom: 4px solid var(--corAS);
+    border-top: 4px solid var(--tertiary);
+    border-bottom: 4px solid var(--tertiary);
     border-radius: 33px;
 }
 
 .card:hover{
-    box-shadow: 0 0 20px var(--corS);
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+    box-shadow: 0 0 20px var(--primary);
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
 }
 
 #T1{
     margin: 20px;
-    background-image: linear-gradient(to bottom, var(--corD2), var(--corAS));
+    background-image: linear-gradient(to bottom, var(--tertiary), var(--tertiary));
     -webkit-background-clip: text;
     color: transparent;
     font-size: 40px;
@@ -137,7 +139,7 @@ body{
 #T2{
     margin: 20px;
     margin-bottom: 20px;
-    color: var(--corL);
+    color: var(--light);
     font-size: 28px;
     font-family: 'Josefin Sans', sans-serif;    
 }
@@ -155,18 +157,18 @@ body{
     resize: none;
     justify-content: space-around;
     background: var(--tranp);
-    color: var(--corAS);
+    color: var(--tertiary);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corAS);
-    border-bottom: 2px solid var(--corAS);
+    border-top: 2px solid var(--tertiary);
+    border-bottom: 2px solid var(--tertiary);
     box-sizing: border-box;
     transition: .3s;
 }
 #Input_mensagem:focus{
-    border-top: 2px solid var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #btn_enviar{
@@ -179,17 +181,17 @@ body{
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
-    color: var(--corAS);
+    color: var(--tertiary);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 #btn_enviar:hover{
-    background: var(--corAS);
-    color: var(--corL);
-    border: 2px solid var(--corAS);
-    box-shadow: 0px 0px 10px var(--corAS);
+    background: var(--tertiary);
+    color: var(--light);
+    border: 2px solid var(--tertiary);
+    box-shadow: 0px 0px 10px var(--tertiary);
 }
 
 #divIMG{
@@ -200,14 +202,14 @@ body{
     margin: 20px;
     width: 50%;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 #IMGpublic:hover{
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 #SelectIMG{
@@ -224,17 +226,17 @@ body{
     text-align: center;
     border-radius: 24px;
     background: var(--tranp);
-    color: var(--corAS);
+    color: var(--tertiary);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 #Select_img_public:hover{
-    background: var(--corAS);
-    color: var(--corL);
-    border: 2px solid var(--corAS);
-    box-shadow: 0px 0px 10px var(--corAS);
+    background: var(--tertiary);
+    color: var(--light);
+    border: 2px solid var(--tertiary);
+    box-shadow: 0px 0px 10px var(--tertiary);
 }
 
 /* ----------------------Desenvolvedores---------------------- */
@@ -242,11 +244,11 @@ body{
 #desenvolvedores{
     margin-top: 20px;
     width: 100%;
-    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
+    background-image: linear-gradient(0deg, var(--primary2) 0%, var(--tertiary) 100%);
     border: none;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0px 0px 15px var(--primary);
     border-radius: 33px;
     text-align: center;
 }
@@ -255,23 +257,24 @@ body{
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
+    background-image: linear-gradient(360deg, var(--tranp) 0%, var(--dark) 100%);
     border: 0;
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
     border-radius: 33px;
     transition: .3s;
 }
 
 #desig:hover{
-    border-top: 4px solid var(--corP);
-    border-bottom: 4px solid var(--corP);    
+    border-top: 4px solid var(--secundary);
+    border-bottom: 4px solid var(--secundary);    
 }
 
 
 .img-P{
     margin-top: 20px;
-    width: 30%;
+    width: 150px;
+    height: 150px;
     background: var(--tranp);
     border: 0;
     border-radius: 100%;
@@ -285,7 +288,7 @@ body{
 
 #desenvolvedores h2{
     margin: 20px;
-    background-image: linear-gradient(to top, var(--corAS), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
@@ -295,14 +298,14 @@ body{
 #desenvolvedores h3{
     margin-top: 20px;
     font-size: 30px;
-    background-image: linear-gradient(to bottom, var(--corS), var(--corAS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;  
     font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores p{
-    color: var(--corP);
+    color: var(--secundary);
     margin-top: 20px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
@@ -320,7 +323,7 @@ body{
     justify-content: space-around;
     margin: 20px;
     font-size: 3rem;
-    color: var(--corL);  
+    color: var(--light);  
     width: 5rem;
     transition: .3s;
 }
@@ -338,7 +341,7 @@ body{
 }
 
 .G:hover{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);

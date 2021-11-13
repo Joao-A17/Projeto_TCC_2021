@@ -9,7 +9,7 @@ $('#B_Nav').on('mouseout', function() {
     d.style.display = 'none';
 });
 /* -----------Menu d----------- */
-$('#d').on('mouseover', function() {  
+$('#d').on('mouseover', function() { 
     d.style.display = 'grid';
 });
 

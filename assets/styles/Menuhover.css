@@ -11,15 +11,15 @@ li{
     justify-content: space-around;
     align-items: center;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
     border-radius: 12px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
+    background-image: linear-gradient(0deg, var(--dark) 0%, var(--tranp) 100%);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0 0 15px var(--primary);
 }
 
 .logo{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -49,22 +49,25 @@ li{
 }
 
 .hoverCLASS{
-    font-size: 20px;
-    font-family: 'Calibri', sans-serif;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
     border-radius: 8px;
     width: 120px;
     height: 35px;
     text-align: center;
+    cursor: pointer;
     display: grid;
     justify-content: center;
     align-items: center;
     background: transparent;
-    border-bottom: 3px solid var(--corL);
-    color: var(--corL);
+    border-bottom: 3px solid var(--light);
+    color: var(--light);
+    transition: .3s;
 }
 
 .hoverCLASS:hover{
-	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 .div_nav{
@@ -75,15 +78,15 @@ li{
     width: 250px;
     height: 180px;
     border-radius: 8px;
-	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
-    border-top: 3px solid var(--corAS);
+	background-image: linear-gradient(0deg, var(--primary), var(--tranp));
+    border-top: 3px solid var(--light);
 }
 
 .Icon_up{
     position: relative;
     top: -18px;
     font-size: 35px;
-    color: var(--corAS);
+    color: var(--light);
 }
 
 .btn_nav{  
@@ -92,16 +95,16 @@ li{
     font-size: 20px;
     font-family: 'Calibri', sans-serif;
     text-decoration: none;
-    color: var(--corL);
+    color: var(--light);
     transition: .2s;
 }
 
 .btn_nav:hover{
-    color: var(--corS);
+    color: var(--secundary);
 }
 
 #btn-sair{
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Calibri', sans-serif;
     border-radius: 8px;
     width: 120px;
@@ -112,13 +115,13 @@ li{
     text-decoration: none;
     border: none; 
     background: transparent;
-    color: var(--corL);
-    border-bottom: 3px solid var(--corL);
+    color: var(--light);
+    border-bottom: 3px solid var(--light);
     transition: .3s;
 }
 
 #btn-sair:hover{
-    background: var(--corL);
-    color: var(--corD);
-    box-shadow: 0px 0px 10px var(--corL);
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: 0px 0px 10px var(--light);
 }

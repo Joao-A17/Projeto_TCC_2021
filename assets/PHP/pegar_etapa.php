@@ -29,23 +29,29 @@ if(isset($_FILES['Foto_perfil'])){
         $Desc = 'Esse perfil não tem descrição';
     }
 
-    $Result_Perfil = "INSERT INTO perfil (nomep, descp, fotop, instagramp, twitterp, telefonep) VALUES ('$Nome', '$Desc', '$Novo_Arquivo_Imagem', '$instagram', '$twitter', '$telefone')";
-    $sql_perfil = mysqli_query($conexao,$Result_Perfil);    
-    
-    $usuario_logado = $_SESSION['nome-user'];
-    
-    if($sql_perfil){
-        $pasta_arquivo['pasta'] = '../IMAGES/Foto_Perfil/'.$usuario_logado.'/'; 
-        mkdir($pasta_arquivo['pasta'], 0777);
-        move_uploaded_file($_FILES['Foto_perfil']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
-        header('Location: ../../pages/Inicio.php');        
-    }else{
-        $_SESSION['msg_etapa'] = "<p style='color:red; font-size:20px;'>Erro: Algum campo vazio ou imagem Invalida :(</p>";  
-        header('Location: ../../pages/etapa.php');  
+    if($Arquivo_Imagem != 'gif'){
+        $Result_Perfil = "INSERT INTO perfil (nomep, descp, fotop, instagramp, twitterp, telefonep) VALUES ('$Nome', '$Desc', '$Novo_Arquivo_Imagem', '$instagram', '$twitter', '$telefone')";
+        $sql_perfil = mysqli_query($conexao,$Result_Perfil);    
+        
+        $usuario_logado = $_SESSION['nome-user'];
+        
+        if($sql_perfil){
+            $pasta_arquivo['pasta'] = '../IMAGES/Foto_Perfil/'.$usuario_logado.'/'; 
+            mkdir($pasta_arquivo['pasta'], 0777);
+            move_uploaded_file($_FILES['Foto_perfil']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
+            header('Location: ../../pages/Inicio.php');        
+        }else{
+            $_SESSION['msg_etapa'] = "<p style='color:red; font-size:20px;'>Erro: Algum campo vazio ou imagem Invalida :(</p>";  
+            header('Location: ../../pages/etapa.php');  
+        }
+    }else{        
+        $_SESSION['msg_etapa'] = "<p style='color:red; font-size:20px;'>Erro: Imagem Invalida :(</p>";  
+        header('Location: ../../pages/etapa.php'); 
     }
+
 }
 else{
-    echo 'Erro Entre na tela de<a href="../../">Inicio</a>';
+    echo 'Erro Entre na tela de<a href="../../pages/">Inicio</a>';
 }
 
 ?>

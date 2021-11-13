@@ -4,18 +4,17 @@
 }
 
 body{
-    overflow-y: hidden;
     height: 100vh;
-	background-image: linear-gradient(360deg, var(--corC) 0%, var(--corAS) 100%);
+    background-image: linear-gradient(180deg, var(--tertiary) 0%, var(--primary2) 100%);
 }
 
 input::placeholder {
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
 }
 
 textarea::placeholder {
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -27,7 +26,7 @@ textarea::placeholder {
 #TituloMenu{
     margin-top: 10px;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corP), var(--corS));
+	background-image: linear-gradient(to bottom, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 }
@@ -37,44 +36,49 @@ p{
     margin-bottom: 50px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #link_ajuda{
     position: absolute;
-    color: var(--corD2);
+    color: var(--tertiary);
     font-size: 25px;
     bottom: 10px;
     left: 20px;
 }
 
 #link_ajuda a{
-    color: var(--corL);
+    color: var(--light);
 }
 
 #link_ajuda a:hover{
-    color: var(--corD);
+    color: var(--dark);
 }
 
-#card_grop{
-    display: inline-flex;
+#card_group{
+    display: flex;
 }
 
-#DimgEtapa{
-    width: 30%;
+#E{
+    width: 20%;
+    margin: 50px;
+}
+
+#imgDIV{
+    margin-bottom: 50px;
 }
 
 #pintura_etapa{
     width: 100%;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 #pintura_etapa:hover{
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 
@@ -93,17 +97,17 @@ p{
     text-align: center;
     border-radius: 8px;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: 2px solid var(--tranp);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s;
 }
 
 .AlteraImg-Pintura:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--secundary);
+    color: var(--dark);
+    border: 2px solid var(--secundary);
+    box-shadow: 0px 0px 10px var(--secundary);
 }
 
 #divND{
@@ -124,14 +128,15 @@ p{
     margin-left: 20px;
     margin-top: 20px;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border-radius: 8px;
-    border-bottom: 2px solid var(--corP);
+    border-bottom: 2px solid var(--secundary);
 }
+
 .InputP:focus{
-    color: var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 textarea#InputDesc {
@@ -139,26 +144,26 @@ textarea#InputDesc {
 }
 
 #InputDesc{
-    width: 1200px;
+    width: 900px;
     font-size: 20px;
     height: 34px;
     padding: 6px 12px;
     font-size: 21px;
     outline: none;
     background: var(--tranp);
-    color: var(--corP);
+    color: var(--secundary);
     border: none;
     border-radius: 8px;
-    border-top: 2px solid var(--corP);
-    border-bottom: 2px solid var(--corP);
+    border-top: 2px solid var(--secundary);
+    border-bottom: 2px solid var(--secundary);
     box-sizing: border-box;
     transition: .3s;
 }
 #InputDesc:focus{
-    color: var(--corS);
-    border-top: 2px solid var(--corS);
-    border-bottom: 2px solid var(--corS);
-    box-shadow: 0 2px 5px var(--corS);
+    color: var(--primary);
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 2px 5px var(--primary);
 }
 
 #BtnSP{
@@ -169,15 +174,15 @@ textarea#InputDesc {
     cursor: pointer;
     border: none;    
     background: var(--tranp);
-    color: var(--corL);    
+    color: var(--light);    
     border-radius: 8px;
-    border-bottom: 2px solid var(--corL);
+    border-bottom: 2px solid var(--light);
     animation: Pulse 1s infinite;
     transition: .4s;    
 }
 #BtnSP:hover{
     animation: none;
-    background: var(--corL);
-    color: var(--corD);
-    box-shadow: 0px 0px 8px var(--corL);
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: 0px 0px 8px var(--light);
 }

@@ -7,15 +7,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: 'Calibri', sans-serif;
-	background-image: linear-gradient(to bottom, var(--corAS), var(--tranp));
+	background-image: linear-gradient(to bottom, var(--terciary), var(--tranp));
     border-radius: 12px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0px 0px 15px var(--primary);
 }
 
 .logo{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -35,31 +35,20 @@ nav {
     padding: 6px 20px;
     font-size: 20px;
     margin-left: 10px;
-    display: flex;
     justify-content: center;
     text-decoration: none;
     border-radius: 8px;
     border: none;
     background: transparent;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    color: var(--corL);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    color: var(--light);
     transition: .3s;
 }
 
 .menu-link:hover{
-    background: var(--corS);
-    box-shadow: 0px 0px 10px var(--corS);
-}
-
-@keyframes span-login{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        
-    }
+    background: var(--primary);
+    box-shadow: 0px 0px 10px var(--primary);
 }
 
 .nav-list {
@@ -75,7 +64,7 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: var(--corP);
+    background: var(--secundary);
     margin: 8px;
     transition: 0.3s;
 }
@@ -94,9 +83,9 @@ nav {
         border: 0;
         border-radius: 24px;
         background: var(--tranp);
-        color: var(--corP);
-        border-top: 2px solid var(--corP);
-        border-bottom: 2px solid var(--corP);
+        color: var(--secundary);
+        border-top: 2px solid var(--secundary);
+        border-bottom: 2px solid var(--secundary);
         box-shadow: 0px 0px 5px var(--tranp);      
     }
     body {
@@ -113,8 +102,8 @@ nav {
         background-image: linear-gradient(to bottom, var(--corD2), var(--corD));
         border: 0;
         border-radius: 33px;
-        border-top: 3px solid var(--corS);
-        border-bottom: 3px solid var(--corS);
+        border-top: 3px solid var(--primary);
+        border-bottom: 3px solid var(--primary);
         transform: translateX(100%);
         transition: transform 0.3 ease-in;
     }

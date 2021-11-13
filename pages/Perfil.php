@@ -42,27 +42,26 @@ require '../assets/PHP/dados_perfil.php';
 
     <div id="CardUser">
         <div id="Img_UserL">
-        <?php
-        // pegar a foto do usuario logado 
+            <?php
+            // pegar a foto do usuario logado 
 
-        $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
+            $pasta = '../assets/IMAGES/Foto_Perfil/' . $usuario_logado . '/';
 
-        if (file_exists("$pasta")) {
-            $diretorio = dir($pasta);
-            while ($FP_Usuario = $diretorio->read()) {
-            if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
-            echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
+            if (file_exists("$pasta")) {
+                $diretorio = dir($pasta);
+                while ($FP_Usuario = $diretorio->read()) {
+                if ($FP_Usuario != '.' && $FP_Usuario != '..') {                  
+                echo "<img src='" . $pasta . $FP_Usuario . "' id='Img-UsuarioL'>";
+                }
+                }
             }
-            }
-        }
-        ?>
-        <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
-        <i class="fas fa-bars btn_menuH"></i>
+            ?>
+            <h3 id="Nome_User"><?php echo $usuario_logado ?></h3>
         </div>
         <div id="menu_usuario">
-        <a class="menuU-link" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
-        <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>
-        <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
+            <a class="menuU-link bp" href="./Meu_Perfil.php"><i class="fas fa-user "></i>    Meu perfil</a>
+            <a class="menuU-link" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Conta</a>
+            <a class="menuU-link" href="../assets/PHP/loginOFF.php"><i class="fas fa-power-off "></i>    Sair</a>
         </div>
     </div>
 

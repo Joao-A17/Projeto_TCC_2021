@@ -5,8 +5,7 @@
 
 body{
     overflow-y: hidden;
-    height: 100vh;
-    background-image: linear-gradient(0deg, var(--corL) 0%, var(--corAS) 100%);
+    background: var(--dark);
 }
 
 i{
@@ -23,18 +22,9 @@ i{
     margin: 50px;
 }
 
-#T1{
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
-  	-webkit-background-clip: text;
-    color: transparent;
-	text-transform: uppercase;
-    font-size: 50px;
-    font-family: 'Calibri', sans-serif;    
-}
-
-#T2{
-    color: var(--corL);
-    font-size: 30px;
+.textospp{
+    color: var(--light);
+    font-size: 40px;
     font-family: 'Josefin Sans', sans-serif;    
 }
 
@@ -43,10 +33,10 @@ i{
     width: 100%;
     border: none;
     text-align: center;
-    background: var(--tranp);
     border-radius: 20px;
-    border-left: 3px solid var(--corL);
-    border-right: 3px solid var(--corL);
+    background-image: linear-gradient(0deg, var(--primary), var(--tranp));
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
 }
 
 #Coluna{
@@ -62,36 +52,27 @@ i{
 .Quadrinhos{
     width: 100%;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 .Quadrinhos:hover{
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    border-top: 3px solid var(--secundary);
+    border-bottom: 3px solid var(--secundary);
 }
 
 #btn_piscar{
     background: none;
-    color: var(--corP);
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    color: var(--light);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
     border-radius: 8px;
-    animation: Pulse 1.2s infinite;
     transition: .3s;  
 }
 
-#btn_piscar:hover{
-    animation: none;
-    background: var(--corP);
-    color: var(--corD);
-    box-shadow: 0px 0px 10px var(--corP);
-}
-
-@keyframes Pulse{
-    from {
-        background: var(--corP);
-        color: var(--corD);
-    }
+#btn_piscar:hover{    
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: 0px 0px 10px var(--light);
 }

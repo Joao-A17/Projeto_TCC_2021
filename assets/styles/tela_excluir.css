@@ -1,7 +1,6 @@
 body{
     overflow-y: hidden;
-    height: 100vh;
-    background-image: linear-gradient(176deg, var(--corAS) 0%, var(--tranp) 100%);
+    background: var(--dark);
 }
 
 .Pint_Completa{
@@ -18,7 +17,7 @@ body{
 h2{
     font-size: 35px;
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--corL);
+    color: var(--light);
 }
 
 #btn_Excluir{
@@ -29,15 +28,15 @@ h2{
     font-size: 20px;
     border-radius: 8px;
     border: none;
-    background: var(--tranp);
-    color: var(--corL);
+    background: var(--dark);
+    color: var(--light);
     border-bottom: 3px solid #dc3545;
     transition: .3s; 
 }
 
 #btn_Excluir:hover{
     background: #dc3545;
-    color: var(--corL);
+    color: var(--light);
     box-shadow: 0 0 12px #dc3545;
 }
 
@@ -56,17 +55,17 @@ h2{
     text-decoration: none;
     border-radius: 8px;
     background: var(--tranp);
-    color: var(--corL);
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    color: var(--light);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
     border-radius: 8px;
     transition: .3s;  
 }
 
 #btn_cancelar:hover{
-    background: var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
-    color: var(--corD);
+    background: var(--light);
+    box-shadow: 0px 0px 10px var(--light);
+    color: var(--dark);
 }
 
 .Fundo_Pint{
@@ -77,6 +76,13 @@ h2{
 .Pintura{
     width: 50%;
     border-radius: 20px;
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    border-top: 3px solid var(--light2);
+    border-bottom: 3px solid var(--light2);
+    box-shadow: 0 0 5px var(--light2);
+}
+
+.Pintura:hover{
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
+    box-shadow: 0 0 12px var(--light);
 }

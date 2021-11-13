@@ -8,7 +8,7 @@
 
 body{
     height: 100%;
-    background: var(--corC);
+    background: var(--dark);
 }
 
 .espaço{    
@@ -30,15 +30,13 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-	background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
-    border: 0;
-    border-radius: 20px;
-    border-top: 3px solid var(--corP);  
-    border-bottom: 3px solid var(--corP); 
+    background-image: linear-gradient(to bottom, var(--tranp) , var(--dark));
+    border-radius: 12px;
+    border: 3px solid var(--secundary);
 }
 
 #topo h1{
-	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+	background-image: linear-gradient(0deg, var(--secundary) 0%, var(--primary)70%);
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 75px;
@@ -49,7 +47,7 @@ body{
 .usuario_logado{
     font-size: 70px;
     font-family: 'Calibri', sans-serif;	
-    background-image: linear-gradient(320deg, var(--corC) 0%, var(--corL) 100%);
+    background-image: linear-gradient(0deg, var(--light2) 0%, var(--light) 100%);
   	-webkit-background-clip: text;
     color: transparent;
     animation: pulse .7s ;
@@ -62,7 +60,7 @@ body{
 
 #topo p{
     padding-top: 30px;
-    color: var(--corL);
+    color: var(--light);
     font-size: 50px;
     font-family: 'Josefin Sans', sans-serif;
     animation: rotação 1s;
@@ -73,20 +71,21 @@ body{
 #section_pesquisar{
     width: 100%;
     height: 380px;
-    margin-bottom: 5px auto;
-    background-image: linear-gradient(to bottom, var(--corAS), var(--corC));
+    background: transparent;
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corC2);
+    border-top: 3px solid var(--dark);
 }
 
-#div_pesquisar{    
-    display: inline-flex;
-    margin: 20px;
+#div_pesquisar{  
+    position: absolute;
+    bottom: -300px;
+    display: flex;
+    left: 30px;
 }
 
 #section_pesquisar label{
-	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+	background-image: linear-gradient(0deg, var(--secundary) 0%, var(--primary)70%);
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 35px;
@@ -95,11 +94,11 @@ body{
 }
 
 .IconU{
-	background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+	background-image: linear-gradient(0deg, var(--secundary) 0%, var(--primary)70%);
   	-webkit-background-clip: text;
     color: transparent;
     font-size: 35px;
-    animation: piscar 1.2s infinite;
+    margin-right: 12px;
 }
 
 #form_input_procurar{
@@ -117,18 +116,17 @@ body{
     width: 200px;
     margin: 12px;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom, var(--corD2), var(--tranp));
-    border-top: 3px solid var(--corC2);
-    border-bottom: 3px solid var(--corC2);
-    box-shadow: 0 0 12px var(--corC2);
+    background-image: linear-gradient(to bottom, var(--light2), var(--tranp));
+    border-top: 3px solid var(--primary3);
+    border-bottom: 3px solid var(--primary3);
+    box-shadow: 0 0 5px var(--primary3);
     transition: .3s;
 }
 
 .form-pesquisa:hover{
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0 0 12px var(--corS);
-    animation: rotação .3s;
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0 0 12px var(--primary);
 }
 
 #Div_buscar_img{
@@ -155,7 +153,7 @@ body{
     text-align: center;
     border-radius: 24px;
     background: none;
-    color: var(--corP);
+    color: var(--secundary);
     box-shadow: 0px 0px 5px var(--tranp);
     transition: .3s; 
 }
@@ -169,14 +167,15 @@ body{
     position: absolute;
     margin-top: 5px;
     margin-left: 150px;
-    background-image: linear-gradient(0deg, var(--corP) 0%, var(--corS)70%);
+    background-image: linear-gradient(0deg, var(--secundary) 0%, var(--primary)70%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 26px;
+    animation: piscar 3s infinite;
 }
 
 input::placeholder {
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -191,20 +190,20 @@ input::placeholder {
   border-radius: 8px;
   outline: none;
   background: var(--tranp);
-  color: var(--corL);
-  border-bottom: 3px solid var(--corAS);
+  color: var(--light);
+  border-bottom: 3px solid var(--primary3);
   box-sizing: border-box;
   transition: .3s;
 }
 
 #outro_usuario:focus{
-  border-bottom: 3px solid var(--corS);
-  box-shadow: 0 2px 5px var(--corS);
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 2px 5px var(--primary);
 }
 
 #P_nenhum{
     margin: 60px;
-    color: var(--corP);
+    color: var(--secundary);
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
     animation: aparecer 2s;
@@ -215,21 +214,20 @@ input::placeholder {
 #info{
     width: 100%;
     height: 380px;
-    margin-bottom: 5px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-	background-image: linear-gradient(to top, var(--corAS), var(--corC));
+	background-image: linear-gradient(to top, var(--primary3), var(--dark));
     border: 0;
     border-radius: 20px;
-    border-bottom: 3px solid var(--corC2);  
+    border-bottom: 3px solid var(--dark2);  
 }
 
 #info h2{
     font-size: 50px;
-    padding-top: 30px;
-	background-image: linear-gradient(to top, var(--corP), var(--corS));
+    padding-top: 60px;
+	background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -240,7 +238,7 @@ input::placeholder {
 .info-P{
     font-size: 30px;
     margin-top: 30px;
-    color: var(--corP);
+    color: var(--secundary);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -258,33 +256,33 @@ input::placeholder {
 .help{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
-    color: var(--corP);
+    color: var(--secundary);
     transition: .3s;
 }
 
 .help a{
-    color: var(--corL);
+    color: var(--light);
     text-decoration: underline;
 }
 
 .help a:hover{
-    color: var(--corS);
+    color: var(--primary);
 }
-/* ----------------------   Pinturaa    ---------------------- */
+/* ----------------------   Pintura    ---------------------- */
 
 #pinturas{
     margin-top: 200px;
     height: 100%;
-    background-image: linear-gradient(269deg, var(--tranp) 0%, var(--corC) 100%);
+    background-image: linear-gradient(269deg, var(--tranp) 0%, var(--dark) 100%);
     border: 0;
     border-radius: 20px;
-    border-top: 3px solid var(--corS);  
-    border-bottom: 3px solid var(--corS);  
+    border-top: 3px solid var(--primary);  
+    border-bottom: 3px solid var(--primary);  
 }
 
 #pinturas h2{  
     font-size: 50px;
-	background-image: linear-gradient(45deg, var(--corP) 0%, var(--corS) 100%);
+	background-image: linear-gradient(45deg, var(--secundary) 0%, var(--primary) 100%);
   	-webkit-background-clip: text;
     color: transparent;
 	text-transform: uppercase;
@@ -301,13 +299,27 @@ input::placeholder {
 .pint{
     border-radius: 8px;
     width: 400px;
-    border-top: 3px solid var(--corS);  
-    border-bottom: 3px solid var(--corS);  
+    border-top: 3px solid var(--primary);  
+    border-bottom: 3px solid var(--primary);  
+    transition: .3s;
 }
 
 .pint:hover{
-    border-top: 3px solid var(--corP);  
-    border-bottom: 3px solid var(--corP);  
+    border-top: 3px solid var(--secundary);  
+    border-bottom: 3px solid var(--secundary);  
+}
+
+.pint2{
+    border-radius: 8px;
+    width: 400px;
+    border-top: 3px solid var(--dark);  
+    border-bottom: 3px solid var(--dark);  
+    transition: .3s;
+}
+
+.pint2:hover{
+    border-top: 3px solid var(--secundary);  
+    border-bottom: 3px solid var(--secundary);  
 }
 
 .textospp{
@@ -315,13 +327,13 @@ input::placeholder {
 }
 
 .Nome_Foto{
-    color: var(--corP);
+    color: var(--primary);
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
 }
 
 .Nome_Foto2{
-    color: var(--corL);
+    color: var(--light);
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
 }
@@ -329,14 +341,14 @@ input::placeholder {
 .Desc_Foto{
     margin-top: 20px;
     font-size: 20px;
-    color: var(--corP);
+    color: var(--primary);
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .Desc_Foto2{
     margin-top: 20px;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -344,14 +356,8 @@ input::placeholder {
     font-size: 20px;
     position: relative;
     left: 100px;
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
-}
-
-#fomr_consulta{
-    position: absolute;
-    left: 800px;
-    margin-top: 20px;
 }
 
 .itensCad{
@@ -361,7 +367,7 @@ input::placeholder {
 }
 
 .itensCad{
-    background: var(--corD);
+    background: var(--light);
 }
 
 .PintArt{
@@ -375,8 +381,8 @@ input::placeholder {
     margin-left: 20px;
     width: 80px;
     height: 80px;    
-    border: 3px solid var(--corP);
-    box-shadow: 0 0 8px var(--corP);
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 8px var(--primary);
     display: block;
     border-radius: 50%;
 }
@@ -385,15 +391,15 @@ input::placeholder {
     margin-left: 20px;
     width: 100px;
     height: 100px;    
-    border: 2px solid var(--corL);
-    box-shadow: 0 0 8px var(--corL);
+    border: 2px solid var(--light);
+    box-shadow: 0 0 8px var(--light);
     display: block;
     border-radius: 50%;
 }
 
 .NomeUsuario{
     height: 20px;
-    color: var(--corP); 
+    color: var(--primary); 
     font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-left: 10px;
@@ -403,7 +409,7 @@ input::placeholder {
 
 .NomeUsuario2{
     height: 20px;
-    color: var(--corL); 
+    color: var(--light); 
     font-family: 'Calibri', sans-serif;
     margin-top: 15px;
     margin-left: 10px;
@@ -414,52 +420,50 @@ input::placeholder {
 .InfoPint{
     margin: 300px;
     width: 650px;
-    background: var(--tranp);
     border: 0;
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
-    border-radius: 33px;
+    background-image: linear-gradient( 0deg, var(--primary), var(--tranp));
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px var(--primary);
+    border-radius: 22px;
     align-items: center;
     text-align: center;
-    transition: .1s;
 }
 
 .InfoPint2{
     margin: 300px;
     width: 650px;
-    background: var(--tranp);
     border: 0;
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
-    border-radius: 33px;
+    background-image: linear-gradient( 0deg, var(--light), var(--tranp));
+    border: 3px solid var(--light);
+    box-shadow: 0 0 20px var(--light);
+    border-radius: 22px;
     align-items: center;
     text-align: center;
-    transition: .1s;
 }
 
 .ConteudoInfo{
-    border-bottom: 3px solid var(--corP);
+    border-bottom: 3px solid var(--primary);
 }
 
 .ConteudoInfo2{
-    border-bottom: 3px solid var(--corL);
+    border-bottom: 3px solid var(--light);
 }
 
 .PintArt h4{
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     font-size: 20px;
-    color: var(--corP);
+    color: var(--primary);
     transition: .3s;
 }
 
 .PintArt a{
     text-decoration: underline;
-    color: var(--corL);
+    color: var(--light);
 }
 
 .PintArt a:hover{
-    color: var(--corS);
+    color: var(--primary);
 }
 
 .User{
@@ -470,7 +474,7 @@ input::placeholder {
 
 #Info_Pintor{
     text-align: center;
-    color: var(--corP);
+    color: var(--primary);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     margin-bottom: 20px;
@@ -478,15 +482,16 @@ input::placeholder {
 
 #Info_Pintor2{
     text-align: center;
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     padding: 10px;
 }
 
 .BConsultar{
-    margin-left: 180px;
-    margin-top: 15px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 30px;;
     width: 180px;
     height: 40px;
     font-size: 20px;
@@ -497,25 +502,25 @@ input::placeholder {
     text-align: center;
     border-radius: 8px;
     background: transparent;
-    color: var(--corP);
-    border-top: 3px solid var(--corP);
-    border-bottom: 3px solid var(--corP);
+    color: var(--light);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     transition: .3s;
 }
 
 .BConsultar:hover{
-    background: var(--corP);
-    color: var(--corD);
-    border: 2px solid var(--corP);
-    box-shadow: 0px 0px 10px var(--corP);
+    background: var(--primary);
+    color: var(--light);
+    border: 2px solid var(--primary);
+    box-shadow: 0px 0px 10px var(--primary);
 }
 
 .BConsultar2{
-    position: relative;
-    bottom: 80px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 30px;;
     width: 180px;
     height: 40px;
-    right: 80px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
     border: 0;
@@ -524,18 +529,18 @@ input::placeholder {
     text-align: center;
     border-radius: 8px;
     background: transparent;
-    color: var(--corL);
-    border-top: 3px solid var(--corL);
-    border-bottom: 3px solid var(--corL);
+    color: var(--light);
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
     box-shadow: 0px 0px 5px var( --tranp);
     transition: .3s;
 }
 
 .BConsultar2:hover{
-    background: var(--corL);
-    color: var(--corD);
-    border: 2px solid var(--corL);
-    box-shadow: 0px 0px 10px var(--corL);
+    background: var(--light);
+    color: var(--dark);
+    border: 2px solid var(--light);
+    box-shadow: 0px 0px 10px var(--light);
 }
 
 @media (max-width: 100px){
@@ -544,16 +549,37 @@ input::placeholder {
     }
 }
 
+#divVermais{
+    text-align: center;
+    position: relative;
+    display: inline-grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+}
+
+.Recarregar{
+    color: var(--light);
+    font-family: 'Calibri', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.Recarregar:hover{
+    color: var(--secundary);
+}
+
 /* ----------------------Desenvolvedores---------------------- */
 
 #desenvolvedores{
     margin-top: 20px;
     width: 100%;
-    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corC) 100%);
+    background-image: linear-gradient(0deg, var(--primary2) 0%, var(--tertiary) 100%);
     border: none;
-    border-top: 3px solid var(--corS);
-    border-bottom: 3px solid var(--corS);
-    box-shadow: 0px 0px 15px var(--corS);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+    box-shadow: 0px 0px 15px var(--primary);
     border-radius: 33px;
     text-align: center;
 }
@@ -562,23 +588,24 @@ input::placeholder {
     width: 350px;
     display: inline-block;
     margin: 20px;
-    background-image: linear-gradient(360deg, var(--corAS) 0%, var(--corC) 100%);
+    background-image: linear-gradient(360deg, var(--tranp) 0%, var(--dark) 100%);
     border: 0;
-    border-top: 4px solid var(--corS);
-    border-bottom: 4px solid var(--corS);
+    border-top: 4px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
     border-radius: 33px;
     transition: .3s;
 }
 
 #desig:hover{
-    border-top: 4px solid var(--corP);
-    border-bottom: 4px solid var(--corP);    
+    border-top: 4px solid var(--secundary);
+    border-bottom: 4px solid var(--secundary);    
 }
 
 
 .img-P{
     margin-top: 20px;
-    width: 30%;
+    width: 150px;
+    height: 150px;
     background: var(--tranp);
     border: 0;
     border-radius: 100%;
@@ -592,7 +619,7 @@ input::placeholder {
 
 #desenvolvedores h2{
     margin: 20px;
-    background-image: linear-gradient(to top, var(--corAS), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;  
     font-size: 50px;
@@ -602,14 +629,14 @@ input::placeholder {
 #desenvolvedores h3{
     margin-top: 20px;
     font-size: 30px;
-    background-image: linear-gradient(to bottom, var(--corS), var(--corAS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
     -webkit-background-clip: text;
     color: transparent;  
     font-family: 'Calibri', sans-serif;
 }
 
 #desenvolvedores p{
-    color: var(--corP);
+    color: var(--secundary);
     margin-top: 20px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
@@ -627,7 +654,7 @@ input::placeholder {
     justify-content: space-around;
     margin: 20px;
     font-size: 3rem;
-    color: var(--corL);  
+    color: var(--light);  
     width: 5rem;
     transition: .3s;
 }
@@ -645,31 +672,8 @@ input::placeholder {
 }
 
 .G:hover{
-    background-image: linear-gradient(to top, var(--corP), var(--corS));
+    background-image: linear-gradient(to top, var(--secundary), var(--primary));
   	-webkit-background-clip: text;
     color: transparent;
     transform: scale(1.40);
-}
-
-#divVermais{
-    text-align: center;
-    position: relative;
-    display: inline-grid;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50px, -50px);
-}
-
-.Icon_UP{
-    display: none;
-}
-
-.Recarregar:hover .Icon_UP{
-    display: block;
-    font-size: 50px;
-    color: var(--corP);
-}
-
-#CardUser{
-    animation: rotação 2s;
 }

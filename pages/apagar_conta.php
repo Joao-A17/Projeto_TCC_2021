@@ -39,7 +39,7 @@ if($Nome_Usuario == $usuario_logado){
         <form action="../assets/PHP/deletar_conta.php" method="POST" id='form_excluir'>            
             <input type="text" id="Input_Usuario" name="Input_Usuario" value=<?php echo $Input_usuario ?> required>
             <input type='submit' id='btn_excluir_conta' name='btn_excluir_conta' value='Excluir'>
-            <a href="./Meu_Perfil.php" id='btn_cancelar'>Cancelar</a>
+            <a href="./editar_perfil.php" id='btn_cancelar'>Cancelar</a>
         </form>          
     </section>    
 </body>

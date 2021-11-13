@@ -6,14 +6,13 @@
 body{
     overflow-y: hidden;
     height: 100vh;
-    background-image: linear-gradient(0deg, var(--corAS) 0%, var(--corAS3) 100%);
+    background-image: linear-gradient(180deg, var(--tertiary) 0%, var(--primary2) 100%);
 }
 
 input::placeholder {
-    color: var(--corL);
+    color: var(--light);
     font-family: 'Josefin Sans', sans-serif;
 }
-
 
 #Form-Card{
     display: inline-flex;
@@ -26,16 +25,14 @@ input::placeholder {
     height: 500px;
     text-align: center;  
     border-radius: 20px;
-    background-image: linear-gradient(180deg, var(--corAS2) 0%, var(--corS) 100%);
-    border: 3px solid var(--corS);
-    box-shadow: 0 0 25px var(--corS);
-    animation: aparecer 1s;
+    background: transparent;
+    animation: aparecer 1.3s;
 }
 
 #Form-Card h2{  
     font-size: 30px;
     font-family: 'Calibri', sans-serif;
-    background-image: linear-gradient(180deg, var(--corL) 0%, var(--corC) 100%);
+    background-image: linear-gradient(0deg, var(--light2) 0%, var(--light) 100%);
     -webkit-background-clip: text;
     color: transparent;
     text-transform: uppercase;
@@ -58,28 +55,30 @@ input::placeholder {
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 80px;
-    background-image: linear-gradient(180deg, var(--corL) 0%, var(--corC) 100%);
+    background-image: linear-gradient(0deg, var(--light2) 0%, var(--light) 100%);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .Input{
+    padding: 0 10px 0 29px;
     font-size: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    display: flex;
     height: 38px;
     width: 320px;
-    border: none;
     outline: none;
-    border-radius: 5px;
     background: none;
-    color: var(--corL);
-    border-bottom: 3px solid var(--corAS);
+    border: none;
+    border-radius: 8px;
+    color: var(--light);
+    background: var(--tranp);
+    border-bottom: 3px solid var(--light);
     transition: .3s;
 }
 .Input:focus{
-    color: var(--corL);
-    border-bottom: 3px solid var(--corL);
+    background: var(--dark);
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 #botao{
@@ -93,15 +92,15 @@ input::placeholder {
     justify-content: center;
     text-align: center;
     border-radius: 8px;
-    background: var(--corAS2);
-    color: var(--corL);
+    background: var(--tranp);
+    color: var(--light);
     transition: .3s;           
 }
 
 #botao:hover{
-    background: var(--corAS);
-    color: var(--corL);
-    box-shadow: 0px 0px 10px var(--corAS);
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: 0px 0px 10px var(--light);
 }
 
 .menu_input{
@@ -112,14 +111,14 @@ input::placeholder {
     font-family: 'Josefin Sans', sans-serif; 
     margin-bottom: 20px;
     font-size: 27px;
-    color: var(--corL);
+    color: var(--light);
 }
 
 .menu_input a{
-    color: var(--corAS);
+    color: var(--light);
 }
 .menu_input a:hover{
-    color: var(--corL);
+    color: var(--primary);
 }
 
 .botão{
@@ -128,30 +127,32 @@ input::placeholder {
 }
 
 .Isenha{
-    color: var(--corL);
+    color: var(--light);
     position: absolute;
+    cursor: pointer;
     font-size: 20px;
-    margin-top: 15px;
-    margin-left: 125px;
+    margin-top: 10px;
+    margin-left: 310px;
     transition: .3s;
 }
 
 .Isenha:hover{
-    color: var(--corS);
+    color: var(--primary);
 }
 
 .Isenha2{
-    color: var(--corAS);
+    color: var(--light);
     position: absolute;
+    cursor: pointer;
     font-size: 20px;
-    margin-top: 15px;
-    margin-left: 125px;
+    margin-top: 10px;
+    margin-left: 310px;
     transition: .3s;
 }
 
 
 .Isenha2:hover{
-    color: var(--corS);
+    color: var(--primary);
 }
 
 #card_a p{
@@ -160,14 +161,14 @@ input::placeholder {
     bottom: 20px;
     left: 20px;
     font-size: 20px;
-    color: var(--corL);
+    color: var(--light);
 }
 
 .menu-link{
     font-size: 20px;
-    color: var(--corAS);               
+    color: var(--light);               
 }
 
 .menu-link:hover{
-    color: var(--corL);
+    color: var(--primary);
 }

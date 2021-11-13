@@ -45,7 +45,7 @@ require '../assets/PHP/dados_perfil.php';
                 <li><a class="btn_nav" href="#MenuPublicar" id="btn_Adicionar2"><i style="margin-right: 15px;"  class="fas fa-plus"></i> Publicar</a></li>
             </div>
         </ul>
-        <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-power-off"></i>Sair</a></li>
+        <li><a href="../assets/PHP/loginOFF.php" id="btn-sair"><i style="margin-right: 15px;" class="fas fa-sign-out-alt"></i>Sair</a></li>
         </div>
     </nav> 
     <div class="container">     
@@ -70,7 +70,7 @@ require '../assets/PHP/dados_perfil.php';
                         <h1 id="Nome-Admin"><?php echo $usuario_logado ?></h1>
                         <p id="Desc-Admin"><?php echo $Desc_Perfil ?></p>                                                        
                     </div>
-                    <a id="btn_editP" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Editar perfil</a>                                            
+                    <a id="btn_editP" href="./editar_perfil.php"><i class="fas fa-user-edit "></i>    Conta</a>                                            
                 </div>
             </div>
             <h4 class="TextE">Clique em ADICIONAR para publicar uma nova pintura</h4>
@@ -109,7 +109,7 @@ require '../assets/PHP/dados_perfil.php';
                             <div id="divIMG">
                                 <img src="" id="IMGpublic">          
                             </div>    
-                            <a href="#Pint_Completa"><button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button></a>                    
+                            <button type="submit" id="btn_publicar" name="Publicar" class="btn-SP">Publicar</button>                    
                         </div>                                          
                     </div> 
                     <br>

@@ -11,7 +11,8 @@ if(file_exists( $caminho_Nome_arquivo )){
     unlink($caminho_Nome_arquivo);    
 }
 $delete = $conexao->query("delete FROM pinturas WHERE Id='$id'");
-if(mysqli_affected_rows($conexao) > 0){
+$verific_delete = mysqli_affected_rows($conexao) > 0;
+if($verific_delete){
     header('Location: ../../pages/Meu_Perfil.php');       
     $_SESSION['msg_deletar'] = "        
     <div id='msg_true'>

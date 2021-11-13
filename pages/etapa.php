@@ -30,27 +30,27 @@ if (file_exists("$pasta_perfil_do_usuario")){
             unset($_SESSION['msg_etapa']);
         }
         ?>
-        <div id="card_grop">
+        <div id="card_group">
             <div id="E">                
                 <img src="" id="pintura_etapa">
             </div>
             <div id="D">
-            <div id="imgDIV">
-                <input type="file" class="form-control-file" name="Foto_perfil" id="inputIMG" accept="image/*" required>
-                <label for="inputIMG" class="AlteraImg-Pintura">Adicionar foto do perfil<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>
-            </div>
-            <div id="divND">
-                <input style="display:none;" type="text" name="Nome_perfil" id="InputNomeAdmin" class="InputP" minlength = "3" placeholder="Nome" value=<?php echo $usuario_logado ?> required> 
-                <textarea name="Desc_perfil" id="InputDesc" style="resize: none;" cols="100" rows="10" minlength = "3" maxlength = "150"  maxlength="220" placeholder="Descrição do seu perfil (opcional)"></textarea>
-                <div id="grade">                  
-                    <input type="text" name="instagram_perfil" id="I_inst" class="InputP" minlength = "3" placeholder="Nome do seu Instagram (opcional)">        
-                    <input type="text" name="twitter_perfil" id="I_twi" class="InputP" minlength = "3" placeholder="Nome do seu Twitter (opcional)">                  
-                    <?php echo "<input style='display: none' type='text' name='telefone_perfil' id='I_tel' class='InputP' maxlength='60' value='".$Whats."' required>"; ?> 
-                </div>                 
-            </div> 
-            <input type="submit" name="submit" id="BtnSP" value="Salvar">
-            </div>
-        </div>                                                            
+                <div id="imgDIV">
+                    <input type="file" class="form-control-file" name="Foto_perfil" id="inputIMG" accept="image/*" required>
+                    <label for="inputIMG" class="AlteraImg-Pintura">Adicionar foto do perfil<i style="margin-left: 10px;" class="fas fa-paint-brush"></i></label>
+                    <input type="submit" style="margin-left: 100px;" name="submit" id="BtnSP" value="Salvar">
+                </div>
+                <div id="divND">
+                    <input style="display:none;" type="text" name="Nome_perfil" id="InputNomeAdmin" class="InputP" minlength = "3" placeholder="Nome" value=<?php echo $usuario_logado ?> required> 
+                    <textarea name="Desc_perfil" id="InputDesc" style="resize: none;" cols="100" rows="10" minlength = "3" maxlength = "150"  maxlength="220" placeholder="Descrição do seu perfil (opcional)"></textarea>
+                    <div id="grade">                  
+                        <input type="text" name="instagram_perfil" id="I_inst" class="InputP" minlength = "3" placeholder="Nome do seu Instagram (opcional)">        
+                        <input type="text" name="twitter_perfil" id="I_twi" class="InputP" minlength = "3" placeholder="Nome do seu Twitter (opcional)">                  
+                        <?php echo "<input style='display: none' type='text' name='telefone_perfil' id='I_tel' class='InputP' maxlength='60' value='".$Whats."' required>"; ?> 
+                    </div>                 
+                </div> 
+            </div>              
+        </div>                                                                 
     </form>
     <script src="../assets/JS/etapaUser.js"></script>
 </body>
