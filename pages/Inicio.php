@@ -139,7 +139,7 @@ if (!file_exists("$verificar_pasta")) {
       <label>Procurar usuários:</label> 
       <form method="POST" action="./Perfil.php" id='form_outro_usuario'>
         <i class="fas fa-search IconB"></i>
-        <input type="text" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
+        <input type="search" name="outro_usuario" id="outro_usuario" placeholder="Digite o nome do usuário">
       </form>
     </div>               
   </section>

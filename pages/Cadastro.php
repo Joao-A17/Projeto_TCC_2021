@@ -41,11 +41,7 @@ else{
             <div id="Registros">
                 <div id="e">
                     <div class="menu_input">
-<<<<<<< HEAD
                         <input class="Input" minlength = "3" maxlength = "20" type="text" id="nome" name="nome" placeholder="Nome de usuário" pattern="[a-z-0-9]+" required>
-=======
-                        <input class="Input" minlength = "3" maxlength = "20" type="text" id="nome" name="nome" placeholder="Nome de usuário" pattern="[a-z-0-9]+"required>
->>>>>>> 8c87ab68124c32eeb11a87e7775382573a787c5e
                     </div>
                     <div class="menu_input">
                         <input class="Input" minlength = "3" maxlength = "220" type="text" id="nome_completo" name="nome_completo" placeholder="Nome completo" required>
@@ -64,13 +60,19 @@ else{
                     </div>
                     <div class="menu_input">
                         <p>Já tem uma conta? <a href="./Login">Entrar</a></p>
-                        <input type="submit" id="botao" name="submit" value="Cadastrar">               
+                        <input type="submit" id="botao" name="submit" value="Cadastrar">              
                     </div>  
                 </div>                  
             </div>   
-        </div>
-        
+        </div>        
     </form>
+    <script>
+        var input_nome = document.getElementById('nome');
+        input_nome.addEventListener('keyup', (ev) => {
+            const input = ev.target;
+            input.value = input.value.toLowerCase();
+        });
+    </script>
     <script src="../assets/JS/Ver_Senha.js"></script>
 </body>
 </html>

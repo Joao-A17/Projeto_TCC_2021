@@ -28,7 +28,7 @@ else{
         <form id="form" class="card" action="../assets/PHP/Conexao_Login.php" method="POST">            
             <div class="card-group">
                 <input class="Inputs" type="text" name="id-user" style='display: none;'>
-                <input class="Inputs" type="text" name="nome-user" id="email" placeholder="Nome de usuário" pattern="[a-z-0-9]+" required>
+                <input class="Inputs" type="text" name="nome-user" id="nome-user" placeholder="Nome de usuário" pattern="[a-z-0-9]+" required>
                 <div class="menu_input">
                     <i class="far fa-eye Isenha"></i>
                     <input class="Inputs" type="password" name="senha" id="senha" placeholder="Senha" required>
@@ -66,6 +66,13 @@ else{
             </div>           
         </form>
     </section>
+    <script>
+        var input_nome = document.getElementById('nome-user');
+        input_nome.addEventListener('keyup', (ev) => {
+            const input = ev.target;
+            input.value = input.value.toLowerCase();
+        });
+    </script>
     <script src="../assets/JS/Ver_Senha.js"></script>
 </body>
 </html>

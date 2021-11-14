@@ -52,8 +52,8 @@ li{
     font-size: 25px;
     font-family: 'Josefin Sans', sans-serif;
     border-radius: 8px;
-    width: 120px;
-    height: 35px;
+    width: 110px;
+    aspect-ratio: 120 / 35;
     text-align: center;
     cursor: pointer;
     display: grid;
@@ -107,8 +107,8 @@ li{
     font-size: 25px;
     font-family: 'Calibri', sans-serif;
     border-radius: 8px;
-    width: 120px;
-    height: 35px;
+    width: 110px;
+    aspect-ratio: 120 / 35;
     display: flex;
     justify-content: center;
     align-items: center;
