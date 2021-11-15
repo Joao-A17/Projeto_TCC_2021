@@ -116,16 +116,15 @@ body{
     width: 200px;
     margin: 12px;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom, var(--light2), var(--tranp));
-    border-top: 3px solid var(--primary3);
-    border-bottom: 3px solid var(--primary3);
-    box-shadow: 0 0 5px var(--primary3);
+    background-image: linear-gradient(45deg, var(--tertiary), var(--tranp));
+    border: 3px solid var(--tertiary);
+    box-shadow: 0 0 5px var(--tertiary);
     transition: .3s;
 }
 
 .form-pesquisa:hover{
-    border-top: 3px solid var(--primary);
-    border-bottom: 3px solid var(--primary);
+    background-image: linear-gradient(0deg, var(--primary), var(--tranp));
+    border: 3px solid var(--primary);
     box-shadow: 0 0 12px var(--primary);
 }
 
