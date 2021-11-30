@@ -184,15 +184,13 @@ if (!file_exists("$verificar_pasta")) {
 
   <footer id="desenvolvedores">
     <h2><i class="fas fa-users"></i> Desenvolvedores</h2>
-
     <div id="desig">
-      <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="João">
-      <h3>João Victor</h3>
-      <p>Bla bla bla</p>
+      <img class="img-P" src="../assets/IMAGES/img_settings/K.jpg" alt="Kauã">
+      <h3>Kauã Vieira</h3>
       <div class="social-media">
         <a href="#"><i class="fab fa-instagram Redes I"></i></a>
         <a href="#"><i class="fab fa-twitter Redes T"></i></a>
-        <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes G"></i></a>
+        <a href="https://github.com/kah66"><i class="fab fa-github Redes G"></i></a>
       </div>
     </div>
     <div id="desig">
@@ -200,7 +198,6 @@ if (!file_exists("$verificar_pasta")) {
         <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
         <h3>Isabella Oliveira</h3>
       </div>
-      <p>Bla bla bla</p>
       <div class="social-media">
         <a href="#"><i class="fab fa-instagram Redes I"></i></a>
         <a href="#"><i class="fab fa-twitter Redes T"></i></a>
@@ -208,13 +205,12 @@ if (!file_exists("$verificar_pasta")) {
       </div>
     </div>
     <div id="desig">
-      <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Kauã">
-      <h3>Kauã Vieira</h3>
-      <p>Bla bla bla</p>
+      <img class="img-P" src="../assets/IMAGES/img_settings/J.jpg" alt="João">
+      <h3>João Victor</h3>
       <div class="social-media">
         <a href="#"><i class="fab fa-instagram Redes I"></i></a>
         <a href="#"><i class="fab fa-twitter Redes T"></i></a>
-        <a href="https://github.com/kah66"><i class="fab fa-github Redes G"></i></a>
+        <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes G"></i></a>
       </div>
     </div>
   </footer>

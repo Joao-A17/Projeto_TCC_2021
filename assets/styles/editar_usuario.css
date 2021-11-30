@@ -8,7 +8,7 @@ body{
 }
 
 #forms_1_2{
-  display: inline-flex;
+  text-align: center;
 }
 
 #form1{
@@ -41,15 +41,17 @@ body{
 }
 
 .menu-link{
-  padding: 5px 25px;
-  margin-left: 20px;
+  width: 100px;
+  height: 20px auto;
   font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;          
-  border: 0;
-  text-decoration: none;
+  font-family: 'Calibri', sans-serif;
+  margin-left: 10px;
+  display: flex;
   cursor: pointer;
-  text-align: center;
-  border-radius: 12px;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
   background: var(--tranp);
   color: var(--light);
   border: 2px solid var(--primary3);
@@ -121,14 +123,17 @@ body{
 #btn_salvar{
   position: absolute;
   right: 600px;
-  height: 40px;
-  width: 120px;
-  font-size: 25px;
-  font-family: 'Josefin Sans', sans-serif;          
-  border: 0;
+  width: 100px;
+  height: 20px auto;
+  font-size: 20px;
+  font-family: 'Calibri', sans-serif;
+  margin-left: 10px;
+  display: flex;
   cursor: pointer;
-  text-align: center;
-  border-radius: 12px;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
   background: var(--tranp);
   color: var(--light);
   border: 2px solid var(--primary3);
@@ -300,10 +305,7 @@ textarea#desc_usuario {
 }
 
 #form_excluir_conta{
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50px, -50px);
+  margin: 50px auto;
 }
 
 #btn_excluir_conta{
@@ -316,7 +318,7 @@ textarea#desc_usuario {
   border-radius: 8px;
   border: none;
   background: var(--tranp);
-  color: #dc3545;
+  color: var(--light);
   border-top: 3px solid #dc3545;
   border-bottom: 3px solid #dc3545;
   transition: .3s; 

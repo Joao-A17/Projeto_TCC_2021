@@ -131,46 +131,38 @@ if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)
       }
     ?>
 
-    <footer id="desenvolvedores">
-        <h2>Desenvolvedores</h2>
-        
-        <div id="desig">
-          <div class="desen">
-            <img class="img-P" src="./assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
-            <h3>João Victor</h3>
-          </div>
-          <p>Bla bla bla</p>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
-            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
-            <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes G"></i></a>
-          </div>
-        </div>
-        <div id="desig">
-          <div class="desen">
-            <img class="img-P" src="./assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
-            <h3>Isabella Oliveira</h3>
-          </div>
-          <p>Bla bla bla</p>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
-            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
-            <a href="https://github.com/bellinha524"><i class="fab fa-github Redes G"></i></a>
-          </div>
-        </div>
-        <div id="desig">
-          <div class="desen">
-            <img class="img-P" src="./assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
-            <h3>Kauã Vieira</h3>
-          </div>
-          <p>Bla bla bla</p>
-          <div class="social-media">
-            <a href="#"><i class="fab fa-instagram Redes I"></i></a>
-            <a href="#"><i class="fab fa-twitter Redes T"></i></a>
-            <a href="https://github.com/kah66"><i class="fab fa-github Redes G"></i></a>
-          </div>
-        </div>
-      </footer>
+  <footer id="desenvolvedores">
+    <h2><i class="fas fa-users"></i> Desenvolvedores</h2>
+    <div id="desig">
+      <img class="img-P" src="../assets/IMAGES/img_settings/K.jpg" alt="Kauã">
+      <h3>Kauã Vieira</h3>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+        <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+        <a href="https://github.com/kah66"><i class="fab fa-github Redes G"></i></a>
+      </div>
+    </div>
+    <div id="desig">
+      <div class="desen">
+        <img class="img-P" src="../assets/IMAGES/img_settings/astronauta.jpg" alt="Isabella">
+        <h3>Isabella Oliveira</h3>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+        <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+        <a href="https://github.com/bellinha524"><i class="fab fa-github Redes G"></i></a>
+      </div>
+    </div>
+    <div id="desig">
+      <img class="img-P" src="../assets/IMAGES/img_settings/J.jpg" alt="João">
+      <h3>João Victor</h3>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-instagram Redes I"></i></a>
+        <a href="#"><i class="fab fa-twitter Redes T"></i></a>
+        <a href="https://github.com/Joao-A17"><i class="fab fa-github Redes G"></i></a>
+      </div>
+    </div>
+  </footer>
                 <!-- scripts -->
       <script src="./assets/JS/menuH_usuario.js"></script>
       <script src="./assets/JS/ajuda.js"></script>

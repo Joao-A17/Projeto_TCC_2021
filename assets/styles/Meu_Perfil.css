@@ -452,28 +452,27 @@ textarea#InputPublicD {
     position: absolute;
     right: 40px;
     margin-top: 20px;
-    width: 250px;
-    height: 40px;
-    cursor: pointer;
+    width: 200px;
+    height: 40px auto;
     font-size: 20px;
     font-family: 'Calibri', sans-serif;
-    display: inline-flex;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
     justify-content: center;
-    align-items: center;
-    background: var(--dark);
-    color: var(--light2);
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    border-top: 3px solid var(--primary);
     border-bottom: 3px solid var(--primary);
-    border-radius: 12px;
-    box-shadow: 0px 0px 5px var(--primary);
+    color: var(--light);
     transition: .3s;
 }
 
 #btn_editP:hover{
     background: var(--primary);
-    color: var(--light);
-    box-shadow: 0px 0px 12px var(--primary);
+    box-shadow: 0px 0px 10px var(--primary);
 }
 
 #Nome-Admin{
