@@ -57,6 +57,7 @@ require '../assets/PHP/dados_perfil.php';
                 if(isset($_SESSION['msg_publicar'])){
                     echo $_SESSION['msg_publicar'];
                     unset($_SESSION['msg_publicar']);
+
                 }    
                 
                 if(isset($_SESSION['msg'])){

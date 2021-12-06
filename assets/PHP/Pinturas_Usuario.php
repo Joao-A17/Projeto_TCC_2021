@@ -19,8 +19,7 @@ if (file_exists("$pasta")) {
                 $Desc_Foto = $Registrar_Pinturas['Desc_Foto'];
                 $Pint_Foto = $Registrar_Pinturas['Arquivo_Imagem'];
                 $Id_Foto = $Registrar_Pinturas['Id'];
-            }
-                
+            }                
                             
                 ?> 
                 <div class='Pint_Completa'>

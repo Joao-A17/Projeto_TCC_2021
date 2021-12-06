@@ -16,7 +16,41 @@ if (file_exists("$pasta")) {
                 $Nome_Foto = $registro['Nome_Foto'];
                 $Desc_Foto = $registro['Desc_Foto'];
                 $Pint_Foto = $registro['Arquivo_Imagem'];     
-                $Criado = $registro['Criado'];      
+                $Criado = $registro['Criado'];
+                
+                /* Marca d'água */
+                $marca_logo = imagecreatefrompng("../assets/IMAGES/img_settings/marca_logo.png");
+            
+                //Validar extensão da imagem
+                switch(isset($Pint_Foto)):
+                    case 'image/jpeg';
+                    case 'image/pjpeg';
+                        //Criar a imagem temporaria a ser manipulada
+                        $imagem_teporaria = imagecreatefromjpeg("../assets/IMAGES/Pinturas/$Outro_Usuario/$Pint_Foto");
+                    break;
+                    case 'image/png';
+                    case 'image/x-png';
+                        //Criar a imagem temporaria a ser manipulada
+                        $imagem_teporaria = imagecreatefrompng("../assets/IMAGES/Pinturas/$Outro_Usuario/$Pint_Foto");
+                    break;
+                endswitch;
+
+                //Obter a largura da logo
+                $largura_logo = imagesx($marca_logo);
+                
+                //Obter a altura da logo
+                $altura_logo = imagesy($marca_logo);
+                
+                //Calcular posição x sendo 6px da lateral direita
+                $x_logo = imagesx($imagem_teporaria) - $largura_logo - 6;
+                
+                //Calcular posição y sendo 6px do rodape
+                $y_logo = imagesy($imagem_teporaria) - $altura_logo - 6;
+                
+                imagecopymerge($imagem_teporaria, $marca_logo, $x_logo, $y_logo, 0, 0, $largura_logo, $altura_logo, 100);                   
+
+                imagejpeg($imagem_teporaria, "../assets/IMAGES/Pinturas/$Outro_Usuario/$Pint_Foto", 50);        
+
                 ?> 
                 <div id="Pint-Completa1-U" class="Cont">
                     <div class="Fundo-Pint">
