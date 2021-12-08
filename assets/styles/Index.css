@@ -4,75 +4,101 @@
 }
 
 body{
-    overflow-y: hidden;
     background: var(--dark);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-i{
-    margin-right: 15px;
+.slide{
+    width: 512px;
+    height: 288px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid var(--light);
+    box-shadow: 0 0 12px var(--light);
+    transition: all 1s;
 }
 
-#Cont_Master{
-    display: block;
-    padding: 50px;
+.slides{
+    width: 5120px;
+    display: flex;
 }
 
 #Card_Mensagem{
+    position: absolute;
+    top: 50px;
     text-align: center;
-    margin: 50px;
 }
 
 .textospp{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
     color: var(--light);
-    font-size: 40px;
-    font-family: 'Josefin Sans', sans-serif;    
+    margin:20px auto;
 }
 
-#Quadros{
-    margin-top: 20px;
-    width: 100%;
-    border: none;
+.images img{
+    width: 512px;
+    height: 288px;
+}
+
+#atual{
+    transition: all 2s;
+}
+
+.btn{
+    position: absolute;
+    color: var(--light);
+    padding: 10px;
     text-align: center;
-    border-radius: 20px;
-    background: conic-gradient(var(--primary), var(--dark));
-    border: 3px solid var(--primary);
-    box-shadow: 0 0 20px var(--primary);
-}
-
-#Coluna{
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
 }
 
-.RT{
-    margin: 20px;
-    width: 200px;
+.btn:hover{
+    transform: scale(1.5);
 }
 
-.Quadrinhos{
-    width: 100%;
-    border-radius: 20px;
-    border-top: 3px solid var(--primary);
-    border-bottom: 3px solid var(--primary);
-    transition: .3s;
+#voltar{
+    top: 50%;
+    left: 28%;
 }
 
-.Quadrinhos:hover{
-    border-top: 3px solid var(--secundary);
-    border-bottom: 3px solid var(--secundary);
+#frente{
+    top: 50%;
+    right: 28%;    
 }
 
-#btn_piscar{
-    background: none;
-    color: var(--light);
-    border-top: 3px solid var(--light);
-    border-bottom: 3px solid var(--light);
-    border-radius: 8px;
-    transition: .3s;  
+.bolas{
+    position: absolute;
+    width: 512px;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
 }
 
-#btn_piscar:hover{    
+.bolas div{
+    transition: all 0.5s;
+    border: 3px solid var(--light);
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.bolas div:hover{
     background: var(--light);
-    color: var(--dark);
-    box-shadow: 0px 0px 10px var(--light);
+}
+
+.img_atual{
+    transition: 0.5s;
+    background: var(--light);
 }

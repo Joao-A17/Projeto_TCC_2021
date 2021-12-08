@@ -19,30 +19,100 @@
           <li><a class="menu-link" id='btn_piscar' href="./pages/Cadastro.php"><i class="fas fa-user-plus Icon"></i>   Cadastre-se</a></li>
         </ul>
     </nav>
-    <section id="Cont_Master">        
-        <div id="Card_Mensagem">
-          <p class="textospp" style="margin-top: 10px;">Exposição e vendas de artes</p>       
-          <p class="textospp">Entre para o mundo mágico das artes de Imbituba-SC</h2> 
+    <div id="Card_Mensagem">
+        <p class="textospp">Exposição e vendas de artes</p>       
+        <p class="textospp">Entre para o mundo mágico do Magic Paintings</h2> 
+    </div>
+    <div class="slide">
+        <div class="slides">
+            
+            <div id="voltar" class="btn">
+                <i class='fas fa-chevron-left'></i>
+            </div>
+            <div id="frente" class="btn">
+                <i class='fas fa-chevron-right'></i>
+            </div>
+
+            <div id="atual" class="images">
+                <img src="./assets/IMAGES/images/Floresta.jpg" alt="">
+            </div>
+            <div class="images">
+                <img src="./assets/IMAGES/images/céu_estrelado.jpg"  alt=""">
+            </div>
+            <div class="images">
+                <img src="./assets/IMAGES/images/areia.png" alt="">
+            </div>
+            <div class="images">
+                <img src="./assets/IMAGES/images/Paraíso_inferno.jpg" alt="">
+            </div>
+            <div class="images">
+                <img src="./assets/IMAGES/images/pintura.jpg" alt="">
+            </div>
+
         </div>
-        <div id="Quadros">
-            <ol id="Coluna">
-                <li class="RT">
-                    <img class="Quadrinhos" src="./assets/IMAGES/images/areia.png">
-                </li>
-                <li class="RT">
-                    <img class="Quadrinhos" src="./assets/IMAGES/images/céu_estrelado.jpg">
-                </li>
-                <li class="RT">
-                    <img class="Quadrinhos" src="./assets/IMAGES/images/Floresta.jpg">
-                </li>
-                <li class="RT">
-                    <img class="Quadrinhos" src="./assets/IMAGES/images/Paraíso_inferno.jpg">
-                </li>
-                <li class="RT">
-                    <img class="Quadrinhos" src="./assets/IMAGES/images/pintura.jpg">
-                </li>
-            </ol>
+        <div class="bolas">
         </div>
-    </section>
+    </div>
 </body>
+
+<script>
+    var bolas = document.querySelector('.bolas');
+    var quant = document.querySelectorAll('.slides .images');
+    var atual = 0;
+    var imagem = document.getElementById('atual');
+    var frente = document.getElementById('frente');
+    var voltar = document.getElementById('voltar');
+    var rolar = true;
+
+    for(let i = 0; i < quant.length; i++){
+        var div = document.createElement('div');
+        div.id = i;
+        bolas.appendChild(div);
+    }
+    document.getElementById('0').classList.add('img_atual');
+
+    var pos = document.querySelectorAll('.bolas div');
+
+    for(let i = 0; i < pos.length; i++){
+        pos[i].addEventListener('click', ()=>{
+            atual = pos[i].id
+            rolar = false;
+            slide()
+        })
+    }
+
+    voltar.addEventListener('click', ()=>{
+        atual--
+        rolar = false;
+        slide()
+    })
+    frente.addEventListener('click', ()=>{
+        atual++
+        rolar = false;
+        slide()
+    })
+
+    function slide(){
+        if(atual >= quant.length){
+            atual = 0
+        }
+        else if(atual < 0){
+            atual = quant.length - 1
+        }
+        document.querySelector('.img_atual').classList.remove('img_atual');
+        imagem.style.marginLeft = -512*atual+'px';
+        document.getElementById(atual).classList.add('img_atual')
+    }
+    slide()
+    setInterval(()=>{
+        if(rolar){
+            atual++
+            slide()
+        }
+        else{
+            rolar = true;
+        }
+    },4000)
+</script>
+
 </html>
