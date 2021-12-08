@@ -63,21 +63,23 @@ if(isset($_FILES['arquivo'])){
         $x_logo = imagesx($imagem_teporaria) - $largura_logo - 6;
         //Calcular posição y sendo 6px do rodape
         $y_logo = imagesy($imagem_teporaria) - $altura_logo - 6;
-        imagecopymerge($imagem_teporaria, $marca_logo, $x_logo, $y_logo, 0, 0, $largura_logo, $altura_logo, 100);                   
-        imagejpeg($imagem_teporaria, "../IMAGES/Pinturas/$usuario_logado/$Novo_Arquivo_Imagem", 280);    
-
+        $mesclar = imagecopymerge($imagem_teporaria, $marca_logo, $x_logo, $y_logo, 0, 0, $largura_logo, $altura_logo, 30);                   
+        imagejpeg($imagem_teporaria, "../IMAGES/Pinturas/$usuario_logado/$Novo_Arquivo_Imagem");    
 
     }
-    
-    $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";       
 
-    if($Result = mysqli_query($conexao, $Inserir_Publicação)){
-        move_uploaded_file($_FILES['arquivo']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
-        header('Location: ../../pages/Meu_Perfil.php');
-        $_SESSION['msg_publicar'] = "<p style='color: var(--primary); font-size:20px;'>Publicado com sucesso :)</p>"; 
-    }else{
-        $_SESSION['msg_publicar'] = "<p style='color:red; font-size:20px;'>Erro: Campos vazio ou Imagem Invalida :(</p>"; 
-        header('Location: ../../pages/Meu_Perfil.php');
+    if($mesclar){
+            
+        $Inserir_Publicação = "INSERT INTO pinturas (Autor, Nome_Foto, Desc_Foto, Arquivo_Imagem, Criado) VALUES ('$Autor', '$Nome_Foto', '$Desc_Foto', '$Novo_Arquivo_Imagem', NOW())";       
+
+        if($Result = mysqli_query($conexao, $Inserir_Publicação)){
+            move_uploaded_file($_FILES['arquivo']['tmp_name'],$pasta_arquivo['pasta'].$Novo_Arquivo_Imagem);
+            header('Location: ../../pages/Meu_Perfil.php');
+            $_SESSION['msg_publicar'] = "<p style='color: var(--primary); font-size:20px;'>Publicado com sucesso :)</p>"; 
+        }else{
+            $_SESSION['msg_publicar'] = "<p style='color:red; font-size:20px;'>Erro: Campos vazio ou Imagem Invalida :(</p>"; 
+            header('Location: ../../pages/Meu_Perfil.php');
+        }
     }
 
 }
